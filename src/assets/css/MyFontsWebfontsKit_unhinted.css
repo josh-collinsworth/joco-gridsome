@@ -1,0 +1,56 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3752128, 2019-04-26T10:56:05-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: AmsiPro-Italic by Stawix
+ * URL: https://www.myfonts.com/fonts/stawix/amsi-pro/italic/
+ * Copyright: &#x00A9; 2012, 2013, 2014, 2015, 2016 by Stawix Ruecha &amp; Foundry. All rights reserved.
+ * 
+ * Webfont: AmsiPro-Regular by Stawix
+ * URL: https://www.myfonts.com/fonts/stawix/amsi-pro/regular/
+ * Copyright: &#x00A9; 2012, 2013, 2014, 2015, 2016 by Stawix Ruecha &amp; Foundry. All rights reserved.
+ * 
+ * Webfont: AmsiPro-Ultra by Stawix
+ * URL: https://www.myfonts.com/fonts/stawix/amsi-pro/ultra/
+ * Copyright: &#x00A9; 2012, 2013, 2014, 2015, 2016 by Stawix Ruecha &amp; Foundry. All rights reserved.
+ * 
+ * Webfont: AmsiPro-UltraItalic by Stawix
+ * URL: https://www.myfonts.com/fonts/stawix/amsi-pro/ultra-italic/
+ * Copyright: &#x00A9; 2012, 2013, 2014, 2015, 2016 by Stawix Ruecha &amp; Foundry. All rights reserved.
+ * 
+ * Webfont: Sagona-BookItalic by Rene Bieder
+ * URL: https://www.myfonts.com/fonts/rene-bieder/sagona/book-italic/
+ * Copyright: Copyright &#x00A9; 2016 by Ren&#x00E9; Bieder. All rights reserved.
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3752128
+ * Licensed pageviews: 10,000
+ * 
+ * © 2019 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3940c0");
+
+  
+@font-face {font-family: 'AmsiPro-Italic';src:url('webfonts/3940C0_0_unhinted_0.woff2') format('woff2'),url('webfonts/3940C0_0_unhinted_0.woff') format('woff'),url('webfonts/3940C0_0_unhinted_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AmsiPro-Regular';src:url('webfonts/3940C0_1_unhinted_0.woff2') format('woff2'),url('webfonts/3940C0_1_unhinted_0.woff') format('woff'),url('webfonts/3940C0_1_unhinted_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AmsiPro-Ultra';src:url('webfonts/3940C0_2_unhinted_0.woff2') format('woff2'),url('webfonts/3940C0_2_unhinted_0.woff') format('woff'),url('webfonts/3940C0_2_unhinted_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AmsiPro-UltraItalic';src:url('webfonts/3940C0_3_unhinted_0.woff2') format('woff2'),url('webfonts/3940C0_3_unhinted_0.woff') format('woff'),url('webfonts/3940C0_3_unhinted_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Sagona-BookItalic';src:url('webfonts/3940C0_4_unhinted_0.woff2') format('woff2'),url('webfonts/3940C0_4_unhinted_0.woff') format('woff'),url('webfonts/3940C0_4_unhinted_0.ttf') format('truetype');}
+ 
