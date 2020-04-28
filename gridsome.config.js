@@ -8,13 +8,16 @@ module.exports = {
       options: {
         baseUrl: 'https://joshcollinsworth.com', // required
         typeName: 'WordPress', // GraphQL schema name (Optional)
+        downloadRemoteImagesFromPosts: true, // default false
+        downloadRemoteFeaturedImages: true, // default false
+        downloadACFImages: true, // default false
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/markdown/**/*.md',
-        typeName: 'markdownPost',
+        path: 'src/projects/*.md',
+        typeName: 'project',
         remark: {
 
         }
@@ -30,10 +33,10 @@ module.exports = {
     WordPressCategory: '/category/:slug', // adds route for "category" post type (Optional)
     WordPressPost: '/:slug', //adds route for "post" post type (Optional)
     WordPressPostTag: '/tag/:slug', // adds route for "post_tag" post type (Optional)
-    markdownPost: [
+    project: [
       {
-        path: '/markdown/:title',
-        component: './src/templates/markdownPost.vue'
+        path: '/projects/:title',
+        component: './src/templates/project.vue'
       }
     ]
   }

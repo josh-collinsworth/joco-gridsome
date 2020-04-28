@@ -31,7 +31,7 @@
 query {
   allWordPressPage {
     edges {
-      node { 
+      node {
         id
         title
         slug
@@ -120,11 +120,11 @@ img {
   max-width: 100%;
   height: auto;
 
-  & + h1, 
-  & + h2, 
-  & + h3, 
-  & + h4, 
-  & + h5, 
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
   & + h6  {
     margin-top: 0;
   }
@@ -141,7 +141,7 @@ i, em {
 
 nav[role="navigation"] {
   text-align: center;
-  
+
   a {
     display: inline-block;
     transition: font-weight .3s ease-in-out;
@@ -300,7 +300,7 @@ pre {
   color: #fff;
   border-radius: 0.5em;
   font-size: .8em;
-  
+
   code {
     background: transparent;
   }
@@ -320,5 +320,10 @@ code {
   text-align: center;
   color: #fff;
   font-weight: bold;
+}
+
+main .fullwidth {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 </style>
