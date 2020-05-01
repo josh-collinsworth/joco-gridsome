@@ -76,6 +76,7 @@ footer {
   text-align: center;
   color: #fff;
   font-weight: bold;
+  text-decoration: none;
 }
 
 main .fullwidth {

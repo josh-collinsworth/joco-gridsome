@@ -22,25 +22,25 @@
 export default {
 	mounted() {
 		const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-		console.log(userPrefersDark)
+		const preferenceAlreadySet = localStorage.getItem('collinsworth-dark-mode')
+		console.log(preferenceAlreadySet)
 
-		if(userPrefersDark) {
-			console.log(userPrefersDark)
+		if(userPrefersDark && preferenceAlreadySet === null) {
 			this.setDarkModeColors()
-			localStorage.setItem('josh-collinsworth-dark-mode', JSON.stringify(true))
+			localStorage.setItem('collinsworth-dark-mode', JSON.stringify(true))
 		}
 	},
 	methods: {
 		toggleDarkMode() {
-			let darkMode = JSON.parse(localStorage.getItem('josh-collinsworth-dark-mode'))
+			let darkMode = JSON.parse(localStorage.getItem('collinsworth-dark-mode'))
 
 			if(darkMode !== true && darkMode !== false) {
-				localStorage.setItem('josh-collinsworth-dark-mode', JSON.stringify(false))
+				localStorage.setItem('collinsworth-dark-mode', JSON.stringify(false))
 				return
 			}
 
 			darkMode = !darkMode
-			localStorage.setItem('josh-collinsworth-dark-mode', JSON.stringify(darkMode))
+			localStorage.setItem('collinsworth-dark-mode', JSON.stringify(darkMode))
 
 			darkMode ? this.setDarkModeColors() : this.setLightModeColors()
 
