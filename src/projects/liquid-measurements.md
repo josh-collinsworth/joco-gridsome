@@ -1,7 +1,8 @@
 ---
-title: Dynamic Liquid Measurements Table,
-featuredMedia: https://joshcollinsworth.com/firefox_screenshot_2020-04-24t20-07-59-444z/
+title: Dynamic Liquid Measurements Table
+featuredMedia: Firefox_Screenshot_2020-04-24T20-07-59.444Z.png
 link: https://codepen.io/joshuajcollinsworth/pen/bGdmmrY
+category: code
 ---
 
 A dynamic table in CSS grid and Vue, demonstrating the relationship between nine units of liquid measurement, from milliliters to gallons. You can update any one of the units, and the others respond and update dynamically. Table is also responsive and makes use of CSS transform to look a little different on mobile-ish widths vs. wider tablets and desktops.

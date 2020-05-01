@@ -1,6 +1,6 @@
 ---
 title: marksindundee.com
-featuredMedia: https://joshcollinsworth.com/wp-content/uploads/2020/04/Firefox_Screenshot_2020-04-24T21-06-18.952Z.png
+featuredMedia: Firefox_Screenshot_2020-04-24T21-06-18.952Z.png
 link: https://marksindundee.com/
 category: code
 ---

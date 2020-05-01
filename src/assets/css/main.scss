@@ -1,0 +1,20 @@
+@import 'scss/vars';
+@import 'scss/fonts';
+@import 'scss/layout';
+@import 'scss/typography';
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Averta STD", -apple-system, system-ui, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--darkGray);
+  margin: 0;
+}
+
+main {
+  margin: 2rem auto;
+}
+

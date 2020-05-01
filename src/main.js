@@ -1,6 +1,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
-// import '~/assets/css/MyFontsWebfontsKit.css'
-import '~/assets/css/new-fonts.css'
+import '~/assets/css/main.scss'
+
 
 export default function (Vue, { head }) {
   Vue.component('Layout', DefaultLayout);

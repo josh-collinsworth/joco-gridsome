@@ -1,7 +1,7 @@
 ---
 title: Super Metroid Item Tracker
-featuredMedia: https://joshcollinsworth.com/wp-content/uploads/2020/04/Firefox_Screenshot_2020-04-24T21-06-05.655Z.png
-link: https://smitty.netlify.dev
+featuredMedia: Firefox_Screenshot_2020-04-24T21-06-05.655Z.png
+link: https://smitty.netlify.app
 category: code
 ---
 

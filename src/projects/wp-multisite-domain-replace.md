@@ -1,6 +1,6 @@
 ---
 title: WP Multisite Domain Replace
-featuredMedia: https://joshcollinsworth.com/wp-content/uploads/2020/04/Firefox_Screenshot_2020-04-24T20-18-24.052Z.png
+featuredMedia: Firefox_Screenshot_2020-04-24T20-18-24.052Z.png
 link: https://wpmultisitedomainreplace.com
 category: code
 ---

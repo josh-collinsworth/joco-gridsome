@@ -36,7 +36,6 @@ export default {
         "https://joshcollinsworth.com/wp-json/wp/v2/posts"
       );
       let posts = await response.json();
-      console.log(posts);
       posts.forEach(post => {
         this.posts.push({
           title: post.title.rendered,
@@ -45,8 +44,6 @@ export default {
         });
       });
       this.loading = false;
-          console.log(this.posts)
-
     };
     getPosts();
   }

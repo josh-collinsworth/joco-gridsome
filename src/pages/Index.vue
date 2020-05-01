@@ -9,7 +9,6 @@
       <a href="https://joshcollinsworth.com/blog/">blogger</a>; feminist; font hoarder; frequent
       <a href="https://twitter.com/jjcollinsworth" target="_blank" rel="noopener noreferrer">Tweeter</a>; occasional public speaker; pun enthusiast; craft beer enjoyer; CrossFitter; game collector and hobbyist; musician; liberal abuser of semicolons.
     </p>
-    <hr>
     <H2>Recent posts:</H2>
     <ul class="post-list">
       <li v-for="{ node } in $page.allWordPressPost.edges" :key="node.id">

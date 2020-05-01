@@ -1,0 +1,135 @@
+html {
+	font-size: 1.375em;
+	line-height: 1.4em;
+}
+
+ul a,
+ol a {
+	text-decoration: underline;
+  text-decoration-color: var(--yellow);
+}
+
+ul {
+	margin: 1rem 0;
+
+	li {
+		margin-bottom: 1rem;
+	}
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  & + h1,
+  & + h2 {
+    margin-top: .25em;
+  }
+}
+
+p {
+  a {
+		color: var(--link-color);
+		text-decoration: underline;
+    text-decoration-color: var(--yellow);
+  }
+  img {
+    margin: 2em 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Pensum Display Basic';
+  line-height: 1em;
+  position: relative;
+  margin: 1.5em 0 1rem;
+	padding: 0 0 1rem;
+	color: var(--heading-color);
+
+  a {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1em;
+  border-bottom: 1px solid;
+}
+
+h2 {
+  font-size: 2.8rem;
+  border-bottom: 1px solid;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+input,
+textarea,
+a,
+button,
+ul,
+li,
+figcaption {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+blockquote,
+figcaption,
+.fancy {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: normal;
+  font-style: italic;
+}
+
+figure  {
+  margin: 2em;
+}
+
+figcaption {
+  font-size: 1rem;
+}
+
+pre, code {
+  font-family: 'MonoLisa', 'Courier', monospace;
+}
+
+pre {
+	background: var(--true-black);
+	border: 1px solid var(--true-white);
+  padding: 1.5em;
+  margin: 2em auto;
+  color: #fff;
+  border-radius: 0.5em;
+	font-size: .8em;
+	overflow: auto;
+
+  code {
+    background: transparent;
+  }
+}
+
+code {
+  font-size: .8em;
+  background: rgba(123, 167, 188, 0.2);
+	padding: 0.3em 0.4em 0.2em;
+	border-radius: 2px;
+	line-height: 1!important;
+}

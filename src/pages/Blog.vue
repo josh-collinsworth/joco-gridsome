@@ -44,9 +44,6 @@ query {
 
 <script>
 export default {
-	mounted() {
-		console.log(this.$static)
-	},
   metaInfo: {
     title: "Blog"
   },

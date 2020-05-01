@@ -1,6 +1,6 @@
 ---
 title: Pure CSS Game Boy Advance SP
-featuredMedia: https://joshcollinsworth.com/wp-content/uploads/2020/04/Firefox_Screenshot_2020-04-24T20-08-14.782Z.png
+featuredMedia: Firefox_Screenshot_2020-04-24T20-08-14.782Z.png
 link: https://codepen.io/joshuajcollinsworth/pen/LVMRwQ
 category: code
 ---

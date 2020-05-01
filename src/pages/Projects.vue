@@ -10,7 +10,7 @@
 							{{ project.node.title }}
 						</span>
 					</div>
-					<g-image :src="project.node.featuredMedia"/>
+					<g-image :src="`images/projects/${project.node.featuredMedia}`"/>
 				</g-link>
 			</li>
 		</ul>

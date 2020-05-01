@@ -1,6 +1,6 @@
 ---
-title: Dynamic Liquid Measurements Table,
-featuredMedia: https://joshcollinsworth.com/firefox_screenshot_2020-04-24t20-07-59-444z/
+title: Emoji Pick Two
+featuredMedia: Firefox_Screenshot_2020-04-24T20-05-56.607Z.png
 link: https://codepen.io/joshuajcollinsworth/pen/vYOPKqx
 ---
 
