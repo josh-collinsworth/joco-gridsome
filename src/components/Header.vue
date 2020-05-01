@@ -1,7 +1,7 @@
 <template>
 	<header class="header">
 		<g-link id="logo" to="/">
-			<img id="jc-logo" src="https://joshcollinsworth.com/wp-content/uploads/2017/12/JC-Mark-2018.svg" />
+			<img id="jc-logo" src="images/2020-logo.svg" />
 		</g-link>
 		<nav class="nav" role="navigation">
 			<!-- <g-link v-for="page in allPagesNoHome" :key="page.node.id" class="nav__link" :to="'/' + page.node.slug">
@@ -20,6 +20,16 @@
 
 <script>
 export default {
+	mounted() {
+		const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+		console.log(userPrefersDark)
+
+		if(userPrefersDark) {
+			console.log(userPrefersDark)
+			this.setDarkModeColors()
+			localStorage.setItem('josh-collinsworth-dark-mode', JSON.stringify(true))
+		}
+	},
 	methods: {
 		toggleDarkMode() {
 			let darkMode = JSON.parse(localStorage.getItem('josh-collinsworth-dark-mode'))
@@ -32,19 +42,7 @@ export default {
 			darkMode = !darkMode
 			localStorage.setItem('josh-collinsworth-dark-mode', JSON.stringify(darkMode))
 
-			if (darkMode) {
-				document.documentElement.style.setProperty('--white', '#101820')
-				document.documentElement.style.setProperty('--black', '#ffffff')
-				document.documentElement.style.setProperty('--darkGray', '#ffffff')
-				document.documentElement.style.setProperty('--heading-color', 'var(--lightBlue)')
-				document.documentElement.style.setProperty('--link-color', 'var(--lightBlue)')
-			} else {
-				document.documentElement.style.setProperty('--white', '#ffffff')
-				document.documentElement.style.setProperty('--black', '#101820')
-				document.documentElement.style.setProperty('--darkGray', '#53565a')
-				document.documentElement.style.setProperty('--heading-color', 'var(--darkGray)')
-				document.documentElement.style.setProperty('--link-color', 'var(--darkBlue)')
-			}
+			darkMode ? this.setDarkModeColors() : this.setLightModeColors()
 
 			// --yellow: #ffd100;
 			// --orange: #ff6a13;
@@ -57,6 +55,29 @@ export default {
 
 			// --column-width: 12vw;
 			// --max-width: 36em;
+		},
+		setDarkModeColors() {
+			this.updateCustomProperty({
+				'--white': '#101820',
+				'--black': '#ffffff',
+				'--darkGray': '#ffffff',
+				'--heading-color': 'var(--lightBlue)',
+				'--link-color': 'var(--lightBlue)',
+			})
+		},
+		setLightModeColors() {
+			this.updateCustomProperty({
+				'--white': '#ffffff',
+				'--black': '#101820',
+				'--darkGray': '#53565a',
+				'--heading-color': 'var(--darkGray)',
+				'--link-color': 'var(--darkBlue)',
+			})
+		},
+		updateCustomProperty(props = {}) {
+			Object.entries(props).forEach(set => {
+				document.documentElement.style.setProperty(set[0], set[1])
+			})
 		}
 	}
 }
@@ -79,7 +100,7 @@ nav[role="navigation"] {
     display: inline-block;
     font-weight: normal;
     text-decoration: none;
-    border-bottom: 3px solid transparent;
+    border-bottom: .1em solid transparent;
 
     &:hover {
       border-bottom-color: var(--yellow);
@@ -100,6 +121,6 @@ nav[role="navigation"] {
 }
 
 .nav__link.active--exact {
-  border-bottom: 4px solid var(--yellow);
+  border-bottom-color: var(--yellow);
 }
 </style>
