@@ -1,12 +1,13 @@
 <template>
   <Layout>
-    <h1>Hi! I'm Josh Collinsworth.</h1>
+    <p class="fancy">Hi, I'm Josh Collinsworth.</p>
+    <h1>Welcome</h1>
     <p class="fancy">
       I'm a Happiness Engineer at
       <a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>;
-      <a href="https://joshcollinsworth.com/code/">web developer</a>;
-      <a href="https://joshcollinsworth.com/design/">graphic designer</a>; WordPress instructor; casual writer and infrequent
-      <a href="https://joshcollinsworth.com/blog/">blogger</a>; feminist; font hoarder; frequent
+      <g-link to="/code/">web developer</g-link>;
+      <g-link to="/design/">graphic designer</g-link>; WordPress instructor; casual writer and infrequent
+      <g-link to="/blog/">blogger</g-link>; feminist; font hoarder; frequent
       <a href="https://twitter.com/jjcollinsworth" target="_blank" rel="noopener noreferrer">Tweeter</a>; occasional public speaker; pun enthusiast; craft beer enjoyer; CrossFitter; game collector and hobbyist; musician; liberal abuser of semicolons.
     </p>
     <H2>Recent posts:</H2>
@@ -55,3 +56,13 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+h1 {
+  margin: 0;
+}
+
+p {
+  margin-bottom: .5rem;
+}
+</style>

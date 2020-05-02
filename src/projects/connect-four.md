@@ -1,6 +1,6 @@
 ---
 title: Connect Four in Vue and CSS
-featuredMedia: Firefox_Screenshot_2020-04-24T19-59-06.176Z.png
+featuredMedia: connect-four.png
 link: https://codepen.io/joshuajcollinsworth/pen/MWwXpLd
 category: code
 ---

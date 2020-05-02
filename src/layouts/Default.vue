@@ -1,8 +1,8 @@
 <template>
   <div class="layout">
+    <Header />
     <div class="layout-container">
 
-      <Header />
       <transition name="fade" appear>
         <main>
           <div class="content">
@@ -47,6 +47,7 @@ export default {
 <style lang="scss">
 .fade-enter-active {
   transition: all .6s cubic-bezier(0, 0.2, 0.25, 1);
+  transition-delay: .6s;
 }
 
 .fade-enter {

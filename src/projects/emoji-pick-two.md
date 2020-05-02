@@ -1,6 +1,6 @@
 ---
 title: Emoji Pick Two
-featuredMedia: Firefox_Screenshot_2020-04-24T20-05-56.607Z.png
+featuredMedia: emoji-pick-two.png
 link: https://codepen.io/joshuajcollinsworth/pen/vYOPKqx
 ---
 

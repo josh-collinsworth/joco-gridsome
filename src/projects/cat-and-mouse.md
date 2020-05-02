@@ -1,6 +1,6 @@
 ---
 title: Cat and Mouse
-featuredMedia: Firefox_Screenshot_2020-04-24T20-03-01.767Z.png
+featuredMedia: cat-and-mouse.png
 link: https://codepen.io/joshuajcollinsworth/pen/ExjZexY
 category: code
 ---

@@ -12,8 +12,6 @@
   --lightBlue: #7ba7bc;
   --darkBlue: #34657f;
 
-
-
   --heading-color: var(--darkGray);
   --link-color: var(--darkBlue);
 
@@ -25,13 +23,14 @@
   --breakpoint3: 960px;
   --breakpoint4: 1400px;
 
-  @media (prefers-color-scheme: dark) {
-    --white: #101820;
-    --black: #eee;
-    --darkGray: #eee;
-    --heading-color: var(--lightBlue);
-    --link-color: var(--lightBlue);
-  }
+  // Looks like we can't do this in both CSS and JavaScript
+  // @media (prefers-color-scheme: dark) {
+  //   --white: #101820;
+  //   --black: #eee;
+  //   --darkGray: #eee;
+  //   --heading-color: var(--lightBlue);
+  //   --link-color: var(--lightBlue);
+  // }
 
   background: var(--white);
 }

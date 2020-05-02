@@ -1,6 +1,6 @@
 ---
 title: Vue Emoji Slider Component
-featuredMedia: Firefox_Screenshot_2020-04-24T19-58-33.476Z.png
+featuredMedia: emoji-slider.png
 link: https://codepen.io/joshuajcollinsworth/pen/OYgGNK
 category: code
 ---
