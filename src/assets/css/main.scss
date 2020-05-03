@@ -1,8 +1,9 @@
 @import 'scss/vars';
 @import 'scss/fonts';
-@import 'scss/animation';
-@import 'scss/layout';
 @import 'scss/typography';
+@import 'scss/layout';
+@import 'scss/animation';
+@import 'scss/forms';
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -23,4 +24,17 @@ body {
 
 main {
   margin: 2rem auto;
+}
+
+.sr {
+  position: absolute;
+  left: -100vw;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: none;
+  word-wrap: normal;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
 }

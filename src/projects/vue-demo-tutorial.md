@@ -1,6 +1,6 @@
 ---
 title: Vue Interactive Demo Tutorial
-featuredMedia: Firefox_Screenshot_2020-04-24T19-59-54.489Z.png
+featuredMedia: vue-demo.png
 link: https://codepen.io/joshuajcollinsworth/full/MLjVrQ
 category: code
 ---

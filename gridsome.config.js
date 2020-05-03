@@ -24,11 +24,6 @@ module.exports = {
       }
     }
   ],
-  transformers: {
-    remark: {
-
-    }
-  },
   templates: {
     WordPressCategory: '/category/:slug', // adds route for "category" post type (Optional)
     WordPressPost: '/:slug', //adds route for "post" post type (Optional)
@@ -36,7 +31,7 @@ module.exports = {
     project: [
       {
         path: '/projects/:title',
-        component: './src/templates/project.vue'
+        component: './src/templates/Project.vue'
       }
     ]
   }

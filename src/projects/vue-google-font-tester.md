@@ -1,6 +1,6 @@
 ---
 title: Vue Google Font Tester
-featuredMedia: Firefox_Screenshot_2020-04-24T20-09-33.378Z.png
+featuredMedia: vue-google-fonts-tester.png
 link: https://codepen.io/joshuajcollinsworth/pen/BEdydP
 category: code
 ---

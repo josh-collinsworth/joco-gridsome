@@ -9,7 +9,6 @@
 			</button>
 			<g-link class="nav__link" to="/projects">Projects</g-link>
 			<g-link class="nav__link" to="/about">About</g-link>
-			<g-link class="nav__link" to="/design">Design</g-link>
 			<g-link class="nav__link" to="/blog">Blog</g-link>
 			<g-link class="nav__link" to="/contact">Contact</g-link>
 			<g-link class="nav__link" to="/uses">Uses</g-link>

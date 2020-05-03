@@ -2,11 +2,11 @@
 	<div>
 		<Header />
 		<Layout>
-			<transition name="pageturn" mode="out-in">
+			<transition name="pageslide" mode="out-in">
 				<router-view />
 			</transition>
 		</Layout>
-		<footer>This is the footer</footer>
+		<Footer />
 	</div>
 </template>
 
@@ -21,9 +21,10 @@ query {
 
 <script>
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default {
-	components: { Header },
+	components: { Header, Footer },
   metaInfo() {
     return {
       title: this.$static.metadata.siteName,
@@ -40,14 +41,7 @@ export default {
 </script>
 
 <style lang="scss">
-
-footer {
-  width: 100%;
-  min-height: 100px;
-  background: var(--lightBlue);
-}
-
-.pageturn {
+.pageslide {
 
 	&-enter-active {
 		transition: all .35s cubic-bezier(.22,.61,.36,1);
