@@ -85,7 +85,7 @@ export default {
 			Object.entries(props).forEach(set => {
 				document.documentElement.style.setProperty(set[0], set[1])
 			})
-		}
+		},
 	}
 }
 </script>
@@ -102,7 +102,7 @@ export default {
 }
 
 nav[role="navigation"] {
-  text-align: center;
+  text-align: right;
 
   a {
     display: inline-block;
@@ -122,7 +122,7 @@ nav[role="navigation"] {
   display: flex;
   justify-content: space-between;
 	align-items: center;
-  margin-bottom: 2em;
+  margin-bottom: 4rem;
 	box-shadow: 0 0 1rem rgba(0,0,0,.05);
 	width: 100%;
 }
@@ -158,7 +158,7 @@ button#dark-mode-toggle {
 		width: 2rem;
 		height: 4rem;
 		transform: translateY(-1.975rem);
-		transition: .2s ease-in-out;
+		transition: .4s cubic-bezier(.7,-0.01,0,1.01);
 
 		path,
 		circle {
