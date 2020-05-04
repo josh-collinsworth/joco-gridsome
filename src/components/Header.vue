@@ -1,7 +1,8 @@
 <template>
 	<header class="header">
 		<g-link id="logo" to="/">
-			<img id="jc-logo" src="/images/2020-logo.svg" />
+			<!-- <img id="jc-logo" src="/images/2020-logo-partial-thin.svg" /> -->
+			<LogoSVG />
 		</g-link>
 		<nav class="nav" role="navigation">
 			<button id="dark-mode-toggle" @click="toggleDarkMode" :class="this.darkMode && 'dark'">
@@ -18,10 +19,11 @@
 
 <script>
 import LightDarkIcon from './LightDarkIcon'
+import LogoSVG from './LogoSVG'
 
 export default {
 	components: {
-		LightDarkIcon
+		LightDarkIcon, LogoSVG
 	},
 	data: () => ({
 		darkMode: false
@@ -52,15 +54,6 @@ export default {
 			this.darkMode = !this.darkMode
 
 			this.darkMode ? this.setDarkModeColors() : this.setLightModeColors()
-
-			// --yellow: #ffd100;
-			// --orange: #ff6a13;
-			// --lightGray: #a7a8aa;
-			// --midGray: #888b8d;
-			// --darkGray: #53565a;
-			// --black: #101820;
-			// --lightBlue: #7ba7bc;
-			// --darkBlue: #34657f;
 		},
 		setDarkModeColors() {
 			this.updateCustomProperty({
@@ -91,13 +84,11 @@ export default {
 
 
 <style lang="scss">
-#logo  {
-  width: 4em;
-}
-
-#jc-logo {
-  max-width: 4em;
+#logo {
+	width: auto;
+	height: 2rem;
 	display: block;
+	position: relative;
 }
 
 nav[role="navigation"] {
@@ -116,7 +107,6 @@ nav[role="navigation"] {
 }
 
 .header {
-	$white: var(--white);
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;

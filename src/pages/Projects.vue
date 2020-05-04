@@ -22,9 +22,12 @@
 					<g-link :to="project.node.path" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
 						<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" />
 						<div class="details" >
-							<span class="title">
+							<div class="title">
 								{{ project.node.title }}
-							</span>
+								<div class="subtitle">
+									{{ project.node.category }}
+								</div>
+							</div>
 						</div>
 					</g-link>
 				</transition-group>
@@ -119,16 +122,16 @@ ul.fullwidth {
 	display: grid;
 	row-gap: 4rem;
 	column-gap: 2rem;
-	grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
 
 	li {
 		margin: 0;
 		display: inline-block;
 		padding: 0;
 		position: relative;
-		text-align: center;
-		font-style: italic;
-		/* font-size: 1.2rem; */
+		font-size: .875rem;
+		line-height: 1.4em;
+		/* font-style: italic; */
 		transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
 
 		&:hover {
@@ -143,12 +146,23 @@ ul.fullwidth {
 	}
 
 	.title {
-		border-top: 1px solid;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		min-height: 5rem;
-		padding: 1rem;
+		padding: .5rem 1rem 1rem 0;
+
+		&:before, &:after {
+			content: '';
+			width: 2em;
+			height: 1px;
+			background: var(--darkGray);
+			display: block;
+			margin: .5rem 0;
+		}
+
+		.subtitle {
+			font-size: .675em;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-top: .5em;
+		}
 	}
 
 	img {
