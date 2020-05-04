@@ -1,6 +1,6 @@
 ---
 title: marksindundee.com
-featuredMedia: Firefox_Screenshot_2020-04-24T21-06-18.952Z.png
+featuredMedia: projects/Firefox_Screenshot_2020-04-24T21-06-18.952Z.png
 link: https://marksindundee.com/
 category: code
 ---

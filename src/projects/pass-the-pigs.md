@@ -1,6 +1,6 @@
 ---
 title: “Pass the Pigs” Scorekeeper App
-featuredMedia: Firefox_Screenshot_2020-04-24T20-13-45.594Z.png
+featuredMedia: projects/Firefox_Screenshot_2020-04-24T20-13-45.594Z.png
 link: https://passthepigs.now.sh
 category: code
 ---

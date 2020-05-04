@@ -1,6 +1,6 @@
 ---
 title: Cat and Mouse
-featuredMedia: cat-and-mouse.png
+featuredMedia: projects/cat-and-mouse.png
 link: https://codepen.io/joshuajcollinsworth/pen/ExjZexY
 category: code
 ---

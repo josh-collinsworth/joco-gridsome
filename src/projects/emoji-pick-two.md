@@ -1,6 +1,6 @@
 ---
 title: Emoji Pick Two
-featuredMedia: emoji-pick-two.png
+featuredMedia: projects/emoji-pick-two.png
 link: https://codepen.io/joshuajcollinsworth/pen/vYOPKqx
 ---
 

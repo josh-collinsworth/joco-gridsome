@@ -1,6 +1,6 @@
 ---
 title: Interactive CSS Filter React Component (with GIFs!)
-featuredMedia: Firefox_Screenshot_2020-04-24T20-07-27.664Z.png
+featuredMedia: projects/Firefox_Screenshot_2020-04-24T20-07-27.664Z.png
 link: https://codepen.io/joshuajcollinsworth/pen/bKXoRN
 category: code
 ---

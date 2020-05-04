@@ -25,7 +25,7 @@
 								{{ project.node.title }}
 							</span>
 						</div>
-						<g-image :src="`images/projects/${project.node.featuredMedia}`"/>
+						<g-image :src="getProjectImage(project)"/>
 					</g-link>
 				</transition>
 			</li>
@@ -47,6 +47,10 @@ export default {
 	methods: {
 		filterProjects(e) {
 			e.preventDefault()
+		},
+		getProjectImage(project) {
+			console.log(`../../../${project.node.featuredMedia}`)
+			return `projects/${project.node.featuredMedia}`
 		}
 	},
 	computed: {

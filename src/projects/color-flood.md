@@ -1,6 +1,6 @@
 ---
 title: Color Flood Game with Colorblind Mode (React + CSS Grid)
-featuredMedia: Firefox_Screenshot_2020-04-24T20-02-23.351Z.png
+featuredMedia: projects/Firefox_Screenshot_2020-04-24T20-02-23.351Z.png
 link: https://codepen.io/joshuajcollinsworth/pen/Pymdxo
 category: code
 ---

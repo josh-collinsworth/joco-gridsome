@@ -1,6 +1,6 @@
 ---
 title: Pure CSS Game Boy Advance SP
-featuredMedia: gba.png
+featuredMedia: projects/gba.png
 link: https://codepen.io/joshuajcollinsworth/pen/LVMRwQ
 category: code
 ---

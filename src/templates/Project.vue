@@ -1,19 +1,17 @@
 <template>
 	<main>
-		{{$page.project.featuredMedia}}
-		<g-image :src="$page.project.featuredMedia" />
+		<g-image :src="require(`!!assets-loader!@images/${$page.project.featuredMedia}`)" width="200" height="200" fit="contain"/>
 		<h1>{{$page.project.title}}</h1>
+		<div v-html="$page.project.content"></div>
+		<hr>
+		<p>
+			<strong>View this project at: </strong>
+			<a v-if="$page.project.link" :href="$page.project.link">
+				{{ $page.project.link }}
+			</a>
+		</p>
 	</main>
 </template>
-
-<static-query>
-query {
-  metadata {
-    siteName
-    siteDescription
-  }
-}
-</static-query>
 
 
 <page-query>
@@ -32,11 +30,11 @@ query($id: ID!) {
 
 <script>
 export default {
-    name: '',
-    props: {
-    },
-    components: {
-    }
+  computed: {
+		imageURL() {
+			return
+		}
+	}
 }
 </script>
 

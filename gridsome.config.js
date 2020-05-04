@@ -1,6 +1,7 @@
 module.exports = {
   siteName: 'Josh Collinsworth',
   siteDescription: 'Code, design and blog from Josh Collinsworth',
+  siteUrl: 'http://localhost:8080',
 
   plugins: [
     {
@@ -16,7 +17,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/projects/*.md',
+        path: 'src/projects/**/*.md',
         typeName: 'project',
         remark: {
 
@@ -24,6 +25,9 @@ module.exports = {
       }
     }
   ],
+  chainWebpack: config => {
+    config.resolve.alias.set('@images', '@/assets/images')
+  },
   templates: {
     WordPressCategory: '/category/:slug', // adds route for "category" post type (Optional)
     WordPressPost: '/:slug', //adds route for "post" post type (Optional)
@@ -31,7 +35,7 @@ module.exports = {
     project: [
       {
         path: '/projects/:title',
-        component: './src/templates/Project.vue'
+        component: './src/templates/project.vue'
       }
     ]
   }
