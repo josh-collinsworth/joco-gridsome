@@ -18,14 +18,14 @@
 
 		<ul class="fullwidth">
 			<li v-for="(project, i) in filteredProjects" :key="project.id">
-				<transition-group name="fade" appear>
-					<g-link :to="project.node.path" :key="project" :style="{transitionDelay: (i * .1) + 's' }">
+				<transition-group name="fade" tag="div" appear>
+					<g-link :to="project.node.path" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
+						<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" />
 						<div class="details" >
 							<span class="title">
 								{{ project.node.title }}
 							</span>
 						</div>
-						<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" />
 					</g-link>
 				</transition-group>
 			</li>
@@ -50,6 +50,18 @@ export default {
 	}),
 	mounted() {
 		this.projects = this.$static.allProject.edges
+	},
+	watch: {
+		//These are necessary to reset the array to nothing temporarily before re-rendering
+		//This keeps animation delays from getting wonky during filtering
+		showCode() {
+			this.projects = []
+			this.$nextTick(() => this.projects = this.$static.allProject.edges)
+		},
+		showDesign() {
+			this.projects = []
+			this.$nextTick(() => this.projects = this.$static.allProject.edges)
+		}
 	},
 	methods: {
 		filterProjects(e) {
@@ -102,9 +114,11 @@ query {
 }
 
 ul.fullwidth {
-	padding: 0;
+	padding: 2rem;
 	list-style-type: none;
 	display: grid;
+	row-gap: 4rem;
+	column-gap: 2rem;
 	grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 
 	li {
@@ -112,65 +126,39 @@ ul.fullwidth {
 		display: inline-block;
 		padding: 0;
 		position: relative;
+		text-align: center;
+		font-style: italic;
+		/* font-size: 1.2rem; */
+		transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+		&:hover {
+			box-shadow: 0 0 0 .25rem var(--yellow);
+			transform: translateY(-.25rem);
+		}
 	}
 
 	a {
 		display: block;
-		overflow: hidden;
-		margin: 0;
-		padding: 0;
-		width: 100%;
+		text-decoration: none;
+	}
+
+	.title {
+		border-top: 1px solid;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 5rem;
+		padding: 1rem;
 	}
 
 	img {
-		object-fit: cover;
 		display: block;
-		transition: all .25s cubic-bezier(0.5, 0, 0.5, 1);
+		transition: all .15s cubic-bezier(0.5, 0, 0.5, 1);
 		transform: scale(1);
-	}
-
-	.details {
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(to top, #53565a, transparent);
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 2;
-		color: white;
-		padding: 0rem 2rem;
-		display: flex;
-		align-items: flex-end;
-		justify-content: center;
-		text-align: center;
-		opacity: 0;
-
-		transition: all .25s cubic-bezier(0.5, 0, 0.5, 1);
-
-		&:hover {
-			opacity: 1;
-
-			.title {
-				transform: translateY(0);
-			}
-
-			& + img {
-				transform: scale(1.1);
-			}
-		}
-
-		.title {
-			font-size: 1.5rem;
-			font-weight: bold;
-			margin-bottom: 1em;
-			transition: inherit;
-			transform: translateY(.5rem);
-		}
 	}
 }
 
 .fade {
-
 	&-enter-active {
 		transition: all .35s cubic-bezier(.22,.61,.36,1);
 	}
@@ -193,6 +181,8 @@ ul.fullwidth {
 
 	&-leave-to {
 		transform: translateY(1rem);
+		position: absolute;
+		z-index: 0;
 	}
 }
 </style>
