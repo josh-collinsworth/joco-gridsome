@@ -18,15 +18,22 @@
 
 		<ul class="fullwidth">
 			<li v-for="(project, i) in filteredProjects" :key="project.id">
-				<transition :duration="2000" name="fade">
-					<g-link :to="project.node.path" :style="{transitionDelay: i * 300 }">
-						<div class="details">
+				<transition-group name="fade" appear>
+					<g-link :to="project.node.path" :key="project" :style="{transitionDelay: (i * .1) + 's' }">
+						<div class="details" >
 							<span class="title">
 								{{ project.node.title }}
 							</span>
 						</div>
-						<g-image :src="getProjectImage(project)"/>
+						<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" />
 					</g-link>
+				</transition-group>
+			</li>
+			<li v-if="!filteredProjects.length" id="projects-empty-state">
+				<transition name="fade">
+					<div class="layouts">
+						<p class="fancy">No projects to show with those filters.</p>
+					</div>
 				</transition>
 			</li>
 		</ul>
@@ -47,10 +54,6 @@ export default {
 	methods: {
 		filterProjects(e) {
 			e.preventDefault()
-		},
-		getProjectImage(project) {
-			console.log(`../../../${project.node.featuredMedia}`)
-			return `projects/${project.node.featuredMedia}`
 		}
 	},
 	computed: {
@@ -87,6 +90,15 @@ query {
 <style lang="scss">
 #projects-filter {
 	margin-top: 2rem;
+}
+
+#projects-empty-state {
+	grid-column: 1 / -1;
+
+	p {
+		text-align: center;
+		padding: 2rem;
+	}
 }
 
 ul.fullwidth {
@@ -161,11 +173,14 @@ ul.fullwidth {
 
 	&-enter-active {
 		transition: all .35s cubic-bezier(.22,.61,.36,1);
-		transition-delay: .05s;
 	}
 
 	&-leave-active {
 		transition: all .25s cubic-bezier(.55,.06,.68,.19);
+	}
+
+	&-move {
+		transition: .25s cubic-bezier(.55,.06,.68,.19);
 	}
 
 	&-enter, &-leave-to {

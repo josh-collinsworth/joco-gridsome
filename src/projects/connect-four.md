@@ -2,7 +2,7 @@
 title: Connect Four in Vue and CSS
 featuredMedia: projects/connect-four.png
 link: https://codepen.io/joshuajcollinsworth/pen/MWwXpLd
-category: code
+category: design
 ---
 
 The classic game of Connect Four in Vue and Sass. Play by either clicking a slot, or using the keyboard.

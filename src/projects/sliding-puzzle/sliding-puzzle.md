@@ -2,7 +2,7 @@
 title: Sliding Puzzle in Vue
 featuredMedia: projects/Firefox_Screenshot_2020-04-24T20-08-24.703Z.png
 link: https://codepen.io/joshuajcollinsworth/pen/XwPXrM
-category: code
+category: design
 ---
 
 Inspired to put Vue’s built-in transition-group element to good use, I decided to try recreating a classic sliding puzzle with Vue and CSS grid.

@@ -2,7 +2,7 @@
 title: QvickList App
 featuredMedia: projects/Firefox_Screenshot_2020-04-24T20-14-22.100Z.png
 link: https://qvicklist.com
-category: code
+category: design
 ---
 
 I was tired of trying to use to-do/checklist apps; there’s always too much upfront effort for something that should be as instant as writing on paper.
