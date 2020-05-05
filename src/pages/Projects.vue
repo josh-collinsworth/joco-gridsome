@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<h1 style="margin-bottom: 0">Projects</h1>
+  <div>
+    <h1 style="margin-bottom: 0">Projects</h1>
 
 		<p class="fancy">A collection of websites, apps and design projects.</p>
 
@@ -19,19 +19,17 @@
 		<ul class="fullwidth">
 			<li v-for="(project, i) in filteredProjects" :key="project.id">
 				<transition-group name="fade" tag="div" appear>
-					<article :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
-						<g-link :to="project.node.path">
-							<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" />
-						</g-link>
+					<g-link :to="project.node.path" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
+						<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" />
 						<div class="details" >
 							<div class="title">
-								<g-link :to="project.node.path">{{ project.node.title }}</g-link>
+								{{ project.node.title }}
 								<div class="subtitle">
 									{{ project.node.category }}
 								</div>
 							</div>
 						</div>
-					</article>
+					</g-link>
 				</transition-group>
 			</li>
 			<li v-if="!filteredProjects.length" id="projects-empty-state">
@@ -43,7 +41,7 @@
 			</li>
 		</ul>
 
-	</div>
+  </div>
 </template>
 
 <script>
@@ -133,7 +131,12 @@ ul.fullwidth {
 		position: relative;
 		font-size: .875rem;
 		line-height: 1.4em;
-		/* font-style: italic; */
+		transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+		&:hover {
+			box-shadow: 0 0 0 .2rem var(--white), .0 0 0 .4rem var(--yellow);
+			transform: translateY(-.25rem);
+		}
 	}
 
 	a {
@@ -143,6 +146,7 @@ ul.fullwidth {
 
 	.title {
 		padding: .5rem 1rem 1rem 0;
+		font-style: italic;
 
 		&:before, &:after {
 			content: '';
@@ -158,17 +162,14 @@ ul.fullwidth {
 			text-transform: uppercase;
 			font-weight: bold;
 			margin-top: .5em;
+			font-style: normal;
 		}
 	}
 
 	img {
 		display: block;
-		transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
-
-		&:hover {
-			box-shadow: 0 0 0 .25rem var(--yellow);
-			transform: translateY(-.25rem);
-		}
+		transition: all .15s cubic-bezier(0.5, 0, 0.5, 1);
+		transform: scale(1);
 	}
 }
 

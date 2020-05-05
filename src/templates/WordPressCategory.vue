@@ -54,11 +54,4 @@ export default {
 </script>
 
 <style>
-.content > p:first-child {
-  margin-bottom: 0;
-}
-
-p + h1 {
-  margin-top: 0;
-}
 </style>
