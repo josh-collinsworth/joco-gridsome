@@ -18,18 +18,3 @@ hr {
   border: none;
   border-bottom: 1px dashed var(--lightGray);
 }
-
-.layout {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-}
-
-.layout-container {
-  max-width: var(--max-width);
-  padding: 0 2rem;
-  width: 100%;
-  margin: auto;
-  min-height: 100vh;
-}

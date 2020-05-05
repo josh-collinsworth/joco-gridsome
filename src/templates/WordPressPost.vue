@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <div>
     <img
       v-if="$page.wordPressPost.featuredMedia"
       :src="$page.wordPressPost.featuredMedia.sourceUrl"
@@ -24,7 +24,7 @@
         </li>
       </ul>
     </template>
-  </Layout>
+  </div>
 </template>
 
 <page-query>

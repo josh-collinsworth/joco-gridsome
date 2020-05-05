@@ -37,7 +37,7 @@ export default {
 
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 .post-list {
   list-style: none;
   padding-left: 0;
@@ -60,5 +60,20 @@ export default {
 main .fullwidth {
   width: 100vw;
   margin-left: calc(50% - 50vw);
+}
+
+.layout {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+.layout-container {
+  max-width: var(--max-width);
+  padding: 0 2rem;
+  width: 100%;
+  margin: auto;
+  min-height: 100vh;
 }
 </style>

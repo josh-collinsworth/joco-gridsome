@@ -1,7 +1,7 @@
 <template>
 	<header class="header">
 		<g-link id="logo" to="/">
-			<!-- <img id="jc-logo" src="/images/2020-logo-partial-thin.svg" /> -->
+			<!-- <img id="jc-logo" src="/images/2020-final.svg" /> -->
 			<LogoSVG />
 		</g-link>
 		<nav class="nav" role="navigation">
@@ -114,6 +114,10 @@ nav[role="navigation"] {
   margin-bottom: 4rem;
 	box-shadow: 0 0 1rem rgba(0,0,0,.05);
 	width: 100%;
+
+	nav {
+		font-size: .875rem;
+	}
 }
 
 .nav__link {

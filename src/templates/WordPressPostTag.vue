@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <div>
     <h1>Tag: {{ $page.wordPressPostTag.title }} </h1>
     <ul class="post-list">
       <li v-for="{ node } in $page.wordPressPostTag.belongsTo.edges" :key="node.id">
@@ -7,7 +7,7 @@
       </li>
     </ul>
     <Pager :info="$page.wordPressPostTag.belongsTo.pageInfo"/>
-  </Layout>
+  </div>
 </template>
 
 <page-query>

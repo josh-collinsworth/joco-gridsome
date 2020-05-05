@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <div>
       <p class="fancy">View by category:</p>
       <h1>{{ $page.wordPressCategory.title }} </h1>
     <ul class="post-list">
@@ -8,7 +8,7 @@
       </li>
     </ul>
     <Pager :info="$page.wordPressCategory.belongsTo.pageInfo"/>
-  </Layout>
+  </div>
 </template>
 
 <page-query>

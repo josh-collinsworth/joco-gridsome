@@ -1,11 +1,11 @@
 <template>
-  <Layout>
+  <div>
     <h1>{{ $page.wordPressPage.title }}</h1>
 
     <div v-html="$page.wordPressPage.content">
     </div>
 
-  </Layout>
+  </div>
 </template>
 
 

@@ -1,6 +1,6 @@
 <template>
-  <Layout>
-    <h1 style="margin-bottom: 0">Projects</h1>
+	<div>
+		<h1 style="margin-bottom: 0">Projects</h1>
 
 		<p class="fancy">A collection of websites, apps and design projects.</p>
 
@@ -19,17 +19,19 @@
 		<ul class="fullwidth">
 			<li v-for="(project, i) in filteredProjects" :key="project.id">
 				<transition-group name="fade" tag="div" appear>
-					<g-link :to="project.node.path" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
-						<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" />
+					<article :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
+						<g-link :to="project.node.path">
+							<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" />
+						</g-link>
 						<div class="details" >
 							<div class="title">
-								{{ project.node.title }}
+								<g-link :to="project.node.path">{{ project.node.title }}</g-link>
 								<div class="subtitle">
 									{{ project.node.category }}
 								</div>
 							</div>
 						</div>
-					</g-link>
+					</article>
 				</transition-group>
 			</li>
 			<li v-if="!filteredProjects.length" id="projects-empty-state">
@@ -41,7 +43,7 @@
 			</li>
 		</ul>
 
-  </Layout>
+	</div>
 </template>
 
 <script>
@@ -132,12 +134,6 @@ ul.fullwidth {
 		font-size: .875rem;
 		line-height: 1.4em;
 		/* font-style: italic; */
-		transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
-
-		&:hover {
-			box-shadow: 0 0 0 .25rem var(--yellow);
-			transform: translateY(-.25rem);
-		}
 	}
 
 	a {
@@ -167,8 +163,12 @@ ul.fullwidth {
 
 	img {
 		display: block;
-		transition: all .15s cubic-bezier(0.5, 0, 0.5, 1);
-		transform: scale(1);
+		transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+		&:hover {
+			box-shadow: 0 0 0 .25rem var(--yellow);
+			transform: translateY(-.25rem);
+		}
 	}
 }
 

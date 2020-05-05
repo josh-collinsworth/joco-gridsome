@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <div>
     <h1>Blog</h1>
 		<article v-for="post in $static.allWordPressPost.edges" :key="post.node.id">
       <g-link href="#" :to="'/' + post.node.slug">
@@ -13,7 +13,7 @@
       <div v-html="post.node.excerpt"></div>
 
 		</article>
-  </Layout>
+  </div>
 </template>
 
 

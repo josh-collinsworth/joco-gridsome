@@ -1,14 +1,15 @@
 <template>
-  <Layout>
+  <div>
     <p class="fancy">Hi, I'm Josh Collinsworth.</p>
     <h1>Welcome</h1>
     <p class="fancy">
-      I'm a Happiness Engineer at
+      I'm a front-end developer at
       <a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>;
-      <g-link to="/code/">web developer</g-link>;
+      <g-link to="/code/">hobby coder</g-link>;
       <g-link to="/design/">graphic designer</g-link>; WordPress instructor; casual writer and infrequent
-      <g-link to="/blog/">blogger</g-link>; feminist; font hoarder; frequent
-      <a href="https://twitter.com/jjcollinsworth" target="_blank" rel="noopener noreferrer">Tweeter</a>; occasional public speaker; pun enthusiast; craft beer enjoyer; CrossFitter; game collector and hobbyist; musician; liberal abuser of semicolons.
+      <g-link to="/blog/">blogger</g-link>; font hoarder; hit-and-miss
+      <a href="https://twitter.com/jjcollinsworth" target="_blank" rel="noopener noreferrer">Tweeter</a>;
+      co-creator of a human; occasional public speaker; pun enthusiast; accessibility and inclusion advocate; fan of dogs; musician; liberal abuser of semicolons.
     </p>
     <H2>Recent posts:</H2>
     <ul class="post-list">
@@ -17,7 +18,7 @@
       </li>
     </ul>
     <Pager :info="$page.allWordPressPost.pageInfo"/>
-  </Layout>
+  </div>
 </template>
 
 <page-query>
