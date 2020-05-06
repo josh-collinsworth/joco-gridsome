@@ -2,7 +2,7 @@
 	<div>
 		<Header />
 			<div class="layout">
-				<main>
+				<main id="main">
 					<transition name="pageslide" mode="out-in">
 						<router-view />
 					</transition>

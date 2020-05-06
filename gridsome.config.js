@@ -11,7 +11,7 @@ module.exports = {
         typeName: 'WordPress', // GraphQL schema name (Optional)
         //TODO: figure out why not all posts are coming in
         perPage: 100,
-        concurrent: 10
+        concurrent: 20
       }
     },
     {
@@ -34,7 +34,7 @@ module.exports = {
     project: [
       {
         path: '/projects/:title',
-        component: './src/templates/project.vue'
+        component: 'src/templates/project.vue'
       }
     ]
   }
