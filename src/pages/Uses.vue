@@ -30,24 +30,7 @@ export default {
   metaInfo: {
     title: "Code"
   },
-  created() {
-    const getPosts = async () => {
-      let response = await fetch(
-        "https://joshcollinsworth.com/wp-json/wp/v2/posts"
-      );
-      let posts = await response.json();
-      posts.forEach(post => {
-        this.posts.push({
-          title: post.title.rendered,
-          content: post.excerpt.rendered,
-          link: post.slug
-        });
-      });
-      this.loading = false;
-    };
-    getPosts();
-  }
-};
+}
 </script>
 
 <style>
