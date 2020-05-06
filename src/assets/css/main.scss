@@ -11,8 +11,8 @@
 }
 
 *:focus {
-  box-shadow: 0 0 0 .1rem var(--yellow);
-  outline: none;
+  outline: 1px dashed var(--lightBlue);
+  outline-offset: 1px;
 }
 
 body {

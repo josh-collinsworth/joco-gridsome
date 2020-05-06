@@ -1,5 +1,8 @@
 <template>
 	<header class="header">
+		<a class="skip-to-content-link" href="#main">
+  		Skip to main content
+		</a>
 		<g-link id="logo" to="/">
 			<LogoSVG />
 		</g-link>
@@ -23,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #logo {
 	width: auto;
 	height: 2rem;
@@ -67,5 +70,25 @@ nav[role="navigation"] {
 
 .nav__link.active--exact {
   border-bottom-color: var(--yellow);
+}
+
+.skip-to-content-link {
+	transition: all .15s cubic-bezier(0.86, 0, 0.07, 1);
+	position: absolute;
+	top: 1rem;
+	left: -100vw;
+	padding: .5em;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	background: var(--yellow);
+
+	&:focus {
+		left: 0;
+		opacity: 1;
+		z-index: 2;
+	}
 }
 </style>

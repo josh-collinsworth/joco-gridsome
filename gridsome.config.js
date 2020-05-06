@@ -9,9 +9,9 @@ module.exports = {
       options: {
         baseUrl: 'https://joshcollinsworth.com', // required
         typeName: 'WordPress', // GraphQL schema name (Optional)
-        downloadRemoteImagesFromPosts: true, // default false
-        downloadRemoteFeaturedImages: true, // default false
-        downloadACFImages: true, // default false
+        //TODO: figure out why not all posts are coming in
+        perPage: 100,
+        concurrent: 10
       }
     },
     {
