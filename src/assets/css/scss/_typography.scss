@@ -28,11 +28,13 @@ a {
 }
 
 p {
+
   a {
 		color: var(--link-color);
 		text-decoration: underline;
     text-decoration-color: var(--yellow);
   }
+
   img {
     margin: 2em 0;
   }
@@ -44,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Pensum Display Basic';
+  font-family: 'Pensum Display Basic', serif;
   line-height: 1em;
   position: relative;
   margin: 1.5em 0 1rem;
@@ -58,7 +60,7 @@ h6 {
 
 h1 {
   font-size: 4rem;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   border-bottom: 1px solid;
 }
 

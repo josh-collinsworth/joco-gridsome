@@ -19,10 +19,6 @@ input[type="checkbox"] {
 	&:checked + label {
 		font-weight: bold;
 
-		&:before {
-			// background: var(--yellow);
-		}
-
 		&:after {
 			content: '';
 			width: .4rem;
@@ -37,4 +33,25 @@ input[type="checkbox"] {
 			transform: rotate(45deg);
 		}
 	}
+}
+
+label {
+	display: block;
+
+	input, textarea {
+		display: block;
+		width: 100%;
+		background: transparent;
+		border: 1px solid var(--darkGray);
+		padding: .5rem;
+		color: inherit;
+		font-size: 1rem;
+		font-style: italic;
+	}
+}
+
+button {
+	border: .1rem solid;
+	padding: .5rem;
+	font-size: 1rem;
 }

@@ -14,7 +14,6 @@
             <a :href="'/' + post.link">
                 <span v-html="post.title"></span>
             </a>
-            <!-- <div v-html="post.content"></div> -->
           </li>
         </ul>
       </div>

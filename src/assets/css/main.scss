@@ -7,6 +7,12 @@
 
 *, *:before, *:after {
   box-sizing: border-box;
+  font-family: inherit;
+}
+
+*:focus {
+  box-shadow: 0 0 0 .1rem var(--yellow);
+  outline: none;
 }
 
 body {

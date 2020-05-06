@@ -9,6 +9,7 @@
 				</main>
 			</div>
 		<Footer />
+    <DarkModeSwitch />
 	</div>
 </template>
 
@@ -24,9 +25,10 @@ query {
 <script>
 import Header from './components/Header';
 import Footer from './components/Footer';
+import DarkModeSwitch from './components/DarkModeSwitch'
 
 export default {
-	components: { Header, Footer },
+  components: { Header, Footer, DarkModeSwitch },
   metaInfo() {
     return {
       title: this.$static.metadata.siteName,
@@ -38,7 +40,7 @@ export default {
         }
       ]
     }
-  }
+  },
 }
 </script>
 
