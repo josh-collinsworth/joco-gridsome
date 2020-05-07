@@ -64,14 +64,19 @@ export default {
   text-decoration: none;
 }
 
-main .fullwidth {
+.fullwidth {
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
 
-main .wider {
-  width: calc(100% + ((100vw - 32rem) / 2));
-  margin-left: calc(((100vw - 32rem) / 4) * -1);
+.wider {
+  width: calc(100% + 3rem);
+  margin-left: -1.5rem;
+
+  @media (min-width: 768px) {
+    width: calc(100% + ((100vw - 32rem) / 2));
+    margin-left: calc(((100vw - 32rem) / 4) * -1);
+  }
 }
 
 .layout {
@@ -82,7 +87,7 @@ main .wider {
 	position: relative;
 	min-height: 100vh;
 
-	@media (min-width: 32rem){
+	@media (min-width: 768px){
 		padding: 0;
 	}
 }

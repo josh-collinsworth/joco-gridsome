@@ -51,7 +51,11 @@ export default {
 </script>
 
 <style scoped>
-  article:not(:first-child) img {
+  article img {
     margin-top: 8rem;
+  }
+
+  h1 + article:first-of-type img {
+    margin-top: 4;
   }
 </style>
