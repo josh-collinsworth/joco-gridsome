@@ -45,7 +45,6 @@ export default {
     getPosts() {
       axios.get("https://joshcollinsworth.com/wp-json/wp/v2/posts")
         .then(({ data }) => {
-          console.log(data)
           data.forEach(post => {
           this.posts.push({
             title: post.title.rendered,

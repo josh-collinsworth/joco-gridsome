@@ -69,6 +69,11 @@ main .fullwidth {
   margin-left: calc(50% - 50vw);
 }
 
+main .wider {
+  width: calc(100% + ((100vw - 32rem) / 2));
+  margin-left: calc(((100vw - 32rem) / 4) * -1);
+}
+
 .layout {
   width: 100%;
   margin: 0 auto;
@@ -77,7 +82,7 @@ main .fullwidth {
 	position: relative;
 	min-height: 100vh;
 
-	@media (min-width: var(--max-width)){
+	@media (min-width: 32rem){
 		padding: 0;
 	}
 }

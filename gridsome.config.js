@@ -17,7 +17,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/projects/*.md',
+        path: './src/projects/*.md',
         typeName: 'project',
         remark: {
         }
@@ -34,7 +34,7 @@ module.exports = {
     project: [
       {
         path: '/projects/:title',
-        component: 'src/templates/project.vue'
+        component: 'src/templates/single_project.vue'
       }
     ]
   }

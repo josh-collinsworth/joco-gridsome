@@ -130,6 +130,10 @@ figcaption,
   font-style: italic;
 }
 
+.fancy + h1 {
+  margin-top: 0;
+}
+
 figure  {
   margin: 2em;
 }
