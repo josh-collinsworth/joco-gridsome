@@ -41,18 +41,20 @@ export default {
     this.getPosts();
   },
   methods: {
-    getPosts: async function(){
-      let response = await fetch(
-        "https://joshcollinsworth.com/wp-json/wp/v2/posts"
-      );
-      let posts = await response.json();
-      posts.forEach(post => {
-        this.posts.push({
-          title: post.title.rendered,
-          content: post.excerpt.rendered,
-          link: post.slug
-        });
-      });
+    getPosts() {
+      fetch("https://joshcollinsworth.com/wp-json/wp/v2/posts")
+        .then(response => response.json())
+        .then(posts => {
+          posts.forEach(post => {
+          this.posts.push({
+            title: post.title.rendered,
+            content: post.excerpt.rendered,
+            link: post.slug
+          })
+        })
+      }).catch(error => {
+        console.log(error)
+      })
       this.loading = false;
     }
   }
