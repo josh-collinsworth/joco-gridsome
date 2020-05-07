@@ -10,7 +10,8 @@
   font-family: inherit;
 }
 
-*:focus {
+*:focus,
+input[type="checkbox"]:focus + label {
   outline: 1px dashed var(--lightBlue);
   outline-offset: 1px;
 }
