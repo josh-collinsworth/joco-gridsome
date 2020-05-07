@@ -22,7 +22,8 @@
 </template>
 
 <script>
-import H2 from '../components/H2';
+import H2 from '../components/H2'
+import axios from 'axios'
 
 export default {
   data() {
@@ -42,10 +43,10 @@ export default {
   },
   methods: {
     getPosts() {
-      fetch("https://joshcollinsworth.com/wp-json/wp/v2/posts")
-        .then(response => response.json())
-        .then(posts => {
-          posts.forEach(post => {
+      axios.get("https://joshcollinsworth.com/wp-json/wp/v2/posts")
+        .then(({ data }) => {
+          console.log(data)
+          data.forEach(post => {
           this.posts.push({
             title: post.title.rendered,
             content: post.excerpt.rendered,
