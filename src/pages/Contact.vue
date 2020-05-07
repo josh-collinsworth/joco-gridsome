@@ -1,5 +1,5 @@
 <template>
-	<form
+	<!-- <form
 		name="contact"
 		method="post"
 		v-on:submit.prevent="handleSubmit"
@@ -30,7 +30,8 @@
 		</div>
 
 		<button type="submit">Submit form</button>
-	</form>
+	</form> -->
+	<h1>Yo</h1>
 </template>
 
 <script>
@@ -42,23 +43,23 @@ export default {
   	}
 	},
 	methods: {
-		encode(data) {
-			return Object.keys(data)
-				.map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-				.join('&')
-		},
-		handleSubmit(e) {
-			fetch('/', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-				body: this.encode({
-					'form-name': e.target.getAttribute('name'),
-					...this.formData,
-				}),
-			})
-			.then(() => this.$router.push('/success'))
-			.catch(error => alert(error))
-		}
+	// 	encode(data) {
+	// 		return Object.keys(data)
+	// 			.map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+	// 			.join('&')
+	// 	},
+	// 	handleSubmit(e) {
+	// 		fetch('/', {
+	// 			method: 'POST',
+	// 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+	// 			body: this.encode({
+	// 				'form-name': e.target.getAttribute('name'),
+	// 				...this.formData,
+	// 			}),
+	// 		})
+	// 		.then(() => this.$router.push('/success'))
+	// 		.catch(error => alert(error))
+	// 	}
 	}
 }
 </script>
