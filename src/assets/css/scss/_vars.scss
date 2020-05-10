@@ -1,9 +1,9 @@
 :root {
-  --true-white: #ffffff;
-  --true-black: #101820;
+  --white: #ffffff;
+  --black: #101820;
 
-  --black: var(--true-black);
-  --white: var(--true-white);
+  --ink: var(--black);
+  --paper: var(--white);
   --yellow: #ffd100;
   --orange: #ff6a13;
   --lightGray: #a7a8aa;
@@ -25,12 +25,12 @@
 
   // Looks like we can't do this in both CSS and JavaScript
   // @media (prefers-color-scheme: dark) {
-  //   --white: #101820;
-  //   --black: #eee;
+  //   --paper: #101820;
+  //   --ink: #eee;
   //   --darkGray: #eee;
   //   --heading-color: var(--lightBlue);
   //   --link-color: var(--lightBlue);
   // }
 
-  background: var(--white);
+  background: var(--paper);
 }

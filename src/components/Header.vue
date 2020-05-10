@@ -34,42 +34,21 @@ export default {
 	position: relative;
 }
 
-nav[role="navigation"] {
-  text-align: right;
-
-  a {
-    display: inline-block;
-    font-weight: normal;
-    text-decoration: none;
-    border-bottom: .1em solid transparent;
-
-    &:hover {
-      border-bottom-color: var(--yellow);
-    }
-  }
-}
-
 .header {
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;
 	align-items: center;
-  margin-bottom: 4rem;
 	box-shadow: 0 0 1rem rgba(0,0,0,.05);
 	width: 100%;
 
 	nav {
 		font-size: .875rem;
+
+		& > a:last-of-type {
+			margin-right: 0;
+		}
 	}
-}
-
-.nav__link {
-  margin-left: 1em;
-  font-weight: bold;
-}
-
-.nav__link.active--exact {
-  border-bottom-color: var(--yellow);
 }
 
 .skip-to-content-link {

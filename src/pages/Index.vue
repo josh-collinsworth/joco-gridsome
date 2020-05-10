@@ -1,17 +1,21 @@
 <template>
   <div>
-    <p class="fancy">Hi, I'm Josh Collinsworth.</p>
-    <h1>Welcome</h1>
-    <p class="fancy">
-      I'm a front-end developer at
-      <a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>;
-      <g-link to="/code/">hobby coder</g-link>;
-      <g-link to="/design/">graphic designer</g-link>; WordPress instructor; casual writer and infrequent
-      <g-link to="/blog/">blogger</g-link>; font hoarder; hit-and-miss
-      <a href="https://twitter.com/jjcollinsworth" target="_blank" rel="noopener noreferrer">Tweeter</a>;
-      co-creator of a human; occasional public speaker; pun enthusiast; accessibility and inclusion advocate; fan of dogs; musician; liberal abuser of semicolons.
-    </p>
-    <H2>Recent posts:</H2>
+    <div class="intro">
+      <p class="fancy">Hi, I'm</p>
+      <h1>Josh Collinsworth.</h1>
+
+      <p class="fancy">
+        I'm a front-end developer at
+        <a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>.
+      </p>
+      <p>
+        <g-link to="/about">Learn more about me</g-link>,
+        <g-link to="/projects">see some of my work</g-link>, or
+        <g-link to="/contact">get in contact</g-link>.
+      </p>
+    </div>
+
+    <h2>Recent posts:</h2>
     <ul class="post-list">
       <li v-for="{ node } in $page.allWordPressPost.edges" :key="node.id">
         <Post :post="node"/>
@@ -42,28 +46,42 @@ query Home ($page: Int) {
 </page-query>
 
 <script>
-import { Pager } from "gridsome";
-import Post from "~/components/Post";
-import H2 from "~/components/H2";
+import { Pager } from 'gridsome';
+
+import Post from '~/components/Post';
 
 export default {
   components: {
     Pager,
-    Post,
-    H2
+    Post
   },
   metaInfo: {
-    title: "Josh Collinsworth Development and Design"
+    title: "Josh Collinsworth, Developer/Designer"
   }
 };
 </script>
 
 <style lang="scss">
-h1 {
-  margin: 0;
-}
+.intro {
+  h1 {
+    font-size: 3rem;
+  }
 
-p {
-  margin-bottom: .5rem;
+  h2 {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  p {
+    margin-bottom: .5rem;
+
+    &.fancy {
+      margin: 0;
+
+      /* & + p {
+        margin-top: 3rem;
+      } */
+    }
+  }
 }
 </style>

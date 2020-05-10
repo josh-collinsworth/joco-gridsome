@@ -1,6 +1,6 @@
 ---
 title: QvickList App
-featuredMedia: projects/Firefox_Screenshot_2020-04-24T20-14-22.100Z.png
+featuredMedia: projects/qvicklist.png
 link: https://qvicklist.com
 category: design
 ---

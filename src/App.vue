@@ -1,13 +1,14 @@
 <template>
 	<div>
 		<Header />
-			<div class="layout">
-				<main id="main">
-					<transition name="pageslide" mode="out-in">
-						<router-view />
-					</transition>
-				</main>
-			</div>
+    <Grid />
+    <div class="layout">
+      <main id="main">
+        <transition name="pageslide" mode="out-in">
+          <router-view />
+        </transition>
+      </main>
+    </div>
 		<Footer />
     <DarkModeSwitch />
 	</div>
@@ -26,9 +27,10 @@ query {
 import Header from './components/Header';
 import Footer from './components/Footer';
 import DarkModeSwitch from './components/DarkModeSwitch'
+import Grid from './components/Grid'
 
 export default {
-  components: { Header, Footer, DarkModeSwitch },
+  components: { Header, Footer, DarkModeSwitch, Grid },
   metaInfo() {
     return {
       title: this.$static.metadata.siteName,

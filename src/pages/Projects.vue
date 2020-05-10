@@ -134,7 +134,7 @@ ul.fullwidth {
 		transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
 
 		&:hover {
-			box-shadow: 0 0 0 .2rem var(--white), .0 0 0 .4rem var(--yellow);
+			box-shadow: 0 0 0 .2rem var(--paper), .0 0 0 .4rem var(--yellow);
 			transform: translateY(-.25rem);
 		}
 	}

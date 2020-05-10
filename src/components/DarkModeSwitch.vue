@@ -42,8 +42,8 @@ export default {
 		},
 		setDarkModeColors() {
 			this.updateCustomProperty({
-				'--white': '#101820',
-				'--black': '#ffffff',
+				'--paper': '#101820',
+				'--ink': '#ffffff',
 				'--darkGray': '#ffffff',
 				'--heading-color': 'var(--lightBlue)',
 				'--link-color': 'var(--lightBlue)',
@@ -51,8 +51,8 @@ export default {
 		},
 		setLightModeColors() {
 			this.updateCustomProperty({
-				'--white': '#ffffff',
-				'--black': '#101820',
+				'--paper': '#ffffff',
+				'--ink': '#101820',
 				'--darkGray': '#53565a',
 				'--heading-color': 'var(--darkGray)',
 				'--link-color': 'var(--darkBlue)',
@@ -80,7 +80,7 @@ button#dark-mode-toggle {
 	border: none;
 	border-radius: 2rem;
 	border: 2px solid var(--darkGray);
-	background: var(--white);
+	background: var(--paper);
 	z-index: 10;
 
 	&:hover svg {

@@ -10,6 +10,10 @@ img {
   & + h6  {
     margin-top: 0;
   }
+
+  & + h1 {
+    margin-bottom: 2rem;
+  }
 }
 
 hr {
@@ -17,4 +21,9 @@ hr {
   margin: 2rem 0;
   border: none;
   border-bottom: 1px dashed var(--lightGray);
+}
+
+nav .active--exact {
+  border-bottom: 1px solid var(--yellow);
+  font-weight: bold;
 }

@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>Blog</h1>
-		<article v-for="post in $static.allWordPressPost.edges" :key="post.node.id">
+    <p class="fancy">Page {{ $page.allWordPressPost.pageInfo.currentPage }} of {{ $page.allWordPressPost.pageInfo.totalPages  }}</p>
+		<article v-for="post in $page.allWordPressPost.edges" :key="post.node.id">
       <g-link href="#" :to="'/' + post.node.slug">
         <img :src="post.node.featuredMedia.sourceUrl" alt="">
       </g-link>
@@ -11,19 +12,24 @@
         </g-link>
       </h2>
       <div v-html="post.node.excerpt"></div>
-
 		</article>
+
+    <p>Page:</p>
+    <Pager :info="$page.allWordPressPost.pageInfo" />
   </div>
 </template>
 
 
-<static-query>
-query {
-	allWordPressPost(perPage: 10) {
+<page-query>
+query ($page: Int) {
+	allWordPressPost(perPage: 5, page: $page) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         title
-        # content
         id
         excerpt
         slug
@@ -39,11 +45,16 @@ query {
     }
   }
 }
-</static-query>
+</page-query>
 
 
 <script>
+import { Pager } from 'gridsome'
+
 export default {
+  components: {
+    Pager
+  },
   metaInfo: {
     title: "Blog"
   },

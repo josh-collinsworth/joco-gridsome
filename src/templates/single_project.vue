@@ -56,7 +56,8 @@ export default {
 
 <style lang="scss" scoped>
 iframe {
-	min-height: 32rem;
+	min-height: 90vh;
+	max-height: 100vh;
 	border: .1rem solid var(--darkGray);
 }
 </style>

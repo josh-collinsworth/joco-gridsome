@@ -1,0 +1,26 @@
+nav {
+  text-align: right;
+
+  a {
+    display: inline-block;
+    font-weight: normal;
+    text-decoration: none;
+		border-bottom: .1em solid transparent;
+		margin: 0 .5rem;
+
+    &:hover {
+      border-bottom-color: var(--yellow);
+    }
+	}
+
+	&.nav__link {
+		margin-left: 1em;
+
+		&.active--exact {
+			font-weight: bold;
+			border-bottom-color: var(--yellow);
+		}
+	}
+
+}
+

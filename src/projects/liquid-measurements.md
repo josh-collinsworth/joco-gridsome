@@ -1,6 +1,6 @@
 ---
 title: Dynamic Liquid Measurements Table
-featuredMedia: projects/Firefox_Screenshot_2020-04-24T20-07-59.444Z.png
+featuredMedia: projects/unit-converter.png
 link: https://codepen.io/joshuajcollinsworth/pen/bGdmmrY
 category: code
 ---
