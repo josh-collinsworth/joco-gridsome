@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <Layout>
     <h1>Blog</h1>
     <p class="fancy">Page {{ $page.allWordPressPost.pageInfo.currentPage }} of {{ $page.allWordPressPost.pageInfo.totalPages  }}</p>
 		<article v-for="post in $page.allWordPressPost.edges" :key="post.node.id">
@@ -16,7 +16,7 @@
 
     <p>Page:</p>
     <Pager :info="$page.allWordPressPost.pageInfo" />
-  </div>
+  </Layout>
 </template>
 
 
@@ -66,7 +66,7 @@ export default {
     margin-top: 8rem;
   }
 
-  h1 + article:first-of-type img {
+  article:first-of-type img {
     margin-top: 4;
   }
 </style>

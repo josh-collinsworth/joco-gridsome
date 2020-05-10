@@ -1,27 +1,31 @@
 <template>
-	<header class="header">
-		<a class="skip-to-content-link" href="#main">
-  		Skip to main content
-		</a>
-		<g-link id="logo" to="/">
-			<LogoSVG />
-		</g-link>
-		<nav class="nav" role="navigation">
-			<g-link class="nav__link" to="/projects">Projects</g-link>
-			<g-link class="nav__link" to="/about">About</g-link>
-			<g-link class="nav__link" to="/blog">Blog</g-link>
-			<g-link class="nav__link" to="/contact">Contact</g-link>
-			<g-link class="nav__link" to="/uses">Uses</g-link>
-		</nav>
-	</header>
+	<div>
+		<Grid />
+		<header class="header">
+			<a class="skip-to-content-link" href="#main">
+				Skip to main content
+			</a>
+			<g-link id="logo" to="/">
+				<LogoSVG />
+			</g-link>
+			<nav class="nav" role="navigation">
+				<g-link class="nav__link" to="/projects">Projects</g-link>
+				<g-link class="nav__link" to="/about">About</g-link>
+				<g-link class="nav__link" to="/blog">Blog</g-link>
+				<g-link class="nav__link" to="/contact">Contact</g-link>
+				<g-link class="nav__link" to="/uses">Uses</g-link>
+			</nav>
+		</header>
+	</div>
 </template>
 
 <script>
 import LogoSVG from './LogoSVG'
+import Grid from '~/components/Grid'
 
 export default {
 	components: {
-		LogoSVG
+		LogoSVG, Grid
 	}
 }
 </script>
@@ -35,12 +39,25 @@ export default {
 }
 
 .header {
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
 	align-items: center;
-	box-shadow: 0 0 1rem rgba(0,0,0,.05);
 	width: 100%;
+	position: relative;
+	z-index: 3;
+
+	@media (min-width: 768px){
+		padding: 1.5rem 2rem;
+  }
+
+	@media (min-width: 1024px){
+		padding: 1.5rem 4rem;
+	}
+
+	@media (min-width: 1200px){
+		padding: 1.5rem 6rem;
+	}
 
 	nav {
 		font-size: .875rem;

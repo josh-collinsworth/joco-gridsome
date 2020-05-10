@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <Layout>
     <h1>Message received</h1>
     <p class="fancy">Thanks for reaching out!</p>
     <p>I'll do my best to get back to you ASAP.</p>
@@ -12,7 +12,7 @@
       <a href="https://en.wikipedia.org/wiki/Aardvark" target="_blank">Read about Aardvarks</a>
     </p>
 
-  </div>
+  </Layout>
 </template>
 
 <script>

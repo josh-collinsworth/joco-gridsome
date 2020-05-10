@@ -1,18 +1,20 @@
 <template>
-	<article>
-		<!-- <g-image :src="require(`!!assets-loader!@images/${$page.project.featuredMedia}`)" width="200" height="200" fit="contain"/> -->
-		<p class="fancy">{{ formattedCategory }} project:</p>
-		<h1>{{project.title}}</h1>
-		<div v-html="project.content"></div>
-		<hr>
-		<iframe class="wider" :src="project.link" frameborder="0"></iframe>
-		<p>
-			<strong>View this project at: </strong>
-			<a v-if="project.link" :href="project.link">
-				{{ project.link }}
-			</a>
-		</p>
-	</article>
+	<Layout>
+		<article>
+			<!-- <g-image :src="require(`!!assets-loader!@images/${$page.project.featuredMedia}`)" width="200" height="200" fit="contain"/> -->
+			<p class="fancy">{{ formattedCategory }} project:</p>
+			<h1>{{project.title}}</h1>
+			<div v-html="project.content"></div>
+			<hr>
+			<iframe class="wider" :src="project.link" frameborder="0"></iframe>
+			<p>
+				<strong>View this project at: </strong>
+				<a v-if="project.link" :href="project.link">
+					{{ project.link }}
+				</a>
+			</p>
+		</article>
+	</Layout>
 </template>
 
 

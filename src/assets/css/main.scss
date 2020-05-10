@@ -22,12 +22,21 @@ body {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--darkGray);
   margin: 0;
+  padding: 0;
 }
 
 #app {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    width: 100%;
+    align-items: stretch;
+  }
 }
 
 main {

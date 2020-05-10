@@ -1,7 +1,7 @@
 <template>
-  <div id="grid" aria-hidden="true">
+  <div class="cell-grid" aria-hidden="true">
 		<template v-for="cell in count">
-			<GridCell :color="randomColor()" :size="randomSize()" :key="cell" />
+			<GridCell :color="randomColor()" :key="cell" />
 		</template>
 	</div>
 </template>
@@ -15,7 +15,7 @@ export default {
 	data: () => ({
 		count: 0,
 		colors: [
-			'var(--paper)',
+			'transparent',
 			'var(--lightGray)',
 			'var(--darkGray)',
 			'var(--lightBlue)',
@@ -27,26 +27,17 @@ export default {
 	mounted() {
 		this.count = Math.floor(
 			(window.innerWidth /
-				(parseInt(window.getComputedStyle(window.document.body, null).getPropertyValue('font-size')) / 1.75) *
-				3
+				(parseInt(window.getComputedStyle(window.document.body, null).getPropertyValue('font-size')) / 0.65) *
+				4
 			)
 		)
 	},
 	methods: {
-		randomSize() {
-			const cellSize = Math.random()
-			if (cellSize > 0.85) {
-				return 3
-			} else if (cellSize > 0.6) {
-				return 2
-			}
-			return 1
-		},
 		randomColor() {
 			const color = Math.floor(Math.random() * 7)
 			const percent = Math.floor(Math.random() * 100)
 
-			if(percent > 50) {
+			if(percent > 25) {
 				return this.colors[color]
 			}
 
@@ -58,14 +49,14 @@ export default {
 
 
 <style lang="scss" scoped>
-#grid {
+.cell-grid {
 	display: grid;
-	overflow: hidden;
-	height: 3rem;
-	grid-template-columns: repeat(auto-fill, minmax(.75rem, 1fr));
-	grid-template-rows: repeat(auto-fill, minmax(.75rem, 1fr));
+	height: 2.5rem;
+	grid-template-columns: repeat(auto-fill, minmax(.5rem, 1fr));
+	grid-template-rows: repeat(auto-fill, minmax(.5rem, 1fr));
 	grid-auto-flow: dense;
-	margin-bottom: 4rem;
+	position: relative;
+	z-index: 2;
 
 	.cell {
 		padding: 50% 0;

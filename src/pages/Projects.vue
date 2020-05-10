@@ -1,19 +1,22 @@
 <template>
-  <div>
-    <h1 style="margin-bottom: 0">Projects</h1>
-
-		<p class="fancy">A collection of websites, apps and design projects.</p>
+  <Layout>
 
 		<form @submit.prevent="filterProjects" id="projects-filter">
 			<header>
-				<p><strong>Filter projects:</strong></p>
+				<strong>Filter projects:</strong>
 			</header>
 
-			<input type="checkbox" v-model="showCode" id="code">
-			<label for="code">Code</label>
+			<div class="checkboxes">
+				<div class="checkbox-wrap">
+					<input type="checkbox" v-model="showCode" id="code">
+					<label for="code">Code</label>
+				</div>
 
-			<input type="checkbox" v-model="showDesign" id="design">
-			<label for="design">Design</label>
+				<div class="checkbox-wrap">
+					<input type="checkbox" v-model="showDesign" id="design">
+					<label for="design">Design</label>
+				</div>
+			</div>
 		</form>
 
 		<ul class="fullwidth">
@@ -41,7 +44,7 @@
 			</li>
 		</ul>
 
-  </div>
+  </Layout>
 </template>
 
 <script>
@@ -102,22 +105,39 @@ query {
 }
 </static-query>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #projects-filter {
-	margin-top: 2rem;
+	margin-top: 0;
+
+	header {
+		display: inline-block;
+		margin: 0 0 1rem;
+		border-bottom: 1px solid;
+	}
+
+	.checkboxes {
+		margin: auto;
+	}
+
+	.checkbox-wrap {
+		display: inline-block;
+		margin-right: 2rem;
+	}
 }
 
 #projects-empty-state {
 	grid-column: 1 / -1;
+}
 
-	p {
-		text-align: center;
+.fullwidth {
+	padding: 1rem;
+
+	@media(min-width: 768px) {
 		padding: 2rem;
 	}
 }
 
 ul.fullwidth {
-	padding: 2rem;
 	list-style-type: none;
 	display: grid;
 	row-gap: 4rem;

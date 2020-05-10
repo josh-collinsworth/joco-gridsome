@@ -1,12 +1,27 @@
 <template>
-	<footer>This is the footer</footer>
+  <div>
+    <Grid />
+  	<footer>This is the footer</footer>
+  </div>
 </template>
+
+<script>
+import Grid from '~/components/Grid'
+
+export default {
+  components: { Grid }
+}
+</script>
 
 <style scoped>
 footer {
   width: 100%;
-  min-height: 100px;
   background: var(--lightBlue);
-  margin-top: 4rem;
+  padding: 3rem 1.5rem 1.5rem;
+}
+
+.cell-grid {
+  transform: rotateX(180deg);
+  top: 1rem;
 }
 </style>

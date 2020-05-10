@@ -17,7 +17,6 @@ input[type="checkbox"] {
 	}
 
 	&:checked + label {
-		font-weight: bold;
 
 		&:after {
 			content: '';
@@ -27,7 +26,7 @@ input[type="checkbox"] {
 			border-right: .2rem solid var(--yellow);
 			position: absolute;
 			left: .3rem;
-			bottom: .4rem;
+			bottom: .45rem;
 			z-index: 2;
 			display: block;
 			transform: rotate(45deg);

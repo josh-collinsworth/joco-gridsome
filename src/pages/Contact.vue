@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<Layout>
 		<h1>Get in touch</h1>
 
 		<form
@@ -34,7 +34,7 @@
 
 			<button type="submit">Send</button>
 		</form>
-	</div>
+	</Layout>
 </template>
 
 <script>

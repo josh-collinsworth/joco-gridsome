@@ -1,28 +1,22 @@
 <template>
-  <div>
+  <Layout>
     <div class="intro">
-      <p class="fancy">Hi, I'm</p>
-      <h1>Josh Collinsworth.</h1>
+      <p class="fancy">Hi, I’m Josh Collinsworth.</p>
+      <h1>I’m a front-end developer.</h1>
 
       <p class="fancy">
-        I'm a front-end developer at
+        I work with lots of excellent people at
         <a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>.
       </p>
       <p>
-        <g-link to="/about">Learn more about me</g-link>,
-        <g-link to="/projects">see some of my work</g-link>, or
-        <g-link to="/contact">get in contact</g-link>.
+        <ul>
+          <li><g-link to="/about">Learn more about me</g-link>;</li>
+          <li><g-link to="/projects">See some of my work</g-link>; or</li>
+          <li><g-link to="/contact">Get in contact</g-link>.</li>
+        </ul>
       </p>
     </div>
-
-    <h2>Recent posts:</h2>
-    <ul class="post-list">
-      <li v-for="{ node } in $page.allWordPressPost.edges" :key="node.id">
-        <Post :post="node"/>
-      </li>
-    </ul>
-    <Pager :info="$page.allWordPressPost.pageInfo"/>
-  </div>
+  </Layout>
 </template>
 
 <page-query>
@@ -78,9 +72,17 @@ export default {
     &.fancy {
       margin: 0;
 
-      /* & + p {
-        margin-top: 3rem;
-      } */
+      & + h1 {
+        margin-top: .5rem;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 2rem;
+
+    li {
+      margin-bottom: .5rem;
     }
   }
 }
