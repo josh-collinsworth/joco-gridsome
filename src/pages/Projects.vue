@@ -37,7 +37,7 @@
 			</li>
 			<li v-if="!filteredProjects.length" id="projects-empty-state">
 				<transition name="fade">
-					<div class="layouts">
+					<div class="empty">
 						<p class="fancy">No projects to show with those filters.</p>
 					</div>
 				</transition>
@@ -129,20 +129,16 @@ query {
 	grid-column: 1 / -1;
 }
 
-.fullwidth {
-	padding: 1rem;
-
-	@media(min-width: 768px) {
-		padding: 2rem;
-	}
+.details {
+	display: none;
 }
 
 ul.fullwidth {
 	list-style-type: none;
 	display: grid;
-	row-gap: 4rem;
-	column-gap: 2rem;
-	grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+	padding: 0;
+	width: 100vw;
+	grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
 
 	li {
 		margin: 0;
@@ -154,8 +150,15 @@ ul.fullwidth {
 		transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
 
 		&:hover {
-			box-shadow: 0 0 0 .2rem var(--paper), .0 0 0 .4rem var(--yellow);
-			transform: translateY(-.25rem);
+			box-shadow: .0 0 0 .4rem var(--yellow);
+			/* transform: translateY(-.25rem); */
+			z-index: 3;
+		}
+
+		.empty {
+			background: var(--paper);
+			margin: 0;
+			padding: 1em;
 		}
 	}
 
@@ -190,6 +193,7 @@ ul.fullwidth {
 		display: block;
 		transition: all .15s cubic-bezier(0.5, 0, 0.5, 1);
 		transform: scale(1);
+		margin: 0;
 	}
 }
 

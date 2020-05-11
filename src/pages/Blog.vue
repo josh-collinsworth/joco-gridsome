@@ -67,6 +67,6 @@ export default {
   }
 
   article:first-of-type img {
-    margin-top: 4;
+    margin-top: 0;
   }
 </style>

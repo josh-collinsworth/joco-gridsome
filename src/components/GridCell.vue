@@ -24,11 +24,15 @@ export default {
 			return Math.random() * .25 + "s"
 		},
 		randomDrop() {
-			const drop = Math.random()
-			if (drop > 0.95) {
-				return '2rem'
-			} else if (drop > 0.9) {
+			const drop = Math.random() * 100
+			if (drop > 93) {
 				return '1rem'
+			} else if (drop > 84) {
+				return '.5rem'
+			} else if (drop > 77) {
+				return '-.5rem'
+			} else if (drop > 70) {
+				return '-1rem'
 			}
 			return '0'
 		}

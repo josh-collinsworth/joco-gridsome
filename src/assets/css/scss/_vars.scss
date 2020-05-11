@@ -1,9 +1,10 @@
+$narrow: 768px;
+$medium: 1024px;
+$wide: 1200px;
+
 :root {
   --white: #ffffff;
   --black: #101820;
-
-  --ink: var(--black);
-  --paper: var(--white);
   --yellow: #ffd100;
   --orange: #ff6a13;
   --lightGray: #a7a8aa;
@@ -12,25 +13,13 @@
   --lightBlue: #7ba7bc;
   --darkBlue: #34657f;
 
+  --ink: var(--black);
+  --paper: var(--white);
   --heading-color: var(--darkGray);
   --link-color: var(--darkBlue);
 
   --column-width: 12vw;
   --max-width: 32rem;
-
-  --breakpoint1: 760px;
-  --breakpoint2: 840px;
-  --breakpoint3: 960px;
-  --breakpoint4: 1400px;
-
-  // Looks like we can't do this in both CSS and JavaScript
-  // @media (prefers-color-scheme: dark) {
-  //   --paper: #101820;
-  //   --ink: #eee;
-  //   --darkGray: #eee;
-  //   --heading-color: var(--lightBlue);
-  //   --link-color: var(--lightBlue);
-  // }
 
   background: var(--paper);
 }

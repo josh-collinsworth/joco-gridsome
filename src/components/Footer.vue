@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Grid />
+    <Grid :density="50" />
   	<footer>This is the footer</footer>
   </div>
 </template>

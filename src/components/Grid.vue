@@ -12,6 +12,16 @@ import GridCell from './GridCell'
 
 export default {
 	components: { GridCell },
+	props: {
+		density: {
+			required: false,
+			type: Number,
+			default: 42,
+			validator: value => {
+				return value >= 0 && value <= 100
+			}
+		}
+	},
 	data: () => ({
 		count: 0,
 		colors: [
@@ -24,7 +34,7 @@ export default {
 			'var(--orange)',
 		]
 	}),
-	mounted() {
+	created() {
 		this.count = Math.floor(
 			(window.innerWidth /
 				(parseInt(window.getComputedStyle(window.document.body, null).getPropertyValue('font-size')) / 0.65) *
@@ -37,7 +47,7 @@ export default {
 			const color = Math.floor(Math.random() * 7)
 			const percent = Math.floor(Math.random() * 100)
 
-			if(percent > 25) {
+			if(percent < this.density) {
 				return this.colors[color]
 			}
 

@@ -2,7 +2,7 @@
   <Layout>
     <div class="intro">
       <p class="fancy">Hi, I’m Josh Collinsworth.</p>
-      <h1>I’m a front-end developer.</h1>
+      <h1>I’m a front-end developer and designer.</h1>
 
       <p class="fancy">
         I work with lots of excellent people at
@@ -58,7 +58,7 @@ export default {
 <style lang="scss">
 .intro {
   h1 {
-    font-size: 3rem;
+    font-size: calc(2rem + 2vw);
   }
 
   h2 {

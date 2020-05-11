@@ -79,11 +79,13 @@ export default {
 
 .layout {
   width: 100%;
-  margin: 2rem auto 4rem 1rem;
+  margin: 2rem 0 4rem 0;
+  padding: 0 1rem;
   max-width: var(--max-width);
 	position: relative;
 
 	@media (min-width: 768px){
+    padding: 0;
 		margin-left: 2rem;
   }
 

@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<Grid />
 		<header class="header">
 			<a class="skip-to-content-link" href="#main">
 				Skip to main content
@@ -16,6 +15,7 @@
 				<g-link class="nav__link" to="/uses">Uses</g-link>
 			</nav>
 		</header>
+		<Grid />
 	</div>
 </template>
 
@@ -39,7 +39,7 @@ export default {
 }
 
 .header {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
 	align-items: center;
