@@ -32,10 +32,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
+  align-content: space-between;
 
   & > * {
     width: 100%;
-    align-items: stretch;
   }
 }
 

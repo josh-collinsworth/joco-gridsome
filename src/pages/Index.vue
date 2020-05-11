@@ -10,9 +10,9 @@
       </p>
       <p>
         <ul>
-          <li><g-link to="/about">Learn more about me</g-link>;</li>
-          <li><g-link to="/projects">See some of my work</g-link>; or</li>
-          <li><g-link to="/contact">Get in contact</g-link>.</li>
+          <li><g-link to="/about">About me</g-link></li>
+          <li><g-link to="/projects">My work</g-link></li>
+          <li><g-link to="/contact">Get in contact</g-link></li>
         </ul>
       </p>
     </div>
@@ -40,15 +40,7 @@ query Home ($page: Int) {
 </page-query>
 
 <script>
-import { Pager } from 'gridsome';
-
-import Post from '~/components/Post';
-
 export default {
-  components: {
-    Pager,
-    Post
-  },
   metaInfo: {
     title: "Josh Collinsworth, Developer/Designer"
   }
@@ -80,9 +72,21 @@ export default {
 
   ul {
     margin-top: 2rem;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    font-size: .9rem;
 
     li {
       margin-bottom: .5rem;
+      padding: .25em .5em;
+      background: var(--darkBlue);
+      color: var(--paper);
+      margin-right: .5em;
+
+      a {
+        color: inherit;
+      }
     }
   }
 }

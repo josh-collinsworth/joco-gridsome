@@ -39,25 +39,12 @@ export default {
 }
 
 .header {
-  padding: 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	position: relative;
 	z-index: 3;
-
-	@media (min-width: 768px){
-		padding: 1.5rem 2rem;
-  }
-
-	@media (min-width: 1024px){
-		padding: 1.5rem 4rem;
-	}
-
-	@media (min-width: 1200px){
-		padding: 1.5rem 6rem;
-	}
 
 	nav {
 		font-size: .875rem;

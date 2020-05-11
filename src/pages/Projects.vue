@@ -27,6 +27,7 @@
 						<div class="details" >
 							<div class="title">
 								{{ project.node.title }}
+								<hr />
 								<div class="subtitle">
 									{{ project.node.category }}
 								</div>
@@ -107,7 +108,7 @@ query {
 
 <style lang="scss" scoped>
 #projects-filter {
-	margin-top: 0;
+	margin: 0 0 3rem;
 
 	header {
 		display: inline-block;
@@ -129,10 +130,6 @@ query {
 	grid-column: 1 / -1;
 }
 
-.details {
-	display: none;
-}
-
 ul.fullwidth {
 	list-style-type: none;
 	display: grid;
@@ -142,17 +139,65 @@ ul.fullwidth {
 
 	li {
 		margin: 0;
-		display: inline-block;
+		display: block;
 		padding: 0;
 		position: relative;
+		overflow: hidden;
 		font-size: .875rem;
 		line-height: 1.4em;
 		transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
 
+		.details {
+			opacity: 0;
+			transition: .2s cubic-bezier(0.77, 0, 0.175, 1);
+			background: linear-gradient(to top, var(--darkBlue) 33%, transparent);
+			padding: 1rem;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			color: var(--paper);
+			display: flex;
+			align-items: flex-end;
+
+			.title,
+			.subtitle,
+			hr {
+				transform: translateY(.25em);
+				opacity: 0;
+				transition: all .25s cubic-bezier(0.5, 0, 0.5, 1);
+				transition-delay: .1s;
+			}
+
+			hr {
+				width: 2rem;
+				border: none;
+				height: 1px;
+				background: var(--paper);
+				transition-delay: .175s;
+				margin: .5em 0;
+			}
+
+			.subtitle {
+				transition-delay: .25s;
+			}
+		}
+
 		&:hover {
 			box-shadow: .0 0 0 .4rem var(--yellow);
-			/* transform: translateY(-.25rem); */
 			z-index: 3;
+
+			.details {
+				opacity: 1;
+
+				.title,
+				.subtitle,
+				hr {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
 		}
 
 		.empty {
@@ -168,17 +213,7 @@ ul.fullwidth {
 	}
 
 	.title {
-		padding: .5rem 1rem 1rem 0;
 		font-style: italic;
-
-		&:before, &:after {
-			content: '';
-			width: 2em;
-			height: 1px;
-			background: var(--darkGray);
-			display: block;
-			margin: .5rem 0;
-		}
 
 		.subtitle {
 			font-size: .675em;

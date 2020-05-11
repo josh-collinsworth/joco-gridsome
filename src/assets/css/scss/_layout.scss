@@ -27,3 +27,20 @@ nav .active--exact {
   border-bottom: 1px solid var(--yellow);
   font-weight: bold;
 }
+
+.header,
+.footer {
+  padding: 1.5rem 1rem;
+
+  @media (min-width: 768px){
+    padding: 1.5rem 2rem;
+  }
+
+  @media (min-width: 1024px){
+    padding: 1.5rem 4rem;
+  }
+
+  @media (min-width: 1200px){
+    padding: 1.5rem 6rem;
+  }
+}

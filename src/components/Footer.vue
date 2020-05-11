@@ -1,7 +1,7 @@
 <template>
   <div>
     <Grid :density="50" />
-  	<footer>This is the footer</footer>
+  	<footer class="footer">This is the footer</footer>
   </div>
 </template>
 
@@ -17,7 +17,6 @@ export default {
 footer {
   width: 100%;
   background: var(--lightBlue);
-  padding: 3rem 1.5rem 1.5rem;
 }
 
 .cell-grid {
