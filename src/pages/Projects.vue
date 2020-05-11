@@ -1,6 +1,6 @@
 <template>
   <Layout>
-
+<!--
 		<form @submit.prevent="filterProjects" id="projects-filter">
 			<header>
 				<strong>Filter projects:</strong>
@@ -17,7 +17,7 @@
 					<label for="design">Design</label>
 				</div>
 			</div>
-		</form>
+		</form> -->
 
 		<ul class="fullwidth">
 			<li v-for="(project, i) in filteredProjects" :key="project.id">
@@ -185,8 +185,9 @@ ul.fullwidth {
 		}
 
 		&:hover {
-			box-shadow: .0 0 0 .4rem var(--yellow);
+			box-shadow: .0 0 0 .2rem var(--yellow);
 			z-index: 3;
+			transform: translateY(-.1rem);
 
 			.details {
 				opacity: 1;

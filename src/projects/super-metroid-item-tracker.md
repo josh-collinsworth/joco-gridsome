@@ -1,6 +1,6 @@
 ---
 title: Super Metroid Item Tracker
-featuredMedia: projects/super-metroid-item-tracker.png
+featuredMedia: projects/smitty.png
 link: https://smitty.netlify.app
 category: code
 ---
