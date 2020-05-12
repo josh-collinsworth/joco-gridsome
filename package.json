@@ -14,8 +14,8 @@
     "@gridsome/transformer-remark": "^0.4.0",
     "axios": "^0.19.2",
     "global": "^4.4.0",
-    "glyphhanger": "^3.2.0",
-    "gridsome": "^0.7.11"
+    "gridsome": "^0.7.11",
+    "sharp": "^0.25.2"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
