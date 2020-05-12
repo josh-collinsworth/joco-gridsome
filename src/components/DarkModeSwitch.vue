@@ -19,6 +19,7 @@ export default {
 		}
 	},
   mounted() {
+		if(typeof window == 'undefined') return
 		const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 		this.darkMode = JSON.parse(localStorage.getItem('collinsworth-dark-mode'))
 

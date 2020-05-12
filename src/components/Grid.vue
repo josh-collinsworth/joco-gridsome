@@ -35,11 +35,11 @@ export default {
 		]
 	}),
 	created() {
+		if(typeof window == 'undefined') return
 		this.count = Math.floor(
 			(window.innerWidth /
-				(parseInt(window.getComputedStyle(window.document.body, null).getPropertyValue('font-size')) / 0.65) *
-				4
-			)
+			(parseInt(window.getComputedStyle(window.document.body, null).getPropertyValue('font-size')) / 0.65) *
+			4)
 		)
 	},
 	methods: {
