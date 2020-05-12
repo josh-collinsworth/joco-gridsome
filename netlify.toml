@@ -4,3 +4,7 @@
 
 [template.environment]
   WORDPRESS_URL = "https://api.joshcollinsworth.com"
+
+[[redirects]]
+  from = "/wp-content/uploads/*"
+  to = "/assets/images/uploads/:splat"

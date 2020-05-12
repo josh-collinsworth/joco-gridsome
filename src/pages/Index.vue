@@ -8,13 +8,13 @@
         I work with lots of excellent people at
         <a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>.
       </p>
-      <p>
-        <ul>
-          <li><g-link to="/about">About me</g-link></li>
-          <li><g-link to="/projects">My work</g-link></li>
-          <li><g-link to="/contact">Get in contact</g-link></li>
-        </ul>
-      </p>
+
+      <TagList>
+        <li><Tag to="/about">About me</Tag></li>
+        <li><Tag to="/projects">My work</Tag></li>
+        <li><Tag to="/contact">Get in contact</Tag></li>
+      </TagList>
+
     </div>
   </Layout>
 </template>
@@ -40,7 +40,11 @@ query Home ($page: Int) {
 </page-query>
 
 <script>
+import Tag from '~/components/Tag'
+import TagList from '~/components/TagList'
+
 export default {
+  components: { Tag, TagList },
   metaInfo: {
     title: "Josh Collinsworth, Developer/Designer"
   }
@@ -66,26 +70,6 @@ export default {
 
       & + h1 {
         margin-top: .5rem;
-      }
-    }
-  }
-
-  ul {
-    margin-top: 2rem;
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    font-size: .9rem;
-
-    li {
-      margin-bottom: .5rem;
-      padding: .25em .5em;
-      background: var(--darkBlue);
-      color: var(--paper);
-      margin-right: .5em;
-
-      a {
-        color: inherit;
       }
     }
   }

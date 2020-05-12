@@ -57,7 +57,7 @@ h6 {
   position: relative;
   margin: 1.5em 0 1rem;
 	padding: 0 0 1rem;
-	color: var(--heading-color);
+	color: var(--header-color);
 
   a {
     text-decoration: none;
@@ -152,11 +152,11 @@ pre, code {
 }
 
 pre {
-	background: var(--black);
-	border: 1px solid var(--white);
+	background: var(--darkBlue);
+	border: 1px solid var(--lightBlue);
   padding: 1.5em;
   margin: 2em auto;
-  color: #fff;
+  color: var(--white);
   border-radius: 0.5em;
 	font-size: .8em;
 	overflow: auto;
@@ -168,8 +168,9 @@ pre {
 
 code {
   font-size: .8em;
+  font-weight: bold;
   background: rgba(123, 167, 188, 0.2);
 	padding: 0.3em 0.4em 0.2em;
 	border-radius: 2px;
-	line-height: 1!important;
+  line-height: 1!important;
 }

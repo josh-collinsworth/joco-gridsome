@@ -46,7 +46,8 @@ export default {
 				'--paper': '#101820',
 				'--ink': '#ffffff',
 				'--darkGray': '#ffffff',
-				'--heading-color': 'var(--lightBlue)',
+				'--header-color': 'var(--lightBlue)',
+				'--accent-color': 'var(--lightBlue)',
 				'--link-color': 'var(--lightBlue)',
 			})
 		},
@@ -55,7 +56,8 @@ export default {
 				'--paper': '#ffffff',
 				'--ink': '#101820',
 				'--darkGray': '#53565a',
-				'--heading-color': 'var(--darkGray)',
+				'--header-color': 'var(--darkGray)',
+				'--accent-color': 'var(--darkBlue)',
 				'--link-color': 'var(--darkBlue)',
 			})
 		},

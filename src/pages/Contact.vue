@@ -2,6 +2,8 @@
 	<Layout>
 		<h1>Get in touch</h1>
 
+		<p class="fancy">Happy to chat.</p>
+
 		<form
 			name="contact"
 			method="post"

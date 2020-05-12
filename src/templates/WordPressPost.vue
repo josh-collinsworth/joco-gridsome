@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <Layout>
     <img
       v-if="$page.wordPressPost.featuredMedia"
       :src="$page.wordPressPost.featuredMedia.sourceUrl"
@@ -8,23 +8,26 @@
     />
     <H1 v-html="$page.wordPressPost.title"/>
     <div v-html="$page.wordPressPost.content"/>
+
+    <hr />
+
     <template v-if="$page.wordPressPost.categories.length">
       <h4>Posted in:</h4>
-      <ul class="list categories">
+      <TagList>
         <li v-for="category in $page.wordPressPost.categories" :key="category.id" >
-          <g-link :to="category.path">{{ category.title }}</g-link>
+          <Tag :to="category.path">{{ category.title }}</Tag>
         </li>
-      </ul>
+      </TagList>
     </template>
     <template v-if="$page.wordPressPost.tags.length">
       <h4>Tags</h4>
-      <ul class="list tags">
+      <TagList>
         <li v-for="tag in $page.wordPressPost.tags" :key="tag.id" >
-          <g-link :to="tag.path">{{ tag.title }}</g-link>
+          <Tag :to="tag.path">{{ tag.title }}</Tag>
         </li>
-      </ul>
+      </TagList>
     </template>
-  </div>
+  </Layout>
 </template>
 
 <page-query>
@@ -54,29 +57,26 @@ query WordPressPost ($id: ID!) {
 </page-query>
 
 <script>
+import Tag from '~/components/Tag'
+import TagList from '~/components/TagList'
+import prism from '~/assets/js/prism.js'
+
 export default {
-  metaInfo () {
+  components: { Tag, TagList },
+  metaInfo() {
     return {
-      title: this.$page.wordPressPost.title
+      title: this.$page.wordPressPost.title,
+      link: [
+        { to: '~/assets/js/prism.js'}
+      ]
     }
-  }
+  },
 }
 </script>
 
 <style>
-  ul.list {
-    list-style: none;
-    padding: 0;
-  }
-  ul.list li {
-    display: inline-block;
-    margin-right: 0.25em;
-  }
-  ul.list.tags li a {
-    padding: 0.25em 0.5em;
-    background-color: lightgray;
-  }
-  ul.list li:last-child:after {
-    content: '';
-  }
+h4 {
+  margin: 2em 0 0;
+  padding-bottom: 0;
+}
 </style>

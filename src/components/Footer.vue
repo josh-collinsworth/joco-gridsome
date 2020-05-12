@@ -16,7 +16,7 @@ export default {
 <style scoped>
 footer {
   width: 100%;
-  background: var(--lightBlue);
+  background: var(--darkBlue);
 }
 
 .cell-grid {

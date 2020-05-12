@@ -1,14 +1,14 @@
 <template>
-  <div>
-      <p class="fancy">View by category:</p>
-      <h1>{{ $page.wordPressCategory.title }} </h1>
+  <Layout>
+    <p class="fancy">View by category:</p>
+    <h1>{{ $page.wordPressCategory.title }} </h1>
     <ul class="post-list">
       <li v-for="{ node } in $page.wordPressCategory.belongsTo.edges" :key="node.id">
         <Post :post="node" />
       </li>
     </ul>
     <Pager :info="$page.wordPressCategory.belongsTo.pageInfo"/>
-  </div>
+  </Layout>
 </template>
 
 <page-query>
@@ -54,4 +54,8 @@ export default {
 </script>
 
 <style>
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 </style>

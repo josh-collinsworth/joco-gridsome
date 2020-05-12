@@ -44,3 +44,17 @@ nav .active--exact {
     padding: 1.5rem 6rem;
   }
 }
+
+.footer {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+//Overrides Gutenberg's background color picker
+.has-background {
+  $lightBlue: var(--lightBlue);
+  padding: 1rem;
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
+  background: rgba(123, 167, 188, .1)!important;
+}

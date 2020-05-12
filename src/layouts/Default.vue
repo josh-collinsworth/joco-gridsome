@@ -27,11 +27,11 @@ export default {
 
 <style lang="scss">
 .categories li a {
-  background: var(--darkGray);
+  background: var(--header-color);
   padding: 0.5em;
   border-radius: 8px;
   text-align: center;
-  color: #fff;
+  color: var(--paper);
   font-weight: bold;
   text-decoration: none;
 }
