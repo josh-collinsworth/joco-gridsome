@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss" scoped>
-  ul {
+  .tag-list {
     display: flex;
     list-style-type: none;
     padding: 0;

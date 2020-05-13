@@ -26,7 +26,7 @@
 		#bracket-left,
 		#bracket-right {
 			transform: translateX(0);
-			transition: transform .3s cubic-bezier(0.23, 1, 0.320, 1);
+			transition: transform .3s cubic-bezier(1, 0, 0, 1);
 		}
 
 </style>

@@ -17,6 +17,7 @@ export default {
 footer {
   width: 100%;
   background: var(--darkBlue);
+  color: var(--white);
 }
 
 .cell-grid {

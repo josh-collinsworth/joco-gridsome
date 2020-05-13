@@ -67,7 +67,7 @@ export default {
     return {
       title: this.$page.wordPressPost.title,
       link: [
-        { to: '~/assets/js/prism.js'}
+        { to: '/assets/js/prism.js'}
       ]
     }
   },

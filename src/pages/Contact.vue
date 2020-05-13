@@ -4,6 +4,8 @@
 
 		<p class="fancy">Happy to chat.</p>
 
+		<noscript><h2>Sorry, this form won't work without JavaScript enabled.</h2></noscript>
+
 		<form
 			name="contact"
 			method="post"

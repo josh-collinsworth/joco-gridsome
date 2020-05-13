@@ -7,13 +7,9 @@
 			<g-link id="logo" to="/">
 				<LogoSVG />
 			</g-link>
-			<nav class="nav" role="navigation">
-				<g-link class="nav__link" to="/projects">Projects</g-link>
-				<g-link class="nav__link" to="/about">About</g-link>
-				<g-link class="nav__link" to="/blog">Blog</g-link>
-				<g-link class="nav__link" to="/contact">Contact</g-link>
-				<g-link class="nav__link" to="/uses">Uses</g-link>
-			</nav>
+
+			<HamburgerButton :menu-open="menuOpen" @toggleMenu="toggleMenu"/>
+			<MainNav :menu-open="menuOpen" />
 		</header>
 		<Grid />
 	</div>
@@ -22,10 +18,20 @@
 <script>
 import LogoSVG from './LogoSVG'
 import Grid from '~/components/Grid'
+import HamburgerButton from '~/components/HamburgerButton'
+import MainNav from '~/components/MainNav'
 
 export default {
 	components: {
-		LogoSVG, Grid
+		LogoSVG, Grid, HamburgerButton, MainNav
+	},
+	data: () => ({
+		menuOpen: false
+	}),
+	methods: {
+		toggleMenu() {
+			this.menuOpen = !this.menuOpen
+		}
 	}
 }
 </script>

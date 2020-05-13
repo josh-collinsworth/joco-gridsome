@@ -149,17 +149,20 @@ ul.fullwidth {
 
 		.details {
 			opacity: 0;
-			transition: .2s cubic-bezier(0.77, 0, 0.175, 1);
+			transition: all .4s cubic-bezier(1, 0, 0, 1);
 			background: linear-gradient(to top, var(--darkBlue) 33%, transparent);
+			background: var(--darkBlue);
 			padding: 1rem;
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			height: 100%;
+			height: auto;
 			width: 100%;
-			color: var(--paper);
+			color: var(--white);
 			display: flex;
 			align-items: flex-end;
+			transform: translateY(100%);
+			opacity: 0;
 
 			.title,
 			.subtitle,
@@ -167,20 +170,20 @@ ul.fullwidth {
 				transform: translateY(.25em);
 				opacity: 0;
 				transition: all .25s cubic-bezier(0.5, 0, 0.5, 1);
-				transition-delay: .1s;
+				transition-delay: .2s;
 			}
 
 			hr {
 				width: 2rem;
 				border: none;
 				height: 1px;
-				background: var(--paper);
-				transition-delay: .175s;
+				background: var(--white);
+				transition-delay: .275s;
 				margin: .5em 0;
 			}
 
 			.subtitle {
-				transition-delay: .25s;
+				transition-delay: .35s;
 			}
 		}
 
@@ -191,6 +194,7 @@ ul.fullwidth {
 
 			.details {
 				opacity: 1;
+				transform: translateY(0);
 
 				.title,
 				.subtitle,
