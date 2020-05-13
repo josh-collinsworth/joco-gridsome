@@ -53,7 +53,7 @@ h4,
 h5,
 h6 {
   font-family: 'Pensum Display Basic', serif;
-  line-height: 1em;
+  line-height: 1.1;
   position: relative;
   margin: 1.5em 0 1rem;
 	padding: 0 0 1rem;
@@ -81,6 +81,8 @@ h1 {
 h2 {
   font-size: 2.2rem;
   border-bottom: 1px solid;
+  display: inline-block;
+  margin-right: auto;
 
   @media(min-width: 768px) {
     font-size: 2.8rem;
@@ -173,4 +175,13 @@ code {
 	padding: 0.3em 0.4em 0.2em;
 	border-radius: 2px;
   line-height: 1!important;
+}
+
+.content > p:first-of-type::first-letter {
+  font-size: 5.6em;
+  font-family: Pensum Display Basic;
+  float: left;
+  line-height: 1;
+  margin: 0.5rem .5rem 0 0;
+  color: inherit;
 }

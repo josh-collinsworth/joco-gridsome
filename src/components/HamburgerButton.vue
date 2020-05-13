@@ -1,5 +1,5 @@
 <template>
-	<button id="hamburger" :aria-pressed="menuOpen" @click="$emit('toggleMenu')">
+	<button id="hamburger" :aria-pressed="menuOpen" :class="{'sticky': menuOpen}" @click="$emit('toggleMenu')">
 		<span class="sr">{{ openOrClose }} menu</span>
 		<div class="line" aria-hidden="true"></div>
 		<div class="line" aria-hidden="true"></div>
@@ -10,7 +10,8 @@
 <script>
 export default {
 	props: {
-		menuOpen: Boolean
+		menuOpen: Boolean,
+		required: true,
 	},
 	computed: {
 		openOrClose() {
@@ -32,6 +33,16 @@ export default {
 		background: transparent;
 		position: relative;
 		z-index: 4;
+
+		&.sticky {
+			position: fixed;
+			top: 2rem;
+			right: 1rem;
+
+			.line {
+				background: var(--white);
+			}
+		}
 
 		.line {
 			width: 100%;

@@ -6,8 +6,8 @@
       :width="$page.wordPressPost.featuredMedia.mediaDetails.width"
       :alt="$page.wordPressPost.featuredMedia.altText"
     />
-    <H1 v-html="$page.wordPressPost.title"/>
-    <div v-html="$page.wordPressPost.content"/>
+    <h1 v-html="$page.wordPressPost.title"></h1>
+    <div class="content" v-html="$page.wordPressPost.content"/>
 
     <hr />
 
@@ -74,7 +74,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 h4 {
   margin: 2em 0 0;
   padding-bottom: 0;

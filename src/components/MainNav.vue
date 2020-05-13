@@ -22,19 +22,19 @@ export default {
 		menuOpen: Boolean,
 		required: true
 	}
-
 }
 </script>
 
 <style lang="scss" scoped>
 	#main-nav {
+
 		ul {
 			list-style-type: none;
 			padding: 0;
 		}
 
 		@media(max-width: 767px) {
-			position: absolute;
+			position: fixed;
 			transition: all .5s cubic-bezier(1, 0, 0, 1);
 			transform: translateX(-100vw);
 			background: var(--darkBlue);
@@ -47,7 +47,8 @@ export default {
 			place-content: center;
 			color: var(--white);
 			padding: 3rem;
-			font-size: 1.2rem;
+			font-size: 1.25rem;
+			line-height: 1.5em;
 
 			&.open {
 				transform: translateX(0)
@@ -59,7 +60,7 @@ export default {
 				width: 100%;
 
 				li {
-					transform: translateX(-100%);
+					transform: translateX(-3em);
 					opacity: 0;
 					transition: all .5s cubic-bezier(1, 0, 0, 1);
 
@@ -67,7 +68,7 @@ export default {
 						transform: translateX(0vw);
 						opacity: 1;
 
-						@for $i from 1 through 9 {
+						@for $i from 2 through 9 {
 							&:nth-of-type(#{$i}) {
 								transition-delay: $i * 0.075 + s;
 							}

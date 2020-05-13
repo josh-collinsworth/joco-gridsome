@@ -19,7 +19,7 @@
         casual writer and infrequent
         <g-link to="/blog/">blogger</g-link>; font hoarder; hit-and-miss
         <a href="https://twitter.com/jjcollinsworth" target="_blank" rel="noopener">Tweeter</a>;
-        co-creator of a human; occasional public speaker; pun enthusiast; accessibility and inclusion advocate; fan of dogs; musician; liberal abuser of semicolons.
+        official dad (both in family status and sense of humor); occasional public speaker; pun enthusiast; accessibility and inclusion advocate; fan of dogs; musician; liberal abuser of semicolons.
       </p>
 
     </div>
@@ -39,7 +39,7 @@ export default {
   h2 {
     font-size: 1.8rem;
     padding: 0;
-    border: none;
+    margin-bottom: 0em;
   }
 
   #avatar {
