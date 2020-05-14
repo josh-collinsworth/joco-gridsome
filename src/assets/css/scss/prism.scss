@@ -11,8 +11,8 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 	 color: #f8f8f2;
 	 background: none;
 	 text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	 font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	 font-size: 1em;
+	 font-family: MonoLisa, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	 font-size: .75rem;
 	 text-align: left;
 	 white-space: pre;
 	 word-spacing: normal;
@@ -32,7 +32,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 
  /* Code blocks */
  pre[class*="language-"] {
-	 padding: 1em;
+	 padding: 1rem;
 	 margin: .5em 0;
 	 overflow: auto;
 	 border-radius: 0.3em;
