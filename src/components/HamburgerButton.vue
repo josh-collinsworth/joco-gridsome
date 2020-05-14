@@ -26,9 +26,9 @@ export default {
 		display: flex;
 		flex-wrap: wrap;
 		align-content: space-between;
-		width: 1.5rem;
-		height: 1rem;
-		padding: 0;
+		width: 2.5rem;
+		height: 2rem;
+		padding: .5rem;
 		border: none;
 		background: transparent;
 		position: relative;
@@ -36,7 +36,7 @@ export default {
 
 		&.sticky {
 			position: fixed;
-			top: 2rem;
+			top: 1.5rem;
 			right: 1rem;
 
 			.line {

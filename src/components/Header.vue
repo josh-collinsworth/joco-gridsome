@@ -4,7 +4,7 @@
 			<a class="skip-to-content-link" href="#main">
 				Skip to main content
 			</a>
-			<g-link id="logo" to="/">
+			<g-link id="logo" to="/" :class="{ 'sticky': menuOpen }">
 				<LogoSVG />
 			</g-link>
 
@@ -42,6 +42,14 @@ export default {
 	height: 2rem;
 	display: block;
 	position: relative;
+	z-index: 4;
+
+	&.sticky {
+		position: fixed;
+		top: 1.5rem;
+
+		--darkGray: var(--white);
+	}
 }
 
 .header {
@@ -51,6 +59,7 @@ export default {
 	width: 100%;
 	position: relative;
 	z-index: 3;
+	min-height: 90px;
 
 	nav {
 		font-size: .875rem;

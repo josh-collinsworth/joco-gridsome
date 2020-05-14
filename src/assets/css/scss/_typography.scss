@@ -56,7 +56,7 @@ h6 {
   line-height: 1.1;
   position: relative;
   margin: 1.5em 0 1rem;
-	padding: 0 0 1rem;
+	padding: 0 0 .5rem;
 	color: var(--header-color);
 
   a {
@@ -154,14 +154,14 @@ pre, code {
 }
 
 pre {
-	background: var(--darkBlue);
-	border: 1px solid var(--lightBlue);
+	background: var(--darkerGray);
   padding: 1.5em;
   margin: 2em auto;
   color: var(--white);
   border-radius: 0.5em;
 	font-size: .8em;
-	overflow: auto;
+  overflow: auto;
+  line-height: 1.5;
 
   code {
     background: transparent;

@@ -7,7 +7,7 @@
       :alt="$page.wordPressPost.featuredMedia.altText"
     />
     <h1 v-html="$page.wordPressPost.title"></h1>
-    <div class="content" v-html="$page.wordPressPost.content"/>
+    <div class="content" v-html="filterPre($page.wordPressPost.content)"/>
 
     <hr />
 
@@ -66,11 +66,16 @@ export default {
   metaInfo() {
     return {
       title: this.$page.wordPressPost.title,
-      link: [
-        { to: '/assets/js/prism.js'}
-      ]
     }
   },
+  mounted() {
+    setTimeout(() => { prism }, 500)
+  },
+  methods: {
+    filterPre(content) {
+      return content.split('<pre>').join('<pre><code class="language-javascript">').split('</pre>').join('</code></pre>')
+    }
+  }
 }
 </script>
 

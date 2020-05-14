@@ -31,11 +31,15 @@ export default {
 		ul {
 			list-style-type: none;
 			padding: 0;
+
+			li {
+				margin: 0;
+			}
 		}
 
 		@media(max-width: 767px) {
 			position: fixed;
-			transition: all .5s cubic-bezier(1, 0, 0, 1);
+			transition: all .4s cubic-bezier(1, 0, 0, 1);
 			transform: translateX(-100vw);
 			background: var(--darkBlue);
 			width: 100vw;
@@ -62,15 +66,16 @@ export default {
 				li {
 					transform: translateX(-3em);
 					opacity: 0;
-					transition: all .5s cubic-bezier(1, 0, 0, 1);
+					transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+					margin-bottom: 1em;
 
 					&.open {
 						transform: translateX(0vw);
 						opacity: 1;
 
-						@for $i from 2 through 9 {
+						@for $i from 1 through 9 {
 							&:nth-of-type(#{$i}) {
-								transition-delay: $i * 0.075 + s;
+								transition-delay: $i * 0.10 + s;
 							}
 						}
 					}
