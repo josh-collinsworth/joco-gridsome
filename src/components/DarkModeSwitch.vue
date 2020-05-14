@@ -1,5 +1,5 @@
 <template>
-	<button id="dark-mode-toggle" @click="toggleDarkMode" :class="this.darkMode && 'dark'">
+	<button id="dark-mode-toggle" @click="toggleDarkMode" :class="this.darkMode && 'dark'" aria-hidden="true">
 		<LightDarkIcon />
 	</button>
 </template>

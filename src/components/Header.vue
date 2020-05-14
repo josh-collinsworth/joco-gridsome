@@ -6,6 +6,7 @@
 			</a>
 			<g-link id="logo" to="/" :class="{ 'sticky': menuOpen }">
 				<LogoSVG />
+				<span class="sr">Home</span>
 			</g-link>
 
 			<HamburgerButton :menu-open="menuOpen" @toggleMenu="toggleMenu"/>
