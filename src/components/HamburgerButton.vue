@@ -22,36 +22,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	#hamburger {
-		display: flex;
-		flex-wrap: wrap;
-		align-content: space-between;
-		width: 2.5rem;
-		height: 2rem;
-		padding: .5rem;
-		border: none;
-		background: transparent;
-		position: relative;
-		z-index: 4;
+#hamburger {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: stretch;
+	width: 2.5rem;
+	height: 2rem;
+	padding: .5rem;
+	border: none;
+	background: transparent;
+	position: relative;
+	z-index: 4;
 
-		&.sticky {
-			position: fixed;
-			top: 1.5rem;
-			right: 1rem;
-
-			.line {
-				background: var(--white);
-			}
-		}
+	&.sticky {
+		position: fixed;
+		top: 1.5rem;
+		right: 1rem;
 
 		.line {
-			width: 100%;
-			height: 2px;
-			background: var(--ink);
-		}
-
-		@media (min-width: 768px) {
-			display: none;
+			background: var(--white);
 		}
 	}
+
+	.line {
+		width: 100%;
+		height: 2px;
+		background: var(--ink);
+	}
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
 </style>

@@ -51,6 +51,10 @@ export default {
 
 		--darkGray: var(--white);
 	}
+
+	svg {
+		width: auto;
+	}
 }
 
 .header {
@@ -64,6 +68,10 @@ export default {
 
 	nav {
 		font-size: .875rem;
+
+		a {
+			color: var(--ink);
+		}
 
 		& > a:last-of-type {
 			margin-right: 0;

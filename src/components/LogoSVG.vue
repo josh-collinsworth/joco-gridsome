@@ -12,21 +12,20 @@
 
 
 <style lang="scss" scoped>
-		a:hover {
+a:hover {
 
-			#bracket-left {
-				transform: translateX(11%);
-			}
+	#bracket-left {
+		transform: translateX(11%);
+	}
 
-			#bracket-right {
-				transform: translateX(-11%);
-			}
-		}
+	#bracket-right {
+		transform: translateX(-11%);
+	}
+}
 
-		#bracket-left,
-		#bracket-right {
-			transform: translateX(0);
-			transition: transform .3s cubic-bezier(1, 0, 0, 1);
-		}
-
+#bracket-left,
+#bracket-right {
+	transform: translateX(0);
+	transition: transform .3s cubic-bezier(1, 0, 0, 1);
+}
 </style>

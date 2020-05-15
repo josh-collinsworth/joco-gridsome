@@ -9,10 +9,8 @@
       </transition>
     </div>
     <Footer />
-    <div class="switch-wrap">
-      <MotionSwitch :reduce-motion="reduceMotion" @toggleReduceMotion="toggleReduceMotion" />
-      <DarkModeSwitch />
-    </div>
+    <MotionSwitch :reduce-motion="reduceMotion" @toggleReduceMotion="toggleReduceMotion" />
+    <DarkModeSwitch />
   </div>
 </template>
 
