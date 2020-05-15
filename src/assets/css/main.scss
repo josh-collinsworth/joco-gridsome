@@ -37,7 +37,16 @@ body {
   align-content: space-between;
 
   & > * {
-    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  &.reduce-motion * {
+    transition: none!important;
+    animation: none!important;
+
+    .cell-grid .cell {
+      opacity: 1!important;
+    }
   }
 }
 

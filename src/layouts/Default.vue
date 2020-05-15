@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="{ 'reduce-motion': reduceMotion }">
     <Header />
     <div class="layout">
       <transition name="pageslide" appear mode="out-in">
@@ -9,17 +9,49 @@
       </transition>
     </div>
     <Footer />
-    <DarkModeSwitch />
+    <div class="switch-wrap">
+      <MotionSwitch :reduce-motion="reduceMotion" @toggleReduceMotion="toggleReduceMotion" />
+      <DarkModeSwitch />
+    </div>
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
+import MotionSwitch from '~/components/MotionSwitch'
 import DarkModeSwitch from '~/components/DarkModeSwitch'
 
 export default {
-  components: { Header, Footer, DarkModeSwitch }
+  components: { Header, Footer, MotionSwitch, DarkModeSwitch },
+  data: () => ({
+    reduceMotion: false
+  }),
+  mounted() {
+    if(typeof window == 'undefined') return
+
+    const userMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const storedMotionPreference = window.localStorage.getItem('collinsworth-reduce-motion')
+
+    console.log(userMotionPreference, storedMotionPreference)
+
+		if((userMotionPreference && storedMotionPreference != 'false') || storedMotionPreference == 'true') {
+			this.reduceMotion = true
+		}
+  },
+  methods: {
+    toggleReduceMotion() {
+      if(typeof window == 'undefined') return
+
+      this.reduceMotion = !this.reduceMotion
+
+      if(this.reduceMotion) {
+        window.localStorage.setItem('collinsworth-reduce-motion', 'true')
+        } else {
+        window.localStorage.setItem('collinsworth-reduce-motion', 'false')
+      }
+    }
+  },
 }
 </script>
 
@@ -110,7 +142,8 @@ export default {
 	}
 
 	&-enter, &-leave-to {
-		opacity: 0;
+    opacity: 0;
+    transform: translateY(.5rem);
 	}
 }
 </style>

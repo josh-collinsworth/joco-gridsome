@@ -1,5 +1,14 @@
 <template>
-	<div class="cell" :style="{ background: color, gridArea: `span ${size} / span ${size}`, animationDelay: randomDelay(), transform: `translateY(${randomDrop()})` }"></div>
+	<div
+		class="cell"
+		:style="{
+			background: color,
+			gridArea: `span ${size} / span ${size}`,
+			animationDelay: randomDelay(),
+			transform: `translateY(${randomDrop()})`
+		}"
+	>
+	</div>
 </template>
 
 

@@ -189,7 +189,7 @@ ul.fullwidth {
 
 		&:hover {
 			box-shadow: .0 0 0 .2rem var(--yellow);
-			z-index: 3;
+			z-index: 2;
 			transform: translateY(-.1rem);
 
 			.details {

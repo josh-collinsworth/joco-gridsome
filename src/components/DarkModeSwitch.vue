@@ -1,5 +1,12 @@
 <template>
-	<button id="dark-mode-toggle" @click="toggleDarkMode" :class="this.darkMode && 'dark'" aria-hidden="true">
+	<button
+		id="dark-mode-toggle"
+		@click="toggleDarkMode"
+		:class="{ 'dark': darkMode }"
+		:title="enableOrDisable + ' dark mode'"
+		:aria-pressed="darkMode"
+	>
+		<span class="sr">{{ enableOrDisable }} dark mode</span>
 		<LightDarkIcon />
 	</button>
 </template>
@@ -66,25 +73,18 @@ export default {
 				document.documentElement.style.setProperty(set[0], set[1])
 			})
 		},
-  }
+	},
+	computed: {
+		enableOrDisable() {
+			return this.darkMode ? 'Disable' : 'Enable'
+		}
+	}
 }
 </script>
 
 
 <style lang="scss">
 button#dark-mode-toggle {
-	position: fixed;
-	left: 1rem;
-	bottom: 1rem;
-	height: calc(2rem + .2rem);
-	width: calc(2rem + .2rem);
-	overflow: hidden;
-	padding: 0;
-	border: none;
-	border-radius: 2rem;
-	border: 2px solid var(--darkGray);
-	background: var(--paper);
-	z-index: 10;
 
 	&:hover svg {
 		path, circle {
