@@ -82,6 +82,7 @@ export default {
 
 					a {
 						padding: .5rem 0 .25rem;
+						color: var(--white);
 					}
 				}
 			}

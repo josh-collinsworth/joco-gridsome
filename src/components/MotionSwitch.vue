@@ -31,7 +31,8 @@ export default {
 
 <style lang="scss">
 button#motion-toggle {
-	bottom: 4rem;
+	bottom: 1rem;
+	left: 4rem;
 	font-weight: bold;
 	font-size: .5rem;
 	color: var(--darkGray);
