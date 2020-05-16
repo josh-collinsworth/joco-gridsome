@@ -187,3 +187,21 @@ code {
   margin: 0.5rem .5rem 0 0;
   color: inherit;
 }
+
+// Class for text callouts in blog posts
+// Still needs some tweaking, especially for different widths
+// Also, need to add it to the blog posts
+.callout {
+  float: right;
+  width: 20em;
+  margin: 2rem;
+  margin-right: 2rem;
+  margin-right: calc(-11rem - 12vw);
+  background: var(--darkBlue);
+  color: white;
+  padding: 0 0 0 1rem;
+  font-style: italic;
+  border-left: 0.5rem solid var(--yellow);
+  font-size: 1.2rem;
+  line-height: 1.5em;
+}

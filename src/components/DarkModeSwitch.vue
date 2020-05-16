@@ -53,7 +53,7 @@ export default {
 				'--paper': '#101820',
 				'--ink': '#ffffff',
 				'--darkGray': '#ffffff',
-				'--header-color': 'var(--lightBlue)',
+				'--header-color': 'var(--white)',
 				'--accent-color': 'var(--lightBlue)',
 				'--link-color': 'var(--lightBlue)',
 			})

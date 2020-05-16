@@ -67,7 +67,7 @@ export default {
 					transform: translateX(-3em);
 					opacity: 0;
 					transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
-					margin-bottom: 1em;
+					margin-bottom: .75rem;
 
 					&.open {
 						transform: translateX(0vw);
@@ -79,10 +79,10 @@ export default {
 							}
 						}
 					}
-				}
 
-				a {
-					color: var(--white);
+					a {
+						padding: .5rem 0 .25rem;
+					}
 				}
 			}
 		}
@@ -93,6 +93,14 @@ export default {
 			ul {
 				display: flex;
 				flex-wrap: wrap;
+
+				a {
+					color: var(--darkGray);
+
+					&:hover {
+						color: var(--link-color);
+					}
+				}
 			}
 		}
 	}

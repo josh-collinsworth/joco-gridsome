@@ -28,10 +28,9 @@ export default {
   mounted() {
     if(typeof window == 'undefined') return
 
-    const userMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const userMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    console.log(userMotionPreference)
     const storedMotionPreference = window.localStorage.getItem('collinsworth-reduce-motion')
-
-    console.log(userMotionPreference, storedMotionPreference)
 
 		if((userMotionPreference && storedMotionPreference != 'false') || storedMotionPreference == 'true') {
 			this.reduceMotion = true

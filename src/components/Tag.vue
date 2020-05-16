@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .tag {
-	padding: .25em .5em;
+	padding: .5em .5em;
 	background: var(--darkBlue);
 	margin-right: .5em;
 	color: var(--white);

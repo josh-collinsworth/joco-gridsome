@@ -9,7 +9,7 @@
 				<span class="sr">Home</span>
 			</g-link>
 
-			<HamburgerButton :menu-open="menuOpen" @toggleMenu="toggleMenu"/>
+			<HamburgerButton :menu-open="menuOpen" @toggleMenu="toggleMenu" />
 			<MainNav :menu-open="menuOpen" />
 		</header>
 		<Grid />

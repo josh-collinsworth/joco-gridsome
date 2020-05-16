@@ -1,19 +1,25 @@
 <template>
   <Layout>
     <div class="about">
+
+      <div>
+
       <img id="avatar" src="images/self-portrait-summer-2018.svg" alt="">
 
       <h1>About me</h1>
+      </div>
 
       <h2>Professionally: </h2>
-      <p>I'm a front-end engineer at <ExternalLink to="getflywheel.com">Flywheel</ExternalLink>, where I work with primarily with <ExternalLink to="vuejs.org">Vue</ExternalLink> and Ruby on Rails.</p>
-      <p>I write semantic, user-focused HTML. I love CSS. JAMstack is my jam. Vue is my favorite (so I'm a big fan of <ExternalLink to="nuxtjs.org">Nuxt</ExternalLink> and <ExternalLink to="gridsome.org">Gridsome</ExternalLink>), but I also really dig Svelte and have worked with React on several projects.</p>
+      <p>I'm a front-end engineer at <ExternalLink to="getflywheel.com">Flywheel</ExternalLink>,
+      where I work with primarily with <ExternalLink to="vuejs.org">Vue</ExternalLink> and Ruby on Rails.</p>
+      <p>I write semantic, user-focused HTML. Being a designer, I love writing custom CSS from scratch to create layouts, animations and beautiful experiences. JAMstack is my jam; Vue is my favorite (so I'm a big fan of <ExternalLink to="nuxtjs.org">Nuxt</ExternalLink> and <ExternalLink to="gridsome.org">Gridsome</ExternalLink>), but I also really dig Svelte and have worked with React on several projects.</p>
 
-        <h2>Previously: </h2>
+      <h2>Previously: </h2>
       <p>
         Full-time graphic designer; WordPress instructor and support team lead.
       </p>
-        <h2>Personally: </h2>
+
+      <h2>Personally: </h2>
       <p>
         <g-link to="/code/">Hobby coder</g-link>;
         casual writer and infrequent
@@ -49,9 +55,7 @@ export default {
     padding: 1rem;
     background: var(--lightBlue);
     border-radius: 4rem;
-    position: absolute;
-    right: 0;
-    top: -2rem;
+    margin-bottom: 1rem;
   }
 }
 </style>

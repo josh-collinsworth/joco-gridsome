@@ -65,11 +65,11 @@ export default {
   components: { Tag, TagList },
   metaInfo() {
     return {
-      title: this.$page.wordPressPost.title,
+      title: this.$page.wordPressPost.title
     }
   },
   mounted() {
-    setTimeout(() => { prism }, 500)
+    prism
   },
   methods: {
     filterPre(content) {
@@ -80,8 +80,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@font-face {
+	font-family: 'MonoLisa';
+	src: url('../assets/fonts/monolisa-regular-webfont.woff2') format('woff2');
+	font-weight: bold;
+	font-style: italic;
+}
+
 h4 {
   margin: 2em 0 0;
   padding-bottom: 0;
+}
+
+pre, code {
+  font-family: MonoLisa, Courier, monospace;
 }
 </style>
