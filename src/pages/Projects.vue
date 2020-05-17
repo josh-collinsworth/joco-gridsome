@@ -1,23 +1,18 @@
 <template>
   <Layout>
-<!--
-		<form @submit.prevent="filterProjects" id="projects-filter">
+
+		<form @submit.prevent="" id="projects-filter">
 			<header>
 				<strong>Filter projects:</strong>
 			</header>
 
 			<div class="checkboxes">
-				<div class="checkbox-wrap">
-					<input type="checkbox" v-model="showCode" id="code">
-					<label for="code">Code</label>
-				</div>
-
-				<div class="checkbox-wrap">
-					<input type="checkbox" v-model="showDesign" id="design">
-					<label for="design">Design</label>
+				<div class="checkbox-wrap" v-for="category in allCategories" :key="category">
+					<input type="checkbox" :value="category" v-model="shownCategories" :id="category">
+					<label :for="category">{{ category }}</label>
 				</div>
 			</div>
-		</form> -->
+		</form>
 
 		<ul class="fullwidth">
 			<li v-for="(project, i) in filteredProjects" :key="project.id">
@@ -51,37 +46,27 @@
 <script>
 export default {
 	data: () => ({
-		showCode: true,
-		showDesign: true,
+		shownCategories: [],
 		projects: []
 	}),
-	mounted() {
+	created() {
 		this.projects = this.$static.allProject.edges
+		this.shownCategories = Array.from(new Set(this.$static.allProject.edges.map(edge => edge.node.category)))
 	},
 	watch: {
 		//These are necessary to reset the array to nothing temporarily before re-rendering
 		//This keeps animation delays from getting wonky during filtering
-		showCode() {
+		shownCategories() {
 			this.projects = []
 			this.$nextTick(() => this.projects = this.$static.allProject.edges)
 		},
-		showDesign() {
-			this.projects = []
-			this.$nextTick(() => this.projects = this.$static.allProject.edges)
-		}
-	},
-	methods: {
-		filterProjects(e) {
-			e.preventDefault()
-		}
 	},
 	computed: {
 		filteredProjects() {
-			const filtered = this.projects.filter(project => {
-				return ((project.node.category == 'code' && this.showCode) ||
-				(project.node.category == 'design' && this.showDesign))
-			})
-			return filtered
+			return this.projects.filter(project => this.shownCategories.includes(project.node.category))
+		},
+		allCategories() {
+			return new Set (this.projects.map(project => project.node.category))
 		}
 	}
 }

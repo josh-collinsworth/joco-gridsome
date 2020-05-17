@@ -8,6 +8,7 @@
   .tag-list {
     display: flex;
     list-style-type: none;
+    margin-top: 1rem;
     padding: 0;
     font-size: .9rem;
   }

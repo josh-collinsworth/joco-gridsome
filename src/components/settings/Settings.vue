@@ -25,7 +25,6 @@ export default {
 	},
 	methods: {
 		toggleSettingsOpen() {
-			console.log('got here')
 			this.settingsOpen = !this.settingsOpen
 		}
 	}
