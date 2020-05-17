@@ -58,25 +58,3 @@ nav .active--exact {
   margin-left: -1rem;
   background: rgba(123, 167, 188, .1)!important;
 }
-
-#dark-mode-toggle,
-#motion-toggle {
-  position: fixed;
-  left: 1rem;
-  bottom: 1rem;
-  height: calc(2rem + .2rem);
-  width: calc(2rem + .2rem);
-  overflow: hidden;
-  padding: 0;
-  border-radius: 2rem;
-  border: 2px solid var(--darkGray);
-  background: var(--paper);
-  z-index: 10;
-  opacity: .9;
-  transition: opacity .2s;
-
-  &:hover {
-    opacity: 1;
-    background: var(--paper);
-  }
-}

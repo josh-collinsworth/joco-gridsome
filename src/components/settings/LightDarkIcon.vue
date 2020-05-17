@@ -36,5 +36,4 @@
 					</g>
 			</g>
 	</svg>
-
 </template>

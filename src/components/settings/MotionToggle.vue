@@ -2,8 +2,11 @@
 	<button
 		id="motion-toggle"
 		@click="toggleReducedMotion"
+		:class="{ 'shown': settingsOpen }"
 		:title="enableOrDisable + ' reduced motion'"
 		:aria-pressed="reduceMotion"
+		:aria-hidden="!settingsOpen"
+		:tabindex="settingsOpen ? 0 : -1"
 	>
 		<span class="sr">{{ enableOrDisable }} reduced motion</span>
 		Motion
@@ -13,8 +16,14 @@
 <script>
 export default {
 	props: {
-		reduceMotion: Boolean,
-		required: true
+		reduceMotion: {
+			type: Boolean,
+			required: true
+		},
+		settingsOpen: {
+			type: Boolean,
+			required: true
+		}
 	},
 	methods: {
 		toggleReducedMotion() {
@@ -31,11 +40,13 @@ export default {
 
 <style lang="scss">
 button#motion-toggle {
-	bottom: 1rem;
-	left: 4rem;
 	font-weight: bold;
 	font-size: .5rem;
 	color: var(--darkGray);
+
+	&.shown {
+		transform: translateY(calc(-2.2rem - 0.75rem));
+	}
 
 	&[aria-pressed="true"]:before {
 		content: '';

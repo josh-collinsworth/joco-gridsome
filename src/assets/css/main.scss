@@ -36,8 +36,8 @@ body {
   flex-wrap: wrap;
   align-content: space-between;
 
-  & > * {
-    flex: 1 1 100%;
+  & > div {
+    width: 100%;
   }
 
   &.reduce-motion * {

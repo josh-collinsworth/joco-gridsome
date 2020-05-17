@@ -2,9 +2,11 @@
 	<button
 		id="dark-mode-toggle"
 		@click="toggleDarkMode"
-		:class="{ 'dark': darkMode }"
+		:class="{ 'dark': darkMode, 'shown': settingsOpen }"
 		:title="enableOrDisable + ' dark mode'"
 		:aria-pressed="darkMode"
+		:aria-hidden="!settingsOpen"
+		:tabindex="settingsOpen ? 0 : -1"
 	>
 		<span class="sr">{{ enableOrDisable }} dark mode</span>
 		<LightDarkIcon />
@@ -16,6 +18,12 @@
 import LightDarkIcon from './LightDarkIcon'
 
 export default {
+	props: {
+		settingsOpen: {
+			type: Boolean,
+			required: true
+		}
+	},
 	components: { LightDarkIcon },
 	data: () => ({
 		darkMode: false
@@ -85,6 +93,10 @@ export default {
 
 <style lang="scss">
 button#dark-mode-toggle {
+
+	&.shown {
+		transform: translateY(calc((var(--button-size) * -2) - 1.5rem));
+	}
 
 	&:hover svg {
 		path, circle {

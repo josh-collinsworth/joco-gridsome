@@ -9,19 +9,17 @@
       </transition>
     </div>
     <Footer />
-    <MotionSwitch :reduce-motion="reduceMotion" @toggleReduceMotion="toggleReduceMotion" />
-    <DarkModeSwitch />
+    <Settings :reduce-motion="reduceMotion" @toggleReduceMotion="toggleReduceMotion" />
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
-import MotionSwitch from '~/components/MotionSwitch'
-import DarkModeSwitch from '~/components/DarkModeSwitch'
+import Settings from '~/components/settings/Settings';
 
 export default {
-  components: { Header, Footer, MotionSwitch, DarkModeSwitch },
+  components: { Header, Footer, Settings },
   data: () => ({
     reduceMotion: false
   }),
