@@ -39,19 +39,8 @@ export default {
 	position: fixed;
 	left: 1rem;
 	bottom: 1rem;
-	height: calc(var(--button-size) + .2rem);
-	width: calc(var(--button-size) + .2rem);
 	overflow: visible;
 	z-index: 10;
-	border-radius: var(--button-size);
-	background-color: var(--darkGray);
-	transition: all .25s cubic-bezier(1, 0, 0, 1);
-	transition-delay: .075s;
-
-	&.open {
-		height: calc((var(--button-size) * 3) + (.75rem * 2) + (.2rem));
-		transition-delay: none;
-	}
 }
 
 #settings-toggle,

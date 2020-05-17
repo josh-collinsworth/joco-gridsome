@@ -5,7 +5,7 @@
       <h1>I’m a front-end developer and designer.</h1>
 
       <p class="fancy">
-        I work with lots of excellent people at
+        I currently work on the support experience team at
         <a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>.
       </p>
 
