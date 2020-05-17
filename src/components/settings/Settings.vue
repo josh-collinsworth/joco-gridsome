@@ -1,5 +1,5 @@
 <template>
-	<form id="settings" @submit.prevent="">
+	<form id="settings" @submit.prevent="" :class="{ 'open': settingsOpen }">
 		<DarkModeToggle :settings-open="settingsOpen"/>
 		<MotionToggle :settings-open="settingsOpen" :reduce-motion="reduceMotion" @toggleReduceMotion="$emit('toggle-reduce-motion')"/>
 		<SettingsToggle :settings-open="settingsOpen" @toggleSettingsOpen="toggleSettingsOpen" />
@@ -39,17 +39,27 @@ export default {
 	position: fixed;
 	left: 1rem;
 	bottom: 1rem;
-	height: auto;
+	height: calc(var(--button-size) + .2rem);
+	width: calc(var(--button-size) + .2rem);
 	overflow: visible;
 	z-index: 10;
+	border-radius: var(--button-size);
+	background-color: var(--darkGray);
+	transition: all .25s cubic-bezier(1, 0, 0, 1);
+	transition-delay: .075s;
+
+	&.open {
+		height: calc((var(--button-size) * 3) + (.75rem * 2) + (.2rem));
+		transition-delay: none;
+	}
 }
 
 #settings-toggle,
 #dark-mode-toggle,
 #motion-toggle {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: .1rem;
+  bottom: .1rem;
   height: var(--button-size);
   width: var(--button-size);
   overflow: hidden;
@@ -65,6 +75,6 @@ export default {
 }
 
 #dark-mode-toggle {
-	transition-delay: .1s;
+	transition-delay: .075s;
 }
 </style>

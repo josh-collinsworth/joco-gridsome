@@ -29,23 +29,38 @@ export default {
 <style lang="scss">
 	#settings-toggle {
 
-		&.open svg path.settings-slider {
-			transform: translateX(-30%);
+		&.open svg {
 
-			& + .settings-slider {
-				transform: translateX(35%);
+			.settings-slider {
+				transform: translateX(-30%);
 
 				& + .settings-slider {
-					transform: translateX(-7%);
+					transform: translateX(35%);
+
+					& + .settings-slider {
+						transform: translateX(-7%);
+					}
 				}
 			}
-
 		}
 
 		svg path {
-			fill: var(--darkGray);
-			stroke: var(--darkGray);
-			transition: all .25s cubic-bezier(1, 0, 0, 1);
+			transition: transform .25s cubic-bezier(1, 0, 0, 1), fill .15s ease, stroke .15s ease;
+
+			&.settings-slider {
+				fill: var(--darkGray);
+			}
+
+			&.settings-track {
+				stroke: var(--darkGray);
+			}
+		}
+
+		&:hover svg {
+
+			.settings-slider {
+				fill: var(--yellow);
+			}
 		}
 	}
 </style>

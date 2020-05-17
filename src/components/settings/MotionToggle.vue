@@ -59,5 +59,9 @@ button#motion-toggle {
 		top: calc(50% - .05rem);
 		transform: rotate(-45deg);
 	}
+
+	&:hover {
+		color: var(--yellow);
+	}
 }
 </style>
