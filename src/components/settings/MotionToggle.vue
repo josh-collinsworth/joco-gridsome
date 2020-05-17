@@ -1,7 +1,7 @@
 <template>
 	<button
 		id="motion-toggle"
-		@click="toggleReducedMotion"
+		@click="$emit('toggleReduceMotion')"
 		:class="{ 'shown': settingsOpen }"
 		:title="enableOrDisable + ' reduced motion'"
 		:aria-pressed="reduceMotion"
@@ -23,11 +23,6 @@ export default {
 		settingsOpen: {
 			type: Boolean,
 			required: true
-		}
-	},
-	methods: {
-		toggleReducedMotion() {
-			this.$emit('toggleReduceMotion')
 		}
 	},
 	computed: {
