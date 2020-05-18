@@ -30,7 +30,7 @@ export default {
 	},
 	methods: {
 		randomDelay() {
-			return Math.random() * .25 + "s"
+			return Math.random() * .5 + "s"
 		},
 		randomDrop() {
 			const drop = Math.random() * 100

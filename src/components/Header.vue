@@ -82,7 +82,7 @@ export default {
 .skip-to-content-link {
 	transition: all .15s cubic-bezier(0.86, 0, 0.07, 1);
 	position: absolute;
-	top: 1rem;
+	top: 0;
 	left: -100vw;
 	padding: .5em;
 	opacity: 0;
@@ -90,12 +90,12 @@ export default {
 	justify-content: center;
 	align-items: center;
 	height: 3rem;
-	background: var(--yellow);
+	background: var(--darkBlue);
 
 	&:focus {
 		left: 0;
 		opacity: 1;
-		z-index: 2;
+		z-index: 10;
 	}
 }
 </style>

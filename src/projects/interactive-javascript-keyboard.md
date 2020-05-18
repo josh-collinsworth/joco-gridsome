@@ -1,6 +1,6 @@
 ---
 title: Interactive JavaScript Keyboard
-featuredMedia: projects/Firefox_Screenshot_2020-04-24T19-59-31.080Z.png
+featuredMedia: projects/js-keyboard.png
 link: https://codepen.io/joshuajcollinsworth/pen/VPXVbW
 category: code
 ---
