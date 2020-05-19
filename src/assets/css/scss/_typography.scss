@@ -192,16 +192,45 @@ code {
 // Still needs some tweaking, especially for different widths
 // Also, need to add it to the blog posts
 .callout {
-  float: right;
-  width: 20em;
-  margin: 2rem;
-  margin-right: 2rem;
-  margin-right: calc(-11rem - 12vw);
-  background: var(--darkBlue);
-  color: white;
-  padding: 0 0 0 1rem;
+  margin: 2rem 1rem;
   font-style: italic;
-  border-left: 0.5rem solid var(--yellow);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.5em;
+  position: relative;
+  background: var(--paper);
+  overflow: hidden;
+  padding: 0 0 1rem;
+
+  p:last-of-type:after {
+    content: '';
+    height: .25rem;
+    width: 100%;
+    margin-left: -100%;
+    background: var(--yellow);
+    bottom: 0;
+    position: absolute;
+  }
+
+  p:not(:last-of-type) {
+    margin: 0 1em;
+  }
+
+  p:last-of-type {
+    margin: 0;
+  }
+
+  @media(min-width: $narrow) {
+    margin: 3rem 0 3rem 3rem;
+  }
+
+  @media(min-width: $medium) {
+    float: right;
+    width: 20em;
+    margin-right: calc(-3rem - 12vw);
+  }
+
+  @media(min-width: $wide) {
+    width: 22em;
+    margin-right: calc(-6rem - 12vw);
+  }
 }

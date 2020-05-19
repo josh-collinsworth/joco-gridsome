@@ -64,9 +64,9 @@ export default {
 
 .fullwidth {
   width: 100vw;
-  margin-left: -1rem;
+  grid-column: grid-start / grid-end!important; //Necessary to override specificity of `main > *` selector
 
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     margin-left: -2rem;
   }
 
@@ -76,7 +76,7 @@ export default {
 
   @media (min-width: 1200px) {
     margin-left: -6rem;
-  }
+  } */
 }
 
 .wider {
@@ -95,32 +95,45 @@ export default {
   @media (min-width: 1200px) {
     width: calc(100vw - 12rem);
   }
-
-  @media (min-width: 768px) {
-    /* These calculations were tough so I'm just gonna leave them here for now */
-    /* width: calc(100% + ((100vw - 32rem) / 2));
-    margin-left: calc: ;(((100vw - 32rem) / 4) * -1); */
-  }
 }
 
 .layout {
-  width: 100%;
+  --left-column: 0;
+  display: grid;
+  grid-template-columns:
+    [grid-start]
+      var(--left-column)
+    [content-start]
+      minmax(400px, var(--max-width))
+    [content-end]
+      1fr
+    [grid-end];
+  grid-gap: 1rem;
   margin: 2rem 0 4rem 0;
-  padding: 0 1rem;
-  max-width: var(--max-width);
-	position: relative;
+  position: relative;
+
+  main {
+    width: 100%;
+    display: inherit;
+    grid-template-columns: inherit;
+    grid-gap: inherit;
+    grid-column: grid-start / grid-end;
+
+    & > * {
+      grid-column: content-start / content-end;
+    }
+  }
 
 	@media (min-width: 768px){
-    padding: 0;
-		margin-left: 2rem;
+    --left-column: 1rem; //grid-gap + 1 = 2
   }
 
 	@media (min-width: 1024px){
-		margin-left: 4rem;
+    --left-column: 3rem; //grid-gap + 3 = 4
   }
 
 	@media (min-width: 1200px){
-		margin-left: 6rem;
+    --left-column: 5rem; // grid-gap + 5 = 6
 	}
 }
 

@@ -4,6 +4,7 @@
 			<a class="skip-to-content-link" href="#main">
 				Skip to main content
 			</a>
+
 			<g-link id="logo" to="/" :class="{ 'sticky': menuOpen }">
 				<LogoSVG />
 				<span class="sr">Home</span>

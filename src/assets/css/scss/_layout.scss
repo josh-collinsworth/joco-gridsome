@@ -58,3 +58,13 @@ nav .active--exact {
   margin-left: -1rem;
   background: rgba(123, 167, 188, .1)!important;
 }
+
+.details {
+  font-size: .8rem;
+  line-height: 1.5em;
+  font-style: italic;
+}
+
+h1 + .details {
+  margin-top: -2rem;
+}

@@ -7,6 +7,11 @@
       :alt="$page.wordPressPost.featuredMedia.altText"
     />
     <h1 v-html="$page.wordPressPost.title"></h1>
+    <p class="details">
+      <b>Originally published</b>: {{ date }}
+      <br>
+      <b>Last updated</b>: {{ modified }}
+    </p>
     <div class="content" v-html="filterPre($page.wordPressPost.content)"/>
 
     <hr />
@@ -35,6 +40,8 @@ query WordPressPost ($id: ID!) {
   wordPressPost(id: $id) {
     title
     content
+    date
+    modified
     featuredMedia {
       sourceUrl
       altText
@@ -74,6 +81,14 @@ export default {
   methods: {
     filterPre(content) {
       return content.split('<pre>').join('<pre><code class="language-javascript">').split('</pre>').join('</code></pre>')
+    }
+  },
+  computed: {
+    date() {
+      return new Date(this.$page.wordPressPost.date).toDateString()
+    },
+    modified() {
+      return new Date(this.$page.wordPressPost.modified).toDateString()
     }
   }
 }
