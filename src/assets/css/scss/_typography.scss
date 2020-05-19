@@ -188,9 +188,6 @@ code {
   color: inherit;
 }
 
-// Class for text callouts in blog posts
-// Still needs some tweaking, especially for different widths
-// Also, need to add it to the blog posts
 .callout {
   margin: 2rem 1rem;
   font-style: italic;
@@ -233,4 +230,11 @@ code {
     width: 22em;
     margin-right: calc(-6rem - 12vw);
   }
+}
+
+.highlight {
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.5em;
+  margin: 2rem 0;
 }
