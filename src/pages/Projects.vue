@@ -18,25 +18,34 @@
 			</div>
 		</form>
 
-		<ul class="fullwidth">
+		<ul id="project-list">
 			<li v-for="(project, i) in filteredProjects" :key="project.id">
 				<transition-group name="fade" tag="div" appear>
-					<g-link :to="project.node.path" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
-						<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" />
-						<div class="details" >
-							<div class="title">
+					<div class="project-preview" :key="project.node.id">
+						<g-link :to="project.node.path" :style="{transitionDelay: (i * .1) + 's' }">
+							<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" alt="" />
+						</g-link>
+						<div class="details">
+							<h2 class="title">
 								{{ project.node.title }}
-								<hr />
-								<div class="subtitle">
-									{{ project.node.category }}
+							</h2>
+							<div class="subtitle">
+								{{ project.node.category }}
+								<div class="tags">
+									<span>{{ project.node.tags.join(', ') }}</span>
 								</div>
 							</div>
+							<div class="excerpt" v-html="project.node.summary"></div>
+							{{ project.node.summary }}
+							<g-link :to="project.node.path" :style="{transitionDelay: (i * .1) + 's' }">
+								Preview project
+							</g-link>
 						</div>
-					</g-link>
+					</div>
 				</transition-group>
 			</li>
 			<li v-if="!filteredProjects.length" id="projects-empty-state">
-				<transition name="fade">
+				<transition name="fade" appear>
 					<div class="empty">
 						<p class="fancy">No projects to show with those filters.</p>
 					</div>
@@ -91,6 +100,7 @@ query {
         content
         featuredMedia
         category
+				tags
 				path
       }
     }
@@ -122,7 +132,51 @@ query {
 	grid-column: 1 / -1;
 }
 
-ul.fullwidth {
+#project-list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+
+	.project-preview {
+		display: grid;
+		grid-template-columns: 12rem 1fr;
+		grid-gap: 2rem;
+		text-decoration: none;
+		margin-bottom: 3rem;
+
+		img {
+			margin: 0;
+		}
+
+		.title {
+			font-family: 'Pensum Display Basic', serif;
+			display: block;
+			border-bottom: unset;
+			font-style: normal;
+			font-size: 1.4rem;
+			border-top: 1px solid;
+			padding: .5rem 0;
+			margin: 0;
+		}
+
+		.subtitle {
+			font-weight: bold;
+			text-transform: uppercase;
+			font-style: normal;
+			font-size: .6rem;
+			border-bottom: 1px solid;
+			padding: 0 0 .25rem;
+
+			.tags {
+				font-style: italic;
+				font-weight: normal;
+				text-transform: none;
+			}
+		}
+	}
+}
+
+/* ul.fullwidth {
 	list-style-type: none;
 	display: grid;
 	padding: 0;
@@ -227,7 +281,7 @@ ul.fullwidth {
 		transform: scale(1);
 		margin: 0;
 	}
-}
+} */
 
 .fade {
 	&-enter-active {

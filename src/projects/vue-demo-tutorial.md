@@ -3,6 +3,8 @@ title: Vue Interactive Demo Tutorial
 featuredMedia: projects/vue-demo.png
 link: https://codepen.io/joshuajcollinsworth/full/MLjVrQ
 category: code
+tags: [tutorial, vue, javascript]
+summary: An interactive, illustrated blog post-like pen demoing the concepts of Vue JS.
 ---
 
 A blog post-shaped pen with interactive code examples and demos for learning the basics of Vue.js.

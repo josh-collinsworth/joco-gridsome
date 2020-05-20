@@ -3,6 +3,8 @@ title: QvickList App
 featuredMedia: projects/qvicklist.png
 link: https://qvicklist.com
 category: code
+tags: [app, vue, javascript]
+summary: A quick, easy, simple to-do app that uses local storage to save changes.
 ---
 
 I was tired of trying to use to-do/checklist apps; there’s always too much upfront effort for something that should be as instant as writing on paper.

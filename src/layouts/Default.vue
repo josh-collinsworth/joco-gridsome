@@ -104,7 +104,7 @@ export default {
     [grid-start]
       var(--left-column)
     [content-start]
-      minmax(400px, var(--max-width))
+      minmax(18rem, var(--max-width))
     [content-end]
       1fr
     [grid-end];

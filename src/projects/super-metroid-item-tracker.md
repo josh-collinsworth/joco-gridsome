@@ -3,6 +3,8 @@ title: Super Metroid Item Tracker
 featuredMedia: projects/smitty.png
 link: https://smitty.netlify.app
 category: code
+tags: [app, svelte, game]
+summary: An online checklist for all the items in the classic Super Nintendo game.
 ---
 
 I’m a huge fan of the game Super Metroid. (In fact, I might even call it my all-time favorite.) I enjoy speed running the game as an amateur, but frequently missed one or two items during my 100% attempts, so I built a checklist.
