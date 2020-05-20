@@ -36,10 +36,42 @@ pre {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 1rem;
-	margin: .5em 0;
+	padding: 4rem 1rem 2rem;
+	margin: 2rem 0;
 	overflow: auto;
 	border-radius: 0.3em;
+	position: relative;
+
+	&:before {
+		top: 0;
+		left: 0;
+		content: 'Code';
+		font-size: 1rem;
+		font-family: 'Averta STD', sans-serif;
+		padding: .5rem 1rem;
+		width: 100%;
+		position: absolute;
+		border-bottom: 1px solid var(--black);
+		background: var(--darkBlue);
+		font-style: italic;
+	}
+}
+
+pre.language-css:before {
+	content: 'CSS:';
+}
+
+pre.language-php:before {
+	content: 'PHP:';
+}
+
+pre.language-html:before {
+	content: 'HTML:';
+}
+
+pre.language-js:before,
+pre.language-javascript:before {
+	content: 'JavaScript:';
 }
 
 :not(pre) > code,

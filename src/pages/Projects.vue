@@ -1,6 +1,10 @@
 <template>
   <Layout>
 
+		<WorkLinks />
+
+		<h1>Showcase</h1>
+
 		<form @submit.prevent="" id="projects-filter">
 			<header>
 				<strong>Filter projects:</strong>
@@ -44,7 +48,10 @@
 </template>
 
 <script>
+import WorkLinks from '~/components/WorkLinks'
+
 export default {
+	components: { WorkLinks },
 	data: () => ({
 		shownCategories: [],
 		projects: []
