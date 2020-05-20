@@ -35,8 +35,7 @@
 									<span>{{ project.node.tags.join(', ') }}</span>
 								</div>
 							</div>
-							<div class="excerpt" v-html="project.node.summary"></div>
-							{{ project.node.summary }}
+							<div class="summary" v-html="project.node.summary"></div>
 							<g-link :to="project.node.path" :style="{transitionDelay: (i * .1) + 's' }">
 								Preview project
 							</g-link>
@@ -102,6 +101,7 @@ query {
         category
 				tags
 				path
+				summary
       }
     }
   }
@@ -139,13 +139,23 @@ query {
 
 	.project-preview {
 		display: grid;
-		grid-template-columns: 12rem 1fr;
-		grid-gap: 2rem;
+		grid-template-columns:	1fr;
+		grid-gap: 1.5rem;
 		text-decoration: none;
-		margin-bottom: 3rem;
+		margin-bottom: 6rem;
+
+		@media (min-width: 440px) {
+			grid-template-columns: 6rem 1fr;
+		}
+
+		@media (min-width: 560px) {
+			grid-template-columns: 12rem 1fr;
+			margin-bottom: 3rem;
+		}
 
 		img {
 			margin: 0;
+			border: 1px solid;
 		}
 
 		.title {
@@ -154,8 +164,6 @@ query {
 			border-bottom: unset;
 			font-style: normal;
 			font-size: 1.4rem;
-			border-top: 1px solid;
-			padding: .5rem 0;
 			margin: 0;
 		}
 
@@ -165,13 +173,21 @@ query {
 			font-style: normal;
 			font-size: .6rem;
 			border-bottom: 1px solid;
-			padding: 0 0 .25rem;
+			display: flex;
+			align-items: baseline;
+			line-height: 1em;
+			padding: .25rem 0 .5rem;
 
 			.tags {
 				font-style: italic;
 				font-weight: normal;
 				text-transform: none;
+				margin-left: .5rem;
 			}
+		}
+
+		.summary {
+			margin-top: 1rem;
 		}
 	}
 }
