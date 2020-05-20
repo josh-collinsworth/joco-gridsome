@@ -21,23 +21,23 @@
 		<ul id="project-list">
 			<li v-for="(project, i) in filteredProjects" :key="project.id">
 				<transition-group name="fade" tag="div" appear>
-					<div class="project-preview" :key="project.node.id">
-						<g-link :to="project.node.path" :style="{transitionDelay: (i * .1) + 's' }">
+					<div class="project-preview" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
+						<g-link :to="project.node.path" class="project-image">
 							<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" alt="" />
 						</g-link>
-						<div class="details">
-							<h2 class="title">
-								{{ project.node.title }}
-							</h2>
-							<div class="subtitle">
-								{{ project.node.category }}
-								<div class="tags">
-									<span>{{ project.node.tags.join(', ') }}</span>
-								</div>
+						<h2 class="title">
+							{{ project.node.title }}
+						</h2>
+						<div class="subtitle">
+							{{ project.node.category }}
+							<div class="tags">
+								<span>{{ project.node.tags.join(', ') }}</span>
 							</div>
+						</div>
+						<div>
 							<div class="summary" v-html="project.node.summary"></div>
 							<g-link :to="project.node.path" :style="{transitionDelay: (i * .1) + 's' }">
-								Preview project
+								View Project
 							</g-link>
 						</div>
 					</div>
@@ -139,23 +139,28 @@ query {
 
 	.project-preview {
 		display: grid;
-		grid-template-columns:	1fr;
-		grid-gap: 1.5rem;
+		grid-template-columns:	8rem 1fr;
+		grid-gap: 1rem;
 		text-decoration: none;
-		margin-bottom: 6rem;
-
-		@media (min-width: 440px) {
-			grid-template-columns: 6rem 1fr;
-		}
+		margin-bottom: 3rem;
+		align-content: start;
+		align-items: start;
 
 		@media (min-width: 560px) {
 			grid-template-columns: 12rem 1fr;
-			margin-bottom: 3rem;
 		}
 
-		img {
-			margin: 0;
-			border: 1px solid;
+		.project-image {
+			grid-row: 2 / 5;
+
+			@media (min-width: 560px) {
+				grid-row: 1 / 5;
+			}
+
+			img {
+				margin: 0;
+				border: 1px solid;
+			}
 		}
 
 		.title {
@@ -165,6 +170,14 @@ query {
 			font-style: normal;
 			font-size: 1.4rem;
 			margin: 0;
+			padding: 0;
+			grid-column: 1 / -1;
+			grid-row: 1 / 2;
+
+			@media (min-width: 560px) {
+				grid-column: 2 / 3;
+				grid-row: 1 / 2;
+			}
 		}
 
 		.subtitle {
@@ -176,7 +189,9 @@ query {
 			display: flex;
 			align-items: baseline;
 			line-height: 1em;
-			padding: .25rem 0 .5rem;
+			padding: 0 0 .5rem;
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
 
 			.tags {
 				font-style: italic;
@@ -187,7 +202,22 @@ query {
 		}
 
 		.summary {
-			margin-top: 1rem;
+			grid-column: 2 / 3;
+			grid-row: 3 / 4;
+			font-size: .9rem;
+			line-height: 1.3em;
+			font-style: italic;
+
+			@media (min-width: 560px) {
+				grid-row: auto;
+			}
+
+			& + a {
+				font-style: italic;
+				display: block;
+				margin-top: 1rem;
+				font-size: .9em;
+			}
 		}
 	}
 }

@@ -13,3 +13,5 @@
 * Fill out all the new projects' info
  * Decide how to handle project images
 * Figure out how to handle multiple project categories
+* Figure out why things delay when toggling dark mode
+* Add typography grid project; consider trimming projects
