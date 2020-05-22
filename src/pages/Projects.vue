@@ -101,7 +101,6 @@ query {
         link
         content
         featuredMedia
-				media_align
         category
 				tags
 				path
