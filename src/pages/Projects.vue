@@ -22,7 +22,7 @@
 				<transition-group name="fade" tag="div" appear>
 					<div class="project-preview" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
 						<g-link :to="project.node.path" class="project-image">
-							<g-image :src="require(`!!assets-loader?width=480&height=480&position=top!@images/${project.node.featuredMedia}`)" fit="contain" position="top"  alt="" />
+							<g-image :src="require(`!!assets-loader?width=480&height=480&position=top!@images/${project.node.featuredMedia}`)" fit="contain" position="top"  :alt="$project.node.title" />
 						</g-link>
 						<h2 class="title">
 							<g-link :to="project.node.path">

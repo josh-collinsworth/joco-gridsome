@@ -2,9 +2,13 @@
 	<button
 		id="settings-toggle"
 		:class="{ 'open': settingsOpen }"
+		:aria-pressed="settingsOpen"
 		@click="$emit('toggleSettingsOpen')"
 	>
 		<SettingsIcon />
+		<span class="sr">
+			{{ settingsOpen ? 'Close' : 'Open' }} settings menu
+		</span>
 	</button>
 </template>
 

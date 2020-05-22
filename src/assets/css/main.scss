@@ -10,6 +10,7 @@
 *, *:before, *:after {
   box-sizing: border-box;
   font-family: inherit;
+  font-display: swap;
 }
 
 *:focus,
@@ -24,7 +25,6 @@ body {
   color: var(--darkGray);
   margin: 0;
   padding: 0;
-  font-display: swap;
 }
 
 #app {
