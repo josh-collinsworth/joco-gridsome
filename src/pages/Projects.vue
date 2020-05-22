@@ -1,9 +1,8 @@
 <template>
   <Layout>
 
-		<WorkLinks />
-
 		<h1>Showcase</h1>
+		<WorkLinks />
 
 		<form @submit.prevent="" id="projects-filter">
 			<header>
@@ -23,10 +22,12 @@
 				<transition-group name="fade" tag="div" appear>
 					<div class="project-preview" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
 						<g-link :to="project.node.path" class="project-image">
-							<g-image :src="require(`!!assets-loader?width=480&height=480!@images/${project.node.featuredMedia}`)" width="80" quality="20" fit="contain" alt="" />
+							<g-image :src="require(`!!assets-loader?width=480&height=480&position=top!@images/${project.node.featuredMedia}`)" fit="contain" position="top"  alt="" />
 						</g-link>
 						<h2 class="title">
-							{{ project.node.title }}
+							<g-link :to="project.node.path">
+								{{ project.node.title }}
+							</g-link>
 						</h2>
 						<div class="subtitle">
 							{{ project.node.category }}
@@ -35,10 +36,7 @@
 							</div>
 						</div>
 						<div>
-							<div class="summary" v-html="project.node.summary"></div>
-							<g-link :to="project.node.path" :style="{transitionDelay: (i * .1) + 's' }">
-								View Project
-							</g-link>
+							<div class="summary" v-html="summaryWithLink(project)"></div>
 						</div>
 					</div>
 				</transition-group>
@@ -76,6 +74,11 @@ export default {
 			this.$nextTick(() => this.projects = this.$static.allProject.edges)
 		},
 	},
+	methods: {
+		summaryWithLink(project) {
+			return project.node.summary + `&ensp;<a href="${this.$url(project.node.path)}">More…</a>`
+		}
+	},
 	computed: {
 		filteredProjects() {
 			return this.projects.filter(project => this.shownCategories.includes(project.node.category))
@@ -98,6 +101,7 @@ query {
         link
         content
         featuredMedia
+				media_align
         category
 				tags
 				path
@@ -133,6 +137,7 @@ query {
 }
 
 #project-list {
+	$projects_breakpoint: 560px;
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
@@ -140,26 +145,30 @@ query {
 	.project-preview {
 		display: grid;
 		grid-template-columns:	8rem 1fr;
-		grid-gap: 1rem;
+		grid-gap: .5rem 1rem;
 		text-decoration: none;
-		margin-bottom: 3rem;
+		margin-bottom: 4rem;
 		align-content: start;
 		align-items: start;
+		border-top: 1px solid;
 
-		@media (min-width: 560px) {
+		@media (min-width: $projects_breakpoint) {
 			grid-template-columns: 12rem 1fr;
 		}
 
 		.project-image {
 			grid-row: 2 / 5;
 
-			@media (min-width: 560px) {
+			@media (min-width: $projects_breakpoint) {
 				grid-row: 1 / 5;
 			}
 
 			img {
 				margin: 0;
-				border: 1px solid;
+
+				@media (min-width: $projects_breakpoint) {
+					border-right: 1px solid;
+				}
 			}
 		}
 
@@ -168,15 +177,19 @@ query {
 			display: block;
 			border-bottom: unset;
 			font-style: normal;
-			font-size: 1.4rem;
-			margin: 0;
+			font-size: 1.5rem;
+			margin: 1rem 0 .5rem;
 			padding: 0;
 			grid-column: 1 / -1;
 			grid-row: 1 / 2;
 
-			@media (min-width: 560px) {
+			@media (min-width: $projects_breakpoint) {
 				grid-column: 2 / 3;
 				grid-row: 1 / 2;
+			}
+
+			a {
+				color: var(--ink);
 			}
 		}
 
@@ -188,10 +201,16 @@ query {
 			border-bottom: 1px solid;
 			display: flex;
 			align-items: baseline;
+			width: auto;
 			line-height: 1em;
-			padding: 0 0 .5rem;
+			padding: 0 0 1rem;
 			grid-column: 2 / 3;
 			grid-row: 2 / 3;
+
+			@media(min-width: $projects_breakpoint) {
+				margin-left: -1rem;
+				padding-left: 1rem;
+			}
 
 			.tags {
 				font-style: italic;
@@ -206,128 +225,23 @@ query {
 			grid-row: 3 / 4;
 			font-size: .9rem;
 			line-height: 1.3em;
+			font-size: .8em;
 			font-style: italic;
+			margin-top: .5rem;
 
-			@media (min-width: 560px) {
+			@media (min-width: $projects_breakpoint) {
 				grid-row: auto;
 			}
 
 			& + a {
 				font-style: italic;
 				display: block;
-				margin-top: 1rem;
-				font-size: .9em;
+				margin-top: .5rem;
+				font-size: .8em;
 			}
 		}
 	}
 }
-
-/* ul.fullwidth {
-	list-style-type: none;
-	display: grid;
-	padding: 0;
-	width: 100vw;
-	grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-
-	li {
-		margin: 0;
-		display: block;
-		padding: 0;
-		position: relative;
-		overflow: hidden;
-		font-size: .875rem;
-		line-height: 1.4em;
-		transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
-
-		.details {
-			opacity: 0;
-			transition: all .4s cubic-bezier(1, 0, 0, 1);
-			background: linear-gradient(to top, var(--darkBlue) 33%, transparent);
-			background: var(--darkBlue);
-			padding: 1rem;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			height: auto;
-			width: 100%;
-			color: var(--white);
-			display: flex;
-			align-items: flex-end;
-			transform: translateY(100%);
-			opacity: 0;
-
-			.title,
-			.subtitle,
-			hr {
-				transform: translateY(.25em);
-				opacity: 0;
-				transition: all .25s cubic-bezier(0.5, 0, 0.5, 1);
-				transition-delay: .2s;
-			}
-
-			hr {
-				width: 2rem;
-				border: none;
-				height: 1px;
-				background: var(--white);
-				transition-delay: .275s;
-				margin: .5em 0;
-			}
-
-			.subtitle {
-				transition-delay: .35s;
-			}
-		}
-
-		&:hover {
-			box-shadow: .0 0 0 .2rem var(--yellow);
-			z-index: 2;
-			transform: translateY(-.1rem);
-
-			.details {
-				opacity: 1;
-				transform: translateY(0);
-
-				.title,
-				.subtitle,
-				hr {
-					transform: translateY(0);
-					opacity: 1;
-				}
-			}
-		}
-
-		.empty {
-			background: var(--paper);
-			margin: 0;
-			padding: 1em;
-		}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.title {
-		font-style: italic;
-
-		.subtitle {
-			font-size: .675em;
-			text-transform: uppercase;
-			font-weight: bold;
-			margin-top: .5em;
-			font-style: normal;
-		}
-	}
-
-	img {
-		display: block;
-		transition: all .15s cubic-bezier(0.5, 0, 0.5, 1);
-		transform: scale(1);
-		margin: 0;
-	}
-} */
 
 .fade {
 	&-enter-active {

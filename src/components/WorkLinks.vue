@@ -1,20 +1,14 @@
 <template>
-	<ul id="work-links">
-		<p>Find me on:</p>
-		<li>
-			<ExternalLink to="github.com/josh-collinsworth">
-				<img :src="`${imageSrc}/2019/02/GitHub-Mark-120px-plus.png`" alt="" />
-				<span class="sr">GitHub profile</span>
-			</ExternalLink>
-		</li>
-
-		<li>
-			<ExternalLink to="codepen.io/joshuajcollinsworth">
-				<img :src="`${imageSrc}/2018/01/Codepen-Button-Fill-Black-Large.png`" alt="">
-				<span class="sr">CodePen profile</span>
-			</ExternalLink>
-		</li>
-	</ul>
+	<p class="fancy details">You can also find me on
+		<ExternalLink to="github.com/josh-collinsworth">
+			GitHub
+		</ExternalLink>
+		and
+		<ExternalLink to="codepen.io/joshuajcollinsworth">
+			CodePen
+		</ExternalLink>
+		.
+	</p>
 </template>
 
 

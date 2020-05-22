@@ -24,6 +24,7 @@ module.exports = {
       }
     }
   ],
+  //Required to make relative image paths work (unfortunately)
   chainWebpack: config => {
     config.resolve.alias.set('@images', '@/assets/images')
   },
