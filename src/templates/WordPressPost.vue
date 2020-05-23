@@ -76,7 +76,7 @@ export default {
     }
   },
   mounted() {
-    prism
+    prism.init()
   },
   methods: {
     filterPre(content) {
