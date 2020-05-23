@@ -2,8 +2,8 @@
 title: The Wine Cellar at Marks
 featuredMedia: projects/the-wine-cellar.png
 link: https://thecellaratmarks.com/
-category: code
-tags: [vue, website, gridsome, javascript]
+category: website
+tags: [vue, gridsome, javascript]
 summary: A website for a local wine seller/cellar.
 ---
 

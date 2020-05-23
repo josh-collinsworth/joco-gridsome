@@ -2,8 +2,8 @@
 title: marksindundee.com
 featuredMedia: projects/Firefox_Screenshot_2020-04-24T21-06-18.952Z.png
 link: https://marksindundee.com/
-category: code
-tags: [website]
+category: website
+tags: [wordpress]
 summary: Website for a local neighborhood bistro, featuring an interactive menu.
 ---
 

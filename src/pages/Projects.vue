@@ -12,7 +12,7 @@
 			<div class="checkboxes">
 				<div class="checkbox-wrap" v-for="category in allCategories" :key="category">
 					<input type="checkbox" :value="category" v-model="shownCategories" :id="category">
-					<label :for="category">{{ category }}</label>
+					<label :for="category">{{ capitalize(category) }}</label>
 				</div>
 			</div>
 		</form>
@@ -32,7 +32,7 @@
 						<div class="subtitle">
 							{{ project.node.category }}
 							<div class="tags">
-								<span>{{ project.node.tags.join(', ') }}</span>
+								<span>{{ projectTags(project) }}</span>
 							</div>
 						</div>
 						<div>
@@ -77,6 +77,12 @@ export default {
 	methods: {
 		summaryWithLink(project) {
 			return project.node.summary + `&ensp;<a href="${this.$url(project.node.path)}">More…</a>`
+		},
+		projectTags(project) {
+			return project.node.tags.map(tag => this.capitalize(tag)).join(', ')
+		},
+		capitalize(str) {
+			return str.replace(/^\w/, c => c.toUpperCase());
 		}
 	},
 	computed: {

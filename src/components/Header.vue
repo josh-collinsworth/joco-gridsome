@@ -92,6 +92,7 @@ export default {
 	align-items: center;
 	height: 3rem;
 	background: var(--darkBlue);
+	color: var(--white);
 
 	&:focus {
 		left: 0;
