@@ -4,7 +4,8 @@
 			<label :for="`${fontName}-size`">Size:</label>
 			<input :id="`${fontName}-size`" type="range" v-model="size" min="8" max="127" />
 		</div>
-		<input type="text" @click="select" v-model="text" :style="{ fontFamily: font, fontSize: sizeInPx, fontStyle, fontWeight }" />
+		<label :for="`${fontName}`" class="sr">{{ fontName }}</label>
+		<input :id="`${fontName}`" type="text" @click="select" v-model="text" :style="{ fontFamily: font, fontSize: sizeInPx, fontStyle, fontWeight }" />
 	</form>
 </template>
 
