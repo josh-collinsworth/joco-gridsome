@@ -6,4 +6,4 @@ tags: [brand, logo]
 summary: A brand and package design for a (unfortunately) fictional product.
 ---
 
-TODO: fill this out
+A student package and brand design project that eventually won both Gold and Judge's Choice at [Show](https://shownebraska.org), Nebraska's annual design showcase.

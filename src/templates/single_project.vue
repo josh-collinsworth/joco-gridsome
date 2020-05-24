@@ -2,18 +2,20 @@
 	<Layout>
 		<p class="fancy">{{ formattedCategory }} project:</p>
 		<h1>{{project.title}}</h1>
-		<g-image :src="require(`!!assets-loader!@images/${$page.project.featuredMedia}`)" width="200" height="200" fit="contain"/>
-		<div v-html="project.content"></div>
+		<g-image id="project-image" :src="require(`!!assets-loader!@images/${$page.project.featuredMedia}`)" width="200" height="200" fit="contain"/>
+		<div class="content" v-html="project.content"></div>
 		<div v-if="project.link">
 			<hr>
-			<iframe class="wider" :src="project.link" frameborder="0"></iframe>
 			<p>
 				<strong>View this project at: </strong>
+				<br />
 				<a :href="project.link">
 					{{ project.link }}
 				</a>
 			</p>
+			<iframe class="wider" :src="project.link" frameborder="0"></iframe>
 		</div>
+		<p><g-link to="/projects">&lsaquo; Back to projects</g-link></p>
 	</Layout>
 </template>
 
@@ -57,6 +59,22 @@ export default {
 
 
 <style lang="scss" scoped>
+
+/* @media (min-width: 72rem) {
+
+	#project-image {
+		float: right;
+		max-width: calc(100vw - var(--max-width) - 13rem);
+		margin-right: calc((100vw - var(--max-width) - 12rem) * -1);
+		margin-left: auto;
+		grid-row: 3 / 4;
+	}
+
+	.content {
+		grid-row: 3 / 4;
+	}
+} */
+
 iframe {
 	min-height: 90vh;
 	max-height: 100vh;

@@ -1,7 +1,7 @@
 <template>
   <Layout>
 
-		<h1>Showcase</h1>
+		<h1>Projects</h1>
 		<WorkLinks />
 
 		<form @submit.prevent="" id="projects-filter">
