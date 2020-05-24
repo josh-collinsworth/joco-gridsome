@@ -65,18 +65,6 @@ export default {
 .fullwidth {
   width: 100vw;
   grid-column: grid-start / grid-end!important; //Necessary to override specificity of `main > *` selector
-
-  /* @media (min-width: 768px) {
-    margin-left: -2rem;
-  }
-
-  @media (min-width: 1024px) {
-    margin-left: -4rem;
-  }
-
-  @media (min-width: 1200px) {
-    margin-left: -6rem;
-  } */
 }
 
 .wider {
@@ -107,6 +95,8 @@ export default {
       minmax(18rem, var(--max-width))
     [content-end]
       1fr
+    [right-gutter-start]
+      var(--left-column)
     [grid-end];
   grid-gap: 1rem;
   margin: 2rem 0 4rem 0;
@@ -118,6 +108,7 @@ export default {
     grid-template-columns: inherit;
     grid-gap: inherit;
     grid-column: grid-start / grid-end;
+    align-items: start;
 
     & > * {
       grid-column: content-start / content-end;

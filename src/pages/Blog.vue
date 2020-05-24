@@ -1,7 +1,9 @@
 <template>
   <Layout>
     <h1>Blog</h1>
+    <BlogSearch @foundPosts="updatePosts" />
     <p class="fancy">Page {{ $page.allWordPressPost.pageInfo.currentPage }} of {{ $page.allWordPressPost.pageInfo.totalPages  }}</p>
+
 		<article v-for="post in $page.allWordPressPost.edges" :key="post.node.id">
       <g-link href="#" :to="'/' + post.node.slug">
         <img :src="post.node.featuredMedia.sourceUrl" alt="">
@@ -50,10 +52,14 @@ query ($page: Int) {
 
 <script>
 import { Pager } from 'gridsome'
+import BlogSearch from '../components/BlogSearch'
 
 export default {
+  data: () => ({
+
+  }),
   components: {
-    Pager
+    Pager, BlogSearch
   },
   metaInfo: {
     title: "Blog"
@@ -63,7 +69,7 @@ export default {
 
 <style scoped>
   article img {
-    margin-top: 8rem;
+    margin-top: 6rem;
   }
 
   article:first-of-type img {

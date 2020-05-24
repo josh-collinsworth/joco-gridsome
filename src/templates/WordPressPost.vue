@@ -12,7 +12,7 @@
       <br>
       <b>Last updated</b>: {{ modified }}
     </p>
-    <div class="content" v-html="filterPre($page.wordPressPost.content)"/>
+    <div class="content" v-html="$page.wordPressPost.content"/>
 
     <hr />
 
@@ -77,11 +77,6 @@ export default {
   },
   mounted() {
     prism.init()
-  },
-  methods: {
-    filterPre(content) {
-      return content.split('<pre>').join('<pre><code class="language-javascript">').split('</pre>').join('</code></pre>')
-    }
   },
   computed: {
     date() {
