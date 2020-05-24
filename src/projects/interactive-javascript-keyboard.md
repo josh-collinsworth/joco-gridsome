@@ -2,7 +2,7 @@
 title: Interactive JavaScript Keyboard
 featuredMedia: projects/js-keyboard.png
 link: https://codepen.io/joshuajcollinsworth/pen/VPXVbW
-category: code
+category: app + code
 tags: [interactive, javascript]
 summary: An interactive project inspired by Wes Bos's JavaScript 30.
 ---

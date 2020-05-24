@@ -1,9 +1,9 @@
 ---
 title: Cougars Sports Logo
 featuredMedia: projects/cougar.png
-category: design
+category: logos + designs
 tags: [logo, vector]
 summary: A logo project for a fictional sports team.
 ---
 
-TODO: fill this out
+Just a fun logo project for a fictional sports team.

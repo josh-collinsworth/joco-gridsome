@@ -2,7 +2,7 @@
 title: Vue Google Font Tester
 featuredMedia: projects/vue-google-fonts-tester.png
 link: https://codepen.io/joshuajcollinsworth/pen/BEdydP
-category: code
+category: app + code
 tags: [app, vue, typography, javascript]
 summary: A mini interactive Google font tester app.
 ---

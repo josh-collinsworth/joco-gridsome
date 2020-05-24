@@ -1,8 +1,8 @@
 ---
 title: WP Multisite Domain Replace
-featuredMedia: projects/Firefox_Screenshot_2020-04-24T20-18-24.052Z.png
+featuredMedia: projects/wpmdbsr.png
 link: https://wpmultisitedomainreplace.com
-category: code
+category: app + code
 tags: [vue, app, website, wordpress, nuxt]
 summary: A web app to help modify the domain of your WordPress multisite in the database.
 ---

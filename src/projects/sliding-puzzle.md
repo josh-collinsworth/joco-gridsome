@@ -1,8 +1,8 @@
 ---
 title: Sliding Puzzle in Vue
-featuredMedia: projects/Firefox_Screenshot_2020-04-24T20-08-24.703Z.png
+featuredMedia: projects/sliding-puzzle.png
 link: https://codepen.io/joshuajcollinsworth/pen/XwPXrM
-category: code
+category: app + code
 tags: [app, game, vue, javascript]
 summary: The classic puzzle game recreated in Vue and custom CSS.
 ---

@@ -1,6 +1,6 @@
 ---
-title: marksindundee.com
-featuredMedia: projects/Firefox_Screenshot_2020-04-24T21-06-18.952Z.png
+title: Marks Bistro
+featuredMedia: projects/marks.png
 link: https://marksindundee.com/
 category: website
 tags: [wordpress]

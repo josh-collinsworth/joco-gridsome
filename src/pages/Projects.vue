@@ -6,7 +6,7 @@
 
 		<form @submit.prevent="" id="projects-filter">
 			<header>
-				<strong>Filter projects:</strong>
+				<strong class="sr">Filter projects:</strong>
 			</header>
 
 			<div class="checkboxes">
@@ -31,9 +31,10 @@
 						</h2>
 						<div class="subtitle">
 							{{ project.node.category }}
-							<div class="tags">
+							<!-- Removing tags for now; don't think they add anything -->
+							<!-- <div class="tags">
 								<span>{{ projectTags(project) }}</span>
-							</div>
+							</div> -->
 						</div>
 						<div>
 							<div class="summary" v-html="summaryWithLink(project)"></div>
@@ -99,7 +100,7 @@ export default {
 
 <static-query>
 query {
-	allProject {
+	allProject(sort: [{ by: "category", order: ASC }, { by: "title", order: ASC }], ) {
     edges {
       node {
         title
@@ -132,7 +133,7 @@ query {
 	}
 
 	.checkbox-wrap {
-		display: inline-block;
+		display: block;
 		margin-right: 2rem;
 	}
 }
@@ -183,7 +184,7 @@ query {
 			border-bottom: unset;
 			font-style: normal;
 			font-size: 1.5rem;
-			margin: 1rem 0 .5rem;
+			margin: 1rem 0 0;
 			padding: 0;
 			grid-column: 1 / -1;
 			grid-row: 1 / 2;

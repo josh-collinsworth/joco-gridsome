@@ -2,22 +2,29 @@
   <Layout>
     <h1>Blog</h1>
     <BlogSearch @foundPosts="updatePosts" />
-    <p class="fancy">Page {{ $page.allWordPressPost.pageInfo.currentPage }} of {{ $page.allWordPressPost.pageInfo.totalPages  }}</p>
+    <p v-if="!searched" class="fancy">Page {{ $page.allWordPressPost.pageInfo.currentPage }} of {{ $page.allWordPressPost.pageInfo.totalPages  }}</p>
+    <p v-else>{{ resultsText }}</p>
 
-		<article v-for="post in $page.allWordPressPost.edges" :key="post.node.id">
-      <g-link href="#" :to="'/' + post.node.slug">
-        <img :src="post.node.featuredMedia.sourceUrl" alt="">
-      </g-link>
-    	<h2>
+    <div v-if="posts.length">
+      <article v-for="post in posts" :key="post.node.id">
         <g-link href="#" :to="'/' + post.node.slug">
-          <span  v-html="post.node.title"></span>
+          <img :src="post.node.featuredMedia.sourceUrl" alt="">
         </g-link>
-      </h2>
-      <div v-html="post.node.excerpt"></div>
-		</article>
+        <h2>
+          <g-link href="#" :to="'/' + post.node.slug">
+            <span  v-html="post.node.title"></span>
+          </g-link>
+        </h2>
+        <div v-html="post.node.excerpt"></div>
+      </article>
+    </div>
 
-    <p>Page:</p>
-    <Pager :info="$page.allWordPressPost.pageInfo" />
+    <h2 v-if="!posts.length">Sorry, no posts found.</h2>
+
+    <div v-if="posts.length">
+      <p>Page:</p>
+      <Pager :info="$page.allWordPressPost.pageInfo" />
+    </div>
   </Layout>
 </template>
 
@@ -56,7 +63,8 @@ import BlogSearch from '../components/BlogSearch'
 
 export default {
   data: () => ({
-
+    searched: false,
+    posts: []
   }),
   components: {
     Pager, BlogSearch
@@ -64,6 +72,24 @@ export default {
   metaInfo: {
     title: "Blog"
   },
+  created() {
+    this.posts = this.$page.allWordPressPost.edges
+  },
+  methods: {
+    updatePosts(found) {
+      console.log('got here')
+      this.posts = []
+      this.searched = true
+      this.$nextTick(() => {
+        this.posts = found
+      })
+    }
+  },
+  computed: {
+    resultsText() {
+      return `${this.posts.length} result${this.posts.length > 1 ? 's' : ''}`
+    }
+  }
 };
 </script>
 

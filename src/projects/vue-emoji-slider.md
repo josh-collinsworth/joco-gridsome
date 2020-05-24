@@ -2,7 +2,7 @@
 title: Vue Emoji Slider Component
 featuredMedia: projects/emoji-slider.png
 link: https://codepen.io/joshuajcollinsworth/pen/OYgGNK
-category: code
+category: app + code
 tags: [vue, app, silly]
 summary: An interactive slider with an emoji face that updates as you change the input.
 ---

@@ -1,9 +1,9 @@
 ---
 title: Contentious Code
 featuredMedia: projects/hotdog-sandwich.png
-category: illustration
+category: illustration, poster + sticker
 tags: [silly, vector, sticker]
 summary: Code is not neutral.
 ---
 
-TODO: fill this out
+This made a nice sticker, and I stand by it. (It was amusing how quickly these stickers went, as people rushed to pick up some swag to express their opinion on the contentious debate.)

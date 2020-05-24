@@ -1,8 +1,8 @@
 ---
 title: Color Flood Game with Colorblind Mode (React + CSS Grid)
-featuredMedia: projects/Firefox_Screenshot_2020-04-24T20-02-23.351Z.png
+featuredMedia: projects/color-flood.png
 link: https://codepen.io/joshuajcollinsworth/pen/Pymdxo
-category: code
+category: app + code
 tags: [app, game, react]
 summary: A version of the classic game built with React.
 ---

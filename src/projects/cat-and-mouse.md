@@ -2,7 +2,7 @@
 title: Cat and Mouse
 featuredMedia: projects/cat-and-mouse.png
 link: https://codepen.io/joshuajcollinsworth/pen/ExjZexY
-category: code
+category: app + code
 tags: [silly, app, vector]
 summary: A silly game that an animated cat won't let you win.
 ---
