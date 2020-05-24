@@ -93,8 +93,8 @@ export default {
 @font-face {
 	font-family: 'MonoLisa';
 	src: url('../assets/fonts/monolisa-regular-webfont.woff2') format('woff2');
-	font-weight: bold;
-	font-style: italic;
+	font-weight: normal;
+	font-style: normal;
 }
 
 h4 {

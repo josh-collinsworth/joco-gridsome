@@ -1,12 +1,12 @@
 <template>
 	<p class="fancy details">You can also find me on
-		<ExternalLink to="github.com/josh-collinsworth">
+		<xa to="github.com/josh-collinsworth">
 			GitHub
-		</ExternalLink>
+		</xa>
 		and
-		<ExternalLink to="codepen.io/joshuajcollinsworth">
+		<xa to="codepen.io/joshuajcollinsworth">
 			CodePen
-		</ExternalLink>
+		</xa>
 		.
 	</p>
 </template>

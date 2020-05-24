@@ -1,5 +1,5 @@
 <template>
-	<a :href="`https://${sanitizedTo}`" rel="noopener" target="_blank">
+	<a :href="`https://${sanitizedTo}`" rel="noreferrer noopener" target="_blank">
 		<slot />
 	</a>
 </template>

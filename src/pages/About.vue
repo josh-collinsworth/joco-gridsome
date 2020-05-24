@@ -10,9 +10,9 @@
       </div>
 
       <h2>Professionally: </h2>
-      <p>I'm a front-end engineer at <ExternalLink to="getflywheel.com">Flywheel</ExternalLink>,
-      where I work with primarily with <ExternalLink to="vuejs.org">Vue</ExternalLink> and Ruby on Rails.</p>
-      <p>I write semantic, user-focused HTML. Being a designer, I love writing custom CSS from scratch to create layouts, animations and beautiful experiences. JAMstack is my jam; Vue is my favorite (so I'm a big fan of <ExternalLink to="nuxtjs.org">Nuxt</ExternalLink> and <ExternalLink to="gridsome.org">Gridsome</ExternalLink>), but I also really dig Svelte and have worked with React on several projects.</p>
+      <p>I'm a front-end engineer at <xa to="getflywheel.com">Flywheel</xa>,
+      where I work with primarily with <xa to="vuejs.org">Vue</xa> and Ruby on Rails.</p>
+      <p>I write semantic, user-focused HTML. Being a designer, I love writing custom CSS from scratch to create layouts, animations and beautiful experiences. JAMstack is my jam; Vue is my favorite (so I'm a big fan of <xa to="nuxtjs.org">Nuxt</xa> and <xa to="gridsome.org">Gridsome</xa>), but I also really dig Svelte and have worked with React on several projects.</p>
 
       <h2>Previously: </h2>
       <p>
