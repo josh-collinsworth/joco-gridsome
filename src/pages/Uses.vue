@@ -170,7 +170,7 @@
 
     <h2>This site</h2>
 
-    <h3>Colors:</h3>
+    <h3>Colors</h3>
 
     <ul id="brand-colors">
       <li v-for="color in colors" :key="color" class="color">
@@ -181,10 +181,10 @@
       </li>
     </ul>
 
-    <h3>Fonts:</h3>
+    <h3>Fonts</h3>
 
-    <p class="fancy details">I use six fonts, which is admittedly quite a few by web standards. I didn't want to compromise on the design, though, so I use other means to mitigate the performance impact.
-      <br/><br/>For one, MonoLisa only loads on blog posts, so it's actually five fonts on non-blog pages (excluding this one). That's still a lot, but they're all subsetted, so only one is larger than 25kb. That's still hefty all added up, but I use font-display: swap to make sure there isn't a wait while they're loading.)</p>
+    <p class="fancy details"><strong>A note on fonts:</strong> up to six fonts may load on a page, which is admittedly quite a few by web standards. I didn't want to compromise on the design, though, so I used other means to mitigate the performance impact.
+      <br/><br/>For one, MonoLisa only loads on blog posts, and the bold italic weight of Averta only loads on a few pages, so it's actually only four most of the time. That's still a lot, but they're all subsetted, so they average about 25kb each. Plus, I use font-display: swap to make sure there isn't a wait while they're loading.</p>
 
     <FontTester font="Pensum Display Basic"/>
     <FontTester font="Averta STD"/>
@@ -230,37 +230,28 @@ export default {
 	font-family: 'MonoLisa';
 	src: url('../assets/fonts/monolisa-regular-webfont.woff2') format('woff2');
 	font-weight: normal;
-	font-style: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 #brand-colors {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   padding: 0;
-}
 
-.color {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  font-size: .9rem;
-  font-family: 'MonoLisa', monospace;
-  text-shadow: 0 0 1px #fff;
+  .color {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+    font-family: 'MonoLisa', monospace;
+    text-shadow: 0 0 1px #fff;
 
-  .swatch {
-    width: 3.5em;
-    height: 3.5em;
-    margin-right: .5rem;
+    .swatch {
+      width: 3.5em;
+      height: 3.5em;
+      margin-right: .5rem;
+    }
   }
-}
-
-.loadfade {
-    transition: all .3s ease;
-}
-.loadfade-enter-active, .loadfade-leave-active {
-  opacity: 1;
-}
-.loadfade-enter, .loadfade-leave-to {
-  opacity: 0;
 }
 </style>

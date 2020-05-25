@@ -55,6 +55,7 @@ export default {
 .intro {
   h1 {
     font-size: calc(2rem + 2vw);
+    margin: .5rem 0 1rem;
   }
 
   h2 {
@@ -67,11 +68,11 @@ export default {
 
     &.fancy {
       margin: 0;
-
-      & + h1 {
-        margin-top: .5rem;
-      }
     }
+  }
+
+  .tag-list {
+    margin-top: 2rem;
   }
 }
 </style>

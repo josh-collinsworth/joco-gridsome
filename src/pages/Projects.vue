@@ -21,14 +21,14 @@
 			<li v-for="(project, i) in filteredProjects" :key="project.id">
 				<transition-group name="fade" tag="div" appear>
 					<div class="project-preview" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
-						<g-link :to="project.node.path" class="project-image">
-							<g-image :src="require(`!!assets-loader?width=480&height=480&position=top!@images/${project.node.featuredMedia}`)" fit="contain" position="top" :alt="project.node.title" />
-						</g-link>
 						<h2 class="title">
 							<g-link :to="project.node.path">
 								{{ project.node.title }}
 							</g-link>
 						</h2>
+						<g-link :to="project.node.path" class="project-image">
+							<g-image :src="require(`!!assets-loader?width=480&height=480&position=top!@images/${project.node.featuredMedia}`)" fit="contain" position="top" :alt="project.node.title" />
+						</g-link>
 						<div class="subtitle">
 							{{ project.node.category }}
 							<!-- Removing tags for now; don't think they add anything -->
@@ -150,8 +150,8 @@ query {
 
 	.project-preview {
 		display: grid;
-		grid-template-columns:	8rem 1fr;
-		grid-gap: .5rem 1rem;
+		grid-template-columns:	10rem 1fr;
+		grid-gap: 0 1rem;
 		text-decoration: none;
 		margin-bottom: 4rem;
 		align-content: start;
@@ -163,7 +163,7 @@ query {
 		}
 
 		.project-image {
-			grid-row: 2 / 5;
+			grid-row: 3 / 5;
 
 			@media (min-width: $projects_breakpoint) {
 				grid-row: 1 / 5;
@@ -171,10 +171,7 @@ query {
 
 			img {
 				margin: 0;
-
-				@media (min-width: $projects_breakpoint) {
-					border-right: 1px solid;
-				}
+				border-right: 1px solid;
 			}
 		}
 
@@ -210,12 +207,15 @@ query {
 			width: auto;
 			line-height: 1em;
 			padding: 0 0 1rem;
-			grid-column: 2 / 3;
+			grid-column: 1 / -1;
 			grid-row: 2 / 3;
+			margin-top: .5rem;
 
 			@media(min-width: $projects_breakpoint) {
 				margin-left: -1rem;
 				padding-left: 1rem;
+				grid-column: 2 / 3;
+				grid-row: 2 / 3;
 			}
 
 			.tags {
@@ -230,10 +230,10 @@ query {
 			grid-column: 2 / 3;
 			grid-row: 3 / 4;
 			font-size: .9rem;
-			line-height: 1.3em;
+			line-height: 1.4em;
 			font-size: .8em;
 			font-style: italic;
-			margin-top: .5rem;
+			margin-top: 1rem;
 
 			@media (min-width: $projects_breakpoint) {
 				grid-row: auto;
@@ -251,15 +251,11 @@ query {
 
 .fade {
 	&-enter-active {
-		transition: all .35s cubic-bezier(.22,.61,.36,1);
+		transition: opacity .35s cubic-bezier(.22,.61,.36,1), transform cubic-bezier(.22,.61,.36,1);
 	}
 
 	&-leave-active {
-		transition: all .25s cubic-bezier(.55,.06,.68,.19);
-	}
-
-	&-move {
-		transition: .25s cubic-bezier(.55,.06,.68,.19);
+		transition: opacity .25s cubic-bezier(.55,.06,.68,.19), transform cubic-bezier(.55,.06,.68,.19);
 	}
 
 	&-enter, &-leave-to {
@@ -268,7 +264,7 @@ query {
 
 	&-enter {
 		transform: translateY(1rem);
-		}
+	}
 
 	&-leave-to {
 		transform: translateY(1rem);

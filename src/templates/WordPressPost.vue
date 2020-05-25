@@ -94,7 +94,8 @@ export default {
 	font-family: 'MonoLisa';
 	src: url('../assets/fonts/monolisa-regular-webfont.woff2') format('woff2');
 	font-weight: normal;
-	font-style: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 h4 {

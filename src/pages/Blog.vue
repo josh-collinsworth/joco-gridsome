@@ -21,7 +21,7 @@
 
     <h2 v-if="!posts.length">Sorry, no posts found.</h2>
 
-    <div v-if="posts.length">
+    <div v-if="posts.length && !searched">
       <p>Page:</p>
       <Pager :info="$page.allWordPressPost.pageInfo" />
     </div>

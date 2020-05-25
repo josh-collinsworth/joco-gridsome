@@ -2,7 +2,7 @@
   <div :class="{ 'reduce-motion': reduceMotion }">
     <Header />
     <div class="layout">
-      <transition name="pageslide" appear mode="out-in">
+      <transition name="pageslide">
         <main id="main">
           <slot />
         </main>
@@ -131,12 +131,11 @@ export default {
 .pageslide {
 
 	&-enter-active {
-		transition: all .35s cubic-bezier(.22,.61,.36,1);
-		transition-delay: .05s;
+		transition: opacity .35s cubic-bezier(.22,.61,.36,1), transform .35s cubic-bezier(.22,.61,.36,1);
 	}
 
 	&-leave-active {
-		transition: all .25s cubic-bezier(.55,.06,.68,.19);
+		transition: opacity .25s cubic-bezier(.55,.06,.68,.19), transform .25s cubic-bezier(.55,.06,.68,.19);
 	}
 
 	&-enter, &-leave-to {
