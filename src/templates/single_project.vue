@@ -59,23 +59,8 @@ export default {
 
 
 <style lang="scss" scoped>
-
-/* @media (min-width: 72rem) {
-
-	#project-image {
-		float: right;
-		max-width: calc(100vw - var(--max-width) - 13rem);
-		margin-right: calc((100vw - var(--max-width) - 12rem) * -1);
-		margin-left: auto;
-		grid-row: 3 / 4;
-	}
-
-	.content {
-		grid-row: 3 / 4;
-	}
-} */
-
 iframe {
+	background: var(--white);
 	min-height: 90vh;
 	max-height: 100vh;
 	border: .1rem solid var(--darkGray);

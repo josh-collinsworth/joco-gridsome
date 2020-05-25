@@ -47,20 +47,16 @@ export default {
   },
   methods: {
     toggleDarkMode() {
-
 			if(this.darkMode !== true && this.darkMode !== false) {
 				localStorage.setItem('collinsworth-dark-mode', JSON.stringify(false))
 			}
-
 			this.darkMode = !this.darkMode
-
 			this.darkMode ? this.setDarkModeColors() : this.setLightModeColors()
 		},
 		setDarkModeColors() {
 			this.updateCustomProperty({
 				'--paper': '#101820',
 				'--ink': '#ffffff',
-				'--darkGray': '#ffffff',
 				'--header-color': 'var(--white)',
 				'--accent-color': 'var(--lightBlue)',
 				'--link-color': 'var(--lightBlue)',
@@ -69,8 +65,7 @@ export default {
 		setLightModeColors() {
 			this.updateCustomProperty({
 				'--paper': '#ffffff',
-				'--ink': '#101820',
-				'--darkGray': '#53565a',
+				'--ink': '#53565a',
 				'--header-color': 'var(--darkGray)',
 				'--accent-color': 'var(--darkBlue)',
 				'--link-color': 'var(--darkBlue)',

@@ -43,7 +43,6 @@
 
 <script>
 export default {
-
 	data() {
 		return {
 			formData: {},
@@ -72,13 +71,5 @@ export default {
 </script>
 
 <style lang="scss">
-	form {
-		margin-top: 4rem;
-	}
-	label {
-		margin: 0 ;
-	}
-	input, textarea {
-		margin-bottom: 2rem;
-	}
+
 </style>

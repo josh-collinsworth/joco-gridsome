@@ -20,7 +20,7 @@
 		<ul id="project-list">
 			<li v-for="(project, i) in filteredProjects" :key="project.id">
 				<transition-group name="fade" tag="div" appear>
-					<div class="project-preview" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's' }">
+					<div class="project-preview" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's', transitionProperty: 'opacity, transform'  }">
 						<h2 class="title">
 							<g-link :to="project.node.path">
 								{{ project.node.title }}

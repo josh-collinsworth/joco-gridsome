@@ -36,6 +36,7 @@ input[type="checkbox"] {
 
 label {
 	display: block;
+	margin: 0;
 }
 
 input, textarea {
@@ -47,10 +48,23 @@ input, textarea {
 	color: inherit;
 	font-size: 1rem;
 	font-style: italic;
+	margin-bottom: 2rem;
+
 }
 
 button {
-	border: .1rem solid;
-	padding: .5rem;
+	border: 1px solid;
+	padding: .5rem 1rem;
 	font-size: 1rem;
+	background: transparent;
+	color: var(--ink);
+
+	&:hover {
+		background: var(--yellow);
+		color: var(--darkGray);
+	}
+}
+
+form {
+	margin-top: 4rem;
 }

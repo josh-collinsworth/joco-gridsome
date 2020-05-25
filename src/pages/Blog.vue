@@ -9,6 +9,7 @@
       <article v-for="post in posts" :key="post.node.id">
         <g-link href="#" :to="'/' + post.node.slug">
           <img :src="post.node.featuredMedia.sourceUrl" alt="">
+          <span class="sr">{{ post.node.title }}</span>
         </g-link>
         <h2>
           <g-link href="#" :to="'/' + post.node.slug">
@@ -21,9 +22,9 @@
 
     <h2 v-if="!posts.length">Sorry, no posts found.</h2>
 
-    <div v-if="posts.length && !searched">
+    <div v-if="posts.length && !searched" class="pagination">
       <p>Page:</p>
-      <Pager :info="$page.allWordPressPost.pageInfo" />
+      <Pager :info="$page.allWordPressPost.pageInfo" class="xyz" />
     </div>
   </Layout>
 </template>
@@ -94,11 +95,16 @@ export default {
 </script>
 
 <style scoped>
-  article img {
-    margin-top: 6rem;
-  }
+article img {
+  margin-top: 6rem;
+}
 
-  article:first-of-type img {
-    margin-top: 0;
-  }
+article:first-of-type img {
+  margin-top: 0;
+}
+
+.pagination nav a {
+  padding: .25em;
+  text-align: center;
+}
 </style>
