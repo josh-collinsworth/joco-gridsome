@@ -2,7 +2,7 @@
   <div :class="{ 'reduce-motion': reduceMotion }">
     <Header />
     <div class="layout">
-      <transition name="pageslide">
+      <transition name="pageslide" appear>
         <main id="main">
           <slot />
         </main>
@@ -87,6 +87,7 @@ export default {
 
 .layout {
   --left-column: 0;
+  --right-column: 0;
   display: grid;
   grid-template-columns:
     [grid-start]
@@ -96,7 +97,7 @@ export default {
     [content-end]
       1fr
     [right-gutter-start]
-      var(--left-column)
+      var(--right-column)
     [grid-end];
   grid-gap: 1rem;
   margin: 2rem 0 4rem 0;
@@ -121,10 +122,12 @@ export default {
 
 	@media (min-width: 1024px){
     --left-column: 3rem; //grid-gap + 3 = 4
+    --right-column: 3rem; //grid-gap + 3 = 4
   }
 
 	@media (min-width: 1200px){
     --left-column: 5rem; // grid-gap + 5 = 6
+    --right-column: 5rem; // grid-gap + 5 = 6
 	}
 }
 

@@ -1,10 +1,9 @@
 <template>
-	<div id="sidebar">
-		<form id="search-form" @submit.prevent="searchPosts">
-			<input type="text" v-model="searchTerm">
-			<input type="submit" value="Search">
-		</form>
-	</div>
+	<form id="search-form" @submit.prevent="searchPosts">
+		<input type="text" id="blog-search-field" v-model="searchTerm">
+		<label for="blog-search-field" class="sr">Search blog posts</label>
+		<input type="submit" value="Search">
+	</form>
 </template>
 
 
@@ -44,20 +43,16 @@ export default {
 <style lang="scss" scoped>
 #search-form {
 	display: flex;
-	position: sticky;
-	top: 1rem;
+	margin: 0;
 
 	input {
-		flex: 2 1 99%;
+		flex: 2 1 80%;
+		margin: 0;
 	}
 
 	input[type=submit] {
 		margin-left: 1rem;
 		flex: 1 1 6rem;
 	}
-}
-
-#sidebar {
-	align-self: stretch;
 }
 </style>

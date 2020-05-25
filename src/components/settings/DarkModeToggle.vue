@@ -107,11 +107,11 @@ button#dark-mode-toggle {
 		width: 2rem;
 		height: 4rem;
 		transform: translateY(-1.975rem);
-		transition: .4s cubic-bezier(.7,-0.01,0,1.01);
+		transition: all .4s cubic-bezier(.7,-0.01,0,1.01);
 
 		path,
 		circle {
-			transition: .4s cubic-bezier(.7,-0.01,0,1.01);
+			transition: all .4s cubic-bezier(.7,-0.01,0,1.01);
 			stroke: var(--ink) !important;
 		}
 	}
