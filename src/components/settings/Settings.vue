@@ -53,7 +53,7 @@ export default {
   overflow: hidden;
   padding: 0;
   border-radius: 2rem;
-  border: .1rem solid var(--darkGray);
+  border: .1rem solid var(--ink);
   background: var(--paper);
   transition: all .25s cubic-bezier(1, 0, 0, 1);
 

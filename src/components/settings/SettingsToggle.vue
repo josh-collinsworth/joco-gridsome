@@ -52,11 +52,11 @@ export default {
 			transition: transform .25s cubic-bezier(1, 0, 0, 1), fill .15s ease, stroke .15s ease;
 
 			&.settings-slider {
-				fill: var(--darkGray);
+				fill: var(--ink);
 			}
 
 			&.settings-track {
-				stroke: var(--darkGray);
+				stroke: var(--ink);
 			}
 		}
 

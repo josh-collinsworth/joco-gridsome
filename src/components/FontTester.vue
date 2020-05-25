@@ -56,8 +56,8 @@ export default {
 
 <style lang="scss">
 .tester-form {
-	margin-bottom: 2rem;
 	overflow: visible;
+	margin: 0;
 
 	.flex-container {
 		display: flex;
@@ -74,6 +74,7 @@ export default {
 	input[type="range"] {
 		flex: 1 1 70%;
 		padding: 0;
+		margin: 0;
 	}
 
 	input[type=text] {

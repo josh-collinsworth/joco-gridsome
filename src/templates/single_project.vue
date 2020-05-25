@@ -63,6 +63,6 @@ iframe {
 	background: var(--white);
 	min-height: 90vh;
 	max-height: 100vh;
-	border: .1rem solid var(--darkGray);
+	border: .1rem solid var(--ink);
 }
 </style>

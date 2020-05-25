@@ -37,7 +37,7 @@ export default {
 button#motion-toggle {
 	font-weight: bold;
 	font-size: .5rem;
-	color: var(--darkGray);
+	color: var(--ink);
 
 	&.shown {
 		transform: translateY(calc(-2.2rem - 0.75rem));
@@ -47,7 +47,7 @@ button#motion-toggle {
 		content: '';
 		width: 100%;
 		height: .1rem;
-		background: var(--darkGray);
+		background: var(--ink);
 		display: block;
 		position: absolute;
 		transform-origin: center;

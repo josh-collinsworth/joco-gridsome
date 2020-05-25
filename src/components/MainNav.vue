@@ -96,7 +96,7 @@ export default {
 				flex-wrap: wrap;
 
 				a {
-					color: var(--darkGray);
+					color: var(--ink);
 
 					&:hover {
 						color: var(--link-color);

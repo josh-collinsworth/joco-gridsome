@@ -50,7 +50,7 @@ export default {
 		position: fixed;
 		top: 1.5rem;
 
-		--darkGray: var(--white);
+		--ink: var(--white);
 	}
 
 	svg {

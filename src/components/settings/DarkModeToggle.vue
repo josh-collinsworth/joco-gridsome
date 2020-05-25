@@ -112,7 +112,7 @@ button#dark-mode-toggle {
 		path,
 		circle {
 			transition: .4s cubic-bezier(.7,-0.01,0,1.01);
-			stroke: var(--darkGray) !important;
+			stroke: var(--ink) !important;
 		}
 	}
 }

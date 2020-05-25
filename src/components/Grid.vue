@@ -27,7 +27,7 @@ export default {
 		colors: [
 			'transparent',
 			'var(--lightGray)',
-			'var(--darkGray)',
+			'var(--ink)',
 			'var(--lightBlue)',
 			'var(--darkBlue)',
 			'var(--yellow)',
