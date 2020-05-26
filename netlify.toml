@@ -5,6 +5,10 @@
 [template.environment]
   WORDPRESS_URL = "https://api.joshcollinsworth.com"
 
+# ---
+# Redirects
+# ---
+
 [[redirects]]
   from = "/wp-content/uploads/*"
   to = "/assets/images/uploads/:splat"
@@ -20,10 +24,24 @@
   to = "/essential-tools-wordpress-development/"
   status = 301
 
+# ---
+# Headers
+# ---
+
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; frame-src 'self' codepen.io *.netlify.app *.now.sh; object-src: 'self' 'unsafe-eval'; frame-ancestors: 'none'; style-src: 'self' 'unsafe-inline'"
 
 [[headers]]
   for = "*.js"
@@ -44,8 +62,3 @@
   for = "*.jpg"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self'; frame-src 'self' codepen.io *.netlify.app *.now.sh; object-src: 'unsafe-eval'; style-src 'self' 'unsafe-inline'"
