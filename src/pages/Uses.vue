@@ -175,9 +175,7 @@
     <ul id="brand-colors">
       <li v-for="color in colors" :key="color" class="color">
         <div class="swatch" :style="{ backgroundColor: color }"></div>
-        <span>
-          {{ color }}
-        </span>
+        <span>{{ color }}</span>
       </li>
     </ul>
 
@@ -236,7 +234,7 @@ export default {
 
 #brand-colors {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
   padding: 0;
 
   .color {

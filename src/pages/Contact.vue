@@ -2,7 +2,7 @@
 	<Layout>
 		<h1>Get in touch</h1>
 
-		<p class="fancy">Happy to chat.</p>
+		<p class="fancy details">Happy to chat.</p>
 
 		<noscript><h2>Sorry, this form won't work without JavaScript enabled.</h2></noscript>
 

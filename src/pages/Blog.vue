@@ -1,11 +1,16 @@
 <template>
   <Layout>
     <h1>Blog</h1>
-    <BlogSearch @foundPosts="updatePosts" />
-    <p v-if="!searched" class="fancy">Page {{ $page.allWordPressPost.pageInfo.currentPage }} of {{ $page.allWordPressPost.pageInfo.totalPages  }}</p>
-    <p v-else>{{ resultsText }}</p>
+    <p class="fancy details">
+      <span v-if="loading">Retrieving posts…</span>
+      <span v-else-if="!searched">Showing all posts, page {{ $page.allWordPressPost.pageInfo.currentPage }} of {{ $page.allWordPressPost.pageInfo.totalPages  }}</span>
+      <span v-else><strong>{{ resultsText }}</strong></span>
+    </p>
+    <BlogSearch @foundPosts="updatePosts" @startSearch="startLoading"/>
 
-    <div v-if="posts.length">
+    <Loader v-if="loading" />
+
+    <div v-if="posts.length && !loading">
       <article v-for="post in posts" :key="post.node.id">
         <g-link href="#" :to="'/' + post.node.slug">
           <img :src="post.node.featuredMedia.sourceUrl" alt="">
@@ -20,7 +25,7 @@
       </article>
     </div>
 
-    <h2 v-if="!posts.length">Sorry, no posts found.</h2>
+    <h2 id="empty" v-if="!posts.length && !loading">Sorry, no posts found.</h2>
 
     <div v-if="posts.length && !searched" class="pagination">
       <p>Page:</p>
@@ -61,14 +66,17 @@ query ($page: Int) {
 <script>
 import { Pager } from 'gridsome'
 import BlogSearch from '../components/BlogSearch'
+import Loader from '../components/Loader'
 
 export default {
   data: () => ({
     searched: false,
+    loading: false,
+    searchTerm: '',
     posts: []
   }),
   components: {
-    Pager, BlogSearch
+    Pager, BlogSearch, Loader
   },
   metaInfo: {
     title: "Blog"
@@ -77,24 +85,28 @@ export default {
     this.posts = this.$page.allWordPressPost.edges
   },
   methods: {
-    updatePosts(found) {
-      console.log('got here')
+    updatePosts(found, searchedTerm) {
       this.posts = []
-      this.searched = true
+      this.loading = false
+      this.searchTerm = searchedTerm,
       this.$nextTick(() => {
         this.posts = found
       })
+    },
+    startLoading() {
+      this.searched = true
+      this.loading = true
     }
   },
   computed: {
     resultsText() {
-      return `${this.posts.length} result${this.posts.length > 1 ? 's' : ''}`
+      return `${this.posts.length} result${this.posts.length == 1 ? '' : 's'} for "${this.searchTerm}"`
     }
   }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 article img {
   margin-top: 6rem;
 }
@@ -106,5 +118,9 @@ article:first-of-type img {
 .pagination nav a {
   padding: .25em;
   text-align: center;
+}
+
+#empty {
+  margin-top: 0;
 }
 </style>

@@ -14,24 +14,24 @@ export default {
 	}),
 	methods: {
 		searchPosts() {
+			this.$emit('startSearch')
 			fetch('https://joshcollinsworth.com/wp-json/wp/v2/posts?search=' + encodeURIComponent(this.searchTerm))
 				.then(res => res.json())
 				.then(json => json.map(post => {
 					console.log(post)
-					return ({ node: {
-						title: post.title.rendered,
-						content: post.content.rendered,
-						featuredMedia: { sourceUrl: post.jetpack_featured_media_url },
-						id: post.id,
-						excerpt: post.excerpt.rendered,
-						slug: post.slug
-						} })
+					return ({
+						node: {
+							title: post.title.rendered,
+							content: post.content.rendered,
+							featuredMedia: { sourceUrl: post.jetpack_featured_media_url },
+							id: post.id,
+							excerpt: post.excerpt.rendered,
+							slug: post.slug
+						}
+					})
 				}))
 				.then(posts => {
-					console.log(posts)
-					// console.log(`${posts.length} posts found.`)
-					// console.log(posts)
-					this.$emit('foundPosts', posts)
+					this.$emit('foundPosts', posts, this.searchTerm)
 				}
 			)
 		}
@@ -43,7 +43,7 @@ export default {
 <style lang="scss" scoped>
 #search-form {
 	display: flex;
-	margin: 0;
+	margin: 0 0 2rem;
 
 	input {
 		flex: 2 1 80%;
