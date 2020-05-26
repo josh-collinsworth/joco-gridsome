@@ -48,4 +48,4 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; frame-src 'self' codepen.io *.netlify.app *.now.sh; object-src data: 'unsafe-eval'"
+    Content-Security-Policy = "default-src 'self'; frame-src 'self' codepen.io *.netlify.app *.now.sh; object-src: 'unsafe-eval'"
