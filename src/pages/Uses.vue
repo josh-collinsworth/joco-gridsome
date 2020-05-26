@@ -170,6 +170,8 @@
 
     <h2>This site</h2>
 
+    <p class="fancy details">This is about the fifth iteration of my personal brand. The colors haven't changed, but I rotate fonts and layout once every year or two.</p>
+
     <h3>Colors</h3>
 
     <ul id="brand-colors">
@@ -181,15 +183,27 @@
 
     <h3>Fonts</h3>
 
-    <p class="fancy details"><strong>A note on fonts:</strong> up to six fonts may load on a page, which is admittedly quite a few by web standards. I didn't want to compromise on the design, though, so I used other means to mitigate the performance impact.
-      <br/><br/>For one, MonoLisa only loads on blog posts, and the bold italic weight of Averta only loads on a few pages, so it's actually only four most of the time. That's still a lot, but they're all subsetted, so they average about 25kb each. Plus, I use font-display: swap to make sure there isn't a wait while they're loading.</p>
+    <p class="fancy details">
+      <strong>A note on fonts:</strong> up to six fonts may load on a page, which is admittedly quite a few by web standards. I didn't want to compromise on the design, though, so I used other means to mitigate the performance impact, including subsetting, conditional loading, and setting font-display: swap.
+      <br />
+      <br />
+      Fonts I've used previously:
+        <xa to="www.myfonts.com/fonts/jcfonts/korb/">Korb</xa>
+        (both on its own and paired with <xa to="fonts.google.com/specimen/Bitter">Bitter</xa>);
+        <xa to="www.myfonts.com/fonts/bitstream/clarendon/">Clarendon BT Pro</xa> +
+        <xa to="www.myfonts.com/fonts/latinotype/texta/">Texta</xa>; and
+        <xa to="www.myfonts.com/fonts/stawix/amsi-pro/">Amsi Pro</xa> +
+        <xa to="www.myfonts.com/search/sagona">Sagona</xa>.
 
-    <FontTester font="Pensum Display Basic"/>
-    <FontTester font="Averta STD"/>
-    <FontTester font="Averta STD" fontStyle="italic" label="Averta STD italic"/>
-    <FontTester font="Averta STD" fontWeight="bold" label="Averta STD bold"/>
-    <FontTester font="Averta STD" fontWeight="bold" fontStyle="italic" label="Averta STD bold italic"/>
-    <FontTester font="MonoLisa"/>
+
+    </p>
+
+    <FontTester font="Pensum Display" label="Pensum Display Bold" link="https://www.myfonts.com/fonts/typemates/pensum-display/"/>
+    <FontTester font="Averta Std" label="Averta Standard" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
+    <FontTester font="Averta Std" fontStyle="italic" label="Averta Standard Italic" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
+    <FontTester font="Averta Std" fontWeight="bold" label="Averta Standard Bold" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
+    <FontTester font="Averta Std" fontWeight="bold" fontStyle="italic" label="Averta Standard Bold Italic" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
+    <FontTester font="MonoLisa" label="MonoLisa Regular" link="https://www.monolisa.dev/"/>
   </Layout>
 </template>
 

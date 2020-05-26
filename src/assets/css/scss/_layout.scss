@@ -74,6 +74,11 @@ h1 + .details {
   }
 }
 
+h2 + .details {
+  font-size: .9rem;
+  margin: -1rem 0 2rem;
+}
+
 h3 + .details {
   margin: -1rem 0 2rem;
 }

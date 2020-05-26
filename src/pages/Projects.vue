@@ -176,7 +176,7 @@ query {
 		}
 
 		.title {
-			font-family: 'Pensum Display Basic', serif;
+			font-family: 'Pensum Display', serif;
 			display: block;
 			border-bottom: unset;
 			font-style: normal;
