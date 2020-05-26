@@ -39,16 +39,6 @@
     X-Content-Type-Options = "nosniff"
 
 [[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self'; frame-src 'self' codepen.io *.netlify.app *.now.sh; frame-ancestors: 'none'; style-src: 'self' 'unsafe-inline'"
-
-[[headers]]
-  for = "*.svg"
-  [headers.values]
-    Content-Security-Policy = "default-src 'none'; frame-ancestors: 'none'; style-src: 'self' 'unsafe-inline'"
-
-[[headers]]
   for = "*.js"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
