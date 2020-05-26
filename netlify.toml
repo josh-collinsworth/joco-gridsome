@@ -41,7 +41,12 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; frame-src 'self' codepen.io *.netlify.app *.now.sh; image-src 'self' data:image/svg+xml; frame-ancestors: 'none'; style-src: 'self' 'unsafe-inline'"
+    Content-Security-Policy = "default-src 'self'; frame-src 'self' codepen.io *.netlify.app *.now.sh; frame-ancestors: 'none'; style-src: 'self' 'unsafe-inline'"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; frame-ancestors: 'none'; style-src: 'self' 'unsafe-inline'"
 
 [[headers]]
   for = "*.js"
