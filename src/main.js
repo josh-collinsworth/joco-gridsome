@@ -1,6 +1,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import xa from '~/components/ExternalLink'
-import '~/assets/css/main.scss'
+import '~/assets/css/global.scss'
 
 
 export default function (Vue, { head }) {

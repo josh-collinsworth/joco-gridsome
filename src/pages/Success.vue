@@ -9,7 +9,6 @@
       <br />
       <a href="https://en.wikipedia.org/wiki/Aardvark" target="_blank">Read about Aardvarks</a>
     </p>
-
   </Layout>
 </template>
 

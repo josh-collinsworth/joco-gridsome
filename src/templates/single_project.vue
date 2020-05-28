@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<p class="fancy">{{ formattedCategory }} project:</p>
+		<p class="fancy pre-heading">{{ formattedCategory }} project:</p>
 		<h1>{{project.title}}</h1>
 		<g-image id="project-image" :src="require(`!!assets-loader!@images/${$page.project.featuredMedia}`)" width="200" height="200" fit="contain"/>
 		<div class="content" v-html="project.content"></div>

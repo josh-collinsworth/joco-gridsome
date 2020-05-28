@@ -31,10 +31,6 @@
 						</g-link>
 						<div class="subtitle">
 							{{ project.node.category }}
-							<!-- Removing tags for now; don't think they add anything -->
-							<!-- <div class="tags">
-								<span>{{ projectTags(project) }}</span>
-							</div> -->
 						</div>
 						<div>
 							<div class="summary" v-html="summaryWithLink(project)"></div>

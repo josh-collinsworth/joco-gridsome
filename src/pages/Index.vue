@@ -5,8 +5,7 @@
       <h1>I’m a front-end developer and designer.</h1>
 
       <p class="fancy">
-        I currently work on the support experience team at
-        <a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>.
+        I work on the support experience team&nbsp;at&nbsp;<a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>.
       </p>
 
       <TagList>
@@ -53,26 +52,20 @@ export default {
 
 <style lang="scss">
 .intro {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: 1fr;
+
+  p, h1 {
+    margin: 0;
+  }
+
   h1 {
     font-size: calc(2rem + 2vw);
-    margin: .5rem 0 1rem;
-  }
 
-  h2 {
-    font-size: 1rem;
-    padding: 0;
-  }
-
-  p {
-    margin-bottom: .5rem;
-
-    &.fancy {
-      margin: 0;
+    & + p {
+      margin-top: .75rem;
     }
-  }
-
-  .tag-list {
-    margin-top: 2rem;
   }
 }
 </style>

@@ -1,8 +1,7 @@
 <template>
 	<nav
-		id="main-nav"
 		:class="menuOpen ? 'open' : ''"
-		class="nav"
+		class="main-nav nav"
 		role="navigation"
 		:aria-hidden="!menuOpen"
 	>
@@ -26,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	#main-nav {
+	.main-nav {
 
 		ul {
 			list-style-type: none;

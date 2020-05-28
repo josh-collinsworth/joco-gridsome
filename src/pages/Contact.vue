@@ -48,6 +48,9 @@ export default {
 			formData: {},
   	}
 	},
+	metaInfo: {
+		title: 'Contact'
+	},
 	methods: {
 		encode(data) {
 			return Object.keys(data)

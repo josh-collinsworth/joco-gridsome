@@ -6,9 +6,9 @@
         This is a headless <xa to="gridsome.org">Gridsome</xa> site
         backed by <xa to="wordpress.org">WordPress</xa>,
         hosted on <xa to="netlify.com">Netlify</xa>
-        and <xa to="getflywheel.com">Flywheel</xa> (respectively). <br />
-        ©2020 Josh Collinsworth.
+        and <xa to="getflywheel.com">Flywheel</xa> (respectively).
       </p>
+      <p>©2020 Josh Collinsworth.</p>
     </footer>
   </div>
 </template>
@@ -27,6 +27,7 @@ footer {
   background: var(--darkBlue);
   color: var(--white);
   font-size: .75rem;
+  line-height: 1.6em;
 
   a {
     color: inherit;
