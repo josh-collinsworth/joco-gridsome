@@ -5,11 +5,17 @@ nav {
     display: inline-block;
     font-weight: normal;
     text-decoration: none;
-		border-bottom: .1em solid transparent;
 		margin: 0 .5rem;
 
+		span {
+			display: inline-block;
+			border-bottom: .1em solid transparent;
+		}
+
     &:hover {
-      border-bottom-color: var(--yellow);
+			span {
+				border-bottom-color: var(--yellow);
+			}
 		}
 	}
 
@@ -17,7 +23,7 @@ nav {
 	&.nav__link {
 		margin-left: 1em;
 
-		&.active--exact {
+		&.active--exact span {
 			font-weight: bold;
 			border-bottom-color: var(--yellow);
 		}

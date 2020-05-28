@@ -26,7 +26,7 @@
 
       <h2>Pointlessly:</h2>
 
-		  <p>I coded this chart from unquantifiable, completely subjective data.</p>
+		  <p>I coded this chart from unquantifiable, subjective and not-at-all static data, which may or may not be partially arranged just to make it fit nicely.</p>
 
       <PointlessChart />
 

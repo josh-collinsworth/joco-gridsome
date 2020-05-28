@@ -23,8 +23,8 @@ hr {
   border-bottom: 1px dashed var(--lightGray);
 }
 
-nav .active--exact {
-  border-bottom: 1px solid var(--yellow);
+nav .active--exact span {
+  border-bottom: .1em solid var(--yellow);
   font-weight: bold;
 }
 

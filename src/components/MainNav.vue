@@ -6,11 +6,31 @@
 		:aria-hidden="!menuOpen"
 	>
 		<ul>
-			<li :class="menuOpen && 'open'"><g-link class="nav__link" to="/projects">Projects</g-link></li>
-			<li :class="menuOpen && 'open'"><g-link class="nav__link" to="/about">About</g-link></li>
-			<li :class="menuOpen && 'open'"><g-link class="nav__link" to="/blog">Blog</g-link></li>
-			<li :class="menuOpen && 'open'"><g-link class="nav__link" to="/contact">Contact</g-link></li>
-			<li :class="menuOpen && 'open'"><g-link class="nav__link" to="/uses">Uses</g-link></li>
+			<li :class="{ 'open': menuOpen }">
+				<g-link class="nav__link" to="/projects">
+					<span>Projects</span>
+				</g-link>
+			</li>
+			<li :class="{ 'open': menuOpen }">
+				<g-link class="nav__link" to="/about">
+					<span>About</span>
+				</g-link>
+			</li>
+			<li :class="{ 'open': menuOpen }">
+				<g-link class="nav__link" to="/blog">
+					<span>Blog</span>
+				</g-link>
+			</li>
+			<li :class="{ 'open': menuOpen }">
+				<g-link class="nav__link" to="/contact">
+					<span>Contact</span>
+				</g-link>
+			</li>
+			<li :class="{ 'open': menuOpen }">
+				<g-link class="nav__link" to="/uses">
+					<span>Uses</span>
+				</g-link>
+			</li>
 		</ul>
 	</nav>
 </template>
@@ -48,10 +68,7 @@ export default {
 			display: flex;
 			flex-wrap: wrap;
 			place-content: center;
-			color: var(--white);
 			padding: 3rem;
-			font-size: 1.25rem;
-			line-height: 1.5em;
 
 			&.open {
 				transform: translateX(0)
@@ -67,6 +84,9 @@ export default {
 					opacity: 0;
 					transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
 					margin-bottom: .75rem;
+					font-size: 1.25rem;
+					line-height: 1.5em;
+					color: var(--white);
 
 					&.open {
 						transform: translateX(0vw);
@@ -82,6 +102,11 @@ export default {
 					a {
 						padding: .5rem 0 .25rem;
 						color: var(--white);
+						display: block;
+
+						span {
+							display: inline-block;
+						}
 					}
 				}
 			}
