@@ -1,7 +1,11 @@
 <template>
 	<ul class="pointless-chart">
-		<div class="x-label" aria-hidden="true">Enjoyment</div>
-		<div class="y-label" aria-hidden="true">Expertise</div>
+		<div class="x-label" aria-hidden="true">
+			Enjoyment <div class="arrow"></div>
+		</div>
+		<div class="y-label" aria-hidden="true">
+			Expertise <div class="arrow"></div>
+		</div>
 		<div class="horizontal-line"></div>
 		<div class="vertical-line"></div>
 		<li
@@ -65,6 +69,13 @@ export default {
 	margin: 4rem 0 2rem 2rem;
 	overflow: visible;
 
+	&:hover .chart-item {
+
+		span {
+			opacity: .2;
+		}
+	}
+
 	.horizontal-line,
 	.vertical-line {
 		position: absolute;
@@ -72,13 +83,13 @@ export default {
 		left: 0;
 		height: 200px;
 		width: 100%;
-		border-bottom: 1px dashed #ddd;
+		border-bottom: 1px dashed #8884;
 		z-index: 0;
 	}
 
 	.vertical-line {
 		width: 50%;
-		border-right: 1px dashed #ddd;
+		border-right: 1px dashed #8884;
 		border-bottom: 0;
 		height: 400px;
 	}
@@ -86,7 +97,9 @@ export default {
 	.y-label, .x-label {
 		position: absolute;
 		text-align: center;
-		color: var(--lightGray);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.y-label {
@@ -115,11 +128,9 @@ export default {
 		font-size: .8rem;
 		font-style: italic;
 		transition: all .2s;
-		opacity: .8;
 		margin: 0;
 
 		span {
-			opacity: .5;
 			transition: inherit;
 			position: absolute;
 			right: calc(100% + .375em);
@@ -133,6 +144,27 @@ export default {
 				opacity: 1;
 			}
 		}
+	}
+}
+
+.arrow {
+	width: 1rem;
+	height: .1rem;
+	background: var(--lightGray);
+	margin-left: .5em;
+	position: relative;
+	top: .05rem;
+
+	&:after {
+		content: '';
+		width: .5rem;
+		height: .5rem;
+		border-bottom: .1rem solid var(--lightGray);
+		border-right: .1rem solid var(--lightGray);
+		transform: rotate(-45deg);
+		position: absolute;
+		right: 0;
+		top: -.2rem;
 	}
 }
 </style>

@@ -7,13 +7,12 @@
       <h1>About me</h1>
 
       <h2>Professionally: </h2>
-      <p>I'm a front-end engineer at <xa to="getflywheel.com">Flywheel</xa>,
-      where I work with primarily with <xa to="vuejs.org">Vue</xa> and Ruby on Rails.</p>
-      <p>I write semantic, user-focused HTML. Being a designer, I love writing custom CSS from scratch to create layouts, animations and beautiful experiences. JAMstack is my jam; Vue is my favorite (so I'm a big fan of <xa to="nuxtjs.org">Nuxt</xa> and <xa to="gridsome.org">Gridsome</xa>), but I also really dig Svelte and have worked with React on several projects.</p>
+      <p>I'm a front-end engineer on the Support Experience team at <xa to="getflywheel.com">Flywheel</xa>, where I put my skills to use building and improving tools and workflows for Flywheel's support team and users.
+      <p>I write semantic, user-focused HTML. I enjoy putting my design skills to use writing CSS from scratch to create beautiful UIs. At work, I use <xa to="vuejs.org">Vue</xa> and Ruby on Rails, but JAMstack is my jam. Fortunately, I love working with Vue (so I'm a big fan of <xa to="nuxtjs.org">Nuxt</xa> and <xa to="gridsome.org">Gridsome</xa>), but I also really dig Svelte and have worked with React on several projects, too.</p>
 
       <h2>Previously: </h2>
       <p>
-        Full-time graphic designer; WordPress instructor for <xa to="interfaceschool.com">Interface Web School</xa>; support team lead at <xa to="getflywheel.com">Flywheel</xa>; seasoned bartender.
+        Graphic designer; WordPress instructor for <xa to="interfaceschool.com">Interface Web School</xa>; support team lead at <xa to="getflywheel.com">Flywheel</xa>; seasoned bartender.
       </p>
 
       <h2>Personally: </h2>

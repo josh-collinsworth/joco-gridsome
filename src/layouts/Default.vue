@@ -100,7 +100,7 @@ export default {
       var(--right-column)
     [grid-end];
   grid-gap: 1rem;
-  margin: 2rem 0 4rem 0;
+  margin: 0 0 4rem 0;
   position: relative;
 
   main {

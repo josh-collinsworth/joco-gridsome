@@ -7,9 +7,8 @@ module.exports = {
     {
       use: '@gridsome/source-wordpress',
       options: {
-        baseUrl: 'https://joshcollinsworth.com', // required
+        baseUrl: 'https://api.joshcollinsworth.com', // required
         typeName: 'WordPress', // GraphQL schema name (Optional)
-        //TODO: figure out why not all posts are coming in
         perPage: 100,
         concurrent: 20
       }
