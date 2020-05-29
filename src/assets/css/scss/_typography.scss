@@ -55,7 +55,7 @@ h6 {
   font-family: 'Pensum Display', serif;
   line-height: 1.1;
   position: relative;
-  margin: 1.5em 0 1rem;
+  margin: 4rem 0 1rem 0;
 	padding: 0 0 .5rem;
 	color: var(--header-color);
 
@@ -65,21 +65,21 @@ h6 {
 }
 
 h1 {
-  font-size: 2.2rem;
-  margin: .5em 0;
+  font-size: 2.6rem;
   border-bottom: 1px solid;
+  margin-top: 0;
 
   @media(min-width: 768px) {
     font-size: 3.4rem;
   }
 
   @media(min-width: 1024px) {
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   border-bottom: 1px solid;
   display: inline-block;
   margin-right: auto;
@@ -92,10 +92,9 @@ h2 {
 h3 {
   font-size: 1.6rem;
   padding: 0;
-  margin: 1em 0 1rem;
 
   @media(min-width: 768px) {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   & + ul {
@@ -107,7 +106,7 @@ h4 {
   font-size: 1.3rem;
 
   @media(min-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 

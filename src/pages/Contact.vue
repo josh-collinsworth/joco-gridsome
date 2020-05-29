@@ -7,6 +7,7 @@
 		<noscript><h2>Sorry, this form won't work without JavaScript enabled.</h2></noscript>
 
 		<form
+			id="contact-form"
 			name="contact"
 			method="post"
 			v-on:submit.prevent="handleSubmit"
@@ -73,6 +74,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+#contact-form {
+	margin-top: 4rem;
+}
 </style>

@@ -2,15 +2,6 @@ img {
   max-width: 100%;
   height: auto;
 
-  & + h1,
-  & + h2,
-  & + h3,
-  & + h4,
-  & + h5,
-  & + h6  {
-    margin-top: 0;
-  }
-
   & + h1 {
     margin-bottom: 2rem;
   }
@@ -66,23 +57,13 @@ nav .active--exact span {
 }
 
 .pre-heading {
-  margin-bottom: -1rem;
+  margin-bottom: 0rem;
 }
 
 h1 + .details {
-  margin: -1.5rem 0 2rem;
   font-size: 1rem;
-
-  @media(min-width: $medium) {
-    margin-top: -2rem;
-  }
 }
 
 h2 + .details {
   font-size: .9rem;
-  margin: -1rem 0 2rem;
-}
-
-h3 + .details {
-  margin: -1rem 0 2rem;
 }

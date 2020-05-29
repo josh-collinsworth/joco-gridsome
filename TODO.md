@@ -16,3 +16,4 @@
 * Figure out why things delay when toggling dark mode
 * Add typography grid project; consider trimming projects
 * Figure out that whole blog searching thing
+* Pagination is broken on the blog 😬

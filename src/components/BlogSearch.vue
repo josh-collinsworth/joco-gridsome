@@ -43,7 +43,7 @@ export default {
 <style lang="scss" scoped>
 #search-form {
 	display: flex;
-	margin: 0 0 2rem;
+	margin: 3rem 0;
 
 	input {
 		flex: 2 1 80%;

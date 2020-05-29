@@ -86,48 +86,28 @@ export default {
 }
 
 .layout {
-  --left-column: 0;
-  --right-column: 0;
-  display: grid;
-  grid-template-columns:
-    [grid-start]
-      var(--left-column)
-    [content-start]
-      minmax(18rem, var(--max-width))
-    [content-end]
-      1fr
-    [right-gutter-start]
-      var(--right-column)
-    [grid-end];
-  grid-gap: 1rem;
-  margin: 0 0 4rem 0;
+  --margin: 1rem;
+  margin: 0 var(--margin) 4rem var(--margin);
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
   main {
     width: 100%;
-    display: inherit;
-    grid-template-columns: inherit;
-    grid-gap: inherit;
-    grid-column: grid-start / grid-end;
-    align-items: start;
-
-    & > * {
-      grid-column: content-start / content-end;
-    }
+    max-width: var(--max-width);
   }
 
 	@media (min-width: 768px){
-    --left-column: 1rem; //grid-gap + 1 = 2
+    --margin: 2rem;
   }
 
 	@media (min-width: 1024px){
-    --left-column: 3rem; //grid-gap + 3 = 4
-    --right-column: 3rem; //grid-gap + 3 = 4
+    --margin: 4rem;
   }
 
 	@media (min-width: 1200px){
-    --left-column: 5rem; // grid-gap + 5 = 6
-    --right-column: 5rem; // grid-gap + 5 = 6
+    --margin: 6rem;
 	}
 }
 

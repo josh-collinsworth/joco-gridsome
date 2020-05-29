@@ -1,17 +1,16 @@
 <template>
 	<Layout>
 		<p class="fancy pre-heading">{{ formattedCategory }} project:</p>
-		<h1>{{project.title}}</h1>
-		<g-image id="project-image" :src="require(`!!assets-loader!@images/${$page.project.featuredMedia}`)" width="200" height="200" fit="contain"/>
+		<h1>{{ project.title }}</h1>
+		<g-image id="project-image" class="callout" :src="require(`!!assets-loader!@images/${$page.project.featuredMedia}`)"/>
 		<div class="content" v-html="project.content"></div>
 		<div v-if="project.link">
 			<hr>
 			<p>
-				<strong>View this project at: </strong>
-				<br />
-				<a :href="project.link">
-					{{ project.link }}
-				</a>
+				Preview this project below, or
+				<xa :to="project.link">
+					open this project in a new tab
+				</xa>.
 			</p>
 			<iframe class="wider" :src="project.link" frameborder="0"></iframe>
 		</div>
@@ -59,10 +58,28 @@ export default {
 
 
 <style lang="scss" scoped>
+h1 {
+	margin-bottom: 2rem;
+}
 iframe {
 	background: var(--white);
 	min-height: 90vh;
 	max-height: 100vh;
 	border: .1rem solid var(--ink);
+	margin-top: 2rem;
+}
+
+hr {
+	max-width: 3rem;
+	border-bottom: 1px solid;
+}
+
+.callout {
+	margin-top: 0;
+	margin-left: 0;
+
+	@media(min-width: 1024px) {
+		margin-left: 2rem;
+	}
 }
 </style>
