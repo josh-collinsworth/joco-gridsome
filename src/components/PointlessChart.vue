@@ -52,7 +52,7 @@ export default {
 			{ name: "Accessibility", x: 60, y: 61 },
 			{ name: "RegEx", x: 73, y: 40 },
 			{ name: "Performance", x: 78, y: 50 },
-			{ name: "GraphQL", x: 32, y: 65, color: '#37aeb8' },
+			{ name: "GraphQL", x: 27, y: 57, color: '#37aeb8' },
 		]
 	})
 }
@@ -61,10 +61,11 @@ export default {
 
 <style lang="scss" scoped>
 .pointless-chart {
+	--chart-height: 600px;
 	padding: 0;
 	position: relative;
 	width: calc(100% - 2rem);
-	height: 400px;
+	height: var(--chart-height);
 	border: 1px solid var(--lightGray);
 	margin: 4rem 0 2rem 2rem;
 	overflow: visible;
@@ -81,7 +82,7 @@ export default {
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 200px;
+		height: calc(var(--chart-height) / 2);
 		width: 100%;
 		border-bottom: 1px dashed #8884;
 		z-index: 0;
@@ -91,7 +92,7 @@ export default {
 		width: 50%;
 		border-right: 1px dashed #8884;
 		border-bottom: 0;
-		height: 400px;
+		height: var(--chart-height);
 	}
 
 	.y-label, .x-label {
@@ -109,8 +110,8 @@ export default {
 	}
 
 	.x-label {
-		width: 400px;
-		top: 400px;
+		width: var(--chart-height);
+		top: var(--chart-height);
 		left: -2rem;
 		transform: rotate(-90deg);
 		transform-origin: top left;

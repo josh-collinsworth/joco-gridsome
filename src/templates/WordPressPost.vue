@@ -106,4 +106,8 @@ h4 {
 pre, code {
   font-family: MonoLisa, Courier, monospace;
 }
+
+.details {
+  margin: -1rem 0 4rem;
+}
 </style>
