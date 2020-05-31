@@ -36,10 +36,6 @@ body {
   flex-wrap: wrap;
   align-content: space-between;
 
-  & > div {
-    width: 100%;
-  }
-
   &.reduce-motion * {
     transition: none!important;
     animation: none!important;
@@ -51,7 +47,7 @@ body {
 }
 
 main {
-  margin: 4rem 0;
+  margin: 3rem 0;
 }
 
 .sr {

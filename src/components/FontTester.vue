@@ -9,7 +9,7 @@
 			<input :id="`${fontName}-size`" type="range" v-model="size" min="8" max="127" />
 		</div>
 		<p v-if="link" class="details">
-			<xa :to="link">{{ font }} family</xa>
+			<xa :to="link">{{ font }} family</xa><i> (click text to edit)</i>
 		</p>
 	</form>
 </template>

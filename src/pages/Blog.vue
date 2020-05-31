@@ -10,26 +10,28 @@
 
     <Loader v-if="loading" />
 
-    <div v-if="posts.length && !loading">
-      <article v-for="post in posts" :key="post.node.id">
-        <g-link href="#" :to="'/' + post.node.slug">
+    <div v-if="!searched || searchTerm === ''">
+      <article v-for="post in $page.allWordPressPost.edges" :key="post.node.id">
+        <g-link :to="post.node.slug">
           <img :src="post.node.featuredMedia.sourceUrl" alt="">
           <span class="sr">{{ post.node.title }}</span>
         </g-link>
         <h2>
-          <g-link href="#" :to="'/' + post.node.slug">
-            <span  v-html="post.node.title"></span>
+          <g-link :to="post.node.slug">
+            <span v-html="post.node.title"></span>
           </g-link>
         </h2>
         <div v-html="post.node.excerpt"></div>
       </article>
     </div>
 
-    <h2 id="empty" v-if="!posts.length && !loading">Sorry, no posts found.</h2>
+    <SearchedPostList v-else-if="searched && searchedPosts.length && !loading" :posts="searchedPosts"/>
 
-    <div v-if="posts.length && !searched" class="pagination">
+    <h2 id="empty" v-if="searched && ! loading && !searchedPosts.length">Sorry, no posts found.</h2>
+
+    <div v-if="!searched" class="pagination">
       <p>Page:</p>
-      <Pager :info="$page.allWordPressPost.pageInfo" class="xyz" />
+      <Pager :info="$page.allWordPressPost.pageInfo"/>
     </div>
   </Layout>
 </template>
@@ -37,7 +39,7 @@
 
 <page-query>
 query ($page: Int) {
-	allWordPressPost(perPage: 5, page: $page) @paginate {
+	allWordPressPost(perPage: 10, page: $page) @paginate {
     pageInfo {
       totalPages
       currentPage
@@ -66,6 +68,7 @@ query ($page: Int) {
 <script>
 import { Pager } from 'gridsome'
 import BlogSearch from '../components/BlogSearch'
+import SearchedPostList from '../components/SearchedPostList'
 import Loader from '../components/Loader'
 
 export default {
@@ -73,24 +76,31 @@ export default {
     searched: false,
     loading: false,
     searchTerm: '',
-    posts: []
+    searchedPosts: []
   }),
+  watch: {
+    searchTerm(newTerm) {
+      if (newTerm === '') {
+        this.loading = false
+        this.searched = false
+        this.searchedPosts = []
+        return
+      }
+    }
+  },
   components: {
-    Pager, BlogSearch, Loader
+    Pager, BlogSearch, SearchedPostList, Loader
   },
   metaInfo: {
     title: "Blog"
   },
-  created() {
-    this.posts = this.$page.allWordPressPost.edges
-  },
   methods: {
     updatePosts(found, searchedTerm) {
-      this.posts = []
+      this.searchedPosts = []
       this.loading = false
       this.searchTerm = searchedTerm,
       this.$nextTick(() => {
-        this.posts = found
+        this.searchedPosts = found
       })
     },
     startLoading() {
@@ -100,7 +110,7 @@ export default {
   },
   computed: {
     resultsText() {
-      return `${this.posts.length} result${this.posts.length == 1 ? '' : 's'} for "${this.searchTerm}"`
+      return `${this.searchedPosts.length} result${this.searchedPosts.length == 1 ? '' : 's'} for "${this.searchTerm}"`
     }
   }
 };

@@ -92,6 +92,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: calc(100% - (var(--margin) * 2));
 
   main {
     width: 100%;

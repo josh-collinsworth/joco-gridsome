@@ -10,8 +10,8 @@
 
       <TagList>
         <li><Tag to="/about">About me</Tag></li>
-        <li><Tag to="/projects">My work</Tag></li>
-        <li><Tag to="/contact">Get in contact</Tag></li>
+        <li><Tag to="/projects">Projects</Tag></li>
+        <li><Tag to="/contact">Get in touch</Tag></li>
       </TagList>
 
     </div>
