@@ -60,6 +60,7 @@ export default {
 				'--header-color': 'var(--white)',
 				'--accent-color': 'var(--lightBlue)',
 				'--link-color': 'var(--lightBlue)',
+				'--highlight-color': 'var(--darkerGray)',
 			})
 		},
 		setLightModeColors() {
@@ -69,6 +70,7 @@ export default {
 				'--header-color': 'var(--darkGray)',
 				'--accent-color': 'var(--darkBlue)',
 				'--link-color': 'var(--darkBlue)',
+				'--highlight-color': 'var(--darkGray)',
 			})
 		},
 		updateCustomProperty(props = {}) {

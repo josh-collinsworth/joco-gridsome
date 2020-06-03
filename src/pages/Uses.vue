@@ -75,7 +75,7 @@
     <ul>
       <li>
         JavaScript is my main language these days, and
-        <strong><xa to="https://vuejs.org/">Vue</xa> </strong>is my main go-to for anything I’m building (I’m unsurprisingly, therefore, a huge fan of
+        <strong><xa to="https://vuejs.org/">Vue</xa></strong> is my main go-to for anything I’m building (I’m unsurprisingly, therefore, a huge fan of
         <strong><xa to="https://nuxtjs.org">Nuxt</xa></strong> and
         <strong><xa to="https://gridsome.org/">Gridsome</xa></strong> as well).
       </li>

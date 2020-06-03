@@ -66,7 +66,7 @@ export default {
 <style lang="scss">
 .tester-form {
 	overflow: visible;
-	margin: 3rem 0 0;
+	margin: 5rem 0 0;
 	position: relative;
 
 	label {

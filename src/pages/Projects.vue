@@ -17,35 +17,38 @@
 			</div>
 		</form>
 
-		<ul id="project-list">
-			<li v-for="(project, i) in filteredProjects" :key="project.id">
-				<transition-group name="fade" tag="div" appear>
-					<div class="project-preview" :key="project.node.id" :style="{transitionDelay: (i * .1) + 's', transitionProperty: 'opacity, transform'  }">
-						<h2 class="title">
-							<g-link :to="project.node.path">
-								{{ project.node.title }}
-							</g-link>
-						</h2>
-						<g-link :to="project.node.path" class="project-image">
-							<g-image :src="require(`!!assets-loader?width=480&height=480&position=top!@images/${project.node.featuredMedia}`)" fit="contain" position="top" :alt="project.node.title" />
+
+
+		<transition-group name="fade" tag="ul" id="project-list" class="wider" mode="in-out" appear>
+			<li
+				v-for="project in filteredProjects"
+				:key="project.node.id"
+				class="project"
+			>
+					<h2 class="project__title">
+						<g-link :to="project.node.path">
+							{{ project.node.title }}
 						</g-link>
-						<div class="subtitle">
-							{{ project.node.category }}
-						</div>
-						<div>
-							<div class="summary" v-html="summaryWithLink(project)"></div>
+					</h2>
+					<g-link :to="project.node.path" class="project__image">
+						<g-image :src="require(`!!assets-loader?width=480&height=480&position=top!@images/${project.node.featuredMedia}`)" fit="contain" position="top" :alt="project.node.title" />
+					</g-link>
+					<div class="project__subtitle">
+						{{ project.node.category }}
+					</div>
+					<div>
+						<div class="project__summary">
+							{{ project.node.summary }}
+							<a class="project__summary-link" :href="project.node.path">More…</a>
 						</div>
 					</div>
-				</transition-group>
 			</li>
-			<li v-if="!filteredProjects.length" id="projects-empty-state">
-				<transition name="fade" appear>
-					<div class="empty">
-						<p class="fancy">No projects to show with those filters.</p>
-					</div>
-				</transition>
+			<li v-if="!filteredProjects.length" id="projects-empty-state" key="empty-error">
+				<div class="empty">
+					<p class="fancy">No projects to show with those filters.</p>
+				</div>
 			</li>
-		</ul>
+		</transition-group>
 
   </Layout>
 </template>
@@ -63,18 +66,7 @@ export default {
 		this.projects = this.$static.allProject.edges
 		this.shownCategories = Array.from(new Set(this.$static.allProject.edges.map(edge => edge.node.category)))
 	},
-	watch: {
-		//These are necessary to reset the array to nothing temporarily before re-rendering
-		//This keeps animation delays from getting wonky during filtering
-		shownCategories() {
-			this.projects = []
-			this.$nextTick(() => this.projects = this.$static.allProject.edges)
-		},
-	},
 	methods: {
-		summaryWithLink(project) {
-			return project.node.summary + `&ensp;<a href="${this.$url(project.node.path)}">More…</a>`
-		},
 		projectTags(project) {
 			return project.node.tags.map(tag => this.capitalize(tag)).join(', ')
 		},
@@ -96,7 +88,7 @@ export default {
 
 <static-query>
 query {
-	allProject(sort: [{ by: "category", order: ASC }, { by: "title", order: ASC }], ) {
+	allProject {
     edges {
       node {
         title
@@ -144,21 +136,27 @@ query {
 	margin: 0;
 	list-style-type: none;
 
-	.project-preview {
+	@media(min-width: 800px) {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.project {
 		display: grid;
 		grid-template-columns:	10rem 1fr;
-		grid-gap: 0 1rem;
+		grid-gap: 0;
 		text-decoration: none;
 		margin-bottom: 4rem;
 		align-content: start;
 		align-items: start;
-		border-top: 1px solid;
+		max-width: var(--max-width);
 
 		@media (min-width: $projects_breakpoint) {
 			grid-template-columns: 12rem 1fr;
 		}
 
-		.project-image {
+		&__image {
 			grid-row: 3 / 5;
 
 			@media (min-width: $projects_breakpoint) {
@@ -168,23 +166,26 @@ query {
 			img {
 				margin: 0;
 				border-right: 1px solid;
+				border-bottom: 1px solid;
 			}
 		}
 
-		.title {
+		&__title {
 			font-family: 'Pensum Display', serif;
 			display: block;
 			border-bottom: unset;
 			font-style: normal;
 			font-size: 1.5rem;
-			margin: 1rem 0 0;
-			padding: 0;
+			margin: 0;
+			padding: 1rem 0 0 0;
 			grid-column: 1 / -1;
 			grid-row: 1 / 2;
+			border-top: 1px solid;
 
 			@media (min-width: $projects_breakpoint) {
 				grid-column: 2 / 3;
 				grid-row: 1 / 2;
+				padding-left: 1rem;
 			}
 
 			a {
@@ -192,7 +193,7 @@ query {
 			}
 		}
 
-		.subtitle {
+		&__subtitle {
 			font-weight: bold;
 			text-transform: uppercase;
 			font-style: normal;
@@ -208,7 +209,6 @@ query {
 			margin-top: .5rem;
 
 			@media(min-width: $projects_breakpoint) {
-				margin-left: -1rem;
 				padding-left: 1rem;
 				grid-column: 2 / 3;
 				grid-row: 2 / 3;
@@ -222,50 +222,47 @@ query {
 			}
 		}
 
-		.summary {
+		&__summary {
 			grid-column: 2 / 3;
 			grid-row: 3 / 4;
 			font-size: .9rem;
 			line-height: 1.4em;
 			font-size: .8em;
 			font-style: italic;
-			margin-top: 1rem;
+			padding: 1rem 0 0 1rem;
+			margin: 0;
 
 			@media (min-width: $projects_breakpoint) {
 				grid-row: auto;
 			}
 
-			& + a {
-				font-style: italic;
+			&-link {
 				display: block;
 				margin-top: .5rem;
-				font-size: .8em;
 			}
 		}
 	}
 }
 
 .fade {
-	&-enter-active {
-		transition: opacity .35s cubic-bezier(.22,.61,.36,1), transform cubic-bezier(.22,.61,.36,1);
+	&-enter-active,
+	&-leave-active {
+		transition: opacity .45s, transform .55s cubic-bezier(1, 0, 0, 1);
 	}
 
 	&-leave-active {
-		transition: opacity .25s cubic-bezier(.55,.06,.68,.19), transform cubic-bezier(.55,.06,.68,.19);
-	}
-
-	&-enter, &-leave-to {
-		opacity: 0;
-	}
-
-	&-enter {
-		transform: translateY(1rem);
-	}
-
-	&-leave-to {
-		transform: translateY(1rem);
 		position: absolute;
-		z-index: 0;
+		width: 28rem;
 	}
+
+	&-enter,
+	&-leave-to {
+		opacity: 0;
+		transform: translateY(1rem);
+	}
+
+  &-move {
+    transition: opacity .3s, transform .55s cubic-bezier(1, 0, 0, 1);
+  }
 }
 </style>

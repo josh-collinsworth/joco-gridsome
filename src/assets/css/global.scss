@@ -19,6 +19,16 @@ input[type="checkbox"]:focus + label {
   outline-offset: 1px;
 }
 
+::selection {
+  background: var(--yellow);
+  color: var(--highlight-color); /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: var(--yellow);
+  color: var(--highlight-color); /* Gecko Browsers */
+}
+
 body {
   font-family: "Averta Std", -apple-system, system-ui, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

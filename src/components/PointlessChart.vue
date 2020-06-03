@@ -34,7 +34,7 @@ export default {
 	data: () => ({
 		chartItems: [
 			{ name: "Vue", x: 83, y: 85, color: '#4fc08d' },
-			{ name: "Svelte", x: 64, y: 94, color: '#ff3e00' },
+			{ name: "Svelte", x: 64, y: 93, color: '#ff3e00' },
 			{ name: "HTML", x: 84, y: 30, color: '#d45632' },
 			{ name: "CSS", x: 90, y: 91, color: '#264de4' },
 			{ name: "JavaScript", x: 86, y: 67, color: '#f0db4f' },
