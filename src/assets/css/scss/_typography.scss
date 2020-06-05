@@ -203,22 +203,22 @@ code {
   overflow: hidden;
   padding: 0 0 1rem;
 
-  p:last-of-type:after {
-    content: '';
-    height: .25rem;
-    width: 100%;
-    margin-left: -100%;
-    background: var(--yellow);
-    bottom: 0;
-    position: absolute;
-  }
-
-  p:not(:last-of-type) {
+  p {
     margin: 0 1em;
   }
 
   p:last-of-type {
     margin: 0;
+
+    &:after {
+      content: '';
+      height: .25rem;
+      width: 100%;
+      margin-left: -100%;
+      background: var(--yellow);
+      bottom: 0;
+      position: absolute;
+    }
   }
 
   @media(min-width: $narrow) {
@@ -241,5 +241,5 @@ code {
   font-size: 1.2em;
   font-style: italic;
   line-height: 1.5em;
-  margin: 3rem 0;
+  margin: 2rem 0;
 }

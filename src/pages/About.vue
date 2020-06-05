@@ -21,7 +21,7 @@
       <p>
         <g-link to="/code/">Hobby coder</g-link>;
         author of a neglected <g-link to="/blog/">blog</g-link>;
-        font hoarder; official dad (both in family status and sense of humor); white dude in tech trying to be an ally and advocate; author of thousands of <xa to="twitter.com/jjcollinsworth">tweets</xa>, some decent; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; massive Nintendo fan; musician; liberal abuser of semicolons.
+        font hoarder; official dad (both in family status and sense of humor); white dude in tech trying to be an ally and advocate (#BlackLivesMatter); author of thousands of <xa to="twitter.com/jjcollinsworth">tweets</xa>, some decent; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; massive Nintendo fan; musician; liberal abuser of semicolons.
       </p>
 
       <h2>Pointlessly:</h2>
