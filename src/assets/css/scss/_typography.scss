@@ -149,7 +149,9 @@ figure  {
 }
 
 figcaption {
-  font-size: 1rem;
+  font-size: .9rem;
+  text-align: center;
+  margin: 1rem 0 3rem;
 }
 
 pre, code {
@@ -247,10 +249,10 @@ code {
 
 .side-note {
   padding: .5rem 1.5rem;
-  // background: var(--yellow);
   position: relative;
   margin-top: 3rem;
   font-size: .9rem;
+  font-style: italic;
   border: 1px solid var(--lightBlue);
 
   &:before {
