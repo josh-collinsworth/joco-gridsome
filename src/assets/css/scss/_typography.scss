@@ -203,6 +203,10 @@ code {
   overflow: hidden;
   padding: 0 0 1rem;
 
+  & + .callout {
+    display: none;
+  }
+
   p {
     margin: 0 1em;
   }
