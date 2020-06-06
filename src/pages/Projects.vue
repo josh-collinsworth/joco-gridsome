@@ -245,7 +245,10 @@ query {
 }
 
 .fade {
-	&-enter-active,
+	&-enter-active {
+		transition: opacity .45s, transform .55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	}
+
 	&-leave-active {
 		transition: opacity .45s, transform .55s cubic-bezier(1, 0, 0, 1);
 	}
@@ -262,7 +265,7 @@ query {
 	}
 
   &-move {
-    transition: opacity .3s, transform .55s cubic-bezier(1, 0, 0, 1);
+		transition: opacity .3s, transform .55s cubic-bezier(1, 0, 0, 1);
   }
 }
 </style>

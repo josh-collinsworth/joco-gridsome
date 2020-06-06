@@ -7,13 +7,13 @@
 	>
 		<ul>
 			<li :class="{ 'open': menuOpen }">
-				<g-link class="nav__link" to="/projects">
-					<span>Projects</span>
+				<g-link class="nav__link" to="/about">
+					<span>About</span>
 				</g-link>
 			</li>
 			<li :class="{ 'open': menuOpen }">
-				<g-link class="nav__link" to="/about">
-					<span>About</span>
+				<g-link class="nav__link" to="/projects">
+					<span>Projects</span>
 				</g-link>
 			</li>
 			<li :class="{ 'open': menuOpen }">

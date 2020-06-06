@@ -1,7 +1,7 @@
 module.exports = {
   siteName: 'Josh Collinsworth',
-  siteDescription: 'Code, design, and blog',
-  siteUrl: 'http://joshcollinsworth.com',
+  siteDescription: 'Front-end developer. Code, design, and blog.',
+  siteUrl: 'https://joshcollinsworth.com',
 
   plugins: [
     {

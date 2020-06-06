@@ -201,11 +201,7 @@ code {
   position: relative;
   background: var(--paper);
   overflow: hidden;
-  padding: 0 0 1rem;
-
-  & + .callout {
-    display: none;
-  }
+  padding: 0 1rem 1rem 0;
 
   p {
     margin: 0 1em;
@@ -226,7 +222,8 @@ code {
   }
 
   @media(min-width: $narrow) {
-    margin: 3rem 0 3rem 3rem;
+    margin: 3rem 1rem 3rem 3rem;
+    padding-right: 0;
   }
 
   @media(min-width: $medium) {
@@ -243,7 +240,30 @@ code {
 
 .highlight {
   font-size: 1.2em;
-  font-style: italic;
   line-height: 1.5em;
   margin: 2rem 0;
+  font-weight: bold;
+}
+
+.side-note {
+  padding: .5rem 1.5rem;
+  // background: var(--yellow);
+  position: relative;
+  margin-top: 3rem;
+  font-size: .9rem;
+  border: 1px solid var(--lightBlue);
+
+  &:before {
+    content: 'Side Note';
+    position: absolute;
+    top: -.5em;
+    left: .5rem;
+    background: var(--paper);
+    padding: 0 1rem;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .7rem;
+    color: var(--lightBlue);
+  }
 }

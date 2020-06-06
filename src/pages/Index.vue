@@ -11,7 +11,8 @@
       <TagList>
         <li><Tag to="/about">About me</Tag></li>
         <li><Tag to="/projects">Projects</Tag></li>
-        <li><Tag to="/contact">Get in touch</Tag></li>
+        <li><Tag to="/blog">Blog</Tag></li>
+        <li><Tag to="/contact">Contact</Tag></li>
       </TagList>
 
     </div>
@@ -19,12 +20,8 @@
 </template>
 
 <page-query>
-query Home ($page: Int) {
-  allWordPressPost (page: $page, perPage: 5) @paginate {
-    pageInfo {
-      totalPages
-      currentPage
-    }
+query {
+  allWordPressPost (perPage: 1) {
     edges {
       node {
         id
@@ -46,6 +43,12 @@ export default {
   components: { Tag, TagList },
   metaInfo: {
     title: "Josh Collinsworth, Developer/Designer"
+  },
+  data: () => ({
+    latestPost: []
+  }),
+  created() {
+    this.latestPost = this.$page.allWordPressPost.edges[0].node
   }
 };
 </script>

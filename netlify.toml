@@ -10,11 +10,6 @@
 # ---
 
 [[redirects]]
-  from = "/wp-content/uploads/*"
-  to = "/assets/images/uploads/:splat"
-  status = 301
-
-[[redirects]]
   from = "/feed"
   to = "https://api.joshcollinsworth.com/feed/"
   status = 301

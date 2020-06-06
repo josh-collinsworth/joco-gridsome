@@ -12,15 +12,6 @@
 </template>
 
 
-<script>
-export default {
-	data: () => ({
-		imageSrc: 'https://api.joshcollinsworth.com/wp-content/uploads/'
-	})
-}
-</script>
-
-
 <style lang="scss" scoped>
 #work-links {
 	padding: 0;
