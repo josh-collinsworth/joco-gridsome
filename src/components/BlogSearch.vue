@@ -15,7 +15,7 @@ export default {
 	methods: {
 		searchPosts() {
 			this.$emit('startSearch')
-			fetch('https://joshcollinsworth.com/wp-json/wp/v2/posts?search=' + encodeURIComponent(this.searchTerm))
+			fetch('https://api.joshcollinsworth.com/wp-json/wp/v2/posts?search=' + encodeURIComponent(this.searchTerm))
 				.then(res => res.json())
 				.then(json => json.map(post => {
 					console.log(post)
