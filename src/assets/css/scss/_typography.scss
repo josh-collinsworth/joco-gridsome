@@ -204,6 +204,7 @@ code {
   background: var(--paper);
   overflow: hidden;
   padding: 0 1rem 1rem 0;
+  display: none;
 
   p {
     margin: 0 1em;
@@ -224,12 +225,14 @@ code {
   }
 
   @media(min-width: $narrow) {
-    margin: 3rem 1rem 3rem 3rem;
+    margin: 3rem -2rem 3rem 3rem;
     padding-right: 0;
+    display: block;
+    float: right;
+    width: 50%;
   }
 
   @media(min-width: $medium) {
-    float: right;
     width: 20em;
     margin-right: calc(-3rem - 12vw);
   }
@@ -244,7 +247,13 @@ code {
   font-size: 1.2em;
   line-height: 1.5em;
   margin: 2rem 0;
-  font-weight: bold;
+  font-weight: normal;
+  font-style: italic;
+
+  @media(min-width: $narrow) {
+    font-weight: bold;
+    font-style: normal;
+  }
 }
 
 .side-note {

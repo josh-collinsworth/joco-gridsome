@@ -135,6 +135,7 @@ query {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
+	width: 100%;
 
 	@media(min-width: 800px) {
 		display: grid;

@@ -37,13 +37,3 @@
 	font-style: italic;
 	font-display: swap;
 }
-
-// We should only need to load this on WordPressPost templates, so we'll move the loading there.
-// Keeping the code just in case I want to bring it back.
-
-// @font-face {
-// 	font-family: 'MonoLisa';
-// 	src: url('../fonts/monolisa-regular-webfont.woff2') format('woff2');
-// 	font-weight: bold;
-// 	font-style: italic;
-// }

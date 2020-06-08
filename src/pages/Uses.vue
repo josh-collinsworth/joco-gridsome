@@ -17,7 +17,7 @@
           </li>
           <li>
             <strong>Font: <xa to="https://www.monolisa.dev/">MonoLisa</xa></strong>.
-            I’m a code nerd and a font nerd. This is my favorite dev font. (If you’re not willing to spend the money though—and I definitely understand if that’s the case—
+            I’m a code nerd and a font nerd, so I don't take this choice lightly, but this is my favorite dev font. I love its combination of legibility and subtle personality, and plus, the code ligatures are great. (If you’re not willing to spend the money, though—and I definitely understand if that’s the case—
             <strong><xa to="https://github.com/tonsky/FiraCode">Fira Code</xa></strong> is my runner-up.)
             </li>
           <li>
@@ -91,7 +91,7 @@
       </li>
       <li>
         I’m a <xa to="https://wordpress.org/">
-        <strong>WordPress</strong></xa> expert and generally prefer to build themes from scratch (as with this one).
+        <strong>WordPress</strong></xa> expert and generally prefer to build themes from scratch.
       </li>
       <li>
         Professionally, I work in Ruby on Rails with SCSS and HAML templates using Vue components.
@@ -182,28 +182,24 @@
     </ul>
 
     <h3>Fonts</h3>
-
-    <p class="fancy details">
-      <strong>A note on fonts:</strong> up to six fonts may load on a page, which is admittedly quite a few by web standards. I didn't want to compromise on the design, though, so I used other means to mitigate the performance impact, including subsetting, conditional loading, and setting font-display: swap.
-      <br />
-      <br />
-      Fonts I've used previously:
-        <xa to="www.myfonts.com/fonts/jcfonts/korb/">Korb</xa>
-        (both on its own and paired with <xa to="fonts.google.com/specimen/Bitter">Bitter</xa>);
-        <xa to="www.myfonts.com/fonts/bitstream/clarendon/">Clarendon BT Pro</xa> +
-        <xa to="www.myfonts.com/fonts/latinotype/texta/">Texta</xa>; and
-        <xa to="www.myfonts.com/fonts/stawix/amsi-pro/">Amsi Pro</xa> +
-        <xa to="www.myfonts.com/search/sagona">Sagona</xa>.
-
-
-    </p>
-
     <FontTester font="Pensum Display" label="Pensum Display Bold" link="https://www.myfonts.com/fonts/typemates/pensum-display/"/>
     <FontTester font="Averta Std" label="Averta Standard" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
     <FontTester font="Averta Std" fontStyle="italic" label="Averta Standard Italic" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
     <FontTester font="Averta Std" fontWeight="bold" label="Averta Standard Bold" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
     <FontTester font="Averta Std" fontWeight="bold" fontStyle="italic" label="Averta Standard Bold Italic" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
     <FontTester font="MonoLisa" label="MonoLisa Regular" link="https://www.monolisa.dev/"/>
+
+    <br />
+
+    <p class="fancy details">
+      Other fonts I've used previously:
+        <xa to="www.myfonts.com/fonts/jcfonts/korb/">Korb</xa>
+        (both on its own and paired with <xa to="fonts.google.com/specimen/Bitter">Bitter</xa>);
+        <xa to="www.myfonts.com/fonts/bitstream/clarendon/">Clarendon BT Pro</xa> +
+        <xa to="www.myfonts.com/fonts/latinotype/texta/">Texta</xa>; and
+        <xa to="www.myfonts.com/fonts/stawix/amsi-pro/">Amsi Pro</xa> +
+        <xa to="www.myfonts.com/search/sagona">Sagona</xa>.
+    </p>
   </Layout>
 </template>
 

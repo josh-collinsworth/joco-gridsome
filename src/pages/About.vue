@@ -6,11 +6,11 @@
 
       <h2>Professionally: </h2>
 
-      <p>I'm a front-end engineer on the Support Experience team at <xa to="getflywheel.com">Flywheel</xa>, where we use build and improve tools and workflows for Flywheel's users and the good folks supporting them.
+      <p>I'm a front-end engineer on the Support Experience team at <xa to="getflywheel.com">Flywheel</xa>; I help build and improve tools and workflows for Flywheel's users and the good folks supporting them.
 
-      <img id="avatar" src="images/self-portrait-summer-2018.svg" alt="">
+      <g-image id="avatar" src="/images/self-portrait-summer-2018.svg" alt="" />
 
-      <p>I enjoy putting my design skills to use writing custom CSS and user-focused, semantic HTML to create beautiful UIs. At work, I use <xa to="vuejs.org">Vue</xa> and Ruby on Rails, but JAMstack is my jam. I love working with Vue (so I'm a big fan of <xa to="nuxtjs.org">Nuxt</xa> and <xa to="gridsome.org">Gridsome</xa>), but I also really dig Svelte and have worked with React on several projects, too.</p>
+      <p>I enjoy working at the intersection of design and code, creating accessible, performant, user-focused UIs and designs. While I work with <xa to="vuejs.org">Vue</xa> and Ruby on Rails on the job, JAMstack is my jam. I love working with Vue (so I'm a big fan of <xa to="nuxtjs.org">Nuxt</xa> and <xa to="gridsome.org">Gridsome</xa>), but I also really dig Svelte and have worked with React on several projects, too.</p>
 
       <h2>Previously: </h2>
       <p>
