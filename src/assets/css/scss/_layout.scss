@@ -25,17 +25,17 @@ nav .active--exact span {
 
 .header,
 .footer {
-  --side-margin: 1rem;
-  padding: 1.5rem var(--side-margin);
+  padding: 1.5rem var(--margin);
   width: 100%;
 
-  @media (min-width: 768px){
-    --side-margin: 2rem;
+  @media (min-width: 1680px){
+    --margin: 4rem;
   }
 }
 
 .footer {
-  padding: 2.5rem var(--side-margin) 2rem 5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
 }
 
 //Overrides Gutenberg's background color picker
