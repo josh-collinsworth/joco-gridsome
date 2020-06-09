@@ -86,7 +86,6 @@ export default {
 }
 
 .layout {
-  --margin: 1rem;
   margin: 0 var(--margin) 4rem var(--margin);
   position: relative;
   display: flex;
@@ -98,18 +97,6 @@ export default {
     width: 100%;
     max-width: var(--max-width);
   }
-
-	@media (min-width: 768px){
-    --margin: 2rem;
-  }
-
-	@media (min-width: 1024px){
-    --margin: 4rem;
-  }
-
-	@media (min-width: 1200px){
-    --margin: 6rem;
-	}
 }
 
 .pageslide {

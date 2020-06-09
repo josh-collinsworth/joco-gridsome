@@ -25,6 +25,22 @@ $wide: 1200px;
 
   --column-width: 12vw;
   --max-width: 32rem;
+  --margin: 1rem;
 
   background: var(--paper);
+
+	@media (min-width: 768px){
+    --margin: 2rem;
+  }
+
+	@media (min-width: 1024px){
+    --margin: 4rem;
+  }
+
+	@media (min-width: 1200px){
+    --margin: 6rem;
+	}
+  @media (min-width: 1400px){
+    --margin: 25vw;
+  }
 }
