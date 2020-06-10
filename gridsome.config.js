@@ -3,6 +3,8 @@ module.exports = {
   siteDescription: 'Front-end developer. Code, design, and blog.',
   siteUrl: 'https://joshcollinsworth.com',
 
+  pages: ['About', 'Projects', 'Blog', 'Contact', 'Uses'], //Controls what shows in the main nav
+
   plugins: [
     {
       use: '@gridsome/source-wordpress',

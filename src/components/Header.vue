@@ -10,8 +10,7 @@
 				<span class="sr">Home</span>
 			</g-link>
 
-			<HamburgerButton :menu-open="menuOpen" @toggleMenu="toggleMenu" />
-			<MainNav :menu-open="menuOpen" />
+			<MainNav :menu-open="menuOpen" @toggleMenu="toggleMenu" />
 		</header>
 		<Grid />
 	</div>
@@ -20,12 +19,11 @@
 <script>
 import LogoSVG from './LogoSVG'
 import Grid from '~/components/Grid'
-import HamburgerButton from '~/components/HamburgerButton'
 import MainNav from '~/components/MainNav'
 
 export default {
 	components: {
-		LogoSVG, Grid, HamburgerButton, MainNav
+		LogoSVG, Grid, MainNav
 	},
 	data: () => ({
 		menuOpen: false
@@ -48,7 +46,7 @@ export default {
 
 	&.sticky {
 		position: fixed;
-		top: 1.5rem;
+		top: 2.5rem;
 
 		--ink: var(--white);
 	}
@@ -65,19 +63,7 @@ export default {
 	width: 100%;
 	position: relative;
 	z-index: 3;
-	min-height: 90px;
-
-	nav {
-		font-size: .875rem;
-
-		a {
-			color: var(--ink);
-		}
-
-		& > a:last-of-type {
-			margin-right: 0;
-		}
-	}
+	min-height: calc(90px + 2rem);
 }
 
 .skip-to-content-link {

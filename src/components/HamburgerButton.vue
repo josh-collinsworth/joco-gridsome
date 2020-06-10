@@ -30,6 +30,7 @@ export default {
 	width: 2.5rem;
 	height: 2rem;
 	padding: .5rem;
+	margin-left: auto;
 	border: none;
 	background: transparent;
 	position: relative;
@@ -37,7 +38,7 @@ export default {
 
 	&.sticky {
 		position: fixed;
-		top: 1.5rem;
+		top: 2.5rem;
 		right: 1rem;
 
 		.line {

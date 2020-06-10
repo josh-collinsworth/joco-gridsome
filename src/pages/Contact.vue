@@ -76,6 +76,7 @@ export default {
 
 <style lang="scss" scoped>
 #contact-form {
+	width: var(--max-width);
 	margin-top: 4rem;
 }
 </style>

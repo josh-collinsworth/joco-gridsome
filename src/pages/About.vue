@@ -12,17 +12,20 @@
 
       <p>I enjoy working at the intersection of design and code, creating accessible, performant, user-focused UIs and designs. While I work with <xa to="vuejs.org">Vue</xa> and Ruby on Rails on the job, JAMstack is my jam. I love working with Vue (so I'm a big fan of <xa to="nuxtjs.org">Nuxt</xa> and <xa to="gridsome.org">Gridsome</xa>), but I also really dig Svelte and have worked with React on several projects, too.</p>
 
+
       <h2>Previously: </h2>
       <p>
         Graphic designer; WordPress instructor for <xa to="interfaceschool.com">Interface Web School</xa>; support team lead at <xa to="getflywheel.com">Flywheel</xa>; seasoned bartender who makes a mean margarita from scratch.
       </p>
 
+
       <h2>Personally:</h2>
       <p>
-        <g-link to="/code/">Hobby coder</g-link>;
-        author of a neglected <g-link to="/blog/">blog</g-link>;
-        font hoarder; official dad (both in family status and sense of humor); white dude in tech trying to be an ally and advocate (#BlackLivesMatter); author of thousands of <xa to="twitter.com/jjcollinsworth">tweets</xa>, some decent; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; massive Nintendo fan; musician; liberal abuser of semicolons.
+        Omaha, Nebraska resident; <g-link to="/code/">hobby coder</g-link>;
+        author of a frequently neglected <g-link to="/blog/">blog</g-link>;
+        font hoarder; husband; dad (with the jokes to match); fairly ordinary white dude in tech trying to be an ally and advocate (#BlackLivesMatter); author of thousands of <xa to="twitter.com/jjcollinsworth">tweets</xa>, some decent; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; massive Nintendo fan; musician; liberal abuser of semicolons.
       </p>
+
 
       <h2>Pointlessly:</h2>
 

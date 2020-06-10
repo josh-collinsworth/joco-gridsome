@@ -235,6 +235,10 @@ code {
   @media(min-width: $wide) {
     margin-right: calc(-6rem - 12vw);
   }
+
+  @media(min-width: 1680px) {
+    margin-right: -14rem;
+  }
 }
 
 .highlight {
