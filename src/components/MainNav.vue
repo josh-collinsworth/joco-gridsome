@@ -136,6 +136,7 @@ export default {
 				flex-wrap: wrap;
 				margin: 0 0 0 2em;
 				width: auto;
+				font-size: .875rem;
 
 				li {
 					margin-left: 1.5em;
