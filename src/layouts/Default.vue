@@ -64,7 +64,7 @@ export default {
 
 .fullwidth {
   width: 100vw;
-  grid-column: grid-start / grid-end!important; //Necessary to override specificity of `main > *` selector
+  margin-left: calc(var(--margin) * -1);
 }
 
 .wider {
@@ -73,7 +73,7 @@ export default {
 
   @media (min-width: 768px) {
     width: calc(100vw - 4rem);
-    margin-left: 0;
+    margin-left: calc(var(--margin) / -2);
   }
 
   @media (min-width: 1024px) {
@@ -82,6 +82,11 @@ export default {
 
   @media (min-width: 1200px) {
     width: calc(100vw - 12rem);
+  }
+
+  @media (min-width: 1680px) {
+    width: calc(200%);
+    margin-left: -25%;
   }
 }
 

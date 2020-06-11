@@ -23,7 +23,14 @@ module.exports = {
         remark: {
         }
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-61693930-1'
+      }
     }
+
   ],
   //Required to make relative image paths work (unfortunately)
   chainWebpack: config => {

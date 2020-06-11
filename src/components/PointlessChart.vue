@@ -105,7 +105,7 @@ export default {
 
 	.y-label {
 		width: 100%;
-		top: -2rem;
+		bottom: -2rem;
 		left: 0;
 	}
 

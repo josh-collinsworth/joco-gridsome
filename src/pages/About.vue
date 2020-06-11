@@ -23,7 +23,7 @@
       <p>
         Omaha, Nebraska resident; <g-link to="/code/">hobby coder</g-link>;
         author of a frequently neglected <g-link to="/blog/">blog</g-link>;
-        font hoarder; husband; dad (with the jokes to match); fairly ordinary white dude in tech trying to be an ally and advocate (#BlackLivesMatter); author of thousands of <xa to="twitter.com/jjcollinsworth">tweets</xa>, some decent; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; massive Nintendo fan; musician; liberal abuser of semicolons.
+        font hoarder; husband; dad (with the jokes to match); fairly ordinary white dude in tech trying to be an ally and advocate; author of thousands of <xa to="twitter.com/jjcollinsworth">tweets</xa>, some decent; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; massive Nintendo fan; musician; liberal abuser of semicolons.
       </p>
 
 
