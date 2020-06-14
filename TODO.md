@@ -19,3 +19,5 @@
 [ ] Figure out comments
 [ ] Figure out how to handle multiple project categories
 [ ] Figure out why there seem to be so many images being processed on build
+[x] Talk about Prism JS in the new site post
+[x] Talk about highlights and callouts in the new site post

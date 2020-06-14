@@ -190,6 +190,10 @@ code {
   color: inherit;
 }
 
+.aligncenter {
+  text-align: center;
+}
+
 .callout {
   margin: 3rem 1rem;
   font-style: italic;
@@ -249,7 +253,6 @@ code {
   font-style: italic;
 
   @media(min-width: $narrow) {
-    font-size: 1.2em;
     font-weight: bold;
     font-style: normal;
   }
