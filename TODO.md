@@ -21,3 +21,4 @@
 [ ] Figure out why there seem to be so many images being processed on build
 [x] Talk about Prism JS in the new site post
 [x] Talk about highlights and callouts in the new site post
+[ ] Make better dark mode preference handling

@@ -28,30 +28,30 @@ export default {
 	data: () => ({
 		darkMode: false
 	}),
-	watch: {
-		darkMode(to) {
-			localStorage.setItem('collinsworth-dark-mode', JSON.stringify(to))
-		}
-	},
   created() {
 		if(typeof window == 'undefined') return
 		const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 		this.darkMode = JSON.parse(localStorage.getItem('collinsworth-dark-mode'))
 
-		if(userPrefersDark && this.darkMode === null) {
+		console.log(this.darkMode)
+		console.log(userPrefersDark)
+
+		if (this.darkMode) {
 			this.setDarkModeColors()
+		}
+
+		if (userPrefersDark && !this.darkMode) {
 			this.darkMode = true
-		} else if (this.darkMode) {
-			this.setDarkModeColors()
 		}
   },
   methods: {
     toggleDarkMode() {
-			if(this.darkMode !== true && this.darkMode !== false) {
+			if(typeof this.darkMode !== "boolean") {
 				localStorage.setItem('collinsworth-dark-mode', JSON.stringify(false))
 			}
 			this.darkMode = !this.darkMode
 			this.darkMode ? this.setDarkModeColors() : this.setLightModeColors()
+			localStorage.setItem('collinsworth-dark-mode', JSON.stringify(this.darkMode))
 		},
 		setDarkModeColors() {
 			this.updateCustomProperty({
@@ -97,7 +97,7 @@ button#dark-mode-toggle {
 
 	&:hover svg {
 		path, circle {
-			stroke: var(--yellow)!important;
+			stroke: var(--yellow);
 		}
 	}
 
@@ -114,7 +114,7 @@ button#dark-mode-toggle {
 		path,
 		circle {
 			transition: all .4s cubic-bezier(.7,-0.01,0,1.01);
-			stroke: var(--ink) !important;
+			stroke: var(--ink);
 		}
 	}
 }

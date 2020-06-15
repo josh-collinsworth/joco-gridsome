@@ -17,7 +17,9 @@
           hosted on <xa to="netlify.com">Netlify</xa>
           and <xa to="getflywheel.com">Flywheel</xa> (respectively).
         </p>
-        <p>This site does not use cookies or collect personal data; it only uses local browser storage to anonymously remember any preferences you may set (after defaulting to your OS preference).</p>
+        <p>This site does not use cookies or collect any personal data, but you can click this button to accept anyway if that just feels weird:
+          <button class="ok">OK</button>
+        </p>
         <p>©2020 Josh Collinsworth.</p>
       </div>
     </footer>
@@ -29,7 +31,15 @@ import Grid from '~/components/Grid'
 import xa from '~/components/ExternalLink'
 
 export default {
-  components: { Grid }
+  components: { Grid },
+  data: () => ({
+    ok: false
+  }),
+  methods: {
+    thumbsUp() {
+      this.ok = true
+    }
+  }
 }
 </script>
 
@@ -72,6 +82,12 @@ export default {
       margin: .5rem 0;
       max-width: 44em;
     }
+  }
+
+  .ok {
+    font-size: .8em;
+    padding: .1em .5em;
+    margin-left: .5em;
   }
 }
 

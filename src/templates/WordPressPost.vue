@@ -32,6 +32,9 @@
         </li>
       </TagList>
     </template>
+    <p>
+      <g-link to="/blog">&lsaquo; Back to blog</g-link>
+    </p>
   </Layout>
 </template>
 

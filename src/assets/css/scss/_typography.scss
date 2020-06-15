@@ -11,11 +11,12 @@ html {
   }
 }
 
-ul {
-	margin: 1rem 0;
+ul,
+ol {
+	margin: 2rem 0;
 
 	li {
-		margin-bottom: 1rem;
+		margin-bottom: .5rem;
 	}
 }
 
@@ -150,6 +151,8 @@ figcaption {
 
 pre, code {
   font-family: 'MonoLisa', 'Courier', monospace;
+  font-style: normal;
+  font-weight: normal;
 }
 
 pre {

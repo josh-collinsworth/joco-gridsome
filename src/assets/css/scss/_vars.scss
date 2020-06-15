@@ -39,8 +39,18 @@ $wide: 1200px;
 
 	@media (min-width: 1200px){
     --margin: 6rem;
-	}
+  }
+
   @media (min-width: 1680px){
     --margin: auto;
+  }
+
+  @media(prefers-color-scheme: dark) {
+    --paper: #101820;
+    --ink: #ffffff;
+    --header-color: var(--white);
+    --accent-color: var(--lightBlue);
+    --link-color: var(--lightBlue);
+    --highlight-color: var(--darkerGray);
   }
 }
