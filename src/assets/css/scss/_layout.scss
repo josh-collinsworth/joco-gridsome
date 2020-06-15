@@ -35,7 +35,11 @@ nav .active--exact span {
 
 .footer {
   padding-top: 2.5rem;
-  padding-bottom: 2rem;
+
+  //Ensure there's always room for the settings button
+  @media(max-width: $medium) {
+    --margin: 4rem;
+  }
 }
 
 //Overrides Gutenberg's background color picker

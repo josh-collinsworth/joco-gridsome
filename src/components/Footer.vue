@@ -88,6 +88,7 @@ export default {
     font-size: .8em;
     padding: .1em .5em;
     margin-left: .5em;
+    color: var(--white);
   }
 }
 

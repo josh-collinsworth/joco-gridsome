@@ -33,15 +33,12 @@ export default {
 		const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 		this.darkMode = JSON.parse(localStorage.getItem('collinsworth-dark-mode'))
 
-		console.log(this.darkMode)
-		console.log(userPrefersDark)
-
-		if (this.darkMode) {
+		if (this.darkMode || userPrefersDark && this.darkMode !== false) {
 			this.setDarkModeColors()
-		}
-
-		if (userPrefersDark && !this.darkMode) {
 			this.darkMode = true
+		} else {
+			this.setLightModeColors()
+			this.darkMode = false
 		}
   },
   methods: {
@@ -54,29 +51,10 @@ export default {
 			localStorage.setItem('collinsworth-dark-mode', JSON.stringify(this.darkMode))
 		},
 		setDarkModeColors() {
-			this.updateCustomProperty({
-				'--paper': '#101820',
-				'--ink': '#ffffff',
-				'--header-color': 'var(--white)',
-				'--accent-color': 'var(--lightBlue)',
-				'--link-color': 'var(--lightBlue)',
-				'--highlight-color': 'var(--darkerGray)',
-			})
+			this.$emit('prefersDarkMode')
 		},
 		setLightModeColors() {
-			this.updateCustomProperty({
-				'--paper': '#ffffff',
-				'--ink': '#53565a',
-				'--header-color': 'var(--darkGray)',
-				'--accent-color': 'var(--darkBlue)',
-				'--link-color': 'var(--darkBlue)',
-				'--highlight-color': 'var(--darkGray)',
-			})
-		},
-		updateCustomProperty(props = {}) {
-			Object.entries(props).forEach(set => {
-				document.documentElement.style.setProperty(set[0], set[1])
-			})
+			this.$emit('prefersLightMode')
 		},
 	},
 	computed: {

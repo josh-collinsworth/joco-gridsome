@@ -1,6 +1,6 @@
 <template>
 	<form id="settings" @submit.prevent="" :class="{ 'open': settingsOpen }">
-		<DarkModeToggle :settings-open="settingsOpen"/>
+		<DarkModeToggle :settings-open="settingsOpen" @prefersDarkMode="$emit('prefersDarkMode')" @prefersLightMode="$emit('prefersLightMode')"/>
 		<MotionToggle :settings-open="settingsOpen" :reduce-motion="reduceMotion" @toggleReduceMotion="$emit('toggleReduceMotion')"/>
 		<SettingsToggle :settings-open="settingsOpen" @toggleSettingsOpen="toggleSettingsOpen" />
 	</form>

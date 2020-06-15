@@ -27,8 +27,6 @@ $wide: 1200px;
   --max-width: 32rem;
   --margin: 1rem;
 
-  background: var(--paper);
-
 	@media (min-width: 768px){
     --margin: 2rem;
   }

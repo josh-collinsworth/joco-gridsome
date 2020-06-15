@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'reduce-motion': reduceMotion }">
+  <div :class="{ 'reduce-motion': reduceMotion, 'prefers-dark': prefersDark, 'prefers-light': prefersLight, 'mounted': ready }">
     <Header />
     <div class="layout">
       <transition name="pageslide" appear>
@@ -9,7 +9,7 @@
       </transition>
     </div>
     <Footer />
-    <Settings :reduce-motion="reduceMotion" @toggleReduceMotion="toggleReduceMotion" />
+    <Settings :reduce-motion="reduceMotion" @toggleReduceMotion="toggleReduceMotion" @prefersDarkMode="setDarkMode" @prefersLightMode="setLightMode" />
   </div>
 </template>
 
@@ -21,7 +21,10 @@ import Settings from '~/components/settings/Settings';
 export default {
   components: { Header, Footer, Settings },
   data: () => ({
-    reduceMotion: false
+    reduceMotion: false,
+    prefersDark: false,
+    prefersLight: false,
+    ready: false
   }),
   mounted() {
     if(typeof window == 'undefined') return
@@ -31,7 +34,9 @@ export default {
 
 		if((userMotionPreference && storedMotionPreference != 'false') || storedMotionPreference == 'true') {
 			this.reduceMotion = true
-		}
+    }
+
+    this.ready = true
   },
   methods: {
     toggleReduceMotion() {
@@ -44,7 +49,15 @@ export default {
         } else {
         window.localStorage.setItem('collinsworth-reduce-motion', 'false')
       }
-    }
+    },
+    setDarkMode() {
+      this.prefersLight = false;
+      this.prefersDark = true;
+    },
+    setLightMode() {
+      this.prefersDark = false;
+      this.prefersLight = true;
+    },
   },
 }
 </script>
@@ -52,6 +65,10 @@ export default {
 
 
 <style lang="scss">
+#app.mounted {
+  transition: inherit;
+}
+
 .categories li a {
   background: var(--header-color);
   padding: 0.5em;

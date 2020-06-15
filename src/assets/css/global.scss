@@ -45,6 +45,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+  background: var(--paper);
+  color: var(--ink);
+  transition: none;
 
   &.reduce-motion * {
     transition: none!important;
@@ -53,6 +56,24 @@ body {
     .cell-grid .cell {
       opacity: 1!important;
     }
+  }
+
+  &.prefers-dark {
+    --paper: #101820;
+    --ink: #ffffff;
+    --header-color: var(--white);
+    --accent-color: var(--lightBlue);
+    --link-color: var(--lightBlue);
+    --highlight-color: var(--darkerGray);
+  }
+
+  &.prefers-light {
+    --paper: #ffffff;
+    --ink: #53565a;
+    --header-color: var(--darkGray);
+    --accent-color: var(--darkBlue);
+    --link-color: var(--darkBlue);
+    --highlight-color: var(--darkGray);
   }
 }
 
