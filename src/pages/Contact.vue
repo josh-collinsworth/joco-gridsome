@@ -78,5 +78,6 @@ export default {
 #contact-form {
 	width: var(--max-width);
 	margin-top: 4rem;
+	max-width: 100%;
 }
 </style>
