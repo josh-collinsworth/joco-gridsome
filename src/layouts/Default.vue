@@ -2,11 +2,9 @@
   <div :class="{ 'reduce-motion': reduceMotion, 'prefers-dark': prefersDark, 'prefers-light': prefersLight, 'mounted': ready }">
     <Header />
     <div class="layout">
-      <transition name="pageslide" appear>
-        <main id="main">
-          <slot />
-        </main>
-      </transition>
+      <main id="main">
+        <slot />
+      </main>
     </div>
     <Footer />
     <Settings :reduce-motion="reduceMotion" @toggleReduceMotion="toggleReduceMotion" @prefersDarkMode="setDarkMode" @prefersLightMode="setLightMode" />
@@ -119,21 +117,5 @@ export default {
     width: 100%;
     max-width: var(--max-width);
   }
-}
-
-.pageslide {
-
-	&-enter-active {
-		transition: opacity .35s cubic-bezier(.22,.61,.36,1), transform .35s cubic-bezier(.22,.61,.36,1);
-	}
-
-	&-leave-active {
-		transition: opacity .25s cubic-bezier(.55,.06,.68,.19), transform .25s cubic-bezier(.55,.06,.68,.19);
-	}
-
-	&-enter, &-leave-to {
-    opacity: 0;
-    transform: translateY(.5rem);
-	}
 }
 </style>
