@@ -3,6 +3,7 @@ title: Fly Fest 2019
 featuredMedia: projects/flyfest.png
 link: https://fest2019.getflywheel.com/
 category: website
+order: 1
 tags: [wordpress, animation]
 summary: A website for an internal Flywheel all-company retreat.
 ---

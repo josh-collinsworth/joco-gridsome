@@ -1,7 +1,8 @@
 ---
-title: Rise
+title: Rise Website
 featuredMedia: projects/rise.png
 link: https://rise.getflywheel.com/
+order: 1
 category: website
 tags: [vue, gridsome]
 summary: Website for a Flywheel employee resource group.

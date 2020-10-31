@@ -2,6 +2,7 @@
 title: Sliding Puzzle in Vue
 featuredMedia: projects/sliding-puzzle.png
 link: https://codepen.io/joshuajcollinsworth/pen/XwPXrM
+order: 1
 category: app + code
 tags: [app, game, vue, javascript]
 summary: The classic puzzle game recreated in Vue and custom CSS.

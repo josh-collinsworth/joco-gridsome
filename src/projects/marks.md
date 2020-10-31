@@ -2,6 +2,7 @@
 title: Marks Bistro
 featuredMedia: projects/marks.png
 link: https://marksindundee.com/
+order: 3
 category: website
 tags: [wordpress]
 summary: Website for a local neighborhood bistro, featuring an interactive menu.

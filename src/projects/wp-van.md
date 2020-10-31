@@ -2,6 +2,7 @@
 title: WordCamp Van Logo
 featuredMedia: projects/wp-van.png
 category: illustration, poster + sticker
+order: 2
 tags: [vector, sticker]
 summary: An unused WordCamp logo turned sticker
 ---

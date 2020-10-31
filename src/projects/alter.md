@@ -1,6 +1,7 @@
 ---
 title: Alter Brand Design
 featuredMedia: projects/alter.png
+order: 3
 category: logos + designs
 tags: [logo]
 summary: A rebrand for a prominent Chicago real estate developer

@@ -17,31 +17,26 @@
 			</div>
 		</form>
 
-
-
-		<transition-group name="fade" tag="ul" id="project-list" class="wider" mode="in-out" appear>
+		<transition-group name="fade" tag="ul" id="project-list" class="wider" mode="out-in" appear>
 			<li
 				v-for="project in filteredProjects"
 				:key="project.node.id"
 				class="project"
 			>
-					<h2 class="project__title">
-						<g-link :to="project.node.path">
-							{{ project.node.title }}
-						</g-link>
-					</h2>
-					<g-link :to="project.node.path" class="project__image">
-						<g-image :src="require(`!!assets-loader?width=480&height=480&position=top!@images/${project.node.featuredMedia}`)" fit="contain" position="top" :alt="project.node.title" />
-					</g-link>
-					<div class="project__subtitle">
-						{{ project.node.category }}
-					</div>
-					<div>
-						<div class="project__summary">
-							{{ project.node.summary }}
-							<a class="project__summary-link" :href="project.node.path">More…</a>
+				<g-link :to="project.node.path" class="project__image">
+					<div class="project__details">
+						<h2>{{ project.node.title }}</h2>
+						<div class="project__subtitle">
+							{{ project.node.category }}
+						</div>
+						<div>
+							<div class="project__summary">
+								{{ project.node.summary }}
+							</div>
 						</div>
 					</div>
+					<g-image :src="require(`!!assets-loader?width=480&height=480&position=top!@images/${project.node.featuredMedia}`)" :alt="project.node.title" />
+				</g-link>
 			</li>
 			<li v-if="!filteredProjects.length" id="projects-empty-state" key="empty-error">
 				<div class="empty">
@@ -88,7 +83,7 @@ export default {
 
 <static-query>
 query {
-	allProject {
+	allProject(sortBy: "order", order: ASC) {
     edges {
       node {
         title
@@ -131,67 +126,67 @@ query {
 }
 
 #project-list {
-	$projects_breakpoint: 560px;
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
-	width: 100%;
+	width: calc(100vw - (var(--margin) * 2));
 
 	@media(min-width: 800px) {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-		grid-gap: 2rem;
+		grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
 	}
 
 	.project {
-		display: grid;
-		grid-template-columns:	10rem 1fr;
-		grid-gap: 0;
 		text-decoration: none;
-		margin-bottom: 4rem;
-		align-content: start;
-		align-items: start;
-		max-width: var(--max-width);
-
-		@media (min-width: $projects_breakpoint) {
-			grid-template-columns: 12rem 1fr;
-		}
+		margin: 0;
+		display: flex;
+		justify-content: stretch;
+		align-items: stretch;
+		position: relative;
+		flex: 1 1 14rem;
 
 		&__image {
-			grid-row: 3 / 5;
-
-			@media (min-width: $projects_breakpoint) {
-				grid-row: 1 / 5;
-			}
+			display: block;
 
 			img {
 				margin: 0;
-				border-right: 1px solid;
-				border-bottom: 1px solid;
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
 			}
 		}
 
-		&__title {
-			font-family: 'Pensum Display', serif;
-			display: block;
-			border-bottom: unset;
-			font-style: normal;
-			font-size: 1.5rem;
-			margin: 0;
-			padding: 1rem 0 0 0;
-			grid-column: 1 / -1;
-			grid-row: 1 / 2;
-			border-top: 1px solid;
+		&__details {
+			padding: 1.5rem;
+			text-decoration: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-end;
+			align-content: flex-end;
+			transition: all .15s ease-in-out;
+			background: linear-gradient(to bottom, rgba(var(--darkBlueRGB), 0.9) 33%, var(--darkBlue) 67%, var(--darkBlue) 100%);
+			opacity: 0;
+			color: var(--white);
 
-			@media (min-width: $projects_breakpoint) {
-				grid-column: 2 / 3;
-				grid-row: 1 / 2;
-				padding-left: 1rem;
+			h2 {
+				width: 100%;
+				margin: 0;
+				font-family: 'Pensum Display', serif;
+				font-style: normal;
+				display: block;
+				border: none;
+				font-size: 1.5rem;
+				color: inherit;
 			}
+		}
 
-			a {
-				color: var(--ink);
-			}
+		&:hover .project__details {
+			opacity: 1;
 		}
 
 		&__subtitle {
@@ -199,27 +194,23 @@ query {
 			text-transform: uppercase;
 			font-style: normal;
 			font-size: .6rem;
-			border-bottom: 1px solid;
+			border-top: 1px solid;
 			display: flex;
 			align-items: baseline;
 			width: auto;
 			line-height: 1em;
-			padding: 0 0 1rem;
+			padding: 1rem 0 ;
 			grid-column: 1 / -1;
 			grid-row: 2 / 3;
-			margin-top: .5rem;
-
-			@media(min-width: $projects_breakpoint) {
-				padding-left: 1rem;
-				grid-column: 2 / 3;
-				grid-row: 2 / 3;
-			}
+			margin: 0.5rem 0 1rem;
+			color: inherit;
 
 			.tags {
 				font-style: italic;
 				font-weight: normal;
 				text-transform: none;
 				margin-left: .5rem;
+				color: inherit;
 			}
 		}
 
@@ -230,43 +221,33 @@ query {
 			line-height: 1.4em;
 			font-size: .8em;
 			font-style: italic;
-			padding: 1rem 0 0 1rem;
+			padding: 1rem 0 0;
 			margin: 0;
-
-			@media (min-width: $projects_breakpoint) {
-				grid-row: auto;
-			}
-
-			&-link {
-				display: block;
-				margin-top: .5rem;
-			}
 		}
 	}
 }
 
 .fade {
-	&-enter-active {
-		transition: opacity .45s, transform .55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	&-enter-active,
+	&-leave-active {
+		transition: all .45s cubic-bezier(0,.5,0,1);
 	}
 
-	&-leave-active {
-		transition: opacity .45s, transform .55s cubic-bezier(1, 0, 0, 1);
-	}
-
-	&-leave-active {
-		position: absolute;
-		width: 28rem;
-	}
 
 	&-enter,
 	&-leave-to {
 		opacity: 0;
-		transform: translateY(1rem);
+		transform: translateY(2rem) scale(0.9);
+		transform-origin: top;
+	}
+
+	&-leave-active {
+		position: absolute!important;
+		width: 100%;
 	}
 
   &-move {
-		transition: opacity .3s, transform .55s cubic-bezier(1, 0, 0, 1);
+		transition: transform .45s cubic-bezier(0,.5,0,1);
   }
 }
 </style>

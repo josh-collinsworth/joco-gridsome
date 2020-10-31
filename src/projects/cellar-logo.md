@@ -1,6 +1,7 @@
 ---
 title: The Wine Cellar at Marks Brand Design
 featuredMedia: projects/the-wine-cellar-logo.png
+order: 2
 link: https://thecellaratmarks.com
 category: logos + designs
 tags: [logo, brand]

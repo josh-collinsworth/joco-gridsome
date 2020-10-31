@@ -21,7 +21,7 @@
           <button class="ok" @click="sayOk">OK</button>
         </p>
         <p v-else>
-          👍
+          <span role="img" alt="Thumbs up">👍</span>
         </p>
         <p>©2020 Josh Collinsworth.</p>
       </div>

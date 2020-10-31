@@ -1,6 +1,7 @@
 ---
 title: Postapocalyptic Pixel Art
 featuredMedia: projects/before-i-can.png
+order: 3
 link: https://designinquotes.com/before-i-can-give-you-my-heart/
 category: illustration, poster + sticker
 tags: [pixellated, vector]
