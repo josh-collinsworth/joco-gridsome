@@ -183,10 +183,10 @@
 
     <h3>Fonts</h3>
     <FontTester font="Pensum Display" label="Pensum Display Bold" link="https://www.myfonts.com/fonts/typemates/pensum-display/"/>
-    <FontTester font="Averta Std" label="Averta Standard" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
-    <FontTester font="Averta Std" fontStyle="italic" label="Averta Standard Italic" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
+    <FontTester font="Averta Std" label="Averta Standard" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/" :italic="true" :bold="true" />
+    <!-- <FontTester font="Averta Std" fontStyle="italic" label="Averta Standard Italic" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
     <FontTester font="Averta Std" fontWeight="bold" label="Averta Standard Bold" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
-    <FontTester font="Averta Std" fontWeight="bold" fontStyle="italic" label="Averta Standard Bold Italic" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
+    <FontTester font="Averta Std" fontWeight="bold" fontStyle="italic" label="Averta Standard Bold Italic" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/> -->
     <FontTester font="MonoLisa" label="MonoLisa Regular" link="https://www.monolisa.dev/"/>
 
     <br />
