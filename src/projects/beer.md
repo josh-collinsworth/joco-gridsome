@@ -2,7 +2,7 @@
 title: Beer Poster
 featuredMedia: projects/beer.png
 order: 4
-category: illustration, poster + sticker
+category: design + illustration
 tags: [vector, poster]
 summary: An entry for a beer poster contest.
 ---

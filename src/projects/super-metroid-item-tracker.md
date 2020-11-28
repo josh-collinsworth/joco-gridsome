@@ -3,7 +3,7 @@ title: Super Metroid Item Tracker
 featuredMedia: projects/smitty.png
 link: https://smitty.netlify.app
 order: 3
-category: app + code
+category: websites, code + apps
 tags: [app, svelte, game]
 summary: An online checklist for all the items in the classic Super Nintendo game.
 ---

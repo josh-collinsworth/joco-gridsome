@@ -2,7 +2,7 @@
 title: Baby Dracula
 featuredMedia: projects/baby-dracula.png
 order: 2
-category: illustration, poster + sticker
+category: design + illustration
 tags: [silly, vector, sticker]
 summary: A silly illustration project with fangs.
 ---

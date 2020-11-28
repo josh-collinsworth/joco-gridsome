@@ -2,7 +2,7 @@
 title: Contentious Code
 featuredMedia: projects/hotdog-sandwich.png
 order: 2
-category: illustration, poster + sticker
+category: design + illustration
 tags: [silly, vector, sticker]
 summary: Code is not neutral.
 ---

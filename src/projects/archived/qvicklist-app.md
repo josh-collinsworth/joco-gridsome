@@ -2,7 +2,7 @@
 title: QvickList App
 featuredMedia: projects/qvicklist.png
 link: https://qvicklist.com
-category: app + code
+category: websites, code + apps
 tags: [app, vue, javascript]
 summary: A quick, easy, simple to-do app that uses local storage to save changes.
 ---

@@ -1,7 +1,7 @@
 ---
 title: Minimalist Vector Self-Portrait
 featuredMedia: projects/self-portrait-2018.png
-category: illustration, poster + sticker
+category: design + illustration
 tags: [vector]
 summary: Seeing myself in simple shapes.
 ---

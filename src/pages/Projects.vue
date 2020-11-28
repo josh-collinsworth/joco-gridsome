@@ -6,7 +6,7 @@
 
 		<form @submit.prevent="" id="projects-filter">
 			<header>
-				<strong class="sr">Filter projects:</strong>
+				Filter projects:
 			</header>
 
 			<div class="checkboxes">
@@ -107,7 +107,7 @@ query {
 
 	header {
 		display: inline-block;
-		margin: 0 0 1rem;
+		margin: 2rem 0 1rem;
 		border-bottom: 1px solid;
 	}
 

@@ -3,7 +3,7 @@ title: Svelte Dad Joke Generator
 featuredMedia: projects/svelte-dad-joke.png
 link: https://dadjokefinder.netlify.app/
 order: 2
-category: app + code
+category: websites, code + apps
 tags: [app, svelte]
 summary: If you need this, you're not a dad.
 ---

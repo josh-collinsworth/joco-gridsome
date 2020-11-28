@@ -2,7 +2,7 @@
 title: Dynamic Liquid Measurements Table
 featuredMedia: projects/unit-converter.png
 link: https://codepen.io/joshuajcollinsworth/pen/bGdmmrY
-category: app + code
+category: websites, code + apps
 order: 3
 tags: [app, interactive, vue]
 summary: A small, dynamic interactive app comparing units of liquid measurement.

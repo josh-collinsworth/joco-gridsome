@@ -3,7 +3,7 @@ title: Pass the Pigs Scorekeeper App
 featuredMedia: projects/pass-the-pigs.png
 link: https://passthepigs.now.sh
 order: 2
-category: app + code
+category: websites, code + apps
 tags: [app, react, game, javascript]
 summary: A scorekeeping app for the game "Pass the Pigs," complete with activity log and modal prompts.
 ---

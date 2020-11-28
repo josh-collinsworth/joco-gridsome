@@ -3,7 +3,7 @@ title: Emoji Pick Two
 featuredMedia: projects/emoji-pick-two.png
 link: https://codepen.io/joshuajcollinsworth/pen/vYOPKqx
 order: 2
-category: app + code
+category: websites, code + apps
 tags: [interactive, silly, javascript]
 summary: A checklist to send to your next client.
 ---

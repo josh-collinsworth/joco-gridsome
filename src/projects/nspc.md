@@ -3,7 +3,7 @@ title: Nebraska Spine + Pain Center logo
 featuredMedia: projects/nspc.png
 link: https://nebraskaspineandpain.com/
 order: 3
-category: logos + designs
+category: design + illustration
 tags: [logo, branding]
 summary: A rebrand project for merging medical practices.
 ---

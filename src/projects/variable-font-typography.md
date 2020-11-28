@@ -3,7 +3,7 @@ title: Variable Font Typography Grid
 featuredMedia: projects/typography-grid.png
 link: https://codepen.io/joshuajcollinsworth/pen/ZEGrMRQ
 order: 3
-category: app + code
+category: websites, code + apps
 tags: [typography, vue, javascript]
 summary: A generative typography experiment with variable fonts.
 ---

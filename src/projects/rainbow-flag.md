@@ -1,7 +1,7 @@
 ---
 title: US Pride Flag
 featuredMedia: projects/us-pride-flag.png
-category: illustration, poster + sticker
+category: design + illustration
 order: 2
 tags: [logo, vector]
 summary: A Pride Month design.
