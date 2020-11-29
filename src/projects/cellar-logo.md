@@ -2,10 +2,12 @@
 title: The Wine Cellar at Marks Brand Design
 featuredMedia: projects/the-wine-cellar-logo.png
 order: 2
-link: https://thecellaratmarks.com
+link: https://marks-wine-cellar.now.sh/
 category: design + illustration
 tags: [logo, brand]
 summary: A new logo identity for a local wine shop.
 ---
 
-[The Wine Cellar at Marks](https://thecellaratmarks.com) is a small, one-page website for a local retail wine shop. I decided to use [Gridsome](https://gridsome.org) for the project to keep the site lean and fast, and sprinkled in some nice loading effects for interest.
+**NOTE:** due to COVID-19, this website and business is no longer open in this form or under this brand. Its `now.sh` URL remains active to view the website.
+
+[The Wine Cellar at Marks](https://marks-wine-cellar.now.sh/) is a small, one-page website for a local retail wine shop. I decided to use [Gridsome](https://gridsome.org) for the project to keep the site lean and fast, and sprinkled in some nice loading effects for interest.
