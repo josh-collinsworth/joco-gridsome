@@ -10,4 +10,6 @@ summary: A new twist on a classic word game
 
 Quina is a slight twist on the classic word game "bulls and cows" (though the better-known variant is Master Mind). It's a word game of strategic deduction, as players guess five-letter words attempting to uncover the secret code word, receiving a new clue with each guess.
 
-You can view the game at quina.app; it uses your browser's localStorage to keep track of your gameplay history, stats, and over two dozen unlockable awards.
+I launched Quina both as [an app on the Google Play Store](https://play.google.com/store/apps/details?id=app.quina.collinsworth), and as a Progressive Web App.
+
+You can purchase the Android app from the link above, or download and play the freemium version at [quina.app](https://quina.app); either way, it uses your browser's localStorage to keep track of your gameplay history, stats, preferences, and 25 unlockable awards.
