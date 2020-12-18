@@ -54,7 +54,7 @@ export default {
 
   data: () => ({
     latestPost: [],
-    fancyNumber: null,
+    fancyNumber: Math.ceil(Math.random() * 28),
     fancyFacts: [
       `I work on the support experience team&nbsp;at&nbsp;<a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>.`,
       `Vue is my go-to framework, but I'm a fan of Svelte,&nbsp;too.`,
@@ -90,7 +90,6 @@ export default {
 
   created() {
     this.latestPost = this.$page.allWordPressPost.edges[0].node
-    this.getRandomFancyNumber()
   },
 
   methods: {
