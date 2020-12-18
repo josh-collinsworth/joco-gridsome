@@ -97,17 +97,20 @@ export default {
     getRandomFancyNumber() {
       const randomNumber = Math.ceil(Math.random() * this.fancyFacts.length)
 
-      console.log(this.fancyNumber)
+      console.log(randomNumber)
       console.log(this.usedNumbers.length, this.fancyFacts.length)
 
       if (this.usedNumbers.length >= this.fancyFacts.length) {
+        console.log('used up all the guesses')
         this.fancyNumber = 0
         return
       }
 
       if (this.usedNumbers.includes(randomNumber)) {
+        console.log('oops! getting new fancy number')
         this.getRandomFancyNumber()
       } else {
+        console.log('setting fancy number to ' + randomNumber)
         this.fancyNumber = randomNumber
         this.usedNumbers += randomNumber
       }
