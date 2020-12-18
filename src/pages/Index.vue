@@ -4,7 +4,7 @@
       <p class="fancy">Hi, I’m Josh Collinsworth.</p>
       <h1>I’m a front-end developer and designer.</h1>
 
-      <p id="random-fact-heading"><strong>A random fact about me:</strong></p>
+      <!-- <p id="random-fact-heading"><strong>A random fact about me:</strong></p>
       <transition-group name="fancy-fade" mode="out-in" class="transition-box">
         <p v-for="(fact, index) in fancyFacts" class="fancy fact" :key="fact" v-show="fancyNumber == index + 1">
           <span v-html="fact"></span>
@@ -13,7 +13,10 @@
         <p v-if="!fancyNumber" class="fancy fact" key="x">
           Sorry, that’s all the facts! Maybe try the <g-link to="/about">about page</g-link>?
         </p>
-      </transition-group>
+      </transition-group> -->
+      <p class="fancy">
+        I work on the support experience team&nbsp;at&nbsp;<a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>.
+      </p>
 
       <TagList>
         <li><Tag to="/about">About me</Tag></li>
