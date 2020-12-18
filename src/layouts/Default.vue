@@ -18,6 +18,7 @@ import Settings from '~/components/settings/Settings';
 
 export default {
   components: { Header, Footer, Settings },
+
   data: () => ({
     reduceMotion: false,
     prefersDark: false,
@@ -37,6 +38,7 @@ export default {
 
     this.ready = true
   },
+
   methods: {
     toggleReduceMotion() {
       if(typeof window == 'undefined') return
@@ -49,10 +51,12 @@ export default {
         window.localStorage.setItem('collinsworth-reduce-motion', 'false')
       }
     },
+
     setDarkMode() {
       this.prefersLight = false;
       this.prefersDark = true;
     },
+
     setLightMode() {
       this.prefersDark = false;
       this.prefersLight = true;

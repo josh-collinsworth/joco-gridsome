@@ -17,12 +17,15 @@ export default {
 		reduceMotion: Boolean,
 		required: true
 	},
+
 	data: () => ({
 		settingsOpen: false
 	}),
+
 	components: {
 		MotionToggle, DarkModeToggle, SettingsToggle
 	},
+
 	methods: {
 		toggleSettingsOpen() {
 			this.settingsOpen = !this.settingsOpen

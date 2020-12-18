@@ -38,10 +38,8 @@ export default {
 
 		if (this.darkMode || userPrefersDark && this.darkMode !== false) {
 			this.setDarkModeColors()
-			this.darkMode = true
 		} else {
 			this.setLightModeColors()
-			this.darkMode = false
 		}
 	},
 
@@ -57,10 +55,12 @@ export default {
 
 		setDarkModeColors() {
 			this.$emit('prefersDarkMode')
+			this.darkMode = true
 		},
 
 		setLightModeColors() {
 			this.$emit('prefersLightMode')
+			this.darkMode = false
 		},
 	},
 
