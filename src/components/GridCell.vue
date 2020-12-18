@@ -20,7 +20,7 @@ export default {
 	props: {
 		color: String,
 	},
-	created() {
+	mounted() {
 		const cellSize = Math.random()
 		if (cellSize > 0.95) {
 			this.size = 3

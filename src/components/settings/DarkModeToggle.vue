@@ -24,10 +24,13 @@ export default {
 			required: true
 		}
 	},
+
 	components: { LightDarkIcon },
+
 	data: () => ({
 		darkMode: false
 	}),
+
   created() {
 		if(typeof window == 'undefined') return
 		const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -40,7 +43,8 @@ export default {
 			this.setLightModeColors()
 			this.darkMode = false
 		}
-  },
+	},
+
   methods: {
     toggleDarkMode() {
 			if(typeof this.darkMode !== "boolean") {
@@ -50,13 +54,16 @@ export default {
 			this.darkMode ? this.setDarkModeColors() : this.setLightModeColors()
 			localStorage.setItem('collinsworth-dark-mode', JSON.stringify(this.darkMode))
 		},
+
 		setDarkModeColors() {
 			this.$emit('prefersDarkMode')
 		},
+
 		setLightModeColors() {
 			this.$emit('prefersLightMode')
 		},
 	},
+
 	computed: {
 		enableOrDisable() {
 			return this.darkMode ? 'Disable' : 'Enable'

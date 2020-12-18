@@ -10,12 +10,12 @@
 
       <g-image id="avatar" src="/images/self-portrait-summer-2018.svg" alt="" />
 
-      <p>I enjoy working at the intersection of design and code, creating accessible, performant, user-focused UIs and designs. While I work with <xa to="vuejs.org">Vue</xa> and Ruby on Rails on the job, JAMstack is my jam. I love working with Vue (so I'm a big fan of <xa to="nuxtjs.org">Nuxt</xa> and <xa to="gridsome.org">Gridsome</xa>), but I also really dig Svelte and have worked with React on some projects, too.</p>
+      <p>I enjoy working at the intersection of design and code, creating accessible, performant, user-focused UIs and designs. While I work with <xa to="vuejs.org">Vue</xa> and Ruby on Rails on the job, Jamstack is my jam. I love working with Vue (so I'm a big fan of <xa to="nuxtjs.org">Nuxt</xa> and <xa to="gridsome.org">Gridsome</xa>), but I also really dig Svelte and have worked with React on some projects, too.</p>
 
 
       <h2>Previously: </h2>
       <p>
-        Graphic designer; WordPress instructor for <xa to="interfaceschool.com">Interface Web School</xa>; support team lead at <xa to="getflywheel.com">Flywheel</xa>; seasoned bartender who makes a mean margarita from scratch.
+        Graphic designer; WordPress instructor for <xa to="interfaceschool.com">Interface Web School</xa>; support team lead at <xa to="getflywheel.com">Flywheel</xa>; seasoned bartender who makes a mean old fashioned.
       </p>
 
 
@@ -29,7 +29,7 @@
 
       <h2>Pointlessly:</h2>
 
-		  <p>I coded this chart from unquantifiable, subjective, and highly fluid data, which may or may not be partially arranged just to make it fit nicely.</p>
+		  <p>I coded this chart from unquantifiable, subjective, and highly fluid data, which may or may not be partially arranged just to make it fit nicely (and which, if anything, probably only really proves that I like things more when I'm better at them).</p>
 
       <PointlessChart />
 

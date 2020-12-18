@@ -3,7 +3,7 @@ title: Fly Fest 2020
 featuredMedia: projects/fly-fest-2020.png
 link: https://fest.getflywheel.com/
 category: websites, code + apps
-order: 2
+order: 1.6
 tags: [wordpress, animation]
 summary: A website for an internal Flywheel all-company retreat.
 ---

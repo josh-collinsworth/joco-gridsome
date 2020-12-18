@@ -17,12 +17,7 @@
           hosted on <xa to="netlify.com">Netlify</xa>
           and&nbsp;<xa to="getflywheel.com">Flywheel</xa>&nbsp;(respectively).
         </p>
-        <p v-if="!ok">This site doesn’t use cookies, but you can click this button to accept anyway if&nbsp;that&nbsp;just&nbsp;feels&nbsp;weird:
-          <button class="ok" @click="sayOk">OK</button>
-        </p>
-        <p v-else>
-          <span role="img" alt="Thumbs up">👍</span>
-        </p>
+
         <p>©2020 Josh Collinsworth.</p>
       </div>
     </footer>

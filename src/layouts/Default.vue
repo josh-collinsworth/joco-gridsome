@@ -24,7 +24,8 @@ export default {
     prefersLight: false,
     ready: false
   }),
-  mounted() {
+
+  created() {
     if(typeof window == 'undefined') return
 
     const userMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)').matches

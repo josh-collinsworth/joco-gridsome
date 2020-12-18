@@ -34,7 +34,7 @@ export default {
 			'var(--orange)',
 		]
 	}),
-	created() {
+	mounted() {
 		if(typeof window == 'undefined') return
 		this.count = Math.floor(
 			(window.innerWidth /

@@ -1,7 +1,7 @@
 ---
 title: The Wine Cellar at Marks
 featuredMedia: projects/the-wine-cellar.png
-order: 2
+order: 3
 link: https://marks-wine-cellar.now.sh/
 category: websites, code + apps
 tags: [vue, gridsome, javascript]

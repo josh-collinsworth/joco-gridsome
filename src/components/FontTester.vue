@@ -71,7 +71,7 @@ export default {
 		displayItalic: false,
 	}),
 
-	created() {
+	mounted() {
 		this.text = (this.label || this.font)
 	},
 

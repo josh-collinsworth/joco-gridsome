@@ -39,15 +39,14 @@ export default {
 		menuOpen: Boolean,
 		required: true
 	},
+
 	components: {
 		HamburgerButton
 	},
+
 	data: () => ({
-		pages: []
+		pages: pages
 	}),
-	created() {
-		this.pages = pages
-	}
 }
 </script>
 
