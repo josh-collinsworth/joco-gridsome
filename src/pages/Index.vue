@@ -6,7 +6,7 @@
 
       <p id="random-fact-heading"><strong>A random fact about me:</strong></p>
       <transition-group name="fancy-fade" mode="out-in" class="transition-box">
-        <p v-for="(fact, index) in fancyFacts" class="fancy fact" :key="fact" v-show="fancyNumber === index + 1">
+        <p v-for="(fact, index) in fancyFacts" class="fancy fact" :key="fact" v-show="fancyNumber == index + 1">
           <span v-html="fact"></span>
           <button v-if="fancyNumber" id="random-fact-btn" @click="getRandomFancyNumber" :disabled="fancyNumber === 0">Get another</button>
         </p>
@@ -21,9 +21,6 @@
         <li><Tag to="/blog">Blog</Tag></li>
         <li><Tag to="/contact">Contact</Tag></li>
       </TagList>
-
-
-
     </div>
   </Layout>
 </template>
@@ -100,6 +97,7 @@ export default {
     getRandomFancyNumber() {
       const randomNumber = Math.ceil(Math.random() * this.fancyFacts.length)
 
+      console.log(this.fancyNumber)
       console.log(this.usedNumbers.length, this.fancyFacts.length)
 
       if (this.usedNumbers.length >= this.fancyFacts.length) {
