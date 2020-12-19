@@ -4,6 +4,9 @@
       <p class="fancy">Hi, I’m Josh Collinsworth.</p>
       <h1>I’m a front-end developer and designer.</h1>
 
+      <!-- Note to self: this did not work in production for some reason -->
+      <!-- I have no idea why and I'm infuriated by it. But somehow the fact just didn't render. All were display:none -->
+
       <!-- <p id="random-fact-heading"><strong>A random fact about me:</strong></p>
       <transition-group name="fancy-fade" mode="out-in" class="transition-box">
         <p v-for="(fact, index) in fancyFacts" class="fancy fact" :key="fact" v-show="fancyNumber == index + 1">
