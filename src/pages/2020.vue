@@ -8,16 +8,29 @@
 
 			<br>
 
-			<p>2020 has been a long, challenging, and unforgettable year—but also one filled with many firsts,
-				much love, and hope for the future. In lieu of sending our traditional Christmas card this year,
-				we decided to share these, our favorite photos of the year.</p>
+			<p>
+				This has been a long, challenging, and unforgettable year—but also one filled with
+				many firsts and milestones, much love, and a new hope for the future.
+			</p>
 
-			<p><strong>Happy holidays and a brighter new year.</strong></p>
+			<p>
+				In lieu of sending our traditional holiday card this year, we decided to build this page,
+				to share our (<em>many</em>) favorite photos from 2020 with you.
+			</p>
+
+			<br>
+
+			<p><strong>Happy holidays and a brighter new year, friends and loved ones.</strong></p>
 		</div>
 
 		<div class="lightbox" v-if="lightboxPhoto || lightboxPhoto === 0" @click="lightboxPhoto = null" @keydown="lightboxPhoto++">
 			<button v-if="lightboxPhoto > 0" @click.stop="previousPhoto" class="prev-button">&lsaquo;</button>
 			<g-image :src="require(`!!assets-loader!@images/2020_images/${photos[lightboxPhoto].name}`)" alt="" />
+			<span class="lightbox__info">
+				{{ photoDate(photos[lightboxPhoto].name) }}
+				• 
+				{{ lightboxPhoto + 1 }} of {{ photos.length }}
+			</span>
 			<button v-if="lightboxPhoto < photos.length - 1" @click.stop="nextPhoto" class="next-button">&rsaquo;</button>
 		</div>
 
@@ -173,8 +186,10 @@ export default {
 	}),
 
 	mounted() {
+		if (typeof window === 'undefined') return
+
 		window.addEventListener('keydown', (e) => {
-			console.log(e.key)
+			if (!e.key) return
 
 			if (e.key === 'ArrowRight') {
 				this.nextPhoto()
@@ -195,12 +210,20 @@ export default {
 			if (this.lightboxPhoto && this.lightboxPhoto > 0) {
 				this.lightboxPhoto -= 1
 			}
+
+			this.scrollToPhoto()
 		},
 
 		nextPhoto() {
 			if ((this.lightboxPhoto || this.lightboxPhoto === 0) && this.lightboxPhoto < this.photos.length - 1) {
 				this.lightboxPhoto += 1
 			}
+
+			this.scrollToPhoto()
+		},
+
+		scrollToPhoto() {
+			document.querySelectorAll('#photo-grid a')[this.lightboxPhoto].scrollIntoView()
 		},
 
 		photoDate(photo) {
@@ -221,6 +244,10 @@ export default {
 
 
 <style scoped lang="scss">
+body {
+	scroll-behavior: smooth;
+}
+
 .inner-container {
 	width: 100%;
 	margin: 4rem 2rem;
@@ -247,6 +274,19 @@ export default {
 	justify-content: center;
 	align-items: center;
 
+	&__info {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 0.5rem;
+		text-align: center;
+		font-size: .7rem;
+		font-style: italic;
+		z-index: 3;
+		color: var(--white);
+		text-shadow: 0 0 1em black, 0 0 .25em rgba(0,0,0,.5);
+	}
+
 	.next-button,
 	.prev-button {
 		font-size: 2rem;
@@ -257,9 +297,22 @@ export default {
 		position: absolute;
 		left: 1rem;
 		z-index: 5;
-		top: calc(50vh - 1em);
+		bottom: 1rem;
 		border: 1px solid;
 		padding: 5px .5rem .5rem;
+		opacity: 0.3;
+		color: var(--white);
+
+		&:hover,
+		&:focus,
+		&:active {
+			opacity: 0.4;
+			background: transparent;
+		}
+
+		@media (min-width: 800px) {
+			bottom: calc(50vh - 1em);
+		}
 	}
 
 	.next-button {
@@ -306,11 +359,18 @@ export default {
 		overflow: hidden;
 		min-height: calc(24rem + 10vw);
 
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+
 		img {
 			display: block;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			transition: transform .2s ease-out;
 		}
 
 		.date {
@@ -320,7 +380,8 @@ export default {
 			right: 0;
 			z-index: 2;
 			padding: .2rem .5rem;
-			background: rgba(0,0,0,.5)
+			background: rgba(0,0,0,.5);
+			color: var(--white);
 		}
 	}
 }
