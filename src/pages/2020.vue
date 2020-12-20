@@ -15,10 +15,10 @@
 			<p><strong>Happy holidays and a brighter new year.</strong></p>
 		</div>
 
-		<div class="lightbox" v-if="lightboxPhoto" @click="lightboxPhoto = null" @keydown="lightboxPhoto++">
-			<button @click.stop="previousPhoto" class="prev-button">&lsaquo;</button>
+		<div class="lightbox" v-if="lightboxPhoto || lightboxPhoto === 0" @click="lightboxPhoto = null" @keydown="lightboxPhoto++">
+			<button v-if="lightboxPhoto > 0" @click.stop="previousPhoto" class="prev-button">&lsaquo;</button>
 			<g-image :src="require(`!!assets-loader!@images/2020_images/${photos[lightboxPhoto].name}`)" alt="" />
-			<button  @click.stop="nextPhoto" class="next-button">&rsaquo;</button>
+			<button v-if="lightboxPhoto < photos.length - 1" @click.stop="nextPhoto" class="next-button">&rsaquo;</button>
 		</div>
 
 		<div id="photo-grid">
@@ -192,13 +192,13 @@ export default {
 		},
 
 		previousPhoto() {
-			if (this.lightboxPhoto && this.lightboxPhoto > 1) {
+			if (this.lightboxPhoto && this.lightboxPhoto > 0) {
 				this.lightboxPhoto -= 1
 			}
 		},
 
 		nextPhoto() {
-			if (this.lightboxPhoto && this.lightboxPhoto < this.photos.length) {
+			if ((this.lightboxPhoto || this.lightboxPhoto === 0) && this.lightboxPhoto < this.photos.length - 1) {
 				this.lightboxPhoto += 1
 			}
 		},
