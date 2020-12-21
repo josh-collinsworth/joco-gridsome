@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<div class="inner-container">
+		<div id="top" class="inner-container">
 			<h1>Happy Holidays 2020 from the Collinsworths</h1>
 			<p class="fancy">
 				Josh, Erika, Thomas, and Griff
@@ -40,6 +40,12 @@
 				<span class="date">{{ photoDate(photo.name) }}</span>
 			</a>
 		</div>
+
+		<div class="inner-container">
+			<a href="/2020/#top">Back to top</a>
+			&ensp;|&ensp;
+			<g-link to="/">Josh's main site</g-link>
+		</div>
 	</div>
 </template>
 
@@ -50,13 +56,14 @@ export default {
 		months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 
 		photos: [
-			{ name: "IMG_20200104_072407.jpg", wide: false },
 			{ name: "IMG_20200105_082023.jpg", wide: true },
 			{ name: "IMG_20200105_123615.jpg", wide: false },
+			{ name: "IMG_20200105.jpg", wide: false },
 			{ name: "IMG_20200105_165904.jpg", wide: false },
 			{ name: "IMG_20200105_180434.jpg", wide: false },
 			{ name: "IMG_20200117_190614.jpg", wide: false },
 			{ name: "IMG_20200119_113022.jpg", wide: false },
+			{ name: "IMG_20200124_212536~3.jpg", wide: false },
 			{ name: "20200124-78035A.jpg", wide: true },
 			{ name: "IMG_20200126_181646_01.jpg", wide: true },
 			{ name: "IMG_20200126_181907_01.jpg", wide: false },
@@ -265,7 +272,7 @@ body {
 .lightbox {
 	width: 100vw;
 	height: 100vh;
-	background: rgba(0,0,0,0.8);
+	background: rgba(16,16,16,0.9);
 	position: fixed;
 	z-index: 3;
 	top: 0;
@@ -361,7 +368,7 @@ body {
 
 		&:hover {
 			img {
-				transform: scale(1.1);
+				transform: scale(1.05);
 			}
 		}
 
