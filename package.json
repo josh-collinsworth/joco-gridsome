@@ -13,7 +13,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/source-wordpress": "^0.4.0",
     "@gridsome/transformer-remark": "^0.4.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "global": "^4.4.0",
     "gridsome": "^0.7.11",
     "sharp": "^0.25.2"
