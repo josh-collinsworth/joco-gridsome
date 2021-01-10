@@ -4,6 +4,14 @@
 		<h1>{{ project.title }}</h1>
 		<g-image id="project-image" class="callout" :src="require(`!!assets-loader!@images/${$page.project.featuredMedia}`)"/>
 		<div class="content" v-html="project.content"></div>
+		<div v-if="project.liked">
+			<h2>What I like about this project:</h2>
+			<p>{{ project.liked }}</p>
+		</div>
+		<div v-if="project.disliked">
+			<h2>What I'd change about this project:</h2>
+			<p>{{ project.disliked }}</p>
+		</div>
 		<div v-if="project.link">
 			<hr>
 			<p>
@@ -14,6 +22,7 @@
 			</p>
 			<iframe class="wider" :src="project.link" frameborder="0"></iframe>
 		</div>
+		<br />
 		<p><g-link to="/projects">&lsaquo; Back to projects</g-link></p>
 	</Layout>
 </template>
@@ -29,6 +38,8 @@ query($id: ID!) {
 		featuredMedia
 		category
 		path
+		liked
+		disliked
 	}
 }
 </page-query>
@@ -62,6 +73,13 @@ h1 {
 	margin-bottom: 2rem;
 }
 
+h2 {
+	font-size: 1.2rem;
+	border: none;
+	font-family: 'Averta STD', sans-serif;
+	margin: 1.5em 0 0;
+}
+
 iframe {
 	background: var(--white);
 	min-height: 90vh;
@@ -82,5 +100,9 @@ hr {
 	@media(min-width: 1024px) {
 		margin-left: 2rem;
 	}
+}
+
+p {
+	margin-top: 0;
 }
 </style>

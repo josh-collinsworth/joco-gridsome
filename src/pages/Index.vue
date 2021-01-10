@@ -2,7 +2,7 @@
   <Layout>
     <div class="intro">
       <p class="fancy">Hi, I’m Josh Collinsworth.</p>
-      <h1>I’m a front-end developer and designer.</h1>
+      <h1>I’m a front-end developer, designer, and code instructor.</h1>
 
       <!-- Note to self: this did not work in production for some reason -->
       <!-- I have no idea why and I'm infuriated by it. But somehow the fact just didn't render. All were display:none -->
@@ -18,14 +18,22 @@
         </p>
       </transition-group> -->
       <p class="fancy">
-        I work on the support experience team&nbsp;at&nbsp;<a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>.
+        I’m currently searching for a new opportunity to contribute professionally to a great team.
       </p>
 
       <TagList>
-        <li><Tag to="/about">About me</Tag></li>
-        <li><Tag to="/projects">Projects</Tag></li>
-        <li><Tag to="/blog">Blog</Tag></li>
-        <li><Tag to="/contact">Contact</Tag></li>
+        <li>
+          <Tag to="/about"><span aria-hidden="true">👀&ensp;</span>Learn more about me</Tag>
+        </li>
+        <li>
+          <Tag to="/contact"><span aria-hidden="true">✉️&ensp;</span>Get in touch</Tag>
+        </li>
+        <li>
+          <Tag to="/projects"><span aria-hidden="true">💼&ensp;</span>See some of my projects</Tag>
+        </li>
+        <li>
+          <Tag to="/blog"><span aria-hidden="true">📝&ensp;</span>Read my mostly-neglected blog</Tag>
+        </li>
       </TagList>
     </div>
   </Layout>
@@ -125,6 +133,11 @@ export default {
 </script>
 
 <style lang="scss">
+
+:root {
+  --max-width: 36rem;
+}
+
 #random-fact-heading {
   font-size: 0.7em;
   text-transform: uppercase;

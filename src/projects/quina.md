@@ -6,6 +6,8 @@ order: 1
 category: websites, code + apps
 tags: [app, vue, game, javascript]
 summary: A new twist on a classic word game
+liked: This is by far the furthest I've ever gone with a side project, both in terms of the tech behind it and the scope of the rollout. I'm extremely proud of this game.
+disliked: I suck at marketing, so it's not very popular.
 ---
 
 Quina is a slight twist on the classic word game "bulls and cows" (though the better-known variant is Master Mind). It's a word game of strategic deduction, as players guess five-letter words attempting to uncover the secret code word, receiving a new clue with each guess.

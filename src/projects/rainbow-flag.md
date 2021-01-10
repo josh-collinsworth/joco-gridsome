@@ -5,6 +5,8 @@ category: design + illustration
 order: 2
 tags: [logo, vector]
 summary: A Pride Month design.
+liked: Making a design that stands for something good.
+disliked: Nothing, really. I'm happy with this simple little design.
 ---
 
 A sticker project with a design that promotes Pride in the US by combining the rainbow flag with the US flag.
