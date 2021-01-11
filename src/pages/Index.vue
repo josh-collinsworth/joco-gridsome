@@ -32,7 +32,7 @@
           <Tag to="/projects"><span aria-hidden="true">💼&ensp;</span>See some of my projects</Tag>
         </li>
         <li>
-          <Tag to="/blog"><span aria-hidden="true">📝&ensp;</span>Read my mostly-neglected blog</Tag>
+          <Tag to="/blog"><span aria-hidden="true">📝&ensp;</span>Read my rarely-updated blog</Tag>
         </li>
       </TagList>
     </div>
