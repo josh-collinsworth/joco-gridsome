@@ -6,25 +6,25 @@
 
       <h2>Professionally: </h2>
 
-      <p>I'm a front-end engineer specializing in Vue. I'm passionate about modern JavaScript and CSS paired with semantic, accessible HTML, and have a background in graphic design, code instruction and technical support.</p>
+      <p>I'm a front-end engineer specializing in Vue. I love solving user problems using modern JavaScript and elegant CSS paired with semantic, accessible HTML. My professional background also includes graphic design, code instruction, technical support and help documentation.</p>
 
       <g-image id="avatar" src="/images/self-portrait-summer-2018.svg" alt="" />
 
-      <p>My ideal role involves contributing to a collaborative team that cares deeply about good design, inclusion, mentorship, and how their work impacts the world.</p>
+      <p>My ideal role involves contributing to a collaborative team that cares deeply about good design, inclusion, mentorship, and how its work impacts the world.</p>
       
-      <p>I most recently worked on a product team, building features and enhancements within a design system, and loved that role. But I'm open to to the right fit anywhere that allows me use my skills for a positive impact.</p>
+      <p>I most recently worked on a product team, building features and enhancements within a design system, and I loved that role. But I'm open to to the right fit anywhere that allows me put my skills to use for a positive impact.</p>
 
 
       <h3>I might be your guy if you need someone&nbsp;who:</h3>
 
       <ul>
         <li>Is an exceptional collaborator and communicator;</li>
-        <li>Can both code and design;</li>
+        <li>Can both code <em>and</em> design;</li>
         <li>Is a CSS whiz, including Sass, modern layout, responsive design, and fun(ctional)&nbsp;animation;</li>
         <li>Writes accessible, semantic HTML and knows the ins and outs of SVG;</li>
-        <li>Knows modern JavaScript and/or specializes in Vue (including Vue Router, Vuex, Nuxt and Gridsome);</li>
+        <li>Is strong with JavaScript and/or Vue (including ES6+, Vue Router, Vuex, Nuxt, Gridsome and jQuery);</li>
         <li>Knows their way around web performance, optimization, DNS, and troubleshooting;</li>
-        <li>Is strongly familiar with WordPress and can write you a custom theme from&nbsp;scratch, migrate your site, or set up a plugin;</li>
+        <li>Is deeply familiar with WordPress;</li>
         <li>Enjoys teaching and helping others;</li>
         <li>Can author clear, simple, useful help docs and tutorials; and/or</li>
         <li>Is prolific with puns and dad jokes.</li>
@@ -54,21 +54,20 @@
       </ul>
 
 
-      <h3>I'm probably <em style="text-decoration: underline">not</em> your guy if:</h3>
+      <h3>I'm probably <em style="text-decoration: underline">NOT</em> your guy if:</h3>
       <ul>
-        <li>Remote work is out of the question (<i>willing to reconsider after the pandemic is over, but flexibility is still preferred</i>);</li>
+        <li>Remote work is out of the question (<i>potentially willing to reconsider after the pandemic is over, but flexibility is still preferred</i>);</li>
         <li>Your company isn't <em>deeply</em> serious about DEI and anti-racism;</li>
         <li>High quality, inclusive design isn't a priority;</li>
-        <li>Your culture doesn't allow people to bring their whole selves to work every&nbsp;day;</li>
         <li>You need somebody who's good at cleaning or closing doors (<i>I asked my wife what I was bad at and that's what she said</i>);</li>
-        <li>You can't stand dad humor; and/or</li>
-        <li>You're not cool working with a dude who regularly tweets profanity at and/or about fascists.</li>
+        <li>Your culture doesn't allow people to bring their whole selves to work every&nbsp;day; and/or</li>
+        <li>You can't stand dad humor.</li>
       </ul>
 
 
       <h2>Previously: </h2>
       <p>
-        Front-end developer at <xa to="https://wpengine.com">WP Engine;</xa> Tier 2 support team tech lead at <xa to="https://getflywheel.com">Flywheel</xa>; WordPress instructor for <xa to="interfaceschool.com">Aim Code School</xa>; graphic designer; seasoned bartender who makes a mean old fashioned; old enough to have worked at an AOL call center once.
+        Front-end developer at <xa to="https://wpengine.com">WP Engine;</xa> Tier 2 support team tech lead at <xa to="https://getflywheel.com">Flywheel</xa>; WordPress instructor for <xa to="interfaceschool.com">Aim Code School</xa>; graphic designer; seasoned bartender who makes a mean old fashioned.
       </p>
 
 
@@ -91,12 +90,10 @@
 </template>
 
 <script>
-import PointlessChart from '~/components/PointlessChart'
 
 export default {
-  components: { PointlessChart },
   metaInfo: {
-    title: "About me"
+    title: "Josh Collinsworth | About me"
   }
 }
 </script>

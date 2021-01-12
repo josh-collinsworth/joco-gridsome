@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="intro">
-      <p class="fancy">Hi, I’m Josh Collinsworth.</p>
+      <p class="fancy"><span aria-hidden="true" style="font-style: normal">👋🏻 </span>Hi, I’m Josh Collinsworth.</p>
       <h1>I’m a front-end developer, designer, and code instructor.</h1>
 
       <!-- Note to self: this did not work in production for some reason -->
@@ -18,21 +18,21 @@
         </p>
       </transition-group> -->
       <p class="fancy">
-        I’m currently searching for a new opportunity to contribute professionally to a great team.
+        I’m currently searching for a new opportunity to contribute to&nbsp;a&nbsp;great&nbsp;team.
       </p>
 
       <TagList>
         <li>
-          <Tag to="/about"><span aria-hidden="true">👀&ensp;</span>Learn more about me</Tag>
+          <Tag to="/about"><span aria-hidden="true">👀&ensp;</span>Learn more <b>About</b> me</Tag>
         </li>
         <li>
-          <Tag to="/contact"><span aria-hidden="true">✉️&ensp;</span>Get in touch</Tag>
+          <Tag to="/contact"><span aria-hidden="true">✉️&ensp;</span>Get in <b>Contact</b></Tag>
         </li>
         <li>
-          <Tag to="/projects"><span aria-hidden="true">💼&ensp;</span>See some of my projects</Tag>
+          <Tag to="/projects"><span aria-hidden="true">💼&ensp;</span>See some of my <b>Projects</b></Tag>
         </li>
         <li>
-          <Tag to="/blog"><span aria-hidden="true">📝&ensp;</span>Read my rarely-updated blog</Tag>
+          <Tag to="/blog"><span aria-hidden="true">📝&ensp;</span>Read my rarely-updated <b>Blog</b></Tag>
         </li>
       </TagList>
     </div>
