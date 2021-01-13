@@ -7,21 +7,21 @@ module.exports = {
 
   plugins: [
     {
-      use: '@gridsome/source-wordpress',
-      options: {
-        baseUrl: 'https://api.joshcollinsworth.com', // required
-        typeName: 'WordPress', // GraphQL schema name (Optional)
-        perPage: 100,
-        concurrent: 20
-      }
-    },
-    {
       use: '@gridsome/source-filesystem',
       options: {
         path: './src/projects/*.md',
         typeName: 'project',
         remark: {
         }
+      }
+    },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        baseDir: './src/posts',
+        typeName: 'post',
+        pathPrefix: '/blog',
+        template: './src/templates/post.vue'
       }
     },
     {
@@ -37,14 +37,11 @@ module.exports = {
     config.resolve.alias.set('@images', '@/assets/images')
   },
   templates: {
-    WordPressCategory: '/category/:slug', // adds route for "category" post type (Optional)
-    WordPressPost: '/:slug', //adds route for "post" post type (Optional)
-    WordPressPostTag: '/tag/:slug', // adds route for "post_tag" post type (Optional)
     project: [
       {
         path: '/projects/:title',
         component: 'src/templates/single_project.vue'
       }
-    ]
+    ],
   }
 }

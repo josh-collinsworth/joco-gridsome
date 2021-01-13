@@ -40,19 +40,7 @@
 </template>
 
 <page-query>
-query {
-  allWordPressPost (perPage: 1) {
-    edges {
-      node {
-        id
-        title
-        path
-        excerpt
-        slug
-      }
-    }
-  }
-}
+
 </page-query>
 
 <script>
@@ -103,7 +91,7 @@ export default {
   }),
 
   created() {
-    this.latestPost = this.$page.allWordPressPost.edges[0].node
+    // this.latestPost = this.$page.allWordPressPost.edges[0].node
   },
 
   methods: {
