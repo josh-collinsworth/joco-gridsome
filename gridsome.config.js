@@ -7,6 +7,15 @@ module.exports = {
 
   plugins: [
     {
+      use: '@gridsome/source-wordpress',
+      options: {
+        baseUrl: 'http://api.joshcollinsworth.com', // required
+        typeName: 'WordPress', // GraphQL schema name (Optional)
+        perPage: 100,
+        concurrent: 20
+      }
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         path: './src/projects/*.md',

@@ -12,7 +12,7 @@
 
       <p>My ideal role involves contributing to a collaborative team that cares deeply about good design, inclusion, mentorship, and how its work impacts the world.</p>
       
-      <p>I most recently worked on a product team, building features and enhancements within a design system, and I loved that role. But I'm open to to the right fit anywhere that allows me put my skills to use for a positive impact.</p>
+      <p>I most recently worked on a product team, building features and enhancements within a design system, but I'm open to to the right fit anywhere that allows me put my skills to use for a positive impact.</p>
 
 
       <h3>I might be your guy if you need someone&nbsp;who:</h3>
@@ -31,7 +31,7 @@
       </ul>
 
 
-      <h3>I'm capable with:</h3>
+      <h3>I'm <em>also</em> capable with:</h3>
 
       <ul>
         <li>React</li>
@@ -75,7 +75,7 @@
       <p>
         Omaha, Nebraska resident; <g-link to="/code/">hobby coder</g-link>;
         author of a frequently neglected <g-link to="/blog/">blog</g-link>;
-        font hoarder; husband; dad (with both the jokes and bod to match); fairly ordinary white dude in tech striving to be an ally and advocate for LGBTQIA+ folx and BIPOC; cold brew addict; author of ten thousand <xa to="twitter.com/jjcollinsworth">tweets</xa> of <em>widely</em> varying substance and quality; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; massive Nintendo fan; musician/guitarist/hack pianist/aggressively mediocre singer; liberal abuser of semicolons.
+        font hoarder; husband; dad (with both the jokes and bod to match); fairly ordinary white dude in tech striving to be an LGBTQIA+ and BIPOC ally and advocate; cold brew addict; author of over ten thousand <xa to="twitter.com/jjcollinsworth">tweets</xa>, a few of which are decent; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; massive Nintendo fan; musician/guitarist/hack pianist/aggressively mediocre singer; liberal abuser of semicolons.
       </p>
 
 
