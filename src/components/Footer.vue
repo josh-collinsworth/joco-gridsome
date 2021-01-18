@@ -4,12 +4,13 @@
   	<footer class="footer">
       <div>
         <ul class="footer__links">
-          <li><g-link to="/feed">RSS</g-link></li>
+          <li><xa to="api.joshcollinsworth.com/feed/">RSS</xa></li>
           <li><xa to="github.com/josh-collinsworth">GitHub</xa></li>
           <li><xa to="codepen.io/joshuajcollinsworth">CodePen</xa></li>
           <li><xa to="twitter.com/jjcollinsworth">Twitter</xa></li>
         </ul>
       </div>
+
       <div class="fine-print">
         <p>
           This is a headless <xa to="gridsome.org">Gridsome</xa> site

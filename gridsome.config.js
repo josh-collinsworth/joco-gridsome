@@ -9,7 +9,7 @@ module.exports = {
     {
       use: '@gridsome/source-wordpress',
       options: {
-        baseUrl: 'https://api.joshcollinsworth.com', // required
+        baseUrl: 'http://api.joshcollinsworth.com', // required
         typeName: 'WordPress', // GraphQL schema name (Optional)
         perPage: 100,
         concurrent: 20
