@@ -29,8 +29,27 @@ module.exports = {
       options: {
         id: 'UA-61693930-1'
       }
+    },
+    {
+      use: 'gridsome-plugin-rss',
+      options: {
+        contentTypeName: 'post',
+        feedOptions: {
+          title: 'Josh Collinsworth',
+          feed_url: 'https://joshcollinsworth.com/rss.xml',
+          site_url: 'https://joshcollinsworth.com'
+        },
+        feedItemOptions: node => ({
+          title: node.title,
+          description: node.excerpt,
+          url: 'https://joshcollinsworth.com/blog/' + node.slug,
+        }),
+        output: {
+          dir: './static',
+          name: 'rss.xml'
+        }
+      }
     }
-
   ],
   //Required to make relative image paths work (unfortunately)
   chainWebpack: config => {

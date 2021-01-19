@@ -4,7 +4,7 @@
   	<footer class="footer">
       <div>
         <ul class="footer__links">
-          <li><xa to="api.joshcollinsworth.com/feed/">RSS</xa></li>
+          <li><a href="/rss.xml">RSS</a></li>
           <li><xa to="github.com/josh-collinsworth">GitHub</xa></li>
           <li><xa to="codepen.io/joshuajcollinsworth">CodePen</xa></li>
           <li><xa to="twitter.com/jjcollinsworth">Twitter</xa></li>
