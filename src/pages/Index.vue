@@ -47,9 +47,7 @@
   </Layout>
 </template>
 
-<page-query>
 
-</page-query>
 
 <script>
 import Tag from '~/components/Tag'
@@ -99,11 +97,6 @@ export default {
     // ],
     // usedNumbers: []
   }),
-
-  created() {
-    // TODO: this is not currently implemented.
-    this.latestPost = this.$page.allWordPressPost.edges[0].node
-  },
 
   methods: {
     // See note above
