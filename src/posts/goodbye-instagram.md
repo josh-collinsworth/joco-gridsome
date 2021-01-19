@@ -1,11 +1,16 @@
 ---
 title: "This isn't the Time, But it's the Perfect Time; Goodbye, Instagram"
 date: "2020-06-03"
+updated: "2020-06-11"
 categories: 
   - "personal"
 coverImage: "instagram-over-1.png"
 excerpt: …Lately, I’ve been wondering whether I can actually continue supporting Instagram and the company behind it, however passively or at whatever seemingly insignificant scale. And while I was zeroing in on this answer anyway, the events of the last couple of weeks have clearly cemented in my mind that the answer—for me, at least—is an unequivocal “no.”
 ---
+import Highlight from '~/components/Highlight'
+import Callout from '~/components/Callout'
+import SideNote from '~/components/SideNote'
+
 
 If you know or follow me, you may already know that I deleted my Facebook account several years ago, in late 2014.
 
@@ -25,7 +30,15 @@ It's not hard to make an argument against Instagram. There are so many valid rea
 
 Instead of speaking in such sweeping terms, I'd like to focus in just a bit more.
 
+<Callout>It’s become clear that Facebook sees its ability to spread misinformation not as a bug, but as a feature.</Callout>
+
 In this moment—Blackout Tuesday, as it's being called by many (for better or worse, given its dubious origins and ill effects on the critical #BlackLivesMatter hashtag feed)—it's become clearer than ever that Facebook does not now, nor will it ever take responsibility for its ongoing, deliberate, and destructive impact on the world in general, and the US in particular.
+
+<SideNote>
+One of the things that prompted me to leave Facebook was the revelation that it conducted a secret study which attempted (successfully!) to cause depression by artificially altering some users’ feeds to show primarily negative posts, just to find out whether it could.
+<br /><br />
+To my knowledge, there has never been any apology for A/B testing with the mental health of non-consenting people. Regardless, this looks tragically tame compared with the list of Facebook’s more modern crimes.
+</SideNote>
 
 This is where I'll be conflating Facebook and Instagram a bit, but that's on purpose. It's clear that the two are intrinsically the same company as far as this topic goes. Marvel might be technically different than Disney, but the dollars go the same place.
 
@@ -35,13 +48,19 @@ Before this year, Facebook—specifically, Mark Zuckerberg himself—pledged tha
 
 But since then, and particularly with the events of the past week, Facebook's promise of accountability and oversight have been more than walked back as the company has instead doubled down on its role in spreading hate, racism, and lies.
 
+<Callout>Misinformation is not benign; it always benefits those with the power to spread it, at the cost of those without the voice to fight it.</Callout>
+
 Among other things: Zuckerberg has gone on the record numerous times now to claim that fact-checking politicians is not in the platform's interest (effectively defending their right to spread misinformation at whatever cost and with any reason). On the surface, this may sound like a defense of first amendment rights, but misinformation is not benign; it always benefits those with the voice to spread it, at the cost of those without the voice to fight it.
 
 It's critical to keep context in mind when discussing the "right" to misinform at grand scale and with impunity. This type of distortion is almost always used for, and is most effective at, spreading hatred, in a way that neither further falsehoods nor the truth are entirely adequate to fight (as you know if you've ever tried to correct a family member who shared something inaccurate or false).
 
+<Highlight>Misinformation is not a two-way street, and it is not to be treated as mere opinion. To side with the right to spread falsehood unchecked is to side with racism, bigotry, anti-science, and any other cause benefited by a lack of context and truth.</Highlight>
+
 Zuckerberg has also refused to acknowledge that the president threatening violent military action against US citizens—let alone citizens who are exercising their constitutional right to protest—is problematic, or to do almost anything about all but the most blatantly violent, racist, hateful or even outright fake posts from just about any source, let alone those in power.
 
 Time and again, Facebook's leadership has failed to demonstrate any substantial interest whatsoever in ensuring their platform is not used for malicious intent.
+
+<Highlight>In short, Facebook has failed us—as users, as citizens, and as humans—to an extent that I feel demands I can no longer be even tangentially complicit in anything the company does.</Highlight>
 
 It shouldn't have taken this long, for any and all of the reasons above. Facebook is, quite frankly, an awful company (and again: it was long before 2016, lest I give the impression this is just about recent events or the election).
 
@@ -69,6 +88,8 @@ Me removing myself from Facebook's platforms won't mean anything on its own. But
 
 This is me, reconciling my beliefs with my actions, and choosing not to look the other way any more, no matter how many other pairs of eyes might be pointed in that direction.
 
+<Highlight>This isn’t me filling the offering plate, or acting like I can; this is me giving my dollar.</Highlight>
+
 I won't tell you whether Instagram—or even Facebook, for that matter—is good for you, or whether you should quit. I understand they're both tools for community, and that they both serve positive causes as well as negative. Maybe you feel you can, or do, offset the inherent negativity of the platform with the impact of your usage.
 
 Obviously, there are millions of users of Instagram using the platform to support Black Lives Matter, Pride Month, and other very good and noble causes. I'm fully in support of that, unequivocally. But for me, personally: if I'm not using Instagram regularly to begin with, does me hopping on just to post a black square or a rainbow avatar actually help? If I'm showing up for the big things and not participating in the little things, is my impact actually positive, or am I no better than the influencers artificially manufacturing Black Lives Matter photo ops without actually contributing anything substantial?
@@ -76,6 +97,8 @@ Obviously, there are millions of users of Instagram using the platform to suppor
 My feelings on the matter are further complicated by the fact that: if I'm being honest, one major catalyst of these beliefs was, ironically, Facebook.
 
 I have Facebook itself to thank for a good deal of the progress I myself made as a person in my 20s and early 30s, as friends and acquaintances on the platform (especially women) helped to gradually push me to become aware of my own bias and privilege (having been blinded to them by, among other things, the religious conservative values I had been brought up with to that point). Frankly, much as it pains me to admit it, Facebook itself is a large part of the reason I have the beliefs I do today.
+
+<Callout>I don’t believe Instagram puts enough good in my life—or that I put enough good into the world because of it—to justify my continued usage.</Callout>
 
 That said, though, it could have just as easily gone the opposite way, and Facebook could have further galvanized my then-problematic views, a fact which had the odd effect of making it both easier and harder to leave.
 
@@ -86,6 +109,8 @@ All of this is to say nothing of the fact that I have something of a luxury in b
 These are hard questions, and I admit I don't have good answers to them. So…your mileage may vary, I suppose. What you feel is right for you may be different than what I feel, and as long as these questions and their impact are at least being honestly considered, I'm all right with that.
 
 But for me, right now, it's become clear that the ethics of the company behind Instagram are antithetical to what I believe is right on any scale. I don't believe Instagram puts enough good in my life—or that I put enough good into the world because of it—to justify my continued usage.
+
+<Highlight>No matter how tiny a grain of sand I might be in that sandcastle, I can’t in good conscience be a part of its walls any more.</Highlight>
 
 If you'd like to keep in touch with me, I'll still be around on [Twitter](https://twitter.com/jjcollinsworth), at least until I face the same reckoning there (though my content there is of a decidedly different flavor). And I'll be attempting to add some more personal content both there and here, on my personal site.
 

@@ -1,6 +1,7 @@
 ---
 title: "My Essential Tools for WordPress Development"
 date: "2016-06-25"
+updated: "2020-06-14"
 categories: 
   - "quotes-and-advice"
   - "web"
@@ -8,12 +9,17 @@ categories:
 coverImage: "Screenshot-2016-06-24-20_45_21.png"
 excerpt: Some of these apps, resources and tools aren’t directly WordPress-related, or even necessarily development-related; some have to do with productivity or just make life a little easier. That’s by design. Part of being a developer is learning to work and use your tools as efficiently and with as little wasted time and mental energy as possible.
 ---
+import Highlight from '~/components/Highlight'
+import Callout from '~/components/Callout'
+import SideNote from '~/components/SideNote'
 
 What follows is a list of software, in some form, that I feel is useful, recommendable or indispensable when developing WordPress sites.
 
 Some of these apps, resources and tools aren't directly WordPress-related, or even necessarily development-related; some have to do with productivity or just make life a little easier. That's by design. Part of being a developer is learning to work and use your tools as efficiently and with as little wasted time and mental energy as possible.
 
 This is a list of the things that help me toward that goal. If you handed me a brand new MacBook and told me to get to work on building your WordPress site, everything on this list would most likely be in my dock, browser history and/or plugins list by the end of the day.
+
+<SideNote>This post hasn’t been updated for a while; Wunderlist isn’t a thing anymore, and neither is Spectacle (it’s a new app called Rectangle now, which honestly is better). Some of the pricing has changed; neither LastPass nor Chrome are my first choices in their category anymore; and in this moment at least, I’d definitely add Block Lab to the list. Still, I leave the post as-is both in the interest of not rewriting history, and because I still think the list is mostly helpful. You can check my /uses page for more.</SideNote>
 
 ![Dropbox Logo](https://api.joshcollinsworth.com/wp-content/uploads/2016/06/Dropbox.svg)
 
@@ -32,7 +38,7 @@ You're going to need somewhere to store your files, and [Dropbox](https://www.dr
 
 I don't have a strong preference between the two, but there's no excuse for not using a password manager in this day and age. Odds are good you'll have at least two usernames and passwords to remember for every single site you work on—maybe more—and repeating the same one or making it easy to type and remember is an awful idea when you're using the world's most popular CMS. Saving brain power is making your life better and your workflow more efficient. And besides, these are extremely affordable apps; LastPass is only $12 per year. Make like Nike and just do it.
 
-![](../assets/images/post_images/32078472-5053adea-baa7-11e7-9034-519002f12ac7.png)
+![VS Code logo](../assets/images/post_images/32078472-5053adea-baa7-11e7-9034-519002f12ac7.png)
 
 ### [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -48,7 +54,7 @@ I highly recommend the following extensions, but you can mix and match your own 
 - **highlight-matching-tag** (Shows where the closing tag is for a selected opening tag and vice versa)
 - **WordPress Toolbox** (for auto-completion of many WordPress PHP functions; a real life-saver)
 
-![](../assets/images/post_images/GenerateWP.png)
+![GenerateWP logo](../assets/images/post_images/GenerateWP.png)
 
 ### [GenerateWP.com](http://generatewp.com/)
 
@@ -58,7 +64,7 @@ There's a _ton_ of PHP to remember in WordPress, the difficulty of which is comp
 
 GenerateWP does the work for you in generating blocks of code. You just fill out some fields telling the site what you're after and it will spit out the code for you to copy and paste in the appropriate PHP file. Everything from custom `WP_Query` loops to defining custom post types and much, much more can now be handled by checking some boxes and filling out a few fields instead of peering through the WordPress Codex trying to remember the difference between `get_header()` and `wp_head()`.
 
-![](https://api.joshcollinsworth.com/wp-content/uploads/2016/06/Local-Logo.svg)
+![Local logo](https://api.joshcollinsworth.com/wp-content/uploads/2016/06/Local-Logo.svg)
 
 ### Local by Flywheel
 
@@ -264,25 +270,24 @@ Just a few of the modestly handy plugins I find myself using frequently:
     Concatenating and minifying your CSS and JS files is essential to optimizing page speed. There are free plugins to do this (like W3 Total Cache and Better WP Minify), but WP Rocket is worth the premium price tag to make the process simpler and easier. Ideally, you'd be handling all of that manually at the development level, but if that's not an option, WP Rocket gets my vote for the best post-development fix.
 - [**Ninja Forms**](https://wordpress.org/plugins/ninja-forms/)  
     Gravity Forms and Caldera Forms are also both fine choices, and I have no doubt there are others, too. I just like how easy it is to get Ninja Forms up and running for free.
-- **[WPS Hide Login](https://wordpress.org/plugins/wps-hide-login/)  
-    **The internet is full of bots looking for your WordPress login screen, but they can only find it if you keep it at the same URI as everybody else (/wp-admin). Change it.
+- [**WPS Hide Login**](https://wordpress.org/plugins/wps-hide-login/)  
+    The internet is full of bots looking for your WordPress login screen, but they can only find it if you keep it at the same URI as everybody else (/wp-admin). Change it.
 - [**Custom Post Types UI**](https://wordpress.org/plugins/custom-post-type-ui/)  
     Although I do enjoy defining custom post types on my own, CPT UI is admittedly the easier way to do it. Just make sure you don't have a client who likes to go poking around where they don't belong when you turn the site over to them.
-- [**Essential Grid  
-    **](http://codecanyon.net/item/essential-grid-wordpress-plugin/7563340)I'm usually not much of a fan of Envato Market and its ilk because I disagree with some of their business practices and have had bad experiences with some of their plugins, but this particular paid plugin, at $26, offers the ability to get any kind of gallery up and running very quickly and easily on any site or page.
-- **[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)  
-    **I'm not a big SEO guy, but this plugin will help you write better content so that your viewers can find it when it's relevant to them.
-- **[Enable Media Replace](https://wordpress.org/plugins/enable-media-replace/)  
-    **Super simple, but allows you to replace a media file and keep its metadata (URI, alt, title, etc.) intact rather than having to delete it and upload a new file every time there's a change.
-- **[Show Current Template](https://wordpress.org/plugins/show-current-template/)  
-    **More of a debugging tool than anything, but it's extremely helpful to be able to tell whether you're bucking the WordPress template hierarchy successfully, and which PHP template files aside from the main one are being loaded on the page.
-- **[Insert PHP](https://wordpress.org/plugins/insert-php/)  
-    **Handy if you need to run some PHP code from a WordPress content field. (Most developers will of course have ways around this, and it's presented here as more of a hack than a recommended way to do things. But in a pinch it works remarkably well.)
-- **[Force Regenerate Thumbnails](https://wordpress.org/plugins/force-regenerate-thumbnails/)  
-    **If you change your media upload size after you've already uploaded some images, you'll want to run this.
-- **Captcha  
-    **There are many kinds (with many levels of intrusiveness), but since Captcha secures all forms, it helps keep bots out of your comments, contact forms, and your login screen. Those are all really good things.
-- **[Akismet](https://akismet.com/)  
-    **It's almost not worth mentioning because of its ubiquity and the fact that many WordPress users don't even allow comments on their site to begin with. But if you do allow comments, activate Akismet, get an API key, and and put the API key in place.
+- [**Essential Grid**](http://codecanyon.net/item/essential-grid-wordpress-plugin/7563340)I'm usually not much of a fan of Envato Market and its ilk because I disagree with some of their business practices and have had bad experiences with some of their plugins, but this particular paid plugin, at $26, offers the ability to get any kind of gallery up and running very quickly and easily on any site or page.
+- [**Yoast SEO**](https://wordpress.org/plugins/wordpress-seo/)  
+    I'm not a big SEO guy, but this plugin will help you write better content so that your viewers can find it when it's relevant to them.
+- [**Enable Media Replace**](https://wordpress.org/plugins/enable-media-replace/)  
+    Super simple, but allows you to replace a media file and keep its metadata (URI, alt, title, etc.) intact rather than having to delete it and upload a new file every time there's a change.
+- [**Show Current Template**](https://wordpress.org/plugins/show-current-template/)  
+    More of a debugging tool than anything, but it's extremely helpful to be able to tell whether you're bucking the WordPress template hierarchy successfully, and which PHP template files aside from the main one are being loaded on the page.
+- [**Insert PHP**](https://wordpress.org/plugins/insert-php/)  
+    Handy if you need to run some PHP code from a WordPress content field. (Most developers will of course have ways around this, and it's presented here as more of a hack than a recommended way to do things. But in a pinch it works remarkably well.)
+- [**Force Regenerate Thumbnails**](https://wordpress.org/plugins/force-regenerate-thumbnails/)  
+    If you change your media upload size after you've already uploaded some images, you'll want to run this.
+- **Captcha** 
+    There are many kinds (with many levels of intrusiveness), but since Captcha secures all forms, it helps keep bots out of your comments, contact forms, and your login screen. Those are all really good things.
+- [**Akismet**](https://akismet.com/)  
+    It's almost not worth mentioning because of its ubiquity and the fact that many WordPress users don't even allow comments on their site to begin with. But if you do allow comments, activate Akismet, get an API key, and and put the API key in place.
 
 That's it! I hope you've found something useful here. Happy developing, WordPressers.

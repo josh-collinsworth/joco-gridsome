@@ -1,6 +1,7 @@
 ---
-title: "File Types, Compatibility and Clarity"
+title: "Understanding the Difference Between Image and Vector File Types"
 date: "2015-06-11"
+updated: "2021-01-19"
 categories: 
   - "design"
   - "web"
@@ -10,9 +11,19 @@ excerpt: If you’re like me, you’ve probably spent some time wondering (and G
 
 If you're like me, you've probably spent some time wondering (and Googling) about the differences between various popular format types commonly used for graphic design applications. I've found out I used or exported the wrong kind more times than I care to admit, and I've asked or been asked the difference between a jpeg and a tiff on countless occasions. Even now it's difficult sometimes to remember whether certain file types support things like CMYK color or transparency, and so I decided I'd create a resource that's hopefully a handy reference on the matter of discerning file type supports and behavior.
 
-[![File type compatibility and specs](../assets/images/post_images/File-Types.png)](https://api.joshcollinsworth.com/wp-content/uploads/2015/06/File-Types.png)
 
-Someday I intend to update this into a browser-rendered chart, but for now, due to time constraints, it will just have to exist as a graphic.
+| Format  | Spot| CMYK| RGB |Vector|Transparency|Compression      |Max Colors      |
+|---------|-----|-----|-----|------|------------|-----------------|----------------|
+| .eps    | Yes | Yes | Yes |Yes   |Yes         |None             |N/A             |
+| .gif    | No  | No  | Yes |No    |Yes         |None             |256             |
+| .jpg    | No  | Yes | Yes |No    |No          |Lossy            |Millions        |
+| .pdf    | Yes | Yes | Yes |Yes   |Yes         |Optional         |N/A             |
+| .png    | No  | No  | Yes |No    |Yes         |Lossless         |256 or milliions|
+| .svg    | No  | No  | Yes |Yes   |Yes         |Optional         |N/A             |
+| .tif    | No  | No  | Yes |No    |Yes         |Lossy or Lossless|Millions        |
+| .wmf    | No  | No  | Yes |Yes   |Yes         |Optional         |Millions        |
+
+
 
 **A few notes about the chart and its summary:**
 

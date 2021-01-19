@@ -1,6 +1,7 @@
 ---
 title: "The Five Things I Wish Somebody Had Told Me as a Design Student"
 date: "2016-02-21"
+updated: "2021-01-19"
 categories: 
   - "design"
   - "personal"
@@ -8,6 +9,9 @@ categories:
 coverImage: "what-i-wish.png"
 excerpt: Your worst instructor as a design student will lay out clear goals and expectations which will not change; this is not a given with clients.
 ---
+import Highlight from '~/components/Highlight'
+import Callout from '~/components/Callout'
+import SideNote from '~/components/SideNote'
 
 I recently had the privilege of attending [Meet the Pros 2016](http://www.meetthepros.org/2016/) and addressing multiple small design student groups in roundtable discussions focused on the question: what do you wish you would have known about being a professional while you were still a design student?
 
@@ -20,6 +24,8 @@ Here's what I answered, and what I told the design students I spoke to last Tues
 I've written about this topic before, but I feel it bears repeating: we're reminded constantly as design students that the goal of everything we're doing is to come out of our program with an amazing portfolio. That portfolio, of course, will (hopefully) get us a job. And we have the message drilled into our heads on an almost daily basis: _a bad portfolio can cost you a job that you might have otherwise gotten_.
 
 But not enough attention is paid to the other side of that coin, in my opinion. An important message gets lost in all the talk of a perfect book full of perfect projects: when it all comes down to it, an employer can't hire your portfolio; they have to hire _you_. And _you can cost your portfolio a job it might have otherwise gotten_.
+
+<Callout>When it all comes down to it, an employer can’t hire your portfolio; they have to hire you. And you can cost your portfolio a job it might have otherwise gotten.</Callout>
 
 I was in a Q&A session recently with Dusty Davidson, one of the founders and owners of [Flywheel](http://getflywheel.com), in which somebody asked him: what should companies be looking for in a potential employee?
 
@@ -60,11 +66,15 @@ Don't despair; there is a lot you can do to quell this behavior. If you haven't 
 
 But no matter how good your research, process, rationale and work are, sometimes the client will still be wrong. Sometimes they won't be able to differentiate between something that they personally like and something that will be effective for their goals. Sometimes they will make the wrong decision even when you find the most superlatively diplomatic and persuasive ways to inform them that they are wrong. And sometimes—_sometimes_—you have no option but to accept that you and your client simply have irreconcilable views of the project.
 
+<Callout>Ego is self-sabotage; professionals can sniff it out for the toxin it is, and it will poison every aspect of your relationship with your clients.</Callout>
+
 There seems to be a bit of elitism that gets built into designers on their way through school. (Design is not unique in this way, of course; many creative fields seem to instill a certain haughtiness in their recruits.) But the sooner you can jettison this baggage, the better.
 
 Ego does as much good for a designer as a 20-pound pair of boots does a swimmer. It will do nothing but hold you back, both with professionals and with clients. Ego is self-sabotage; professionals can sniff it out for the toxin it is, and it will poison every aspect of your relationship with your clients.
 
 Ok, I may have gone overboard with the mixed metaphors. But the point is: ego is counterproductive at best and suicidal at worst. Take pride in your work, but don't be prideful. Defend your work, but don't be defensive.
+
+<Callout>Take pride in your work, but don’t be prideful. Defend your work, but don’t be defensive.</Callout>
 
 Like it or not, what we do—while grounded in many objective principles and disciplines—is still subjective. My view of green is different than yours and your feelings about this typeface are different than mine. Our experiences lead us to different conclusions about what we see. It's nobody's fault. Keep the end goal and target audience in mind (your client probably isn't at this point) and just move on.
 
@@ -73,6 +83,8 @@ Like it or not, what we do—while grounded in many objective principles and dis
 It's pretty fashionable—downright cliché, actually—to advise people to follow their passions these days (particularly in blog posts). Sure, I'd give that advice to anyone, but this is about more than that. It's about aligning yourself to the right people and the right goals because _that's_ what makes the work worthwhile.
 
 Obviously, you probably won't have the luxury of picking your employer or your clients right out of school. But when and if the opportunity comes along to choose between making more money or doing something you care more about, my advice is to take the second option every single time.
+
+<Callout>What you fail to realize as a poor design student is that money is a drug. And like any drug, its effect can only last so long. Then you realize that no amount of it actually changes the dismal situation you’re in.</Callout>
 
 Let me share a couple of examples from my personal experience:
 
@@ -89,15 +101,19 @@ This advice comes with two very important caveats:
 1. **This is _not_ a license to be a lazy creative.** You don't always get to do things you care about when you feel like doing them. Do your work anyway.
 2. **Success looks different to everyone, and you need to know in advance what it looks like for you**. Maybe to you, success does equal a big paycheck. But for me personally, success has almost _nothing_ to do with money (and I would argue it should be that way for any designer; this isn't a career to take on if you want to retire wealthy).
 
+<Callout>I didn’t actually want to be where I was or doing what I was doing, and money was comically and tragically powerless to change that.</Callout>
+
 I wound up leaving that job for one that paid literally half as well and offered even fewer hours. In effect, I made the difficult decision to take a pay cut of greater than 50% at my next internship in order to work at a smaller shop where I respected the work and aligned with the values of the people.
 
 And you know what? It was unequivocally the best decision I could have made. Sure, it was tough. But I was happier, I was doing better work, and because of that, it led to things my previous position never could have.
 
 Some time later, motivated by some tight financial times, I made the opposite decision. I took on the best-paying freelance project I'd ever gotten even though I couldn't actually get behind the values of the client. And as you may have guessed, I was abjectly miserable. There was a point in the middle of the dozens and dozens of hours of work that I had agreed to and that I couldn't possibly outsource when I thought to myself, _I would actually_ pay _my contract to get out of doing this work right now_.
 
+<Callout>Assuming your needs are met otherwise, financial deficiency is an easier burden to carry than creative despair.</Callout>
+
 The thing is, the work itself wasn't bad. In fact, it was the kind of work that, under most other circumstances, I might have been doing just for fun. But knowing that my time and efforts were being transformed into a vehicle for furthering goals I didn't agree with for people whose values didn't align to mine sucked any hope of enjoyment out of the project. It was supposed to be freedom; it became entrapment.
 
-Design is hard enough work as it is. Don't make it harder by shackling yourself to people and projects you don't care about. It's never worth it. Financial deficiency is an easier burden to carry than creative despair.
+Design is hard enough work as it is. Don't make it harder by shackling yourself to people and projects you don't care about. It's never worth it. Assuming your needs are met otherwise, financial deficiency is an easier burden to carry than creative despair.
 
 ### School Doesn't Prepare You to Manage a Professional Workload
 
@@ -105,11 +121,15 @@ There's little school can do—outside of becoming entirely unreasonable—to pr
 
 In short, the price for failure in school is relatively low, and this is absolutely not the case in the professional world.
 
+<Callout>In short, the price for failure in school is relatively low, and this is absolutely not the case in the professional world.</Callout>
+
 Failure in school is a continuum; failure in the professional world is an absolute. There's no bad grade and there are few revisions to be had; there are just unhappy clients, which can lead quickly to unemployment if the fault is yours.
 
 The timeline is also often very different; as a professional, you may very well be working on a project that is due this afternoon when you just found out about it this morning. That project may have initially had a completely different timeline when the client suddenly decided they needed it right now. You will very likely be juggling any number of projects at once, and if you don't feel like it or would rather trade in a little quality work for some quality time, you don't often get that luxury.
 
 Sometimes all your professional projects are out waiting on client feedback and you have nothing but free time. Sometimes you get all of those projects back in the same day and have to find a way to complete them all. School can only do so much to teach you to manage your downtime responsibly in order to be prepared when timelines shift and work comes flooding in. Because of my own failure to learn this (a longstanding personal downfall), I never worked as hard as a design student as I was forced to work as a professional.
+
+<Callout>School can only do so much to teach you to manage your downtime responsibly in order to be prepared when timelines shift and work comes flooding in.</Callout>
 
 No, not all design jobs demand insane scheduling, but some do. Hopefully you won't land at a self-serving agency where they treat their interns like batteries to be sucked of their energy and then discarded, but maybe you will for a while. Hopefully your clients stick to timelines and you can keep the flow of work smooth, but maybe not. Regardless, the kind of time management skills involved in maintaining that balance and still putting out quality work is a much more intense and focused version than school often demands.
 

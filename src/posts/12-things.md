@@ -1,6 +1,7 @@
 ---
 title: "Social Media, Compulsion, and the 12 Things I Learned on My Break from Facebook"
 date: "2015-03-27"
+updated: "2021-01-19"
 categories: 
   - "personal"
 tags: 
@@ -11,6 +12,11 @@ tags:
 coverImage: "Untitled-21.png"
 excerpt: I’m beginning to believe that becoming more connected with everyone is making me less connected with anyone.
 ---
+import Highlight from '~/components/Highlight'
+import Callout from '~/components/Callout'
+import SideNote from '~/components/SideNote'
+
+<SideNote>I wrote this post back in early 2015, and gave up Facebook permanently later that year. I've since deleted Instagram as well, though you can still find me on Twitter for the time being (despite the fact that some of these things are uncomfortably true there as well).</SideNote>
 
 As many of you may know, I recently took on the self-appointed challenge of staying off Facebook for 60 days. ...Well, actually, that's only partly true; I initially gave up Facebook for an indefinite amount of time. When I made the decision, part of me hoped that maybe it would result in a permanent termination.
 
@@ -24,6 +30,8 @@ Below are the realizations I had from approximately January 1 to March 1, 2015.
 
 ## #1. Facebook trains you to not read things
 
+<Callout>It wasn’t until I’d gotten back on Facebook that I realized how much text was flying through my field of vision with less than a second’s thought…or wondered what I was looking for.</Callout>
+
 You're not going to read this whole post. If anything, you're just going to skim the headlines to see if any of it looks interesting. That's ok; that's what I do, too. The internet in general and social media in particular have trained us not so much to read, but to search for what we find interesting. To the human eye, that naturally is not text. But it wasn't until I'd gotten back on Facebook that I realized how much text was flying through my field of vision with less than a second's thought...or wondered what I was looking for.
 
 ## #2. Everything is in Numbered Lists These Days
@@ -34,11 +42,17 @@ I don't know, but if you're already bored, or if you're used to being directed t
 
 ## #3. You don't get invited to things when you're not on Facebook
 
+<Callout>Unless it’s too small to actually plan or large enough to sell tickets, Facebook is the only way you’re hearing about it.</Callout>
+
 This one was the most surprising to me. Just try it. You will disappear off your friends' invite radar once you leave Facebook. Somehow, for better or worse, it's become the de facto vehicle for invitations of virtually every type, and nobody except maybe your mom will bother to actually contact you directly if you don't respond. Unless it's too small to actually plan or large enough to sell tickets, Facebook is the only way you're hearing about it.
 
 ## #4. You check your phone WAY more than you realize you do
 
-As part of this exercise, I uninstalled the Facebook app from my phone. I was astounded how many times my thumb would automatically, without so much as a conscious thought, move to the space where the Facebook app icon used to be. It would happen dozens of times a day. I actually found myself wondering—and I'm ashamed to admit this—“what did I do while I was in the bathroom before I got a smartphone?” (Don't picture that.)
+As part of this exercise, I uninstalled the Facebook app from my phone. 
+
+<Highlight>I was astounded how many times my thumb would automatically, without so much as a conscious thought, move to the space where the Facebook app icon used to be. It would happen dozens of times a day.</Highlight>
+
+I actually found myself wondering—and I'm ashamed to admit this—“what did I do while I was in the bathroom before I got a smartphone?” (Don't picture that.)
 
 Once I was off social media, I started noticing how often the people around me—often people close to me, with whom I was having some sort of social interaction (however minor)—whipped out their smartphones to stare at a feed through which they endlessly scrolled.
 
@@ -76,9 +90,11 @@ Seriously; I never realized how much neck stiffness I had until I stopped checki
 
 ## #10. Connectedness is costing us
 
-Or put another way: I'm beginning to believe that becoming more connected with everyone is making me less connected with anyone.
+Or put another way: 
 
-All that time spent browsing, reading, liking...it has to come from somewhere. **Any minute you are or could be in the presence of another human being spent on social media is a minute you're taking from them and splitting up a dozen, a hundred, or a thousand ways.** It's significantly weakening one good relationship in the name of very slightly strengthening many others.
+<Highlight>I'm beginning to believe that becoming more connected with everyone is making me less connected with anyone.</Highlight>
+
+All that time spent browsing, reading, liking...it has to come from somewhere. Any minute you are or could be in the presence of another human being spent on social media is a minute you're taking from them and splitting up a dozen, a hundred, or a thousand ways. It's significantly weakening one good relationship in the name of very slightly strengthening many others.
 
 Maybe this is a negative view of the situation, or maybe it's a bit extreme. Maybe time and relationships aren't a zero-sum game. But let me ask you a question:
 
@@ -99,5 +115,3 @@ I'm trying not to check it as much, not to think about it as much. I'm trying to
 A break from Facebook was very good for me. I encourage everybody to try it, at least once, and at least for a short time.
 
 Even if it's just to find out what you do without it in the bathroom.
-
-* * *

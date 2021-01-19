@@ -1,6 +1,7 @@
 ---
 title: "How to Create Custom Editor Blocks with Block Lab"
 date: "2020-06-14"
+updated: "2020-07-02"
 categories: 
   - "css"
   - "design"
@@ -9,6 +10,10 @@ categories:
 coverImage: "block-lab-banner.png"
 excerpt: Block Lab is a WordPress plugin that simplifies the process of creating custom blocks to use in the block editor, AKA Gutenberg, the new content editor in WordPress 5.0. This post explains how to use it, even if you only know basic HTML.
 ---
+import Highlight from '~/components/Highlight'
+import Callout from '~/components/Callout'
+import SideNote from '~/components/SideNote'
+import Code from '~/components/Code'
 
 I wrote briefly about [Block Lab](https://wordpress.org/plugins/block-lab/) in my post on [going headless with Gridsome](https://api.joshcollinsworth.com/a-new-headless-site-with-gridsome/), but I find it to be such a handy plugin that I thought I'd write just a bit more in depth on what it does and how to use it, as well as how I've adapted it specifically to my workflow in writing content for a headless WordPress site.
 
@@ -17,6 +22,8 @@ I wrote briefly about [Block Lab](https://wordpress.org/plugins/block-lab/) in m
 First things first: Block Lab is a WordPress plugin that simplifies the process of creating custom blocks to use in the block editor, AKA Gutenberg, the new content editor in WordPress 5.0.
 
 Ordinarily, you're restricted to the types of blocks WordPress includes by default—the standard text, headings, dividers, images, quotes, etc.—and if you need something more specialized, you'd either have to install a third-party plugin with the type of block you want, or you'd have to get your hands dirty writing a pretty good deal of custom code. Block Lab is something of a best-of-both hybrid of those two choices.
+
+<Highlight>Block Lab is a plugin that helps you create your own custom blocks with minimal code required.</Highlight>
 
 There are three main steps to this process:
 
@@ -34,7 +41,11 @@ If you're familiar with WordPress shortcodes, think of custom blocks as the next
 
 Personally, I have a few custom blocks. One I really like—that I'll use for this example—is my "side note" block. It renders content like this on the front end of the site:
 
+<SideNote>This is just an example of the Side Note block! Nifty, eh?</SideNote>
+
 I find that block handy for expressing tangential thoughts and info in the middle of some content; it helps tell the reader that they can skip that part if they're not interested in extra details, while also adding some visual interest.
+
+<Callout>If you’re familiar with WordPress shortcodes, think of custom blocks as the next evolution of that idea. Custom blocks are the same concept, but much easier to use (since the author just picks a block type, rather than typing a specific key combination).</Callout>
 
 It would certainly be possible to achieve this result without a custom block, but it would be tedious extra work. At minimum, you (or the author) would need to add a class to whatever block you were using each time you wanted to invoke the component. Or, you could use a shortcode, or even use the block editor's styling controls to change the block's appearance.
 
@@ -42,11 +53,11 @@ But in any of those cases, it's a hassle _and_ too much to expect of content aut
 
 Ideally, authors would just be able to click a button to create a side note block and fill it in instead—and that's exactly what a custom block allows you to do! No memorization or extra configuration required. Here's how it works, with the example side note you just saw above:
 
-![](../assets/images/post_images/block-selection.png)
+![The WordPress block editor's block selection screen, showing a "side note" block option](../assets/images/post_images/block-selection.png)
 
 Custom blocks can be easily selected from the normal block menu…
 
-![](../assets/images/post_images/side-note-block-backend-1024x405.png)
+![Filling text content into the side note component with a text box](../assets/images/post_images/side-note-block-backend-1024x405.png)
 
 …then simply filled in with content, with no need to worry about manual styling.
 
@@ -60,9 +71,9 @@ The natural first step is to install the Block Lab plugin, which of course you c
 
 Either way, once it's installed and activated, you'll find a new "**Block Lab**" item in the WordPress admin sidebar. Head there, and choose "**New block**."
 
-![](../assets/images/post_images/add-new-block-1024x687.png)
+![The "add new block" options screen in WordPress](../assets/images/post_images/add-new-block-1024x687.png)
 
-The "Add New Block" options screen
+
 
 ### Block options
 
@@ -82,13 +93,16 @@ Once you've named your block, click the "**add field**" button to start adding s
 
 Fields are the things you actually fill in with your content when using the block. You could think of the field(s) as the variable part of the block; the part that the user adds each time the block is used.
 
+<SideNote>Theoretically, you could have a block without fields if it just looked and worked the same each time it was used—a divider or spacer block, for example—but generally, you’ll want at least one field to fill in with some content.</SideNote>
+
 Most of the time, I find just one field per block is what I want, but you can get creative do more than one. Either way, you have several options for field type. Let's get a quick overview of the main options:
 
-![](../assets/images/post_images/Image-2020-06-13-at-9.57.00-PM-1024x976.png)
-
-All the options for fields in a Block Lab block, explained in greater detail below.
+![All the options for fields in a Block Lab block, explained in greater detail below.
+](../assets/images/post_images/Image-2020-06-13-at-9.57.00-PM-1024x976.png)
 
 If you're familiar with Advanced Custom Fields (ACF), then this part will be very familiar to you. In fact, as I understand it, Block Lab is actually built on top of Advanced Custom Fields under the hood, so all the power of that excellent plugin comes standard.
+
+<Callout>Block Lab is actually built on top of Advanced Custom Fields under the hood, so all the power of that excellent plugin comes standard.</Callout>
 
 In any case, though, working with fields in Block Lab is pretty much identical to working with fields in ACF.
 
@@ -101,9 +115,7 @@ I'm not going to go into the other options here since they're, well, optional, b
 
 If it helps, this is how my example "Side Note" block from above is set up:
 
-![](../assets/images/post_images/side-note-options-1024x694.png)
-
-The config options for my example "Side Note" block from this site.
+![The config options for my example “Side Note” block from this site; as a textarea field type with field location set to "Editor."](../assets/images/post_images/side-note-options-1024x694.png)
 
 I don't fill in the help text since I'm the only editor on this site, but it's a good idea if your block(s) will be used by others.
 
@@ -111,30 +123,38 @@ In any case, once you're happy with the setup of your block, hit the **Publish**
 
 Helpfully, Block Lab gives you a popup detailing your next step, which is: creating a template file for your block, which you'll place inside your theme.
 
-![](../assets/images/post_images/next-step-1024x381.png)
+![Instructions to place a PHP template file in the active theme, in a "blocks" directory](../assets/images/post_images/next-step-1024x381.png)
 
-Block Lab helpfully lets you know what to do next once you've published your block.
+As you can see, Block Lab helpfully lets you know what to do next once you've published your block.
+
+<SideNote>Technically, your block is available to choose in the block editor at this point, but it won’t work right until you take the next step and add a template file.</SideNote>
 
 ### Create a template file for your custom block
 
 In order to display your custom block (either in the block editor or on the front end of the site), you'll need to create a PHP template file for it. Don't panic, though. As I've already mentioned: the beautiful thing about Block Lab is that you don't need to know anything about PHP to create custom blocks. Just a little HTML and CSS is enough. All you'll need to know is where to find your theme's folder, and how to add files to it. (And it may go without saying, but be sure you're using a [child theme](https://api.joshcollinsworth.com/wordpress-child-theme-explanation/) or your own custom theme before you attempt this, or your work will probably be overwritten next time your theme updates.)
+
+<Callout>The beautiful thing about Block Lab is that you don’t need to know anything about PHP to create custom blocks. Just a little HTML and CSS is enough.</Callout>
 
 Again, Block Lab lets you know exactly what you should name your template file and where to place it. There are a few ways to go about this part, depending on your needs (you can [read more in the documentation](https://getblocklab.com/docs/get-started/add-a-block-lab-block-to-your-website-content/) if interested), but we'll stick with the simplest:
 
 1. Create a folder named `blocks` inside your theme's folder;
 2. Create a file for your custom block, with the name that Block Lab gives you, inside that folder.
 
+<SideNote>Obviously, you’ll need to be able to access your site’s files in order to complete this step. That means either using FTP, or a plugin that gives you access to the file system from the WordPress admin.</SideNote>
+
 The naming convention is: `block-slug.php`, where `slug` becomes the actual "slug" field you used above when the block was created. In the case of the example "side note" block, the file that Block Lab will look for to render the block is `block-side-note.php`.
 
 What you actually want inside your template depends on how you'd like it to look and what content it will hold, but let's assume we just want a basic `div` wrapping the content with a special class. In that case, here's what our `block-side-note.php` might look like:
 
-```
-<div class="side-note">
-  <?php block_field( 'note-text' ); ?>
-</div>
-```
+<Code lang="php">
+  &lt;div class="side-note"&gt;
+    <?php block_field( 'note-text' ); ?>
+  &lt;/div&gt;
+</Code>
 
 Remember how I said you wouldn't need to know any PHP? That's because for basic blocks, the above is all you need, and you can easily just copy, paste, and adapt that code for whatever fields you have.
+
+<Highlight>The important thing is just to make sure that the string inside the parentheses (<code>'note-text'</code> in the example code block above) matches the field’s name.</Highlight>
 
 What this all means is: every time you use this block, it'll be dynamically rendered wrapped in a `div` with the `side-note` class. And the cool thing is: that applies both in the editor, and on the front end!
 
@@ -144,9 +164,11 @@ Obviously, a `div` doesn't do us much good on its own; we need to use some CSS t
 
 To do this, create a `blocks.css` file, also in the `blocks` folder in your active theme. Block Lab will automatically read this stylesheet and apply its styles on both the front and back end of the site.
 
+<SideNote>You could also have <a href="https://getblocklab.com/docs/get-started/style-block-lab-custom-blocks/" target="_blank" rel="noreferrer noopener">a separate CSS file for each block</a>, but unless a block gets pretty complex, I personally prefer just having all block styling together in one place.</SideNote>
+
 Here's the actual CSS code I use on this site to create that Side Note component, if you're interested or want to try this block out on your site:
 
-```
+<Code lang="css">
 .side-note {
   padding: .5rem 1.5rem;
   position: relative;
@@ -169,7 +191,7 @@ Here's the actual CSS code I use on this site to create that Side Note component
   font-size: .7rem;
   color: var(--lightBlue);
 }
-```
+</Code>
 
 ## Recap
 
@@ -187,11 +209,11 @@ In the meantime, the plugin will continue working for the foreseeable future. An
 
 That needs to be done manually, of course, and will need to be re-done any time the plugin updates (if it does). But to do this: you can simply go into the plugin's folder, open `php/class-util.php`, and change the `is_pro()` function (on line 31, as of this writing) to return `true`, like so:
 
-```
+<Code lang="php">
 public function is_pro() {
   return true; //This line is edited
 }
-```
+</Code>
 
 That will open up a handful of additional extremely handy fields for you to use in your blocks, including the all-powerful repeater field, and the ever-useful rich text field.
 

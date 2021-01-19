@@ -1,39 +1,48 @@
 <template>
   <Layout>
-    <img
-      v-if="$page.post.coverImage"
-      :src="$page.post.coverImage"
-      alt=""
-    />
-    <h1 v-html="$page.post.title"></h1>
-    <p class="details">
-      <b>Originally published</b>: {{ date }}
-      <br>
-      <span v-if="modified"><b>Last updated</b>: {{ modified }}</span>
-    </p>
-    <VueRemarkContent />
+    <article>
+      <g-image
+        :src="require(`!!assets-loader!@images/post_images/${$page.post.coverImage}`)"
+        alt=""
+      />
+      <h1 v-html="$page.post.title"></h1>
+      <p class="details">
+        <b>Originally published</b>: {{ date }}
+        <br>
+        <b>Last updated</b>: {{ updated }}
+      </p>
 
-    <hr />
+      <VueRemarkContent class="content" />
 
-    <template v-if="$page.post.categories.length">
-      <h4>Posted in:</h4>
-      <TagList>
-        <li v-for="category in $page.post.categories" :key="category.id" >
-          <Tag :to="`/${category}`">{{ category.title }}</Tag>
-        </li>
-      </TagList>
-    </template>
-    <template v-if="$page.post.tags && $page.post.tags.length">
-      <h4>Tags</h4>
-      <TagList>
-        <li v-for="tag in $page.post.tags" :key="tag.id" >
-          <Tag :to="tag.path">{{ tag.title }}</Tag>
-        </li>
-      </TagList>
-    </template>
-    <p>
-      <g-link to="/blog">&lsaquo; Back to blog</g-link>
-    </p>
+      <hr />
+
+      <p class="post-post">
+        <strong>Thanks for reading.</strong> If you have any questions, comments, etc., feel free to
+        <g-link to="/contact">get in contact with me here</g-link>.
+      </p>
+
+      <!-- TODO: figure out handling of categories and tags now that WordPress is out of the picture -->
+
+      <!-- <template v-if="$page.post.categories.length">
+        <h4>Posted in:</h4>
+        <TagList>
+          <li v-for="category in $page.post.categories" :key="category.id" >
+            <Tag :to="`category.path`">{{ category }}</Tag>
+          </li>
+        </TagList>
+      </template> -->
+      <!-- <template v-if="$page.post.tags && $page.post.tags.length">
+        <h4>Tags</h4>
+        <TagList>
+          <li v-for="tag in $page.post.tags" :key="tag.id" >
+            <Tag :to="tag.path">{{ tag.title }}</Tag>
+          </li>
+        </TagList>
+      </template> -->
+      <p>
+        <g-link to="/blog">&lsaquo; Back to blog</g-link>
+      </p>
+    </article>
   </Layout> 
 </template>
 
@@ -43,6 +52,7 @@ query Post ($id: ID!) {
     title
     content
     date
+    updated
     coverImage
     categories
   }
@@ -72,6 +82,10 @@ export default {
       return new Date(this.$page.post.date).toDateString()
     },
 
+    updated() {
+      return new Date(this.$page.post.updated).toDateString()
+    },
+
     modified() {
       if (!this.$page.post.modified) return null
       return new Date(this.$page.post.modified).toDateString()
@@ -80,7 +94,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+:root {
+  --max-width: 36rem;
+}
+
 @font-face {
 	font-family: 'MonoLisa';
 	src: url('../assets/fonts/monolisa-regular-webfont.woff2') format('woff2');
@@ -99,6 +117,40 @@ pre, code {
 }
 
 .details {
-  margin: -1rem 0 4rem;
+  margin: 0 0 4rem;
+}
+
+.content {
+  img {
+    margin: 2em 0;
+  }
+
+  table {
+    font-size: 0.9em;
+    border-collapse: collapse;
+    max-width: 200%;
+    margin: 2rem 0;
+
+    tr td,
+    tr th {
+      border-bottom: 1px solid var(--lightGray);
+      padding: .5em;
+      text-align: left;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.post-post {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.4;
 }
 </style>

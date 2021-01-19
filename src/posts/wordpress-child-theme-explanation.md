@@ -1,12 +1,17 @@
 ---
 title: "WordPress Child Theme Explanation and Walkthrough"
 date: "2015-12-31"
+updated: "2020-06-16"
 categories: 
   - "web"
   - "wordpress"
 coverImage: "wordpress-bg-medblue.png"
 excerpt: When you’re just starting out with WordPress, it’s easy to think that you can just open up the style.css file included with your theme and begin making alterations. And that will work—at least for a while—but it won’t be a good idea…
 ---
+import Highlight from '~/components/Highlight'
+import Callout from '~/components/Callout'
+import SideNote from '~/components/SideNote'
+import Code from '~/components/Code'
 
 One lesson a lot of WordPress novices learn the hard way, just like I did, is that if you want to customize anything about your theme itself—whether that's editing the CSS styles, adding functionality like a custom post type, changing the header code or creating a custom page template—you _need_ to be using a WordPress child theme.
 
@@ -24,6 +29,8 @@ This leaves you in the unfortunate predicament of choosing between redoing all o
 
 A WordPress child theme is kind of like an add-on extension of the main theme. A child theme borrows everything it can from its parent theme, but exists independently apart from any files you want it to share. A WordPress child theme allows you to add files to supplement those of the parent theme, taking precedent over the parent's files without the risk of being overwritten.
 
+<Callout>A WordPress child theme is kind of like an add-on extension of the main theme. A child theme borrows everything it can from its parent theme, but exists independently apart from any files you want it to share.</Callout>
+
 To put it in simpler terms: any time WordPress needs a theme file (say, for example, header.php), it will look inside the child theme folder for the named file. If there _is_ a file by that name in the child theme's folder, it will use that file. But if not, it will look for a file by that name in the _parent theme's_ folder instead, and will borrow that file from its parent theme.
 
 This works perfectly for any file in the [WordPress template hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/), but you might be wondering: what about my CSS?
@@ -31,6 +38,8 @@ This works perfectly for any file in the [WordPress template hierarchy](https://
 In the case of our stylesheets, we can set up a child theme to use all of the parent theme's styles (because we likely chose our main parent theme in part due to its appearance and don't want to be forced to start from scratch), but _then_ to load a custom child theme stylesheet _afterward_, which we can use to override and replace certain existing styles as we choose.
 
 The process of setting up a child theme can seem a little intimidating, particularly if you don't spend much time in FTP or WordPress's file structure, but it's actually pretty simple. Let's walk through the steps.
+
+<SideNote>There are plugins to create child themes for you, and that’s generally simpler and easier than this process. But if you’d like to do it manually for full control, or if you’d just like to understand what goes into a child theme better, read on!</SideNote>
 
 ### Step 1: Create a New Theme Folder
 
@@ -54,7 +63,8 @@ As far as the file itself, you can either create it in your FTP client and then 
 
 If you look at the [Codex entry for child themes](https://codex.wordpress.org/Child_Themes), you'll find the following snippet of code to copy and paste into your child theme's style.css file. Don't copy and paste this just yet, though; I'm only giving you the full list of things you might see at the top of a theme's style.css file:
 
-/\*
+<Code lang="css">
+/*
  Theme Name: Twenty Fifteen Child
  Theme URI: http://example.com/twenty-fifteen-child/
  Description: Twenty Fifteen Child Theme
@@ -66,7 +76,8 @@ If you look at the [Codex entry for child themes](https://codex.wordpress.org/Ch
  License URI: http://www.gnu.org/licenses/gpl-2.0.html
  Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain: twenty-fifteen-child
-\*/
+*/
+</Code>
 
 It looks scary, but I'll let you in on a little secret: almost none of the above is actually required for your child theme to work properly. In fact, most of it is there for people who intend build a new theme and distribute it.
 
@@ -74,17 +85,21 @@ It looks scary, but I'll let you in on a little secret: almost none of the above
 
 At this point you might be wondering: isn't this just a comment? Why do I need to include it? Aren't comments supposed to be read by humans and ignored by computers?
 
+<Callout>WordPress finds, reads, and understands what to do with a file based on its specific name and the comments at the top of the file.</Callout>
+
 You'd be mostly right, but actually, browsers and servers _do_ read comments. (Otherwise, how would they know when the comment was over?)
 
 **In the case of WordPress files, comments are frequently used to pass WordPress information about themes and plugins.** Just like the file's name is important, having the above comment snippet at the top of your style.css file is also important; it's how we can pass certain important pieces of information on to WordPress about our theme! But from a purely functional standpoint, most of that info up there is actually not crucial at all for a WordPress child theme to function.
 
 In fact, if you want to save yourself the hassle, here's all you'll really need to worry about:
 
-/\*
+<Code lang="css">
+/*
  Theme Name: Your Theme Name
  Template: parent-theme-name
  Text Domain: your-theme-name
-\*/
+*/
+</Code>
 
 Even of the above three lines, the Template line is the only one that's strictly necessary for the child theme to function, but you'll want to fill out the others too. Here's what each one does:
 
@@ -101,6 +116,8 @@ All of that is a long way to say: it's just a simple process of copying and past
 You should know that the CSS won't actually take effect yet, however. Later, in step 3, we're going to tell WordPress to load the parent theme's stylesheet first and our child theme's stylesheet second. This way, because of the way that CSS works, any styles that you add to your child theme's style.css file will load last, and will therefore override the parent theme's CSS so that you won't need to delete or alter anything in the parent theme's stylesheet. Huzzah! (This is assuming, of course, that the child theme's styles are of equal or greater specificity. If you're not sure what that means or if you could use a refresher on CSS specificity, [check this article out](https://css-tricks.com/specifics-on-css-specificity/).)
 
 **But until we do that, our CSS in this file won't actually work.** WordPress assumes we've put our theme info at the top of our style.css file, but it _won't_ assume we want to actually use it as a file for our actual CSS styling. That will come shortly, when we use functions.php to enqueue our parent theme's stylesheet, and then our child theme's.
+
+<Callout>…any styles that you add to your child theme’s style.css file will load last, and will therefore override the parent theme’s CSS so that you won’t need to delete or alter anything in the parent theme’s stylesheet.</Callout>
 
 This way, the parent theme is free to update all it wants, but your styles remain intact and unaffected. Your site stays up-to-date and secure, while your styles stay safe from unintended alterations.
 
@@ -128,25 +145,28 @@ Again, however, it's critical that this file is named "functions.php" _exactly_ 
 
 When any given WordPress theme is active, any code in that theme's functions.php file will run every time a page on that site is loaded (as will its parent theme's). So our child theme's functions.php file (_and_ its parent theme's functions.php file) will load and run every time a new page loads, as long as our child theme is the active theme.
 
+<Callout>You can think of functions.php a little like a custom plugin specially made for your theme.</Callout>
+
 **This is true in both the WordPress admin area and the front-facing portion of the site.** That's why things like styles, custom post types, navigation menus, theme features, and other "always-on" bits of functionality are generally added to functions.php. You can think of functions.php a little like a custom plugin specially made for your theme.
 
 ### Step 4: Copy the Enqueuing Function to functions.php
 
-```
+<Code lang="php">
 <?php
-function theme_enqueue_styles() {
-
-  $parent_style = 'parent-style';
-
-  wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-  wp_enqueue_style( 'child-style',
-    get_stylesheet_directory_uri() . '/style.css',
-    array( $parent_style )
-  );
-}
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+  function theme_enqueue_styles() {
+<br/><br/>
+    $parent_style = 'parent-style';
+<br/><br/>
+    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style',
+      get_stylesheet_directory_uri() . '/style.css',
+      array( $parent_style )
+    );
+  }
+ <br/><br/> 
+  add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 ?>
-```
+</Code>
 
 **If you're not familiar with (or intimidated by) PHP, don't worry—you don't have to make any changes to the above code, or even understand it, really.** You just need to copy and paste it into your WordPress child theme's new, blank functions.php file. (Technically, it would be best practice to change the two instances of "theme\_enqueue\_styles" to reflect your custom theme name in order to avoid any potential conflicts, but it's not strictly mandatory.)
 
@@ -166,4 +186,4 @@ If you previously had the parent theme active, you probably won't see any visibl
 
 You're done! You've created a WordPress child theme, and can make all the changes you want to your site's appearance and functionality—through style.css and functions.php, respectively—without any worry of your code being overwritten when the parent theme updates. Go, you!
 
-Have anything to add? Did I miss anything? Feel free to let me know in the comments below.
+Have anything to add? Did I miss anything? Feel free to let me know.
