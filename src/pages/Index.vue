@@ -47,21 +47,7 @@
   </Layout>
 </template>
 
-<page-query>
-query {
-  allWordPressPost (perPage: 1) {
-    edges {
-      node {
-        id
-        title
-        path
-        excerpt
-        slug
-      }
-    }
-  }
-}
-</page-query>
+
 
 <script>
 import Tag from '~/components/Tag'
@@ -111,11 +97,6 @@ export default {
     // ],
     // usedNumbers: []
   }),
-
-  created() {
-    // TODO: this is not currently implemented.
-    this.latestPost = this.$page.allWordPressPost.edges[0].node
-  },
 
   methods: {
     // See note above

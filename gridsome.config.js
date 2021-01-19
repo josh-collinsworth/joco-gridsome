@@ -7,15 +7,6 @@ module.exports = {
 
   plugins: [
     {
-      use: '@gridsome/source-wordpress',
-      options: {
-        baseUrl: 'http://api.joshcollinsworth.com', // required
-        typeName: 'WordPress', // GraphQL schema name (Optional)
-        perPage: 100,
-        concurrent: 20
-      }
-    },
-    {
       use: '@gridsome/source-filesystem',
       options: {
         path: './src/projects/*.md',
@@ -25,26 +16,51 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/vue-remark',
+      options: {
+        baseDir: './src/posts',
+        typeName: 'post',
+        pathPrefix: '/blog',
+        template: './src/templates/post.vue'
+      }
+    },
+    {
       use: '@gridsome/plugin-google-analytics',
       options: {
         id: 'UA-61693930-1'
       }
+    },
+    {
+      use: 'gridsome-plugin-rss',
+      options: {
+        contentTypeName: 'post',
+        feedOptions: {
+          title: 'Josh Collinsworth',
+          feed_url: 'https://joshcollinsworth.com/rss.xml',
+          site_url: 'https://joshcollinsworth.com'
+        },
+        feedItemOptions: node => ({
+          title: node.title,
+          description: node.excerpt,
+          url: 'https://joshcollinsworth.com/blog/' + node.slug,
+        }),
+        output: {
+          dir: './static',
+          name: 'rss.xml'
+        }
+      }
     }
-
   ],
   //Required to make relative image paths work (unfortunately)
   chainWebpack: config => {
     config.resolve.alias.set('@images', '@/assets/images')
   },
   templates: {
-    WordPressCategory: '/category/:slug', // adds route for "category" post type (Optional)
-    WordPressPost: '/:slug', //adds route for "post" post type (Optional)
-    WordPressPostTag: '/tag/:slug', // adds route for "post_tag" post type (Optional)
     project: [
       {
         path: '/projects/:title',
         component: 'src/templates/single_project.vue'
       }
-    ]
+    ],
   }
 }

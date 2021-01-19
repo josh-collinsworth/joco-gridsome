@@ -4,7 +4,7 @@
   	<footer class="footer">
       <div>
         <ul class="footer__links">
-          <li><xa to="api.joshcollinsworth.com/feed/">RSS</xa></li>
+          <li><a href="/rss.xml">RSS</a></li>
           <li><xa to="github.com/josh-collinsworth">GitHub</xa></li>
           <li><xa to="codepen.io/joshuajcollinsworth">CodePen</xa></li>
           <li><xa to="twitter.com/jjcollinsworth">Twitter</xa></li>
@@ -12,14 +12,12 @@
       </div>
 
       <div class="fine-print">
-        <p>
-          This is a headless <xa to="gridsome.org">Gridsome</xa> site
-          backed by <xa to="wordpress.org">WordPress</xa>,
-          hosted on <xa to="netlify.com">Netlify</xa>
-          and&nbsp;<xa to="getflywheel.com">Flywheel</xa>&nbsp;(respectively).
-        </p>
+        <p>©2020–{{ currentYear }} Josh Collinsworth.</p>
 
-        <p>©2020 Josh Collinsworth.</p>
+        <p>
+          Made with love and <xa to="gridsome.org">Gridsome</xa>;
+          hosted on <xa to="netlify.com">Netlify</xa>.
+        </p>
       </div>
     </footer>
   </div>
@@ -31,12 +29,10 @@ import xa from '~/components/ExternalLink'
 
 export default {
   components: { Grid },
-  data: () => ({
-    ok: false
-  }),
-  methods: {
-    sayOk() {
-      this.ok = true
+
+  computed: {
+    currentYear() {
+      return new Date().getFullYear()
     }
   }
 }
@@ -81,14 +77,6 @@ export default {
       margin: .5rem 0;
       max-width: 44em;
     }
-  }
-
-  .ok {
-    font-size: .8em;
-    padding: .1em .5em;
-    margin-left: .5em;
-    color: var(--white);
-    cursor: pointer;
   }
 }
 

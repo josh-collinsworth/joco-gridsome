@@ -2,36 +2,26 @@
   <Layout>
     <h1>Blog</h1>
     <p class="fancy details">
-      <span v-if="loading">Retrieving posts…</span>
-      <span v-else-if="!searched">Showing all posts, page {{ $page.allWordPressPost.pageInfo.currentPage }} of {{ $page.allWordPressPost.pageInfo.totalPages  }}</span>
-      <span v-else><strong>{{ resultsText }}</strong></span>
+      Page {{ $page.allPost.pageInfo.currentPage }} of {{ $page.allPost.pageInfo.totalPages  }}
     </p>
-    <BlogSearch @foundPosts="updatePosts" @startSearch="startLoading"/>
 
-    <Loader v-if="loading" />
+    <article v-for="post in $page.allPost.edges" :key="post.node.id">
+      <g-link :to="post.node.path">
+        <g-image :src="require(`!!assets-loader!@images/post_images/${post.node.coverImage}`)" alt="" />
+        <span class="sr">{{ post.node.title }}</span>
+      </g-link>
 
-    <div v-if="!searched || searchTerm === ''">
-      <article v-for="post in $page.allWordPressPost.edges" :key="post.node.id">
-        <g-link :to="post.node.slug">
-          <img :src="post.node.featuredMedia.sourceUrl" alt="">
-          <span class="sr">{{ post.node.title }}</span>
+      <h2>
+        <g-link :to="post.node.path">
+          <span v-html="post.node.title"></span>
         </g-link>
-        <h2>
-          <g-link :to="post.node.slug">
-            <span v-html="post.node.title"></span>
-          </g-link>
-        </h2>
-        <div v-html="post.node.excerpt"></div>
-      </article>
-    </div>
+      </h2>
+      <div v-html="post.node.excerpt"></div>
+    </article>
 
-    <SearchedPostList v-else-if="searched && searchedPosts.length && !loading" :posts="searchedPosts"/>
-
-    <h2 id="empty" v-if="searched && ! loading && !searchedPosts.length">Sorry, no posts found.</h2>
-
-    <div v-if="!searched" class="pagination">
+    <div class="pagination">
       <p>Page:</p>
-      <Pager :info="$page.allWordPressPost.pageInfo"/>
+      <Pager :info="$page.allPost.pageInfo"/>
     </div>
   </Layout>
 </template>
@@ -39,7 +29,7 @@
 
 <page-query>
 query ($page: Int) {
-	allWordPressPost(perPage: 10, page: $page) @paginate {
+	allPost(perPage: 10, page: $page) @paginate {
     pageInfo {
       totalPages
       currentPage
@@ -49,14 +39,9 @@ query ($page: Int) {
         title
         id
         excerpt
-        slug
-        featuredMedia {
-          sourceUrl
-        }
-        categories {
-          title
-          slug
-        }
+        path
+        coverImage
+        categories
         date
       }
     }
@@ -67,52 +52,16 @@ query ($page: Int) {
 
 <script>
 import { Pager } from 'gridsome'
-import BlogSearch from '../components/BlogSearch'
-import SearchedPostList from '../components/SearchedPostList'
-import Loader from '../components/Loader'
 
 export default {
-  data: () => ({
-    searched: false,
-    loading: false,
-    searchTerm: '',
-    searchedPosts: []
-  }),
-  watch: {
-    searchTerm(newTerm) {
-      if (newTerm === '') {
-        this.loading = false
-        this.searched = false
-        this.searchedPosts = []
-        return
-      }
-    }
-  },
+
   components: {
-    Pager, BlogSearch, SearchedPostList, Loader
+    Pager, 
   },
+
   metaInfo: {
-    title: "Blog"
+    title: "Josh Collinsworth | Blog"
   },
-  methods: {
-    updatePosts(found, searchedTerm) {
-      this.searchedPosts = []
-      this.loading = false
-      this.searchTerm = searchedTerm,
-      this.$nextTick(() => {
-        this.searchedPosts = found
-      })
-    },
-    startLoading() {
-      this.searched = true
-      this.loading = true
-    }
-  },
-  computed: {
-    resultsText() {
-      return `${this.searchedPosts.length} result${this.searchedPosts.length == 1 ? '' : 's'} for "${this.searchTerm}"`
-    }
-  }
 };
 </script>
 
