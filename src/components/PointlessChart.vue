@@ -1,4 +1,5 @@
 <template>
+	<!-- TODO: this component isn't in use curently. Delete it or find something else to do with it. -->
 	<ul class="pointless-chart">
 		<div class="x-label" aria-hidden="true">
 			Enjoyment <div class="arrow"></div>

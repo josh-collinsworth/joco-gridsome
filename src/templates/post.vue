@@ -152,5 +152,6 @@ pre, code {
   font-size: 1.1rem;
   font-style: italic;
   line-height: 1.4;
+  margin-bottom: 3rem;
 }
 </style>

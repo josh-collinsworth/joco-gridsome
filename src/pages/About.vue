@@ -73,18 +73,10 @@
 
       <h2>Personally:</h2>
       <p>
-        Omaha, Nebraska resident; <g-link to="/code/">hobby coder</g-link>;
+        Maker of the game <i>Quina</i> (<xa to="quina.app">web</xa> / <xa to="https://play.google.com/store/apps/details?id=app.quina.collinsworth">Google Play Store</xa>); Omaha, Nebraska resident; <g-link to="/code/">hobby coder</g-link>;
         author of a frequently neglected <g-link to="/blog/">blog</g-link>;
         font hoarder; husband; dad (with both the jokes and bod to match); fairly ordinary white dude in tech striving to be an LGBTQIA+ and BIPOC ally and advocate; cold brew addict; author of over ten thousand <xa to="twitter.com/jjcollinsworth">tweets</xa>, a few of which are decent; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; massive Nintendo fan; musician/guitarist/hack pianist/aggressively mediocre singer; liberal abuser of semicolons.
       </p>
-
-
-      <!-- <h2>Pointlessly:</h2>
-
-		  <p>I coded this chart from unquantifiable, subjective, and highly fluid data, which may or may not be partially arranged just to make it fit nicely (and which, if anything, probably only really proves that I like things more when I'm better at them).</p>
-
-      <PointlessChart /> -->
-
     </div>
   </Layout>
 </template>

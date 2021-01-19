@@ -9,6 +9,11 @@ categories:
 coverImage: "2018-logo.jpg"
 excerpt: Building a WordPress theme (and a new brand) from scratch.
 ---
+import Highlight from '~/components/Highlight'
+import Callout from '~/components/Callout'
+import SideNote from '~/components/SideNote'
+
+<SideNote>This site is no longer on WordPress, so the theme described here can't actually be seen anywhere.</SideNote>
 
 It's been a goal of mine for a very long time to completely redesign my WordPress theme from scratch. Finally, that goal is a reality!
 
