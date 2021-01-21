@@ -19,6 +19,7 @@ module.exports = {
       use: '@gridsome/vue-remark',
       options: {
         baseDir: './src/posts',
+        ignore: ['drafts/*.md'],
         typeName: 'post',
         pathPrefix: '/blog',
         template: './src/templates/post.vue'

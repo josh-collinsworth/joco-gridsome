@@ -1,4 +1,5 @@
 <template>
+	<!-- TODO: this component is no longer in use. -->
 	<form id="search-form" @submit.prevent="searchPosts">
 		<input type="text" id="blog-search-field" v-model="searchTerm">
 		<label for="blog-search-field" class="sr">Search blog posts</label>

@@ -26,22 +26,33 @@
         </transition-group> 
       -->
       <p class="fancy">
-        I’m currently searching for a new opportunity to contribute to&nbsp;a&nbsp;great&nbsp;team.
+        I'm currently searching for a new opportunity to contribute to&nbsp;a&nbsp;great&nbsp;team.
+      </p>
+      
+      <p class="previously">
+        Previously: front-end engineer at <xa to="wpengine.com">WP Engine</xa>; 
+        senior support lead at <xa to="getflywheel.com">Flywheel</xa>; 
+        WordPress instructor for <xa to="interfaceschool.com">AIM Code School</xa>; 
+        maker and designer of <xa to="quina.app">Quina</xa>.
       </p>
 
       <TagList>
-        <li>
-          <Tag to="/about"><span aria-hidden="true">👀&ensp;</span>Learn more <b>About</b> me</Tag>
-        </li>
-        <li>
-          <Tag to="/contact"><span aria-hidden="true">✉️&ensp;</span>Get in <b>Contact</b></Tag>
-        </li>
-        <li>
-          <Tag to="/projects"><span aria-hidden="true">💼&ensp;</span>See some of my <b>Projects</b></Tag>
-        </li>
-        <li>
-          <Tag to="/blog"><span aria-hidden="true">📝&ensp;</span>Read my rarely-updated <b>Blog</b></Tag>
-        </li>
+        <Tag to="/about">
+          <span aria-hidden="true">👀&ensp;</span>
+          Learn more <b>About</b> me
+        </Tag>        
+        <Tag to="/contact">
+          <span aria-hidden="true">✉️&ensp;</span>
+          Get in <b>Contact</b>
+        </Tag>        
+        <Tag to="/projects">
+          <span aria-hidden="true">💼&ensp;</span>
+          See some of my <b>Projects</b>
+        </Tag>        
+        <Tag to="/blog">
+          <span aria-hidden="true">📝&ensp;</span>
+          Read my rarely-updated <b>Blog</b>
+        </Tag>
       </TagList>
     </div>
   </Layout>
@@ -168,9 +179,14 @@ export default {
   h1 {
     font-size: calc(2rem + 2vw);
 
-    & + p {
+    & + p.fancy {
       margin-top: .75rem;
     }
+  }
+
+  .previously {
+    margin: 1rem 0 0.5rem;
+    font-size: 0.9rem;
   }
 }
 

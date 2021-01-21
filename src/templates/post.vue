@@ -25,8 +25,12 @@
 
       <!-- <template v-if="$page.post.categories.length">
         <h4>Posted in:</h4>
-        <TagList>
-          <li v-for="category in $page.post.categories" :key="category.id" >
+        <TagList> -->
+          <!-- 
+            NOTE: the <Tag> component has changed. It now includes the <li>. 
+            So when re-implementing this, delete the <li>
+          -->
+          <!-- <li v-for="category in $page.post.categories" :key="category.id" >
             <Tag :to="`category.path`">{{ category }}</Tag>
           </li>
         </TagList>

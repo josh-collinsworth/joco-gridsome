@@ -7,3 +7,4 @@ dist
 .env
 .env.*
 src/assets/images/uploads
+src/posts/drafts
