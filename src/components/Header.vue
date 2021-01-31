@@ -25,9 +25,11 @@ export default {
 	components: {
 		LogoSVG, Grid, MainNav
 	},
+
 	data: () => ({
 		menuOpen: false
 	}),
+	
 	methods: {
 		toggleMenu() {
 			this.menuOpen = !this.menuOpen

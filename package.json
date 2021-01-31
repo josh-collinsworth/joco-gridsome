@@ -5,7 +5,8 @@
     "build": "gridsome build",
     "develop": "gridsome develop",
     "dev": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "test": "vue-cli-service test:unit src/**/*.spec.js --watch"
   },
   "dependencies": {
     "@gridsome/cli": "^0.3.1",
@@ -20,6 +21,10 @@
     "sharp": "^0.25.2"
   },
   "devDependencies": {
+    "@vue/cli-plugin-unit-mocha": "^4.5.11",
+    "@vue/cli-service": "^4.5.11",
+    "@vue/test-utils": "^1.1.2",
+    "chai": "^4.2.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0"
   }
