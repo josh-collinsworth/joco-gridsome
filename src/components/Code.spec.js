@@ -2,7 +2,7 @@ import Code from './Code'
 import { mount } from '@vue/test-utils'
 import { expect } from 'chai'
 
-describe('Code', () => {
+describe('<Code>', () => {
   let component
 
   beforeEach(() => {

@@ -2,7 +2,7 @@ import Callout from './Callout'
 import { mount } from '@vue/test-utils'
 import { expect } from 'chai'
 
-describe("Callout", () => {
+describe('<Callout>', () => {
   let component
 
   beforeEach(() => {

@@ -6,7 +6,7 @@
     "develop": "gridsome develop",
     "dev": "gridsome develop",
     "explore": "gridsome explore",
-    "test:unit": "vue-cli-service test:unit src/**/*.spec.js"
+    "test": "vue-cli-service test:unit src/**/*.spec.js --watch"
   },
   "dependencies": {
     "@gridsome/cli": "^0.3.1",

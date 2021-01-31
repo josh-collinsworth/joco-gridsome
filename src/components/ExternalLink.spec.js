@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import { mount } from '@vue/test-utils'
 import ExternalLink from './ExternalLink'
 
-describe('ExternalLink', () => {
+describe('<ExternalLink>', () => {
   let component
 
   beforeEach(() => {

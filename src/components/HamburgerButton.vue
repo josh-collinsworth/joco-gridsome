@@ -13,6 +13,7 @@ export default {
 		menuOpen: Boolean,
 		required: true,
 	},
+	
 	computed: {
 		openOrClose() {
 			return this.menuOpen ? "Close" : "Open"
