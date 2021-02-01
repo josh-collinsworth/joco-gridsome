@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { mount } from '@vue/test-utils'
-import ExternalLink from './ExternalLink'
+import ExternalLink from '../components/ExternalLink'
 
 describe('<ExternalLink>', () => {
   let component
@@ -16,7 +16,7 @@ describe('<ExternalLink>', () => {
     })
   })
 
-  it('renders with all attributes', () => {    
+  it('renders with all attributes', () => {
     expect(component.attributes('href')).to.contain('https')
     expect(component.attributes('rel')).to.contain('noreferrer noopener')
     expect(component.attributes('target')).to.contain('_blank')

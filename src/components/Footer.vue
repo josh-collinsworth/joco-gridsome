@@ -24,11 +24,11 @@
 </template>
 
 <script>
-import Grid from '~/components/Grid'
-import xa from '~/components/ExternalLink'
+import Grid from './Grid'
+import xa from './ExternalLink'
 
 export default {
-  components: { Grid },
+  components: { Grid, xa },
 
   computed: {
     currentYear() {

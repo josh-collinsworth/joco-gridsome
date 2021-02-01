@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { mount } from '@vue/test-utils'
-import FontTester from './FontTester'
+import FontTester from '../components/FontTester'
 
 describe('<FontTester>', () => {
 
@@ -56,7 +56,7 @@ describe('<FontTester>', () => {
     expect(checkbox.exists()).to.be.true
 
     // Is the font italic when the box is checked?
-    await checkbox.setChecked(true)    
+    await checkbox.setChecked(true)
     expect(component.find(`#${fontName}`).element.style.fontStyle).to.equal('italic')
 
     // Is the font normal when the box is unchecked?

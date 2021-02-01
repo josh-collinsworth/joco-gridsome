@@ -152,7 +152,8 @@ pre, code {
 }
 
 pre {
-	background: var(--darkerGray);
+  background: var(--darkerGray);
+  background: #2c292d; //the Monokai background color
   padding: 1.5em;
   margin: 2rem auto;
   color: var(--white);

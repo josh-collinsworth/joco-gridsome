@@ -1,5 +1,5 @@
 <template>
-	<button id="hamburger" :aria-pressed="menuOpen" :class="{'sticky': menuOpen}" @click="$emit('toggleMenu')">
+	<button id="hamburger" :aria-pressed="menuOpen" :class="{'sticky': menuOpen}" @click="toggleMenu">
 		<span class="sr">{{ openOrClose }} menu</span>
 		<div class="line" aria-hidden="true"></div>
 		<div class="line" aria-hidden="true"></div>
@@ -13,10 +13,16 @@ export default {
 		menuOpen: Boolean,
 		required: true,
 	},
-	
+
 	computed: {
 		openOrClose() {
-			return this.menuOpen ? "Close" : "Open"
+			return this.menuOpen ? 'Close' : 'Open'
+		}
+	},
+
+	methods: {
+		toggleMenu() {
+			this.$emit('toggleMenu')
 		}
 	}
 }

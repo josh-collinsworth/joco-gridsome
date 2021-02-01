@@ -32,9 +32,10 @@ export default {
 	}),
 
   created() {
-		if(typeof window == 'undefined') return
+		if (typeof window == 'undefined') return
+
 		const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-		this.darkMode = JSON.parse(localStorage.getItem('collinsworth-dark-mode'))
+		this.darkMode = JSON.parse(localStorage.getItem('collinsworth-dark-mode') || false)
 
 		if (this.darkMode || userPrefersDark && this.darkMode !== false) {
 			this.setDarkModeColors()
@@ -45,12 +46,15 @@ export default {
 
   methods: {
     toggleDarkMode() {
-			if(typeof this.darkMode !== "boolean") {
-				localStorage.setItem('collinsworth-dark-mode', JSON.stringify(false))
+			if (typeof this.darkMode !== "boolean" && typeof window !== 'undefined') {
+				window.localStorage.setItem('collinsworth-dark-mode', JSON.stringify(false))
 			}
 			this.darkMode = !this.darkMode
 			this.darkMode ? this.setDarkModeColors() : this.setLightModeColors()
-			localStorage.setItem('collinsworth-dark-mode', JSON.stringify(this.darkMode))
+
+			if (typeof window !== 'undefined') {
+				window.localStorage.setItem('collinsworth-dark-mode', JSON.stringify(this.darkMode))
+			}
 		},
 
 		setDarkModeColors() {

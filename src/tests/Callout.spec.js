@@ -1,4 +1,4 @@
-import Callout from './Callout'
+import Callout from '../components/Callout'
 import { mount } from '@vue/test-utils'
 import { expect } from 'chai'
 

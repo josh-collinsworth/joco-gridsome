@@ -1,4 +1,4 @@
-import Code from './Code'
+import Code from '../components/Code'
 import { mount } from '@vue/test-utils'
 import { expect } from 'chai'
 

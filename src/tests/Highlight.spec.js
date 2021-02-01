@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { mount } from '@vue/test-utils'
-import Highlight from './Highlight'
+import Highlight from '../components/Highlight'
 
 describe('<Highlight>', () => {
 
