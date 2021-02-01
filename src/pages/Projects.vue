@@ -176,7 +176,7 @@ query {
 			h2 {
 				width: 100%;
 				margin: 0;
-				font-family: 'Pensum Display', serif;
+				font-family: var(--heading-font);
 				font-style: normal;
 				display: block;
 				border: none;

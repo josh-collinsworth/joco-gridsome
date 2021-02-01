@@ -21,20 +21,20 @@
         <g-link to="/contact">get in contact with me here</g-link>.
       </p>
 
-      <!-- TODO: figure out handling of categories and tags now that WordPress is out of the picture -->
 
-      <!-- <template v-if="$page.post.categories.length">
+      <template v-if="$page.post.categories.length">
         <h4>Posted in:</h4>
-        <TagList> -->
-          <!-- 
-            NOTE: the <Tag> component has changed. It now includes the <li>. 
-            So when re-implementing this, delete the <li>
-          -->
-          <!-- <li v-for="category in $page.post.categories" :key="category.id" >
-            <Tag :to="`category.path`">{{ category }}</Tag>
-          </li>
+        <TagList>
+          <Tag
+            :to="`/category/${category}/`"
+            v-for="category in $page.post.categories"
+            :key="category.id"
+          >
+            {{ category }}
+          </Tag>
         </TagList>
-      </template> -->
+      </template>
+      <!-- TODO: figure out handling of categories and tags now that WordPress is out of the picture -->
       <!-- <template v-if="$page.post.tags && $page.post.tags.length">
         <h4>Tags</h4>
         <TagList>
@@ -47,7 +47,7 @@
         <g-link to="/blog">&lsaquo; Back to blog</g-link>
       </p>
     </article>
-  </Layout> 
+  </Layout>
 </template>
 
 <page-query>

@@ -1,3 +1,20 @@
-// This file is here for querying remote APIs for content
-// Once, I was doing that (for custom WordPress API routes).
-// Now, I am not, so this file is just sticking around in case I need to again
+module.exports = function(api) {
+  api.loadSource(actions => {
+
+    const categories = actions.addCollection({
+      typeName: 'category'
+    })
+
+    const allPosts = actions.getCollection('post')._collection.data
+
+    const allCategories = new Set(allPosts.flatMap(post => post.categories))
+
+    allCategories.forEach((category, index) => {
+      categories.addNode({
+        title: category,
+        id: index,
+        posts: allPosts.filter(post => post.categories.includes(category))
+      })
+    })
+  })
+}

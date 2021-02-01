@@ -51,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Pensum Display', serif;
+  font-family: var(--heading-font);
   line-height: 1.1;
   position: relative;
   margin: 4rem 0 1rem 0;
@@ -182,7 +182,7 @@ code {
 .content > p:first-of-type::first-letter,
 .content > hr + p:first-letter {
   font-size: 3.4em;
-  font-family: 'Pensum Display';
+  font-family: var(--heading-font);
   float: left;
   line-height: 0.7em;
   margin: 0.4rem .4rem 0 0;

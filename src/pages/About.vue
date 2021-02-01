@@ -11,7 +11,7 @@
       <g-image id="avatar" src="/images/self-portrait-summer-2018.svg" alt="" />
 
       <p>My ideal role involves contributing to a collaborative team that cares deeply about good design, inclusion, mentorship, and how its work impacts the world.</p>
-      
+
       <p>I most recently worked on a product team, building features and enhancements within a design system, but I'm open to to the right fit anywhere that allows me put my skills to use for a positive impact.</p>
 
 
@@ -99,7 +99,7 @@ export default {
   }
 
   h3 {
-    font-family: 'Averta STD';
+    font-family: var(--body-font);
     font-weight: bold;
     margin-top: 2.5em;
     margin-bottom: 1em;

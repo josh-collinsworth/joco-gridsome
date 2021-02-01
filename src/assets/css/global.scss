@@ -30,8 +30,7 @@ input[type="checkbox"]:focus + label {
 }
 
 body {
-  font-family: "Averta Std", -apple-system, system-ui, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--body-font);
   color: var(--ink);
   margin: 0;
   padding: 0;

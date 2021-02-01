@@ -76,7 +76,7 @@ h1 {
 h2 {
 	font-size: 1.2rem;
 	border: none;
-	font-family: 'Averta STD', sans-serif;
+	font-family: var(--body-font);
 	margin: 1.5em 0 0;
 }
 

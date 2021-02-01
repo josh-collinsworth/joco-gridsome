@@ -19,7 +19,7 @@ module.exports = {
         baseDir: './src/posts',
         typeName: 'post',
         pathPrefix: '/blog',
-        template: './src/templates/post.vue'
+        template: './src/templates/post.vue',
       }
     },
     {
@@ -60,5 +60,11 @@ module.exports = {
         component: 'src/templates/single_project.vue'
       }
     ],
+    category: [
+      {
+        path: '/category/:title',
+        component: 'src/templates/category.vue'
+      }
+    ]
   }
 }
