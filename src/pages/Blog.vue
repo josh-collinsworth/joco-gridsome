@@ -6,7 +6,7 @@
     </p>
 
     <article v-for="post in $page.allPost.edges" :key="post.node.id">
-      <g-link :to="post.node.path">
+      <g-link :to="post.node.path" class="post-image-link">
         <g-image :src="require(`!!assets-loader!@images/post_images/${post.node.coverImage}`)" alt="" />
         <span class="sr">{{ post.node.title }}</span>
       </g-link>
@@ -16,7 +16,10 @@
           <span v-html="post.node.title"></span>
         </g-link>
       </h2>
-      <div v-html="post.node.excerpt"></div>
+      <p class="post-excerpt">
+        {{ post.node.excerpt }}
+        <g-link :to="post.node.path">Read more</g-link>
+      </p>
     </article>
 
     <div class="pagination">
@@ -56,7 +59,7 @@ import { Pager } from 'gridsome'
 export default {
 
   components: {
-    Pager, 
+    Pager,
   },
 
   metaInfo: {
@@ -65,9 +68,15 @@ export default {
 };
 </script>
 
+
 <style lang="scss" scoped>
 article img {
   margin-top: 6rem;
+}
+
+.post-image-link {
+  min-height: 6rem;
+  display: inline-block;
 }
 
 article:first-of-type img {
@@ -77,6 +86,10 @@ article:first-of-type img {
 .pagination nav a {
   padding: .25em;
   text-align: center;
+}
+
+.post-excerpt {
+  font-style: italic;
 }
 
 #empty {

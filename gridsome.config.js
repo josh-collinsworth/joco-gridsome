@@ -11,15 +11,12 @@ module.exports = {
       options: {
         path: './src/projects/*.md',
         typeName: 'project',
-        remark: {
-        }
       }
     },
     {
       use: '@gridsome/vue-remark',
       options: {
         baseDir: './src/posts',
-        ignore: ['drafts/*.md'],
         typeName: 'post',
         pathPrefix: '/blog',
         template: './src/templates/post.vue'

@@ -8,12 +8,12 @@
         Note to self: this did not work in production for some reason.
         I have no idea why and I'm pretty frustrated by it.
         But somehow the fact just didn't render. All were display: none.
-        Don't know if it's Gridsome, Netlify, or a combo, and this probably 
+        Don't know if it's Gridsome, Netlify, or a combo, and this probably
         wasn't the ideal way to do it anyway. But I'm leaving this here
         just in case I want to re-implement it in the future.
       ------------------------------------------------------------------------- -->
 
-      <!-- 
+      <!--
         <p id="random-fact-heading"><strong>A random fact about me:</strong></p>
         <transition-group name="fancy-fade" mode="out-in" class="transition-box">
           <p v-for="(fact, index) in fancyFacts" class="fancy fact" :key="fact" v-show="fancyNumber == index + 1">
@@ -23,16 +23,16 @@
           <p v-if="!fancyNumber" class="fancy fact" key="x">
             Sorry, that’s all the facts! Maybe try the <g-link to="/about">about page</g-link>?
           </p>
-        </transition-group> 
+        </transition-group>
       -->
       <p class="fancy">
         I'm currently searching for a new opportunity to contribute to&nbsp;a&nbsp;great&nbsp;team.
       </p>
-      
+
       <p class="previously">
-        Previously: front-end engineer at <xa to="wpengine.com">WP Engine</xa>; 
-        senior support lead at <xa to="getflywheel.com">Flywheel</xa>; 
-        WordPress instructor for <xa to="interfaceschool.com">AIM Code School</xa>; 
+        Previously: front-end engineer at <xa to="wpengine.com">WP Engine</xa>;
+        senior support lead at <xa to="getflywheel.com">Flywheel</xa>;
+        WordPress instructor for <xa to="interfaceschool.com">AIM Code School</xa>;
         maker and designer of <xa to="quina.app">Quina</xa>.
       </p>
 
@@ -40,15 +40,15 @@
         <Tag to="/about">
           <span aria-hidden="true">👀&ensp;</span>
           Learn more <b>About</b> me
-        </Tag>        
+        </Tag>
         <Tag to="/contact">
           <span aria-hidden="true">✉️&ensp;</span>
           Get in <b>Contact</b>
-        </Tag>        
+        </Tag>
         <Tag to="/projects">
           <span aria-hidden="true">💼&ensp;</span>
           See some of my <b>Projects</b>
-        </Tag>        
+        </Tag>
         <Tag to="/blog">
           <span aria-hidden="true">📝&ensp;</span>
           Read my rarely-updated <b>Blog</b>
@@ -75,7 +75,7 @@ export default {
     latestPost: [],
     fancyNumber: Math.ceil(Math.random() * 28),
 
-    // See note above 
+    // See note above
     // fancyFacts: [
     //   `I work on the support experience team&nbsp;at&nbsp;<a href="http://getflywheel.com" target="_blank" rel="noopener noreferrer">Flywheel</a>.`,
     //   `Vue is my go-to framework, but I'm a fan of Svelte,&nbsp;too.`,
@@ -190,7 +190,7 @@ export default {
   }
 }
 
-/* See note above 
+/* See note above
 
 .transition-box {
   position: relative;

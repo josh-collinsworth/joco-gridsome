@@ -65,6 +65,10 @@ pre.language-php:before {
 	content: 'PHP:';
 }
 
+pre.language-markdown:before {
+	content: 'Markdown:';
+}
+
 pre.language-html:before {
 	content: 'HTML:';
 }
