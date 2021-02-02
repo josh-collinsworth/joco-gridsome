@@ -21,7 +21,7 @@ This is a list of the things that help me toward that goal. If you handed me a b
 
 <SideNote>This post hasn’t been updated for a while; Wunderlist isn’t a thing anymore, and neither is Spectacle (it’s a new app called Rectangle now, which honestly is better). Some of the pricing has changed; neither LastPass nor Chrome are my first choices in their category anymore; and in this moment at least, I’d definitely add Block Lab to the list. Still, I leave the post as-is both in the interest of not rewriting history, and because I still think the list is mostly helpful. You can check my /uses page for more.</SideNote>
 
-![Dropbox Logo](https://api.joshcollinsworth.com/wp-content/uploads/2016/06/Dropbox.svg)
+![Dropbox Logo](../assets/images/post_images/Dropbox.svg)
 
 ### [Dropbox](https://www.dropbox.com)
 
@@ -29,7 +29,7 @@ This is a list of the things that help me toward that goal. If you handed me a b
 
 You're going to need somewhere to store your files, and [Dropbox](https://www.dropbox.com) syncs beautifully with all your devices. You can also set up synced folders, so that anything you save in a particular folder on your machine is available on any machine, thus creating both a local and cloud copy. It can also automatically save screenshots, upload pics from your smartphone's camera for safe storage, and send/receive client files easily.
 
-![LastPass logo](https://api.joshcollinsworth.com/wp-content/uploads/2016/06/LastPass-Logo-Color.svg)
+![LastPass logo](../assets/images/post_images/LastPass-Logo-Color.svg)
 
 ### [LastPass/1Password](http://www.lastpass.com)
 
@@ -64,7 +64,7 @@ There's a _ton_ of PHP to remember in WordPress, the difficulty of which is comp
 
 GenerateWP does the work for you in generating blocks of code. You just fill out some fields telling the site what you're after and it will spit out the code for you to copy and paste in the appropriate PHP file. Everything from custom `WP_Query` loops to defining custom post types and much, much more can now be handled by checking some boxes and filling out a few fields instead of peering through the WordPress Codex trying to remember the difference between `get_header()` and `wp_head()`.
 
-![Local logo](https://api.joshcollinsworth.com/wp-content/uploads/2016/06/Local-Logo.svg)
+![Local logo](../assets/images/post_images/Local-Logo.svg)
 
 ### Local by Flywheel
 
@@ -203,7 +203,7 @@ It's a desktop app, a smartphone app and a browser extension, so you can make li
 
 And, of course, there's that whole conserving mental energy thing I'm a big fan of.
 
-![WordPress.com plus Jetpack logos](https://api.joshcollinsworth.com/wp-content/uploads/2016/06/WP-plus-Jetpack.svg)
+![WordPress.com plus Jetpack logos](../assets/images/post_images/WP-plus-Jetpack.png)
 
 ### [Calypso/Jetpack](https://developer.wordpress.com/calypso/)
 
@@ -220,7 +220,7 @@ So in short, Calypso—AKA the WordPress.com app—allows you to connect all you
 
 You'll have access to one app dashboard to manage all your sites. The major key feature for me: you can update plugins and themes remotely, so you don't have to sign in to each site individually. On its own, that's fantastic, but the icing on the cake is: you can even set plugins and themes to update _automatically_. (Or should I say: automattically?) It's a beautiful thing, and we haven't even scratched the surface of all the other cool things Jetpack can do on its own.
 
-![CodePen.io logo](https://api.joshcollinsworth.com/wp-content/uploads/2016/06/codepen.svg)
+![CodePen.io logo](../assets/images/post_images/codepen.svg)
 
 ### [CodePen](http://codepen.io)
 
@@ -238,7 +238,7 @@ Photoshop also works, if you have access to it. So do the wide range of free or 
 
 It may not quite have all the features of Photoshop (though it's pretty close) or be quite the photo editing ninja that Lightroom is (though it's no slouch), but to replace the two apps together for a comparably low price tag, I feel the tradeoff is more than worth it.
 
-![Elegant Themes logo](https://api.joshcollinsworth.com/wp-content/uploads/2016/06/elegant-themes-logo.svg)
+![Elegant Themes logo](../assets/images/post_images/elegant-themes-logo.svg)
 
 ### A Great Premium Theme
 
@@ -254,7 +254,7 @@ On projects with lean budgets, I often implement custom developed pages and temp
 
 In short: when you need to build quickly and on a budget, you need a framework to reach for. Maybe that's in theme form; maybe not. But having one that you know handy is essential for client work.
 
-![Flywheel logo](https://api.joshcollinsworth.com/wp-content/uploads/2016/06/Flywheel-Logo.svg)
+![Flywheel logo](../assets/images/post_images/Flywheel-Logo.svg)
 
 ### [Flywheel](https://getflywheel.com/)
 

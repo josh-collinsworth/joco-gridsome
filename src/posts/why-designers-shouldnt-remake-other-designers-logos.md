@@ -23,7 +23,7 @@ Among the population in general, and particularly among designers, reviews have 
 
 That's an understatement, really. Barely 48 hours had passed since the announcement when, with a cursory search of the word "Google" in [Dribbble](https://dribbble.com/), I came upon pages and pages full of graphic designers posting their ideas for a "fixed" or "better" version of Google's new logo. Here's just a small glance at everything that was out there (believe me—there were hundreds more, and again, this was less than two days after the new identity system was announced):
 
-[![Designers scrambling to "fix" Google's new logo](../assets/images/post_images/Screen-Shot-2015-09-03-at-9.07.07-AM.png)](https://api.joshcollinsworth.com/wp-content/uploads/2015/09/Screen-Shot-2015-09-03-at-9.07.07-AM.png) [![Designers scrambling to "fix" Google's new logo](../assets/images/post_images/Screen-Shot-2015-09-03-at-9.08.06-AM.png)](https://api.joshcollinsworth.com/wp-content/uploads/2015/09/Screen-Shot-2015-09-03-at-9.08.06-AM.png)
+![Designers scrambling to "fix" Google's new logo](../assets/images/post_images/Screen-Shot-2015-09-03-at-9.07.07-AM.png)
 
 To say that this behavior was limited to Dribbble would be inaccurate. The announcement was made on Tuesday, and before the day was even over there were slews of articles, some thousands of words long, popping up all across the internet, many of which filled with righteous indignation over Google's decision to go with something so supposedly unoriginal, plain, radically different, or just bad (in the opinion of the writer, of course).
 

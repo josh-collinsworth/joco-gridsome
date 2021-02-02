@@ -2,7 +2,7 @@
 title: "A New Headless Site with Gridsome"
 date: "2020-06-06"
 updated: "2021-01-19"
-categories: 
+categories:
   - "javascript"
   - "web"
 coverImage: "wp-plus-gridsome.png"
@@ -179,9 +179,9 @@ This change in fonts also necessitated a redesign of my personal logo, since the
 
 I'll be honest: every time I create a new version of my logo, I feel less and less pressure to make it "something," and instead just go with what feels right to me. I suppose you could view this either as atrophy or maturation of my design skills; I'll let you be the judge of that. But in any case, this logo is a little bit of a remix of the last one, but doesn't try quite so hard to wink at you (at least, not until you hover on it in the site header).
 
-![The 2018 version of the logo, in Amsi Pro Ultra](https://api.joshcollinsworth.com/wp-content/uploads/2017/12/Full-Logo-2018.svg)
+![The 2018 version of the logo, in Amsi Pro Ultra](../assets/images/post_images/Full-Logo-2018.svg)
 
-![The newer 2020 version of the logo, in Pensum Display Basic Bold](https://api.joshcollinsworth.com/wp-content/uploads/2020/06/2020-logo-final.svg)
+![The newer 2020 version of the logo, in Pensum Display Basic Bold](../assets/images/post_images/2020-logo-final.svg)
 
 As a nice side effect, the old favicon uses two pairs of brackets, where the new one uses only one, which makes it easy to distinguish between the secondary back-end (where I didn't bother updating the favicon) and the primary front-end at a glance in my browser tabs.
 

@@ -6,17 +6,15 @@ module.exports = function(api) {
     })
 
     const allPosts = actions.getCollection('post')._collection.data
-
     let allPostsCategories = []
 
     allPosts.forEach(post => allPostsCategories.push(...post.categories))
 
-    const allCategories = new Set(allPostsCategories)
+    const uniqueCategories = new Set(allPostsCategories)
 
-    allCategories.forEach((category, index) => {
+    uniqueCategories.forEach((category) => {
       categories.addNode({
         title: category,
-        id: index,
         posts: allPosts.filter(post => post.categories.includes(category))
       })
     })

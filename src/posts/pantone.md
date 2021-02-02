@@ -52,7 +52,7 @@ So you probably can't print actual Pantone _inks_ on your own, but there's good 
 
 <Highlight>Each Pantone swatch in the book includes CMYK, RGB and HTML values to reproduce that swatch color as accurately as possible in standard print and onscreen applications.</Highlight>
 
-[![Pantone swatches include recommended CMYK, RGB and HTML values](../assets/images/post_images/ColorPost-2-1024x579.jpg)](https://api.joshcollinsworth.com/wp-content/uploads/2015/03/ColorPost-2.jpg)
+![Pantone swatches include recommended CMYK, RGB and HTML values](../assets/images/post_images/ColorPost-2.jpg)
 
 Always be sure to use the CMYK, RGB and/or HTML values recommended here on the Pantone swatch. Avoid converting by any other method.
 
@@ -64,7 +64,7 @@ Why must you do this? Because spot color swatches in a design program aren't mea
 
 In other words, because the input doesn't match the output.
 
-[![InDesign's swatch panel](../assets/images/post_images/Swatch-Panel.jpg)](https://api.joshcollinsworth.com/wp-content/uploads/2015/04/Swatch-Panel.jpg)
+![InDesign's swatch panel](../assets/images/post_images/Swatch-Panel.jpg)
 
 As shown in the image above, standard color swatches (such as the "Dark Red" swatch) are indicated in the InDesign swatch panel by a checkered box icon to the right of the swatch name. Spot color swatches (like Pantone swatches) are indicated with a small dot icon in the same position. If you are using any spot color swatches in your document and you are not going to be printing those with true spot color inks, you _must_ convert those spot color swatches and all instances of those colors in your document to standard CMYK values for best results.
 
@@ -78,7 +78,7 @@ This is where problems arise, as whatever method seems right to the computer wil
 
 Put another, less technical way: sending a document with spot colors through a standard 4-color process print is a little like translating the same sentence into a new language over and over. The end result might look passable, but it will almost certainly be missing the finer nuances of the original source material.
 
-[![The "print" modal window in InDesign](../assets/images/post_images/Screen-Shot-2015-04-01-at-11.59.07-AM.png)](https://api.joshcollinsworth.com/wp-content/uploads/2015/04/Screen-Shot-2015-04-01-at-11.59.07-AM.png)
+![The "print" modal window in InDesign](../assets/images/post_images/Screen-Shot-2015-04-01-at-11.59.07-AM.png)
 
 In the print popup window, select "output" on the left and see how many inks are in the ink section. If it's more than the basic four process inks, you'll want to convert your spot colors to process colors for optimal print results.
 
@@ -90,21 +90,21 @@ So we've established that we need to change our spot colors to process colors be
 
 That's what I thought, too, but I was very wrong.
 
-[![The InDesign color panel, showing Pantone 132 C](../assets/images/post_images/Screen-Shot-2015-04-01-at-12.02.15-PM.png)](https://api.joshcollinsworth.com/wp-content/uploads/2015/04/Screen-Shot-2015-04-01-at-12.02.15-PM.png)
+![The InDesign color panel, showing Pantone 132 C](../assets/images/post_images/Screen-Shot-2015-04-01-at-12.02.15-PM.png)
 
 Here's the color panel with a Pantone swatch selected.
 
-[![The InDesign color panel, showing the color conversion menu options](../assets/images/post_images/Screen-Shot-2015-04-01-at-12.02.28-PM.png)](https://api.joshcollinsworth.com/wp-content/uploads/2015/04/Screen-Shot-2015-04-01-at-12.02.28-PM.png)
+![The InDesign color panel, showing the color conversion menu options](../assets/images/post_images/Screen-Shot-2015-04-01-at-12.02.28-PM.png)
 
 If you open the panel menu and change the color to CMYK...
 
-[![The InDesign color panel, showing the newly converted and incorrect CMYK values](../assets/images/post_images/Screen-Shot-2015-04-01-at-12.02.37-PM.png)](https://api.joshcollinsworth.com/wp-content/uploads/2015/04/Screen-Shot-2015-04-01-at-12.02.37-PM.png)
+![The InDesign color panel, showing the newly converted and incorrect CMYK values](../assets/images/post_images/Screen-Shot-2015-04-01-at-12.02.37-PM.png)
 
 ...you will not end up with the correct CMYK values for your Pantone swatch.
 
 Changing the document color mode and/or the color mode in the color panel of a design program will _NOT_ change a spot color to the appropriate CMYK, RGB or HTML value. _You must get those from the Pantone swatch book and enter them manually._ (There are easy ways to do this using the tools in the swatch panel, but I won't go into that here.)
 
-[![A Pantone book swatch, detailing RGB, CMYK, and HTML values](../assets/images/post_images/20150401_142813-300x206.jpg)](https://api.joshcollinsworth.com/wp-content/uploads/2015/04/20150401_142813.jpg)
+![A Pantone book swatch, detailing RGB, CMYK, and HTML values](../assets/images/post_images/20150401_142813-300x206.jpg)
 
 Take the example in the above image: the recommended CMYK formula for Pantone 132 C is 9/38/100/32. That's _very_ far from the values that InDesign dialed up for me in the color panel in the screenshot before that. (A telltale sign of improperly converted CMYK swatches is that they involve decimal points, e.g., the 13.04% black shown in the color panel screenshot above. No Pantone swatch's recommended CMYK value ever calls for decimals.)
 

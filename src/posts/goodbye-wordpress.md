@@ -11,8 +11,6 @@ excerpt: WordPress was potentially the most impactful and empowering technology 
 import Highlight from '~/components/Highlight'
 import Callout from '~/components/Callout'
 import SideNote from '~/components/SideNote'
-import Footnote from '~/components/Footnote'
-import FootnoteLink from '~/components/FootnoteLink'
 import Code from '~/components/Code'
 import xa from '~/components/ExternalLink'
 
@@ -123,9 +121,24 @@ templates: {
 
 *The above config code tells Gridsome how to convert markdown files to HTML content. Other SSGs, like <xa to="11ty.dev">Eleventy</xa> or Gatsby, work similarly.*
 
+Finally, the template file for rendering the data collected from the Markdown files (the `single_project.vue` file seen above, simplified here just to communicate the general idea):
+
+```
+<template>
+  <Layout>
+    <h1>{{ project.title }}</h1>
+    <p>{{ project.category }}</p>
+    <img :src="project.featuredMedia"/>
+    <div v-html="project.content" />
+  </Layout>
+</template>
+```
+
+_(Not pictured: there's also a GraphQL query to grab the currently viewed project. I just didn't show that for the sake of simplicity.)_
+
 ---
 
-So moving all my WordPress posts to Markdown files and abandoning the database altogether didn't seem like that much of a leap; the pieces were all there already. (I was only half-right in that assessment; more on that in a bit.)
+So moving all my WordPress posts to Markdown files and abandoning the database altogether didn't seem like that much of a leap; the pieces were all there already. (_I was only half-right in that assessment; more on that in a bit_.)
 
 Having all your content hosted in the repository along with your files means that search-and-replace is easy, and can be done in your text editor, rather than via MySQL or WP-CLI. It also means anybody can contribute a pull request to correct mistakes or add context. Plus, previewing posts as they're being written was always a problem with headless. I'm sure you could do some tricky things to make it possible, but none of them were as easy as simply spinning up a local dev server and writing in a markdown file, watching your post auto-refresh in the browser every time you save.
 
@@ -201,6 +214,41 @@ Authoring content via Markdown means that handling drafts is something you need 
 There are a few ways to go about this. The simplest is probably to add a `published` or `status` key to the frontmatter of each post, and add a conditional to your code to filter out unpublished content.
 
 Personally, I created a `drafts` folder inside my `posts` folder, and then added it to the project's `.gitignore` file to ensure that any time I push to the main branch, the drafts stay behind. That way, nobody can snoop on my drafts in GitHub before they're actually published, either. (Not that anybody cares that much anyway, but hey.)
+
+Also note that generating taxonomy pages will be an extra challenge with any SSG. In the case of Gridsome, you can modify the `gridsome.server.js` file to add collections. Here's how I achieved mine:
+
+<Code lang="javascript">
+module.exports = function(api) {
+  api.loadSource(actions => {
+<br/>
+    //Create a new "categories" collection
+    const categories = actions.addCollection({
+      typeName: 'category'
+    })
+<br/>
+    //Get all the posts (which already exist from the vue-remark plugin)
+    const allPosts = actions.getCollection('post')._collection.data
+<br/>
+    //Loop over the posts and add their categories to an array
+    let allPostsCategories = []
+    allPosts.forEach(post => allPostsCategories.push(...post.categories))
+<br/>
+    //Filter out duplicates
+    const uniqueCategories = new Set(allPostsCategories)
+<br/>
+    //Finally, add each category as a data node, with an array of the matching posts
+    uniqueCategories.forEach((category, index) => {
+      categories.addNode({
+        title: category,
+        id: index,
+        posts: allPosts.filter(post => post.categories.includes(category))
+      })
+    })
+  })
+}
+</Code>
+
+<SideNote>There are more efficient ways to achieve the above; my first try used <code>flatMap</code>. But turns out: Node doesn't have the <code>flatMap</code> array method, so it wouldn't compile on Netlify's servers. So this was my slightly longer workaround.</SideNote>
 
 
 ## Final thoughts

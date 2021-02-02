@@ -2,7 +2,7 @@
 title: "WordPress Child Theme Explanation and Walkthrough"
 date: "2015-12-31"
 updated: "2020-06-16"
-categories: 
+categories:
   - "web"
   - "wordpress"
 coverImage: "wordpress-bg-medblue.png"
@@ -47,7 +47,7 @@ If your site is already up on a live server, you'll need to connect to your site
 
 Inside that folder, you'll see a list of themes on your site, probably similar to this:
 
-[![A WordPress child theme will most likely look like the last folder in this screenshot.](../assets/images/post_images/Screenshot-2015-12-31-11.26.45.png)](https://api.joshcollinsworth.com/wp-content/uploads/2015/12/Screenshot-2015-12-31-11.26.45.png)
+[![A WordPress child theme will most likely look like the last folder in this screenshot.](../assets/images/post_images/Screenshot-2015-12-31-11.26.45.png)](/assets/images/post_images/Screenshot-2015-12-31-11.26.45.png)
 
 Here, you'll simply create a new folder and name it whatever you want your child theme to be named. Usually, this is a hyphenated version of the parent theme name, such as with "enfold" and "enfold-child" in the screenshot above. This naming convention exists so that anybody looking at the list of themes can immediately tell which themes rely on others, but if you'd rather, the name can be whatever you want.
 
@@ -131,7 +131,7 @@ To give your theme an image that will appear on the theme selection screen, just
 
 While this feature exists so that you can show potential theme users what their site will look like if they activate this theme, if you're working on a child theme, you can add that extra little something special by making screenshot.png your logo or your client's logo.
 
-[![Screenshot 2016-01-17 20.11.39](../assets/images/post_images/Screenshot-2016-01-17-20.11.39.png)](https://api.joshcollinsworth.com/wp-content/uploads/2015/12/Screenshot-2016-01-17-20.11.39.png)
+[![Screenshot 2016-01-17 20.11.39](../assets/images/post_images/Screenshot-2016-01-17-20.11.39.png)](/assets/images/post_images/Screenshot-2016-01-17-20.11.39.png)
 
 ### Step 3: Create a functions.php File
 
@@ -163,7 +163,7 @@ When any given WordPress theme is active, any code in that theme's functions.php
       array( $parent_style )
     );
   }
- <br/><br/> 
+ <br/><br/>
   add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 ?>
 </Code>
