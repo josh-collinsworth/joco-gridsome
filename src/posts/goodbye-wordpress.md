@@ -1,7 +1,7 @@
 ---
 title: "Goodbye, WordPress"
 date: "2021-02-01"
-updated: "2021-02-01"
+updated: "2021-02-02"
 categories:
   - "wordpress"
   - "javascript"
