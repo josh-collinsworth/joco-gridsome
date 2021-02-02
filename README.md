@@ -1,39 +1,9 @@
-# WordPress starter for Gridsome
+# Josh Collinsworth Gridsome Site
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gridsome/gridsome-starter-wordpress)
+This was originally built using Gridsome's WordPress starter, but now that I've abandoned WordPress, it's just pure static Markdown files and Vue templates.
 
-## Install
+To get this running on your own:
 
-`gridsome create my-gridsome-project wordpress`
-
-## Guide
-
-Add your WordPress URL to the plugin options.
-
-```js
-// gridsome.config.js
-
-module.exports = {
-  plugins: [
-    {
-      use: '@gridsome/source-wordpress',
-      options: {
-        baseUrl: 'YOUR_WEBSITE_URL', // required
-        typeName: 'WordPress', // GraphQL schema name
-      }
-    }
-  ],
-  // Setup template routes for any WordPress collection
-  templates: {
-    WordPressPost: '/:year/:month/:day/:slug',
-    WordPressTag: '/tag/:slug'
-  },
-}
-
-```
-
-See all [options](https://gridsome.org/plugins/@gridsome/source-wordpress).
-
-## Included templates
-
-This starter includes basic templates for categories, tags and posts.
+1. Clone the repo to a folder on your machine (or download it and unzip it);
+2. Inside the repo, run `yarn` (assuming you already have yarn installed; if not, `npm install` will work if you've got NPM);
+3. Once that's finished, run `yarn dev` (or `npm run dev`)

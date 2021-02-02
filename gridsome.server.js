@@ -7,7 +7,11 @@ module.exports = function(api) {
 
     const allPosts = actions.getCollection('post')._collection.data
 
-    const allCategories = new Set(allPosts.flatMap(post => post.categories))
+    let allPostsCategories = []
+
+    allPosts.forEach(post => allPostsCategories.push(...post.categories))
+
+    const allCategories = new Set(allPostsCategories)
 
     allCategories.forEach((category, index) => {
       categories.addNode({
