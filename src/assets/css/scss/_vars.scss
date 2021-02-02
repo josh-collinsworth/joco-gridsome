@@ -1,6 +1,8 @@
 $narrow: 768px;
 $medium: 1024px;
 $wide: 1200px;
+$wider: 1440px;
+$widest: 1960px;
 
 :root {
   --white: #ffffff;
@@ -30,6 +32,7 @@ $wide: 1200px;
 
   --column-width: 12vw;
   --max-width: 32rem;
+  --sidebar-width: 14rem;
   --margin: 1rem;
 
 	@media (min-width: 768px){

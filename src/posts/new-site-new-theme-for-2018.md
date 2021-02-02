@@ -2,9 +2,10 @@
 title: "New Site, New Theme for 2018"
 date: "2018-01-02"
 updated: "2020-05-18"
-categories: 
+categories:
   - "design"
   - "web"
+  - "php"
   - "wordpress"
 coverImage: "2018-logo.jpg"
 excerpt: Building a WordPress theme (and a new brand) from scratch.

@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :sidebar="true">
     <article>
       <g-image
         :src="require(`!!assets-loader!@images/post_images/${$page.post.coverImage}`)"

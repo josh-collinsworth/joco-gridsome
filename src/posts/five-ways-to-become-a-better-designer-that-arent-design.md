@@ -2,9 +2,9 @@
 title: "Five Ways to Become a Better Designer (That Aren't Design)"
 date: "2017-02-04"
 updated: "2020-05-18"
-categories: 
+categories:
   - "design"
-  - "quotes-and-advice"
+  - "thoughts-and-advice"
 coverImage: "toa-heftiba-195458-1-1.jpg"
 excerpt: There’s vast world of design learning and opportunity right in front of us constantly. All we need to do is take the time to notice it and learn from it.
 ---

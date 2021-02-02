@@ -2,10 +2,9 @@
 title: "Pantone, Color, and What I Wish I Had Known Sooner as a Designer"
 date: "2015-04-01"
 updated: "2021-01-19"
-categories: 
+categories:
   - "design"
-  - "logo-design"
-  - "quotes-and-advice"
+  - "thoughts-and-advice"
 coverImage: "ColorPost-4.jpg"
 excerpt: One of the most difficult things for me to learn in my transition from the classroom to a professional branding agency was how to properly handle color output. So I decided to write this post in the hope of saving you some from some of the pitfalls that I failed to avoid.
 ---

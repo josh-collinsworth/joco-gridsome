@@ -2,8 +2,8 @@
 title: "My Essential Tools for WordPress Development"
 date: "2016-06-25"
 updated: "2020-06-14"
-categories: 
-  - "quotes-and-advice"
+categories:
+  - "thoughts-and-advice"
   - "web"
   - "wordpress"
 coverImage: "Screenshot-2016-06-24-20_45_21.png"
@@ -33,7 +33,7 @@ You're going to need somewhere to store your files, and [Dropbox](https://www.dr
 
 ### [LastPass/1Password](http://www.lastpass.com)
 
-**[lastpass.com](http://www.lastpass.com)** | _free to start; $12 per year_  
+**[lastpass.com](http://www.lastpass.com)** | _free to start; $12 per year_
 **[1password.com](http://1password.com)** | _$5 per month for families or $64.99 one-time fee for a single user_
 
 I don't have a strong preference between the two, but there's no excuse for not using a password manager in this day and age. Odds are good you'll have at least two usernames and passwords to remember for every single site you work on—maybe more—and repeating the same one or making it easy to type and remember is an awful idea when you're using the world's most popular CMS. Saving brain power is making your life better and your workflow more efficient. And besides, these are extremely affordable apps; LastPass is only $12 per year. Make like Nike and just do it.
@@ -164,7 +164,7 @@ Gallons of wasted time and effort are accumulated a drip at a time. Spectacle is
 
 ### [TinyPNG](https://tinypng.com/)
 
-**[tinypng.com](https://tinypng.com/)** | _Free unlimited use_  
+**[tinypng.com](https://tinypng.com/)** | _Free unlimited use_
 **[wordpress.org/plugins/tiny-compress-images](https://wordpress.org/plugins/tiny-compress-images/)** | _Free for first 500 compressions per month; extra start at 9¢ per compression_
 
 Amazingly, I just learned that TinyPNG is not only [a website](https://tinypng.com/) where you can compress the fatty megabytes out of your image files for free (often at gigantic reductions in both size and page loading time); it's also a [WordPress plugin](https://wordpress.org/plugins/tiny-compress-images/)! Install it and follow the steps in the plugin settings to get set up with an API key you can use to compress either new uploaded images, existing images, or both.
@@ -207,7 +207,7 @@ And, of course, there's that whole conserving mental energy thing I'm a big fan 
 
 ### [Calypso/Jetpack](https://developer.wordpress.com/calypso/)
 
-**[developer.wordpress.com/calypso](https://developer.wordpress.com/calypso/)** | _Free_  
+**[developer.wordpress.com/calypso](https://developer.wordpress.com/calypso/)** | _Free_
 **[jetpack.com](https://jetpack.com/)** | _Free; premium add-ons starting at $99 per year_
 
 You might know it as Calypso, the new WordPress.com, the WordPress.com app, Jetpack, or maybe even something else, but the (amazing) combination is just the same: manage all your WordPress sites together, in one tool, for free.
@@ -266,28 +266,28 @@ Full disclosure: I work for Flywheel. But I still wouldn't have another host eve
 
 Just a few of the modestly handy plugins I find myself using frequently:
 
-- [**WP Rocket**](https://wp-rocket.me/)  
+- [**WP Rocket**](https://wp-rocket.me/)
     Concatenating and minifying your CSS and JS files is essential to optimizing page speed. There are free plugins to do this (like W3 Total Cache and Better WP Minify), but WP Rocket is worth the premium price tag to make the process simpler and easier. Ideally, you'd be handling all of that manually at the development level, but if that's not an option, WP Rocket gets my vote for the best post-development fix.
-- [**Ninja Forms**](https://wordpress.org/plugins/ninja-forms/)  
+- [**Ninja Forms**](https://wordpress.org/plugins/ninja-forms/)
     Gravity Forms and Caldera Forms are also both fine choices, and I have no doubt there are others, too. I just like how easy it is to get Ninja Forms up and running for free.
-- [**WPS Hide Login**](https://wordpress.org/plugins/wps-hide-login/)  
+- [**WPS Hide Login**](https://wordpress.org/plugins/wps-hide-login/)
     The internet is full of bots looking for your WordPress login screen, but they can only find it if you keep it at the same URI as everybody else (/wp-admin). Change it.
-- [**Custom Post Types UI**](https://wordpress.org/plugins/custom-post-type-ui/)  
+- [**Custom Post Types UI**](https://wordpress.org/plugins/custom-post-type-ui/)
     Although I do enjoy defining custom post types on my own, CPT UI is admittedly the easier way to do it. Just make sure you don't have a client who likes to go poking around where they don't belong when you turn the site over to them.
 - [**Essential Grid**](http://codecanyon.net/item/essential-grid-wordpress-plugin/7563340)I'm usually not much of a fan of Envato Market and its ilk because I disagree with some of their business practices and have had bad experiences with some of their plugins, but this particular paid plugin, at $26, offers the ability to get any kind of gallery up and running very quickly and easily on any site or page.
-- [**Yoast SEO**](https://wordpress.org/plugins/wordpress-seo/)  
+- [**Yoast SEO**](https://wordpress.org/plugins/wordpress-seo/)
     I'm not a big SEO guy, but this plugin will help you write better content so that your viewers can find it when it's relevant to them.
-- [**Enable Media Replace**](https://wordpress.org/plugins/enable-media-replace/)  
+- [**Enable Media Replace**](https://wordpress.org/plugins/enable-media-replace/)
     Super simple, but allows you to replace a media file and keep its metadata (URI, alt, title, etc.) intact rather than having to delete it and upload a new file every time there's a change.
-- [**Show Current Template**](https://wordpress.org/plugins/show-current-template/)  
+- [**Show Current Template**](https://wordpress.org/plugins/show-current-template/)
     More of a debugging tool than anything, but it's extremely helpful to be able to tell whether you're bucking the WordPress template hierarchy successfully, and which PHP template files aside from the main one are being loaded on the page.
-- [**Insert PHP**](https://wordpress.org/plugins/insert-php/)  
+- [**Insert PHP**](https://wordpress.org/plugins/insert-php/)
     Handy if you need to run some PHP code from a WordPress content field. (Most developers will of course have ways around this, and it's presented here as more of a hack than a recommended way to do things. But in a pinch it works remarkably well.)
-- [**Force Regenerate Thumbnails**](https://wordpress.org/plugins/force-regenerate-thumbnails/)  
+- [**Force Regenerate Thumbnails**](https://wordpress.org/plugins/force-regenerate-thumbnails/)
     If you change your media upload size after you've already uploaded some images, you'll want to run this.
-- **Captcha** 
+- **Captcha**
     There are many kinds (with many levels of intrusiveness), but since Captcha secures all forms, it helps keep bots out of your comments, contact forms, and your login screen. Those are all really good things.
-- [**Akismet**](https://akismet.com/)  
+- [**Akismet**](https://akismet.com/)
     It's almost not worth mentioning because of its ubiquity and the fact that many WordPress users don't even allow comments on their site to begin with. But if you do allow comments, activate Akismet, get an API key, and and put the API key in place.
 
 That's it! I hope you've found something useful here. Happy developing, WordPressers.

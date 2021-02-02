@@ -53,18 +53,22 @@ import WorkLinks from '~/components/WorkLinks'
 
 export default {
 	components: { WorkLinks },
+
 	data: () => ({
 		shownCategories: [],
 		projects: []
 	}),
+
 	created() {
 		this.projects = this.$static.allProject.edges
 		this.shownCategories = Array.from(new Set(this.$static.allProject.edges.map(edge => edge.node.category)))
 	},
+
 	methods: {
 		projectTags(project) {
 			return project.node.tags.map(tag => this.capitalize(tag)).join(', ')
 		},
+
 		capitalize(str) {
 			return str.replace(/^\w/, c => c.toUpperCase());
 		}
@@ -73,6 +77,7 @@ export default {
 		filteredProjects() {
 			return this.projects.filter(project => this.shownCategories.includes(project.node.category))
 		},
+
 		allCategories() {
 			return new Set (this.projects.map(project => project.node.category))
 		}

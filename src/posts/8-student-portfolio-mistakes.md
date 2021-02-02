@@ -2,9 +2,9 @@
 title: "8 Mistakes to Avoid in Your Student Design Portfolio"
 date: "2015-08-20"
 updated: "2021-01-19"
-categories: 
+categories:
   - "design"
-  - "quotes-and-advice"
+  - "thoughts-and-advice"
 coverImage: "Negative-Space.png"
 excerpt: If your portfolio cost less than $20, is so large it can’t fit on a small table when open, is jammed full of huge illustrations and uses Helvetica all over the place, this is something you might want to read.
 ---
@@ -48,7 +48,7 @@ Generally speaking, an interviewer probably has a pretty good idea of your talen
 
 While there's no magic number for the total projects that you should show, I'd say as a general rule of thumb, cap it at 10–12. And probably don't go below about six unless those six are either expansive brandscapes with multiple pieces each or exceptionally high quality. (But these are just my opinions; if telling your story requires you to break these limits, by all means do.)
 
-Ideally, every one of the pieces in your student design portfolio should show off something—a skill, a style, a type of work, or a thought process—that no other piece does. Don't include two posters if one will do. Don't include fifteen projects just because you have that many. And _never_ put a project in your book just because you can't decide what to cut. 
+Ideally, every one of the pieces in your student design portfolio should show off something—a skill, a style, a type of work, or a thought process—that no other piece does. Don't include two posters if one will do. Don't include fifteen projects just because you have that many. And _never_ put a project in your book just because you can't decide what to cut.
 
 **Design is decision-making.** If you can't make the decision on what to even include in your book for an interview, what does that say of your ability to make the decisions the job itself will require of you?
 
@@ -130,7 +130,7 @@ It's easy to fall into the trap of believing that your work must be as large as 
 
 I understand; you want people to be able to see the details. How will anybody else know that every point, pixel and period is in its proper place if you don't stretch your available space to its limit?
 
-<Highlight>Don't think of your portfolio as a collection of projects; it's a design project in itself.</Highlight> 
+<Highlight>Don't think of your portfolio as a collection of projects; it's a design project in itself.</Highlight>
 
 It should only include what makes you look great. Most interviewers don't want or need to see every single spread or be able to read every paragraph of body copy (though they will read some—see #4). Decorating a spread just to fill up the space is the visual equivalent of commenting on the weather to fill an awkward silence: it's meaningless noise.
 

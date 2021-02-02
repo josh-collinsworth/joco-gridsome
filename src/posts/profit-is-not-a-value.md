@@ -2,10 +2,9 @@
 title: "Profit is Not a Value"
 date: "2015-08-05"
 updated: "2020-05-19"
-categories: 
-  - "branding"
-  - "design"
-  - "quotes-and-advice"
+categories:
+  - "thoughts-and-advice"
+  - "personal"
 coverImage: "money.png"
 excerpt: Any executive or business owner will say their company values integrity, and virtually every company claims that they reward and value their employees exhibiting their brand values. But is that really accurate?
 ---

@@ -22,7 +22,7 @@
 			<ul>
 				<li v-for="page in pages" :key="page + '-d'">
 					<g-link class="nav__link" :to="`/${page.toLowerCase()}`">
-						<span>{{page}}</span>
+						<span>{{ page }}</span>
 					</g-link>
 				</li>
 			</ul>

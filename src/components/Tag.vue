@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tag {
+a.tag {
 	display: block;
 	padding: .5em 1em;
 	background: var(--darkBlue);

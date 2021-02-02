@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout sidebar="true">
     <h1>Blog</h1>
     <p class="fancy details">
       Page {{ $page.allPost.pageInfo.currentPage }} of {{ $page.allPost.pageInfo.totalPages  }}

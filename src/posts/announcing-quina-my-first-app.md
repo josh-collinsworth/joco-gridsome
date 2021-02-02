@@ -1,9 +1,9 @@
 ---
 title: "Announcing Quina (My First App)!"
 date: "2020-12-10"
-categories: 
+categories:
   - "javascript"
-  - "logo-design"
+  - "design"
   - "web"
 coverImage: "social-share-image.png"
 excerpt: "The story of building Quina, a word game Progressive Web App built with Nuxt, and launched on the Google Play Store."
@@ -64,8 +64,8 @@ Beyond the core word game, Quina has a number of features to hopefully keep it e
     - Basic sticks to common, everyday English words; Tricky has some curveballs and harder words; and Random just lets you enjoy the challenge of not knowing.
 - Players also have the option to **start the game with a hint**, if they want (either a small one or a big one), to make the game a bit more accessible.
 - There's a quick-start tutorial, as well as a more in-depth explanation of the rules.
-- As you play, you can mark up your guesses to help you deduce the meaning behind the clues.  
-    
+- As you play, you can mark up your guesses to help you deduce the meaning behind the clues.
+
 
 ![](../assets/images/post_images/tutorial-3-1024x576.png)
 

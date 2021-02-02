@@ -39,7 +39,6 @@ body {
 #app {
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
@@ -74,10 +73,6 @@ body {
     --link-color: var(--darkBlue);
     --highlight-color: var(--darkGray);
   }
-}
-
-main {
-  margin: 3rem 0;
 }
 
 .sr {

@@ -1,23 +1,41 @@
 <template>
-  <div :class="{ 'reduce-motion': reduceMotion, 'prefers-dark': prefersDark, 'prefers-light': prefersLight, 'mounted': ready }">
+  <div :class="{
+    'reduce-motion': reduceMotion,
+    'prefers-dark': prefersDark,
+    'prefers-light': prefersLight,
+    'mounted': ready }"
+  >
     <Header />
     <div class="layout">
       <main id="main">
         <slot />
       </main>
+      <Sidebar v-if="sidebar" />
     </div>
     <Footer />
-    <Settings :reduce-motion="reduceMotion" @toggleReduceMotion="toggleReduceMotion" @prefersDarkMode="setDarkMode" @prefersLightMode="setLightMode" />
+    <Settings
+      :reduce-motion="reduceMotion"
+      @toggleReduceMotion="toggleReduceMotion"
+      @prefersDarkMode="setDarkMode" @prefersLightMode="setLightMode"
+    />
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
+import Sidebar from '~/components/Sidebar';
 import Settings from '~/components/settings/Settings';
 
 export default {
-  components: { Header, Footer, Settings },
+  components: { Header, Footer, Sidebar, Settings },
+
+  props: {
+    sidebar: {
+      type: Boolean,
+      default: false
+    }
+  },
 
   data: () => ({
     reduceMotion: false,
@@ -68,6 +86,8 @@ export default {
 
 
 <style lang="scss">
+@import '../assets/css/scss/_vars';
+
 #app.mounted {
   transition: inherit;
 }
@@ -117,6 +137,23 @@ export default {
   align-items: center;
   justify-content: flex-start;
   width: calc(100% - (var(--margin) * 2));
+  padding-top: 4rem;
+
+  @media (min-width: $wider) {
+    display: grid;
+    grid-template-columns: var(--max-width) 1fr var(--sidebar-width);
+    gap: 2rem;
+    margin-right: 2rem;
+    width: 100%;
+
+    #sidebar {
+      display: block;
+    }
+  }
+
+  @media (min-width: $widest) {
+    margin-right: var(--margin);
+  }
 
   main {
     width: 100%;

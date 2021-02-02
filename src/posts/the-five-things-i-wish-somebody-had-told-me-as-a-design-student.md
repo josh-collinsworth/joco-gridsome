@@ -2,10 +2,10 @@
 title: "The Five Things I Wish Somebody Had Told Me as a Design Student"
 date: "2016-02-21"
 updated: "2021-01-19"
-categories: 
+categories:
   - "design"
   - "personal"
-  - "quotes-and-advice"
+  - "thoughts-and-advice"
 coverImage: "what-i-wish.png"
 excerpt: Your worst instructor as a design student will lay out clear goals and expectations which will not change; this is not a given with clients.
 ---
