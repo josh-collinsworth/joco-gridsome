@@ -9,25 +9,25 @@ export default function (Vue, { head }) {
 
   head.link.push({
     rel: 'preload',
-    href: '/assets/fonts/avertastd-regular-webfont.woff2',
+    href: '/fonts/avertastd-regular-webfont.woff2',
     as: 'font',
     type: 'font/woff2',
     crossorigin: true
   }, {
     rel: 'preload',
-    href: '/assets/fonts/avertastd-regularitalic-webfont.woff2',
+    href: '/fonts/avertastd-regularitalic-webfont.woff2',
     as: 'font',
     type: 'font/woff2',
     crossorigin: true
   }, {
     rel: 'preload',
-    href: '/assets/fonts/avertastd-bold-webfont.woff2',
+    href: '/fonts/avertastd-bold-webfont.woff2',
     as: 'font',
     type: 'font/woff2',
     crossorigin: true
   }, {
     rel: 'preload',
-    href: '/assets/fonts/pensumdisplaybasic-bold-webfont.woff2',
+    href: '/fonts/pensumdisplaybasic-bold-webfont.woff2',
     as: 'font',
     type: 'font/woff2',
     crossorigin: true
