@@ -138,6 +138,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/css/scss/_vars';
 
 :root {
   --max-width: 36rem;
@@ -178,6 +179,10 @@ export default {
 
   h1 {
     font-size: calc(2rem + 2vw);
+
+    @media (min-width: $widest) {
+      font-size: 3.8rem;
+    }
 
     & + p.fancy {
       margin-top: .75rem;

@@ -1,5 +1,9 @@
 <template>
   <aside id="sidebar">
+    <g-link to="/" class="home-link">
+      <LogoSVG :iconOnly="true" />
+    </g-link>
+
     <h2>Recent posts</h2>
     <ul>
       <li v-for="post in recentPosts" :key="post.node.id">
@@ -7,9 +11,9 @@
           {{post.node.title}}
         </g-link>
       </li>
-      <li>
+      <li v-if="$route.path !== '/blog'">
         <g-link to="/blog">
-          [ View all posts ]
+          &lsaquo; All posts
         </g-link>
       </li>
     </ul>
@@ -83,10 +87,11 @@ query Categories {
 <script>
 import TagList from './TagList'
 import Tag from './Tag'
+import LogoSVG from './LogoSVG'
 
 export default {
   components: {
-    TagList, Tag
+    TagList, Tag, LogoSVG
   },
 
   computed: {
@@ -108,6 +113,17 @@ export default {
   top: 2rem;
   grid-column: 3 / 4;
   text-align: right;
+
+  .home-link {
+    display: block;
+    margin: 0 0 1rem auto;
+    width: 1.5rem;
+    overflow: hidden;
+
+    svg {
+      width: 500%;
+    }
+  }
 
   h2 {
     font-family: var(--body-font);
@@ -131,7 +147,7 @@ export default {
     line-height: 1.2;
 
     &.display-flex li {
-      margin-left: .5em;
+      margin-left: .75em;
     }
 
     li {
@@ -141,7 +157,27 @@ export default {
       a {
         font-size: inerit;
         color: inherit;
-        text-decoration-color: inherit;
+        text-decoration-color: var(--lightGray);
+        position: relative;
+
+        &:hover,
+        &:focus {
+          outline: none;
+
+          &:before,
+          &:after {
+            position: absolute;
+          }
+
+          &:before {
+            content: '[';
+            left: -.5em;
+          }
+          &:after {
+            content: ']';
+            right: -.5em;
+          }
+        }
       }
     }
   }

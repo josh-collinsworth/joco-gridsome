@@ -43,16 +43,16 @@ pre[class*="language-"] {
 	position: relative;
 
 	&:before {
+		content: 'Code';
 		top: 0;
 		left: 0;
-		content: 'Code';
 		font-size: 1rem;
 		font-family: var(--body-font), sans-serif;
 		padding: .5rem 1rem;
 		width: 100%;
 		position: absolute;
-		border-bottom: 1px solid var(--black);
 		background: var(--darkBlue);
+		background: linear-gradient(to right, var(--darkBlue), rgba(var(--darkBlueRGB), 0));
 		font-style: italic;
 	}
 }

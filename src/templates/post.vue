@@ -34,15 +34,6 @@
           </Tag>
         </TagList>
       </template>
-      <!-- TODO: figure out handling of categories and tags now that WordPress is out of the picture -->
-      <!-- <template v-if="$page.post.tags && $page.post.tags.length">
-        <h4>Tags</h4>
-        <TagList>
-          <li v-for="tag in $page.post.tags" :key="tag.id" >
-            <Tag :to="tag.path">{{ tag.title }}</Tag>
-          </li>
-        </TagList>
-      </template> -->
       <p>
         <g-link to="/blog">&lsaquo; Back to blog</g-link>
       </p>
@@ -105,7 +96,7 @@ export default {
 
 @font-face {
 	font-family: 'MonoLisa';
-	src: url('../assets/fonts/monolisa-regular-webfont.woff2') format('woff2');
+	src: url('/monolisa-regular-webfont.woff2') format('woff2');
 	font-weight: normal;
   font-style: normal;
   font-display: swap;

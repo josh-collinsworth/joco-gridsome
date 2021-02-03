@@ -1,5 +1,5 @@
 ---
-title: Color Flood Game with Colorblind Mode (React + CSS Grid)
+title: React Color Flood Game with Colorblind Mode
 featuredMedia: projects/color-flood.png
 link: https://codepen.io/joshuajcollinsworth/pen/Pymdxo
 order: 3

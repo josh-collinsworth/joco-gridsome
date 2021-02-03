@@ -67,7 +67,7 @@ Again: that doesn't mean WordPress is bad. It's not. It just means that of the z
 
 When this site was headless WordPress, the front-end was already built in <xa to="gridsome.org">Gridsome</xa>, a Vue-based static site generator that could be fairly described as Vue's equivalent of [Gatsby](https://www.gatsbyjs.com/).
 
-<SideNote>A "static site generator" (SSG) is a tool that takes input of some kind—maybe markdown files, maybe JSON from an API, or maybe even a combination of different data sources—and turn it all into a traditional, static HTML website. This allows the site to be hosted cheaply and easily on a CDN-backed host for optimum performance.</SideNote>
+<SideNote>A "static site generator" (SSG) is a tool that takes input of some kind—maybe Markdown files, maybe JSON from an API, or maybe even a combination of different data sources—and turn it all into a traditional, static HTML website. This allows the site to be hosted cheaply and easily on a CDN-backed host for optimum performance.</SideNote>
 
 While it would've certainly been possible to just abandon the headless formula and go back to good ol' solo WordPress, that wasn't really an option to me. I'd lose too much work that had gone into this site already, and honestly, I wasn't interested in abandoning the modern dev experience that a JavaScript-based framework offers. I'm not making any value statements here, but to me:
 
@@ -119,20 +119,21 @@ templates: {
 }
 </Code>
 
-*The above config code tells Gridsome how to convert markdown files to HTML content. Other SSGs, like <xa to="11ty.dev">Eleventy</xa> or Gatsby, work similarly.*
+*The above config code tells Gridsome how to convert Markdown files to HTML content. Other SSGs, like <xa to="11ty.dev">Eleventy</xa> or Gatsby, work similarly.*
 
 Finally, the template file for rendering the data collected from the Markdown files (the `single_project.vue` file seen above, simplified here just to communicate the general idea):
 
-```
-<template>
-  <Layout>
-    <h1>{{ project.title }}</h1>
-    <p>{{ project.category }}</p>
-    <img :src="project.featuredMedia"/>
-    <div v-html="project.content" />
-  </Layout>
-</template>
-```
+<Code lang="html">
+&lt;template&gt;
+  &lt;Layout&gt;
+    &lt;h1&gt;&#123;&#8203;&#123; project.title &#125;&#125;&lt;/h1&gt;
+    &lt;p&gt;&#123;&#8203;&#123; project.category &#125;&#125;&lt;/p&gt;
+    &lt;img :src="project.featuredMedia"/&gt;
+    &lt;div v-html="project.content" /&gt;
+  &lt;/Layout&gt;
+&lt;/template&gt;
+</Code>
+
 
 _(Not pictured: there's also a GraphQL query to grab the currently viewed project. I just didn't show that for the sake of simplicity.)_
 
@@ -140,14 +141,14 @@ _(Not pictured: there's also a GraphQL query to grab the currently viewed projec
 
 So moving all my WordPress posts to Markdown files and abandoning the database altogether didn't seem like that much of a leap; the pieces were all there already. (_I was only half-right in that assessment; more on that in a bit_.)
 
-Having all your content hosted in the repository along with your files means that search-and-replace is easy, and can be done in your text editor, rather than via MySQL or WP-CLI. It also means anybody can contribute a pull request to correct mistakes or add context. Plus, previewing posts as they're being written was always a problem with headless. I'm sure you could do some tricky things to make it possible, but none of them were as easy as simply spinning up a local dev server and writing in a markdown file, watching your post auto-refresh in the browser every time you save.
+Having all your content hosted in the repository along with your files means that search-and-replace is easy, and can be done in your text editor, rather than via MySQL or WP-CLI. It also means anybody can contribute a pull request to correct mistakes or add context. Plus, previewing posts as they're being written was always a problem with headless. I'm sure you could do some tricky things to make it possible, but none of them were as easy as simply spinning up a local dev server and writing in a Markdown file, watching your post auto-refresh in the browser every time you save.
 
 But most importantly for me: it means I no longer even need a database. MySQL need not be a part of the stack any longer, because everything I have on the site is in a `.md` file.
 
 I shied away from this approach for a couple of main reasons previously:
 
 1. I liked having WordPress's REST API to query for searches; and
-2. Exporting WordPress posts as markdown is somewhere between not easy and painstakingly tedious.
+2. Exporting WordPress posts as Markdown is somewhere between not easy and painstakingly tedious.
 
 #1 wasn't really enough value to keep WordPress around, even if there weren't other alternatives in the Jamstack world. But #2 proved to be the largest stumbling block, so to speak…
 
@@ -159,7 +160,7 @@ I shied away from this approach for a couple of main reasons previously:
 It turns out that, while WordPress offers a content export tool by default, it's highly limited in what it can do (i.e., it spits out XML). WordPress, naturally, isn't strongly incentivized to help you move your content to non-WordPress platforms, so their exporter is only designed to work with WordPress (if at all; it's not great in my experience).
 
 
-I tried a few tools, including a seemingly abandoned Gatsby plugin, and even considered converting my posts by hand before I came across [this GitHub repo](https://github.com/lonekorean/wordpress-export-to-markdown) with a with a Node CLI tool called `wordpress-export-to-markdown`. (Thanks to the author for jumping in a Twitter thread where I was griping about how hard this whole thing is!)
+I tried a few tools, including a seemingly abandoned Gatsby plugin, and even considered converting my posts by hand before I came across [this GitHub repo](https://github.com/lonekorean/wordpress-export-to-Markdown) with a with a Node CLI tool called `wordpress-export-to-Markdown`. (Thanks to the author for jumping in a Twitter thread where I was griping about how hard this whole thing is!)
 
 This miraculous little CLI tool takes your WordPress export XML file, and not only converts each piece of content to Markdown—complete with frontmatter!—but can also scrape your site for all the images in the content and neatly download them.
 
@@ -173,7 +174,7 @@ While I had a few small hiccups with it (mostly not really the tool's fault), th
 
 WordPress apparently matches that line from the database to the PHP file that renders its contents at run time. (As you can infer, I'm using the Block Lab plugin for my custom blocks here. I'm not sure if this is a Block Lab-specific thing, or if this is the case for _any_ custom block.)
 
-So long story short: `wordpress-export-to-markdown` is a phenomenal tool that I'd highly recommend to anybody looking to export WordPress content as Markdown. But WordPress doesn't provide enough info in its XML export to know how to render a custom block, so the comment (and block, and its contents) are simply omitted from the output.
+So long story short: `wordpress-export-to-Markdown` is a phenomenal tool that I'd highly recommend to anybody looking to export WordPress content as Markdown. But WordPress doesn't provide enough info in its XML export to know how to render a custom block, so the comment (and block, and its contents) are simply omitted from the output.
 
 That meant I had to go through each of my posts, and manually insert every single custom block that was missing, along with its contents.
 
@@ -188,17 +189,19 @@ Among Gridsome's library of plugins is a particularly delightful one called [Vue
 
 That means I can still have the functionality of all my custom blocks even while I'm writing posts in Markdown; simply drop a custom component in where it's needed and use Markdown for everything else! Here's an example:
 
-```
-# Some generic markdown
-
-A paragraph **also** using _markdown_.
-
-<SomeVueComponent props="whatever">
+<Code lang="markdown">
+# Some generic Markdown
+<br />
+A paragraph _also_ using _Markdown_.
+<br />
+&lt;SomeVueComponent props="whatever">
   Use components where needed!
-</SomeVueComponent>
-
-## Back to markdown
-```
+&lt;/SomeVueComponent>
+<br />
+## Back to Markdown!
+<br />
+_Neat, huh?_
+</Code>
 
 All the custom blocks I had on WordPress have now been faithfully recreated in simple Vue single-file components, available to import and use at will in these posts.
 
@@ -237,10 +240,9 @@ module.exports = function(api) {
     const uniqueCategories = new Set(allPostsCategories)
 <br/>
     //Finally, add each category as a data node, with an array of the matching posts
-    uniqueCategories.forEach((category, index) => {
+    uniqueCategories.forEach(category => {
       categories.addNode({
         title: category,
-        id: index,
         posts: allPosts.filter(post => post.categories.includes(category))
       })
     })
