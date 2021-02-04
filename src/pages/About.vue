@@ -44,12 +44,12 @@
       </ul>
 
 
-      <h3>I know some, and would like to learn more, about:</h3>
+      <h3>Things I know some and am currently learning more about:</h3>
 
       <ul>
         <li>TypeScript</li>
         <li>GraphQL</li>
-        <li>JavaScript testing</li>
+        <li>JavaScript testing (Mocha/Chai)</li>
         <li>Node/serverless</li>
       </ul>
 

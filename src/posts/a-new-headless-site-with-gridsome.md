@@ -5,6 +5,8 @@ updated: "2021-01-19"
 categories:
   - "javascript"
   - "web"
+  - "vue"
+  - "wordpress"
 coverImage: "wp-plus-gridsome.png"
 excerpt: A lengthy write-up diving into what headless means, its advantages and disadvantages, some of the techniques and gotchas involved, and, finally, the new design of this site specifically.
 ---

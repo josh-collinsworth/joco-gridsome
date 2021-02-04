@@ -5,6 +5,7 @@ updated: "2021-02-02"
 categories:
   - "wordpress"
   - "javascript"
+  - "vue"
 coverImage: "gw.png"
 excerpt: WordPress was potentially the most impactful and empowering technology I've yet encountered. It transformed my career path and enabled me to do anything I wanted at every point in my journey. So why leave it now?
 ---
@@ -14,14 +15,9 @@ import SideNote from '~/components/SideNote'
 import Code from '~/components/Code'
 import xa from '~/components/ExternalLink'
 
-Before I start this article, there's one thing I want to get out of the way very clearly and quickly: **I am not here to bash WordPress.**
-
-The tech community online can be, shall we say, a bit of a touchy place. Too often when we make statements about a particular technology and our subjective evaluations of their personal value to us, it's taken as derogatory; some hot take dunking on said tech. So before anybody gets all wound up: this isn't that.
-
-<Highlight>This is just the story of my history with WordPress, and evaluating its current value in my specific use case.</Highlight>
-
-
----
+<SideNote>
+This piece is not a value statement on WordPress. I'm not bashing it, nor am I suggesting other people ought to abandon it. This is just the story of my personal evaluation of its tradeoffs in my unique use case.
+</SideNote>
 
 I was first introduced to WordPress pretty early in my design career. I was a fledgling professional designer working at a small branding agency when I got my first glimpse of everything WordPress could be via the impressive [Divi theme](https://www.elegantthemes.com/gallery/divi/).
 
@@ -35,11 +31,11 @@ I got a lot of mileage out of my site while it was on WordPress. At first, it wa
 
 Finally, last year (2020), I converted to a headless site, with WordPress on the back end and Gridsome on the front. (I wrote about that process in <g-link to="/blog/a-new-headless-site-with-gridsome/">this post</g-link>.)
 
-<Callout> I've come to the inevitable conclusion that, in the case of this, my personal website and blog, WordPress does not represent value so much as tech debt.</Callout>
+<Callout> I've come to the inevitable conclusion that, in the case of this, my personal website and (occasional) blog, WordPress does not represent value so much as tech debt.</Callout>
 
 At the time, I made the decision to go headless because I wanted to keep a foot in the WordPress world, for reasons laid out in previously mentioned post. But to summarize: I wanted the best of both worlds. I didn't want to go full static, but giving up WordPress entirely wasn't really a thought for me then, either, because having a database and all my content (especially images) still represented value.
 
-Fast-forward several months, and I've come to the inevitable conclusion that, in the case of this, my personal website and blog, WordPress does not represent value so much as tech debt.
+Fast-forward several months, and I've come to the inevitable conclusion that, in the case of this, my personal website and (occasional) blog, WordPress does not represent value so much as tech debt.
 
 
 ## Why move? Why now?
@@ -56,22 +52,22 @@ The real question at the end of that mental calculation is: does WordPress's val
 
 The answer for me is: no; WordPress isn't worth it anymore in the case of my specific needs and wants.
 
-I thought about taking the WordPress side of the site to some cheap-o $5/month hosting. I tried out [SpinUpWP](https://spinupwp.com/), and liked it a lot, but not enough to justify the cost of one single site. (I'd definitely use it if I had multiple client sites to host, though.)
+I thought about taking the WordPress side of the site to some cheap-o $5/month hosting. I tried out [SpinupWP](https://spinupwp.com/), and liked it a lot, but not enough to justify the cost of one single site. (I'd definitely use it if I had multiple client sites to host, though.)
 
 <Highlight>Eventually, I came to the conclusion that I just want things simple, and headless WordPress is not simple.</Highlight>
 
-Again: that doesn't mean WordPress is bad. It's not. It just means that of the zillion things WordPress is and is capable of, either I'm not doing them, or doing them WordPress's way isn't personally worth the tradeoff to me, and for my unique set of needs and goals.
+Again: that doesn't mean WordPress is bad. It's not. (And while we're near the topic: neither is PHP. That joke can just die, please.) This just means that of the zillion things WordPress is and is capable of, either I'm not doing them, or doing them WordPress's way isn't personally worth the tradeoff to me, and for my unique set of needs and goals.
 
 
 ## So what's the alternative?
 
 When this site was headless WordPress, the front-end was already built in <xa to="gridsome.org">Gridsome</xa>, a Vue-based static site generator that could be fairly described as Vue's equivalent of [Gatsby](https://www.gatsbyjs.com/).
 
-<SideNote>A "static site generator" (SSG) is a tool that takes input of some kind—maybe Markdown files, maybe JSON from an API, or maybe even a combination of different data sources—and turn it all into a traditional, static HTML website. This allows the site to be hosted cheaply and easily on a CDN-backed host for optimum performance.</SideNote>
+<SideNote>A <b>static site generator</b> (or SSG) is a tool that takes input of some kind—maybe Markdown files, maybe JSON from an API, or maybe even a combination of different data sources—and turn it all into a traditional, static HTML website. This allows the site to be hosted cheaply and easily on a CDN-backed host for optimum performance.</SideNote>
 
 While it would've certainly been possible to just abandon the headless formula and go back to good ol' solo WordPress, that wasn't really an option to me. I'd lose too much work that had gone into this site already, and honestly, I wasn't interested in abandoning the modern dev experience that a JavaScript-based framework offers. I'm not making any value statements here, but to me:
 
-<Highlight>Authoring front-end code in Markdown and Vue just feels nicer than working with PHP templates.</Highlight>
+<Highlight>Authoring front-end code in Markdown and Vue just feels nicer than working with the block editor and PHP templates.</Highlight>
 
 (No knock on PHP. I still enjoy it when I get the chance to dive back into those waters, like playing an old video game I have fond memories of. But it's not my first choice anymore.)
 
@@ -81,20 +77,20 @@ Gridsome, along with many other static site generators, has the ability to gener
 
 <SideNote>If you're not familiar with Markdown: it's a simple way of authoring formatted text that's much closer to natural typing than HTML. There's a pretty neat <xa to="dillinger.io/">Markdown playground here</xa> that covers the general syntax.</SideNote>
 
-The front end of this site was already using Markdown to create content with its projects; each project is a Markdown file with the project's details. Here's an example project Markdown file, just to get the idea across:
+The front end of this site was already using Markdown to create content with its projects; each project is a Markdown file with the project's details. Here's an example project Markdown file, just to get general the idea across on how Gridsome scrapes content from files and converts it into a content type:
 
-```
----
+<Code lang="markdown">
+&dash;&dash;&dash;
 title: My Awesome Project
 featuredMedia: projects/image.png
 category: design + illustration
 summary: This project was awesome
----
-
+&dash;&dash;&dash;
+<br />
 The project content Markdown would go here. Neato!
-```
+</Code>
 
-All of those files are compiled on the <g-link to="/projects">projects page</g-link> using just a bit of config setup that directs Gridsome to the folder where it can find project files, and what template(s) to render them with:
+Any Markdown files in the `/projects` directory are processed into content for the <g-link to="/projects">projects page</g-link>, using just a bit of config setup that directs Gridsome to the folder where it can find project files, and what Vue template(s) to render them with:
 
 <Code lang="javascript">
 //gridsome.config.js
@@ -112,7 +108,9 @@ plugins: [
 templates: {
   project: [
     {
+      // The dynamic path for each project
       path: '/projects/:title',
+      // What Vue component is used to render each project
       component: 'src/templates/single_project.vue'
     },
   ],
@@ -124,6 +122,7 @@ templates: {
 Finally, the template file for rendering the data collected from the Markdown files (the `single_project.vue` file seen above, simplified here just to communicate the general idea):
 
 <Code lang="html">
+&lt;!-- The Vue template -->
 &lt;template&gt;
   &lt;Layout&gt;
     &lt;h1&gt;&#123;&#8203;&#123; project.title &#125;&#125;&lt;/h1&gt;
@@ -134,18 +133,17 @@ Finally, the template file for rendering the data collected from the Markdown fi
 &lt;/template&gt;
 </Code>
 
-
 _(Not pictured: there's also a GraphQL query to grab the currently viewed project. I just didn't show that for the sake of simplicity.)_
 
 ---
 
-So moving all my WordPress posts to Markdown files and abandoning the database altogether didn't seem like that much of a leap; the pieces were all there already. (_I was only half-right in that assessment; more on that in a bit_.)
+So moving all my WordPress posts to Markdown files and abandoning the database altogether didn't seem like that much of a leap; the pieces were all there already. (_I was only half-right in that assessment; more on that in a bit_.) And I liked the idea of working with a purely file- and code-based site a lot.
 
-Having all your content hosted in the repository along with your files means that search-and-replace is easy, and can be done in your text editor, rather than via MySQL or WP-CLI. It also means anybody can contribute a pull request to correct mistakes or add context. Plus, previewing posts as they're being written was always a problem with headless. I'm sure you could do some tricky things to make it possible, but none of them were as easy as simply spinning up a local dev server and writing in a Markdown file, watching your post auto-refresh in the browser every time you save.
+Having all your content hosted in the repository along with your files means that search-and-replace is easy, and can be done in your text editor, rather than via MySQL or WP-CLI. It also means anybody can contribute a pull request to correct mistakes or provide context. Plus, previewing posts as they're being written was always a problem with headless. I'm sure you could do some tricky things to make it possible, but none of them were as easy as simply spinning up a local dev server and writing in a Markdown file, watching your post auto-refresh in the browser every time you save.
 
 But most importantly for me: it means I no longer even need a database. MySQL need not be a part of the stack any longer, because everything I have on the site is in a `.md` file.
 
-I shied away from this approach for a couple of main reasons previously:
+When I was initially converting this site to headless, I didn't go full static at the time for two reasons:
 
 1. I liked having WordPress's REST API to query for searches; and
 2. Exporting WordPress posts as Markdown is somewhere between not easy and painstakingly tedious.
@@ -157,10 +155,9 @@ I shied away from this approach for a couple of main reasons previously:
 
 <Callout>This miraculous little CLI tool takes your WordPress export XML file, and not only converts each piece of content to Markdown—complete with frontmatter!—but can also scrape your site for all the images in the content and neatly download them.</Callout>
 
-It turns out that, while WordPress offers a content export tool by default, it's highly limited in what it can do (i.e., it spits out XML). WordPress, naturally, isn't strongly incentivized to help you move your content to non-WordPress platforms, so their exporter is only designed to work with WordPress (if at all; it's not great in my experience).
+It turns out that, while WordPress offers a content export tool by default, it's highly limited in what it can do (i.e., it spits out XML). WordPress, naturally, isn't strongly incentivized to help you move your content to non-WordPress platforms, so their exporter is only designed to work with WordPress (if at all; it's not particularly reliable in my experience).
 
-
-I tried a few tools, including a seemingly abandoned Gatsby plugin, and even considered converting my posts by hand before I came across [this GitHub repo](https://github.com/lonekorean/wordpress-export-to-Markdown) with a with a Node CLI tool called `wordpress-export-to-Markdown`. (Thanks to the author for jumping in a Twitter thread where I was griping about how hard this whole thing is!)
+I tried a few tools, including a seemingly abandoned Gatsby plugin, and even considered converting my posts by hand before I came across [this GitHub repo](https://github.com/lonekorean/wordpress-export-to-markdown) with a with a Node CLI tool called `wordpress-export-to-markdown`. (Thanks to the author for jumping in a Twitter thread where I was griping about how hard this whole thing is!)
 
 This miraculous little CLI tool takes your WordPress export XML file, and not only converts each piece of content to Markdown—complete with frontmatter!—but can also scrape your site for all the images in the content and neatly download them.
 
@@ -172,9 +169,9 @@ While I had a few small hiccups with it (mostly not really the tool's fault), th
 <!-- wp:block-lab/block_name_here -->
 ```
 
-WordPress apparently matches that line from the database to the PHP file that renders its contents at run time. (As you can infer, I'm using the Block Lab plugin for my custom blocks here. I'm not sure if this is a Block Lab-specific thing, or if this is the case for _any_ custom block.)
+WordPress apparently matches that line from the database to the PHP file that renders its contents at run time, rather than having the HTML for the block stored in the database as it would with typical blocks, like headings and text. (As you can infer, I'm using the Block Lab plugin for my custom blocks here. I'm not sure if this is a Block Lab-specific problem, or if this is the case for _any_ custom block.)
 
-So long story short: `wordpress-export-to-Markdown` is a phenomenal tool that I'd highly recommend to anybody looking to export WordPress content as Markdown. But WordPress doesn't provide enough info in its XML export to know how to render a custom block, so the comment (and block, and its contents) are simply omitted from the output.
+So long story short: `wordpress-export-to-markdown` is a phenomenal tool that I'd highly recommend to anybody looking to export WordPress content as Markdown. But WordPress doesn't provide enough info in its XML export to know how to render a custom block, so the comment (and block, and its contents) are simply omitted from the output.
 
 That meant I had to go through each of my posts, and manually insert every single custom block that was missing, along with its contents.
 
@@ -183,11 +180,32 @@ Fortunately, I only have like 20 posts on this site (over the course of like sev
 Also fortunately: I like my current solution to custom blocks better anyway.
 
 
+## Handling images without WordPress
+
+One of the amazing things that WordPress does for you, for free and out of the box, is generate multiple image sizes and serve your content images with responsive source sets. This means users always load the appropriate image size for their device, which is a big benefit to both user experience and performance. If you're using Jetpack, you also get your images (optionally) loaded from WordPress.com's global CDN servers for faster load times.
+
+<Callout>Gridsome ships with a <code>&lt;g-image&gt;</Code> component that handles loading appropriately sized images, <em>and</em> goes a step further with automatic lazy loading.</Callout>
+
+Moving away from WordPress means those benefits are gone. Fortunately, Gridsome ships with a `<g-image>` component that handles loading appropriately sized images, _and_ goes a step further with automatic lazy loading. And when you're deploying on Netlify, you have a CDN already, so that's all sorted.
+
+There _is_ the matter of getting the images you need without the ones you don't (since your `wp-content` folder will be full of extraneous resized images alongside the originals). Scraping all the original images from the WordPress site was fairly easy thanks to the `wordpress-export-to-markdown` tool mentioned above (although it _did_ miss a few for some reason. No big deal, but something to watch out for). Beyond that, a bit of RegEx in a search-and-replace over the Markdown files, and I was in business.
+
+A couple of other considerations around images, though:
+
+* **All your images need to live in your repo with this approach.** I don't have enough (and they aren't large enough) that it's a problem, but that might be an issue for some sites.
+
+* **Build times balloon with lots of images.** Netlify is free to use up to a certain number of build minutes, and the only times I've gotten close were when I was doing regular updates on this site. (Thankfully, there's a [Gridsome Cache Netlify plugin](https://github.com/edm00se/netlify-plugin-gridsome-cache) to prevent unnecessary duplicate image processing.
+
+
 ## Building with Vue components in Markdown
 
 Among Gridsome's library of plugins is a particularly delightful one called [Vue Remark](https://gridsome.org/plugins/@gridsome/vue-remark). Vue Remark simply allows you to import Vue components in your Markdown files, and use them right alongside your Markdown content anywhere you want.
 
-That means I can still have the functionality of all my custom blocks even while I'm writing posts in Markdown; simply drop a custom component in where it's needed and use Markdown for everything else! Here's an example:
+This means I can still have the functionality of all my custom blocks even while I'm writing posts in Markdown!
+
+<Highlight>Vue Remark allows you to simply drop Vue components into Markdown files anywhere they're needed.</Highlight>
+
+Here's an example:
 
 <Code lang="markdown">
 # Some generic Markdown
@@ -212,13 +230,13 @@ The authoring experience is incredibly nice, too; since Gridsome runs on a local
 
 ## Other considerations
 
-Authoring content via Markdown means that handling drafts is something you need to do on your own; there isn't a "publish" button anymore.
+Remember that authoring content via Markdown means that handling drafts is something you need to do on your own; there isn't a "publish" button anymore. (Though you won't lose revisions as long as you keep a tidy git history.)
 
-There are a few ways to go about this. The simplest is probably to add a `published` or `status` key to the frontmatter of each post, and add a conditional to your code to filter out unpublished content.
+There are a few ways to go about drafts. The simplest is probably to add a `published` or `status` key to the frontmatter of each post, and add a conditional to your code to filter out unpublished content.
 
-Personally, I created a `drafts` folder inside my `posts` folder, and then added it to the project's `.gitignore` file to ensure that any time I push to the main branch, the drafts stay behind. That way, nobody can snoop on my drafts in GitHub before they're actually published, either. (Not that anybody cares that much anyway, but hey.)
+Personally, I created a `drafts` folder inside my `posts` folder, and then added it to the project's `.gitignore` file to ensure that any time I push to the main branch, the drafts stay behind. That way, nobody can snoop on my drafts in GitHub before they're actually published, either. (Not that anybody cares that much, or that it would really matter even if they did, but at least if I delete a post before I publish it, it's not anywhere in my GitHub history.)
 
-Also note that generating taxonomy pages will be an extra challenge with any SSG. In the case of Gridsome, you can modify the `gridsome.server.js` file to add collections. Here's how I achieved mine:
+Also note that generating taxonomy pages (categories, tags, etc.) will likely be an extra manual challenge with any static site generator. In the case of Gridsome, you can modify the `gridsome.server.js` file to add new collections. Here's how I achieved mine:
 
 <Code lang="javascript">
 module.exports = function(api) {
@@ -255,16 +273,14 @@ module.exports = function(api) {
 
 ## Final thoughts
 
-As I said at the beginning: I still love WordPress. I just love simplicity more, and there's something attractive about having my entire website be a collection of files in a git repo. No database; no SQL dumps; no live server at all. Just content files compiled to beautifully uncomplicated HTML.
+<Highlight>I still love WordPress. But I found myself wanting a site I could tinker with in my editor, all together in one place. No database; no SQL dumps; no live server at all. Just content files compiled to beautifully uncomplicated HTML.</Highlight>
 
-<Callout>I still love WordPress. I just love simplicity&nbsp;more.</Callout>
+This approach certainly isn't right for everyone. It works great for me because I'm the only one working on this site. But if I had co-authors, or users, or collaborators, the whole calculation might be drastically different.
 
-This approach certainly isn't right for everyone. It works great for me because I'm the only one working on this site. But if I had co-authors, or users, or collaborators, the whole calculation would be drastically different.
+<Callout>I like things being back together, all in&nbsp;one&nbsp;place.</Callout>
 
-And of course, what *I* find to be simple may be very different from what *you* find to be simple.
+And of course, what *I* find to be simple may be very different from what *you* find to be simple. I love living in my code editor. You might find a visual interface easier to use. Both are just fine. It's just a matter of personal preference.
 
-I've gotten accustomed to command line tools and local Node development servers and git workflows, but that may be a black box of dark magic to you, and that's absolutely ok. I'm not selling something here. I'm just telling my story.
+WordPress just didn't quite fit my wants and needs for this project. It might still be a great fit for you and yours. And I'm sure it will be again for me for a future project.
 
-WordPress was worth abandoning for me, for this site, just because it didn't quite fit my wants and needs for this project. It might still be a great fit for you and yours. And I'm sure it will be again for me for a future project.
-
-For now, though: I like things being back together, all in one place.
+But right now, I like things being back together, all in one place.

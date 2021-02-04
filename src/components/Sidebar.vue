@@ -152,7 +152,7 @@ export default {
 
     li {
       font-size: inherit;
-      margin-bottom: .75em;
+      margin-bottom: .6em;
 
       a {
         font-size: inerit;
