@@ -6,68 +6,15 @@
 
       <h2>Professionally: </h2>
 
-      <p>I'm a front-end engineer specializing in Vue. I love solving user problems using modern JavaScript and elegant CSS paired with semantic, accessible HTML. My professional background also includes graphic design, code instruction, technical support and help documentation.</p>
-
-      <g-image id="avatar" src="/images/self-portrait-summer-2018.svg" alt="" />
-
-      <p>My ideal role involves contributing to a collaborative team that cares deeply about good design, inclusion, mentorship, and how its work impacts the world.</p>
-
-      <p>I most recently worked on a product team, building features and enhancements within a design system, but I'm open to to the right fit anywhere that allows me put my skills to use for a positive impact.</p>
-
-
-      <h3>I might be your guy if you need someone&nbsp;who:</h3>
-
-      <ul>
-        <li>Is an exceptional collaborator and communicator;</li>
-        <li>Can both code <em>and</em> design;</li>
-        <li>Is a CSS whiz, including Sass, modern layout, responsive design, and fun(ctional)&nbsp;animation;</li>
-        <li>Writes accessible, semantic HTML and knows the ins and outs of SVG;</li>
-        <li>Is strong with JavaScript and/or Vue (including ES6+, Vue Router, Vuex, Nuxt, Gridsome and jQuery);</li>
-        <li>Knows their way around web performance, optimization, DNS, and troubleshooting;</li>
-        <li>Is deeply familiar with WordPress;</li>
-        <li>Enjoys teaching and helping others;</li>
-        <li>Can author clear, simple, useful help docs and tutorials; and/or</li>
-        <li>Is prolific with puns and dad jokes.</li>
-      </ul>
-
-
-      <h3>I'm <em>also</em> capable with:</h3>
-
-      <ul>
-        <li>React</li>
-        <li>Svelte</li>
-        <li>Ruby on Rails</li>
-        <li>PHP and MySQL</li>
-        <li>Regular tools of the trade like git/GitHub, NPM, CLIs and such</li>
-        <li>Agile/Scrum</li>
-        <li>Collaborating on designs, communicating with stakeholders and end users, and presenting work</li>
-      </ul>
-
-
-      <h3>Things I know some and am currently learning more about:</h3>
-
-      <ul>
-        <li>TypeScript</li>
-        <li>GraphQL</li>
-        <li>JavaScript testing (Mocha/Chai)</li>
-        <li>Node/serverless</li>
-      </ul>
-
-
-      <h3>I'm probably <em style="text-decoration: underline">NOT</em> your guy if:</h3>
-      <ul>
-        <li>Remote work is out of the question (<i>potentially willing to reconsider after the pandemic is over, but flexibility is still preferred</i>);</li>
-        <li>Your company isn't <em>deeply</em> serious about DEI and anti-racism;</li>
-        <li>High quality, inclusive design isn't a priority;</li>
-        <li>You need somebody who's good at cleaning or closing doors (<i>I asked my wife what I was bad at and that's what she said</i>);</li>
-        <li>Your culture doesn't allow people to bring their whole selves to work every&nbsp;day; and/or</li>
-        <li>You can't stand dad humor.</li>
-      </ul>
-
+      <div>
+        <g-image id="avatar" src="/images/self-portrait-summer-2018.svg" alt="" />
+        
+        <p>I'm a senior JavaScript developer specializing in Vue, elegant CSS, and semantic, accessible HTML. I currently put those skills to use at <xa to="aware3.com">Aware3</xa> building software to help nonprofits engage with their communities.</p>
+      </div>
 
       <h2>Previously: </h2>
       <p>
-        Front-end developer at <xa to="https://wpengine.com">WP Engine;</xa> Tier 2 support team tech lead at <xa to="https://getflywheel.com">Flywheel</xa>; WordPress instructor for <xa to="interfaceschool.com">Aim Code School</xa>; graphic designer; seasoned bartender who makes a mean old fashioned.
+        Front-end developer at <xa to="https://wpengine.com">WP Engine;</xa> Tier 2 support team tech lead at <xa to="https://getflywheel.com">Flywheel</xa>; WordPress instructor for <xa to="interfaceschool.com">Aim Code School</xa>; graphic designer; seasoned bartender who makes a pretty good old fashioned; deservedly struggling musician.
       </p>
 
 
@@ -75,7 +22,7 @@
       <p>
         Maker of the game <i>Quina</i> (<xa to="quina.app">web</xa> / <xa to="https://play.google.com/store/apps/details?id=app.quina.collinsworth">Google Play Store</xa>); Omaha, Nebraska resident; <g-link to="/code/">hobby coder</g-link>;
         author of a frequently neglected <g-link to="/blog/">blog</g-link>;
-        font hoarder; husband; dad (with both the jokes and bod to match); fairly ordinary white dude in tech striving to be an LGBTQIA+ and BIPOC ally and advocate; cold brew addict; author of over ten thousand <xa to="twitter.com/jjcollinsworth">tweets</xa>, a few of which are decent; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; massive Nintendo fan; musician/guitarist/hack pianist/aggressively mediocre singer; liberal abuser of semicolons.
+        font hoarder; husband; dad (with both the jokes and bod to match); fairly ordinary white dude in tech striving to be an LGBTQIA+ and BIPOC ally and advocate; cold brew addict; author of over ten thousand <xa to="twitter.com/jjcollinsworth">tweets</xa>, a few of which are decent; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; lifelong Nintendo fan; musician/guitarist/hack pianist/aggressively mediocre singer; liberal abuser of semicolons.
       </p>
     </div>
   </Layout>
@@ -115,7 +62,7 @@ export default {
     padding: 1rem;
     background: var(--lightBlue);
     border-radius: 4rem;
-    margin: 1rem;
+    margin: 0 0 1rem 1rem;
     shape-outside: circle(80%);
   }
 }

@@ -1,6 +1,5 @@
 <template>
-  <Layout>
-
+	<Layout>
 		<h1>Projects</h1>
 		<WorkLinks />
 
@@ -44,8 +43,7 @@
 				</div>
 			</li>
 		</transition-group>
-
-  </Layout>
+	</Layout>
 </template>
 
 <script>
@@ -73,6 +71,7 @@ export default {
 			return str.replace(/^\w/, c => c.toUpperCase());
 		}
 	},
+
 	computed: {
 		filteredProjects() {
 			return this.projects.filter(project => this.shownCategories.includes(project.node.category))
@@ -89,19 +88,19 @@ export default {
 <static-query>
 query {
 	allProject(sortBy: "order", order: ASC) {
-    edges {
-      node {
-        title
-        id
-        link
-        content
-        featuredMedia
-        category
-				tags
-				path
-				summary
-      }
-    }
+		edges {
+			node {
+			title
+			id
+			link
+			content
+			featuredMedia
+			category
+					tags
+					path
+					summary
+			}
+		}
   }
 }
 </static-query>
