@@ -59,6 +59,37 @@ I thought about taking the WordPress side of the site to some cheap-o $5/month h
 Again: that doesn't mean WordPress is bad. It's not. (And while we're near the topic: neither is PHP. That joke can just die, please.) This just means that of the zillion things WordPress is and is capable of, either I'm not doing them, or doing them WordPress's way isn't personally worth the tradeoff to me, and for my unique set of needs and goals.
 
 
+### An aside on WordPress's trajectory and future
+
+There's an interesting story here about how WordPress, in many ways, made its name—rightfully—as the democratizer of the web. Anybody could get a website and set it up to do pretty much whatever they wanted with WordPress. And if you just wanted that to be a simple blog, hey, even better! You can host it for free on WordPress.com.
+
+But as time goes on, I've noticed that it seems like the _hosting_ story of WordPress has evolved a lot—first for the better, and now…maybe not as much.
+
+In the early days (let's say from WordPress's origins to around the early 2010s), it could be very difficult to self-host WordPress. Setting up the requisite server software was relegated to relatively few very technical people.
+
+Then, managed WordPress hosting blew up, and companies like WP Engine and Flywheel (RIP) made entering the WordPress space _easier_ than it had ever been before—but also arguably more expensive.
+
+Don't get me wrong; that's fair. Managed WordPress hosting exists—and the companies selling it are succeeding despite its price tag—because it's valuable. They take care of some very difficult things for you, and that's worth the price in a lot of cases.
+
+<Callout>I worry that WordPress has begun squeezing the side projects and personal blogs out of the market.</Callout>
+
+But the price tag of WordPress hosting generally assumes that your site is _worth_ that to you. WordPress hosting has become _costly_ because it wants your key, important businesses to run on WordPress, and in that pursuit, I worry that WordPress has begun squeezing the side projects and personal blogs out of the market.
+
+Even GoDaddy starts at $10 per month; most other managed hosts, that would be considered a step above that, aren't selling it for less than about $15–30 per month (even WordPress.com will charge you at least $25 per month if you want SFTP access), and that price tag is _not_ cheap for a simple personal website or side project.
+
+<Highlight>There's an argument to be made, I think, that the Jamstack—and companies like Netlify and Vercel—are succeeding because they're filling a gap that WordPress just&nbsp;isn't.</Highlight>
+
+Granted, the tech hurdle is higher—not just anybody can code up a static site, and that's not to be discounted—but I can have a live Jamstack site on the web for _absolutely free_ any time I want with Netlify, et al. 
+
+<Highlight>WordPress, for all its myriad benefits, is definitely <em>not</em> the choice if you just want a random side project to live on the web, forever, for minimal personal cost.</Highlight>
+
+<Callout>WordPress just won't continue to be worth it for everyone all&nbsp;the&nbsp;time.</Callout>
+
+As I write this, WP Engine and, no doubt, many other hosts are working on the headless WordPress story, and figuring out how to empower that tech stack and solve its problems in the same way they solved WordPress's. I have no doubt they'll come forward with something very compelling that will meet a great many customers' needs, but I also have no doubt it won't be cheap—certainly not as cheap as what the Jamstack is currently offering. And I think that will make many more people ask the same question I asked, and come to the same conclusion; WordPress just won't continue to be worth it for everyone all the time.
+
+
+
+
 ## So what's the alternative?
 
 When this site was headless WordPress, the front-end was already built in <xa to="gridsome.org">Gridsome</xa>, a Vue-based static site generator that could be fairly described as Vue's equivalent of [Gatsby](https://www.gatsbyjs.com/).
