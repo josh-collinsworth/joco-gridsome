@@ -2,7 +2,7 @@
   <Layout :sidebar="true">
     <article>
       <g-image
-        :src="require(`!!assets-loader!@images/post_images/${$page.post.coverImage}`)"
+        :src="require(`~/assets/images/post_images/${$page.post.coverImage}`)"
         alt=""
       />
       <h1 v-html="$page.post.title"></h1>

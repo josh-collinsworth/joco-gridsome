@@ -25,7 +25,7 @@
 
 		<div class="lightbox" v-if="lightboxPhoto || lightboxPhoto === 0" @click="lightboxPhoto = null" @keydown="lightboxPhoto++">
 			<button v-if="lightboxPhoto > 0" @click.stop="previousPhoto" class="prev-button">&lsaquo;</button>
-			<g-image :src="require(`!!assets-loader!@images/2020_images/${photos[lightboxPhoto].name}`)" alt="" />
+			<g-image :src="require(`~/assets/images/2020_images/${photos[lightboxPhoto].name}`)" alt="" />
 			<span class="lightbox__info">
 				{{ photoDate(photos[lightboxPhoto].name) }}
 				• 
@@ -36,7 +36,7 @@
 
 		<div id="photo-grid">
 			<a v-for="(photo, index) in photos" :href="require(`@/assets/images/2020_images/${photo.name}`)" @click.prevent="startLightbox(index)" :key="photo.name" :class="{ wide: photo.wide, jumbo: photo.jumbo }">
-				<g-image :src="require(`!!assets-loader!@images/2020_images/${photo.name}`)" alt="" />
+				<g-image :src="require(`~/assets/images/2020_images/${photo.name}`)" alt="" />
 				<span class="date">{{ photoDate(photo.name) }}</span>
 			</a>
 		</div>

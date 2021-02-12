@@ -34,7 +34,7 @@
 							</div>
 						</div>
 					</div>
-					<g-image :src="require(`!!assets-loader?width=480&height=480&position=top!@images/${project.node.featuredMedia}`)" :alt="project.node.title" />
+					<g-image :src="projectImageSource(project)" :alt="project.node.title" />
 				</g-link>
 			</li>
 			<li v-if="!filteredProjects.length" id="projects-empty-state" key="empty-error">
@@ -69,6 +69,10 @@ export default {
 
 		capitalize(str) {
 			return str.replace(/^\w/, c => c.toUpperCase());
+		},
+
+		projectImageSource(project) {
+			return require(`~/assets/images/${project.node.featuredMedia}?width=480&height=480&position=top`)
 		}
 	},
 

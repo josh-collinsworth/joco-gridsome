@@ -2,7 +2,7 @@
 	<Layout>
 		<p class="fancy pre-heading">{{ formattedCategory }} project:</p>
 		<h1>{{ project.title }}</h1>
-		<g-image id="project-image" class="callout" :src="require(`!!assets-loader!@images/${$page.project.featuredMedia}`)"/>
+		<g-image id="project-image" class="callout" :src="projectImage"/>
 		<div class="content" v-html="project.content"></div>
 		<div v-if="project.liked">
 			<h2>What I like about this project:</h2>
@@ -49,19 +49,20 @@ export default {
 	data: () => ({
 		project: {}
 	}),
-  computed: {
-		imageURL() {
-			return
-		}
-	},
+
 	mounted() {
 		this.project = this.$page.project
 	},
+
 	computed: {
 		formattedCategory() {
 			let letters = [...this.$page.project.category]
 			letters[0] = letters[0].toUpperCase()
 			return letters.join('')
+		},
+		
+		projectImage() {
+			return require(`~/assets/images/${this.$page.project.featuredMedia}`)
 		}
 	}
 }

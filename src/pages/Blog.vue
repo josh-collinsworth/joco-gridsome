@@ -7,7 +7,7 @@
 
     <article v-for="post in $page.allPost.edges" :key="post.node.id">
       <g-link :to="post.node.path" class="post-image-link">
-        <g-image :src="require(`!!assets-loader!@images/post_images/${post.node.coverImage}`)" alt="" />
+        <g-image :src="require(`~/assets/images/post_images/${post.node.coverImage}`)" alt="" />
         <span class="sr">{{ post.node.title }}</span>
       </g-link>
 

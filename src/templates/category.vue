@@ -5,7 +5,7 @@
 
     <article v-for="post in orderedPosts" :key="post.id">
       <g-link :to="post.path" class="post-image-link">
-        <g-image :src="require(`!!assets-loader!@images/post_images/${post.coverImage}`)" alt="" />
+        <g-image :src="require(`~/assets/images/post_images/${post.coverImage}`)" alt="" />
         <span class="sr">{{ post.title }}</span>
       </g-link>
 
