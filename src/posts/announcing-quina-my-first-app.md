@@ -1,6 +1,7 @@
 ---
 title: "Announcing Quina (My First App)!"
 date: "2020-12-10"
+updated: "2021-02-11"
 categories:
   - "javascript"
   - "design"
