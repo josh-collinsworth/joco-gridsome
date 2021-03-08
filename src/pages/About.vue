@@ -20,10 +20,25 @@
 
       <h2>Personally:</h2>
       <p>
-        Maker of the game <i>Quina</i> (<xa to="quina.app">web</xa> / <xa to="https://play.google.com/store/apps/details?id=app.quina.collinsworth">Google Play Store</xa>); Omaha, Nebraska resident; <g-link to="/code/">hobby coder</g-link>;
+        Maker of the game <i>Quina</i> (<xa to="quina.app">web</xa> / <xa to="https://play.google.com/store/apps/details?id=app.quina.collinsworth">Google Play Store</xa>);
+        <g-link to="/code/">hobby coder</g-link>;
         author of a frequently neglected <g-link to="/blog/">blog</g-link>;
-        font hoarder; husband; dad (with both the jokes and bod to match); fairly ordinary white dude in tech striving to be an LGBTQIA+ and BIPOC ally and advocate; cold brew addict; author of over ten thousand <xa to="twitter.com/jjcollinsworth">tweets</xa>, a few of which are decent; occasional conference speaker; pun enthusiast; accessibility and inclusion advocate; dog owner and lover; lifelong Nintendo fan; musician/guitarist/hack pianist/aggressively mediocre singer; liberal abuser of semicolons.
+        font hoarder;
+        husband;
+        dad (with both the jokes and bod to match);
+        fairly ordinary white dude in tech striving to be an LGBTQIA+ and BIPOC ally and advocate;
+        cold brew addict;
+        author of over ten thousand <xa to="twitter.com/jjcollinsworth">tweets</xa>, a few of which are decent;
+        occasional conference speaker;
+        pun enthusiast;
+        accessibility and inclusion advocate;
+        dog owner and lover;
+        lifelong Nintendo fan;
+        musician/guitarist/hack pianist/aggressively mediocre singer;
+        liberal abuser of semicolons.
       </p>
+
+      <p>Currently: Omaha; previously: Kansas City, Manhattan (KS), Oklahoma City, middle of nowhere, Kansas.</p>
     </div>
   </Layout>
 </template>

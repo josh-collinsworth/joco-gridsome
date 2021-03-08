@@ -20,7 +20,7 @@ If you're like me, you've probably spent some time wondering (and Googling) abou
 | .pdf    | Yes | Yes | Yes |Yes   |Yes         |Optional         |N/A             |
 | .png    | No  | No  | Yes |No    |Yes         |Lossless         |256 or milliions|
 | .svg    | No  | No  | Yes |Yes   |Yes         |Optional         |N/A             |
-| .tif    | No  | No  | Yes |No    |Yes         |Lossy or Lossless|Millions        |
+| .tif    | No  | Yes | Yes |No    |Yes         |Lossy or Lossless|Millions        |
 | .wmf    | No  | No  | Yes |Yes   |Yes         |Optional         |Millions        |
 
 
