@@ -1,7 +1,7 @@
 ---
 title: Emoji Pick Two
 featuredMedia: projects/emoji-pick-two.png
-link: https://codepen.io/joshuajcollinsworth/pen/vYOPKqx
+link: https://codepen.io/collinsworth/pen/vYOPKqx
 order: 3
 category: websites, code + apps
 tags: [interactive, silly, javascript]

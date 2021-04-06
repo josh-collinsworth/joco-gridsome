@@ -1,7 +1,7 @@
 ---
 title: Interactive JavaScript Keyboard
 featuredMedia: projects/js-keyboard.png
-link: https://codepen.io/joshuajcollinsworth/pen/VPXVbW
+link: https://codepen.io/collinsworth/pen/VPXVbW
 category: websites, code + apps
 order: 3
 tags: [interactive, javascript]

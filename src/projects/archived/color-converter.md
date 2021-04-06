@@ -1,7 +1,7 @@
 ---
 title: RGB/Hex Color Converter
 featuredMedia: projects/vue-color-converter.png
-link: https://codepen.io/joshuajcollinsworth/pen/mdJmBQz
+link: https://codepen.io/collinsworth/pen/mdJmBQz
 category: websites, code + apps
 tags: [app, vue]
 summary: An app for converting colors between RGB(A) and hexadecimal.

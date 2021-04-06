@@ -1,7 +1,7 @@
 ---
 title: Vue Emoji Slider Component
 featuredMedia: projects/emoji-slider.png
-link: https://codepen.io/joshuajcollinsworth/pen/OYgGNK
+link: https://codepen.io/collinsworth/pen/OYgGNK
 order: 2
 category: websites, code + apps
 tags: [vue, app, silly]

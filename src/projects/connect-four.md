@@ -1,7 +1,7 @@
 ---
 title: Connect Four in Vue and CSS
 featuredMedia: projects/connect-four.png
-link: https://codepen.io/joshuajcollinsworth/pen/MWwXpLd
+link: https://codepen.io/collinsworth/pen/MWwXpLd
 order: 2.9
 category: websites, code + apps
 tags: [app, game, vue]

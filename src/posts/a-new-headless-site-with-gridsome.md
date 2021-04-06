@@ -201,7 +201,7 @@ Highlights, in either case, only appear as larger text (no different to screen r
 
 <Highlight>Highlights take the text of the paragraph and—what else—highlight it, just like so. (How meta!)</Highlight>
 
-The colorful square grid on the header and footer were really the heart of the visual aspect of the design, and they grew out of a [typographic experiment I made on CodePen](https://codepen.io/joshuajcollinsworth/pen/ZEGrMRQ). I realized early on that the site was pretty stark and needed just a pop of color and interest, so I plagiarized myself and reused that colorful grid, and just for fun, made it re-render itself into a new random shape on every new page load.
+The colorful square grid on the header and footer were really the heart of the visual aspect of the design, and they grew out of a [typographic experiment I made on CodePen](https://codepen.io/collinsworth/pen/ZEGrMRQ). I realized early on that the site was pretty stark and needed just a pop of color and interest, so I plagiarized myself and reused that colorful grid, and just for fun, made it re-render itself into a new random shape on every new page load.
 
 Speaking of page loads: I experimented with many, many different animations and transitions on the site before finally settling on the advantages of the current setup. There was a time I had full in _and_ out transitions for the pages, but that required some custom setup that eventually I decided was too much of a burden—especially because the "out" transition effectively slowed down the site.
 

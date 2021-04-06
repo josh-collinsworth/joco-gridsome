@@ -4,7 +4,7 @@
 			GitHub
 		</xa>
 		and
-		<xa to="codepen.io/joshuajcollinsworth">
+		<xa to="codepen.io/collinsworth">
 			CodePen
 		</xa>
 		.

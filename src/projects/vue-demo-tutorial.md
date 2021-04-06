@@ -1,7 +1,7 @@
 ---
 title: Vue Interactive Demo Tutorial
 featuredMedia: projects/vue-demo.png
-link: https://codepen.io/joshuajcollinsworth/full/MLjVrQ
+link: https://codepen.io/collinsworth/full/MLjVrQ
 order: 2
 category: websites, code + apps
 tags: [tutorial, vue, javascript]

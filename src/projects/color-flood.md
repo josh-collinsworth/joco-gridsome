@@ -1,7 +1,7 @@
 ---
 title: React Color Flood Game with Colorblind Mode
 featuredMedia: projects/color-flood.png
-link: https://codepen.io/joshuajcollinsworth/pen/Pymdxo
+link: https://codepen.io/collinsworth/pen/Pymdxo
 order: 3
 category: websites, code + apps
 tags: [app, game, react]

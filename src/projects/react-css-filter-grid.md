@@ -1,7 +1,7 @@
 ---
 title: Interactive CSS Filter React Component (with GIFs!)
 featuredMedia: projects/css-filter-react-component.png
-link: https://codepen.io/joshuajcollinsworth/pen/bKXoRN
+link: https://codepen.io/collinsworth/pen/bKXoRN
 order: 2
 category: websites, code + apps
 tags: [app, game, react, javascript]

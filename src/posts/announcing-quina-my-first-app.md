@@ -15,7 +15,7 @@ import SideNote from '~/components/SideNote.vue'
 import Highlight from '~/components/Highlight.vue'
 
 
-One of my favorite code hobbies is making games on [CodePen](https://codepen.io). I've got a handful I've created in the online sandbox code editor over the years—[Connect Four](https://codepen.io/joshuajcollinsworth/pen/MWwXpLd), [Color Flood](https://codepen.io/joshuajcollinsworth/pen/Pymdxo), [Hangman](https://codepen.io/joshuajcollinsworth/pen/oNbavJN) and [sliding puzzles](https://codepen.io/joshuajcollinsworth/pen/XwPXrM), to name a few—but I've wanted to build a legit, standalone app for a long time now.
+One of my favorite code hobbies is making games on [CodePen](https://codepen.io). I've got a handful I've created in the online sandbox code editor over the years—[Connect Four](https://codepen.io/collinsworth/pen/MWwXpLd), [Color Flood](https://codepen.io/collinsworth/pen/Pymdxo), [Hangman](https://codepen.io/collinsworth/pen/oNbavJN) and [sliding puzzles](https://codepen.io/collinsworth/pen/XwPXrM), to name a few—but I've wanted to build a legit, standalone app for a long time now.
 
 As a secondary goal, I wanted to get that app listed in a major app store. There are plenty of hurdles for web devs in this regard; the app stores out there are mostly full of native apps (apps built with native iOS or Andriod code, rather than web languages).
 

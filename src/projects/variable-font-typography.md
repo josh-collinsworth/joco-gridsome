@@ -1,7 +1,7 @@
 ---
 title: Variable Font Typography Grid
 featuredMedia: projects/typography-grid.png
-link: https://codepen.io/joshuajcollinsworth/pen/ZEGrMRQ
+link: https://codepen.io/collinsworth/pen/ZEGrMRQ
 order: 3
 category: websites, code + apps
 tags: [typography, vue, javascript]

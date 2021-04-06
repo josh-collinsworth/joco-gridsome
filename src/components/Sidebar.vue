@@ -4,31 +4,7 @@
       <LogoSVG :iconOnly="true" />
     </g-link>
 
-    <h2>Recent posts</h2>
-    <ul>
-      <li v-for="post in recentPosts" :key="post.node.id">
-        <g-link :to="post.node.path">
-          {{post.node.title}}
-        </g-link>
-      </li>
-      <li v-if="$route.path !== '/blog'">
-        <g-link to="/blog">
-          &lsaquo; All posts
-        </g-link>
-      </li>
-    </ul>
-
-    <h2>Categories</h2>
-    <ul class="display-flex">
-      <li v-for="category in $static.allCategory.edges" :key="category.node.id">
-        <g-link :to="category.node.path">
-          {{ category.node.title }}
-        </g-link>
-      </li>
-    </ul>
-
     <h2>Links</h2>
-
     <ul>
       <li>
         <g-link to="/about">
@@ -51,9 +27,32 @@
         </xa>
       </li>
       <li>
-        <xa to="https://codepen.io/joshuajcollinsworth/">
+        <xa to="https://codepen.io/collinsworth/">
           CodePen
         </xa>
+      </li>
+    </ul>
+
+    <h2>Recent posts</h2>
+    <ul>
+      <li v-for="post in recentPosts" :key="post.node.id">
+        <g-link :to="post.node.path">
+          {{post.node.title}}
+        </g-link>
+      </li>
+      <li v-if="$route.path !== '/blog'">
+        <g-link to="/blog">
+          &lsaquo; All posts
+        </g-link>
+      </li>
+    </ul>
+
+    <h2>Categories</h2>
+    <ul class="display-flex">
+      <li v-for="category in $static.allCategory.edges" :key="category.node.id">
+        <g-link :to="category.node.path">
+          {{ category.node.title }}
+        </g-link>
       </li>
     </ul>
 
