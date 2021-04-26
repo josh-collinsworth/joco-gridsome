@@ -9,11 +9,11 @@
       <li>
         <strong><xa to="code.visualstudio.com/">Visual Studio Code</xa></strong>:
         my favorite editor ever.
-        I was a reluctant Sublime convert but the switch was more than worth it.
+        I was a reluctant Sublime Text convert, but the switch was more than worth it.
         <ul>
           <li>
             <strong>Theme: </strong>
-            I use the built-in <strong><xa to="marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode">Monokai</xa></strong> theme, although I've been toying with others. Currently trying out <xa to="draculatheme.com/pro">Dracula Pro</xa>.
+            currently on <b><xa to="draculatheme.com/pro">Dracula Pro</xa></b>. It's a premium theme that includes skins for iTerm, Slack, etc. and that matches well with my pretty particular color preferences. But if I'm picking a free one, I'm probably going with the built-in <strong><xa to="marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode">Monokai</xa></strong> theme.
           </li>
           <li>
             <strong>Font: <xa to="www.monolisa.dev/">MonoLisa</xa></strong>.
@@ -22,34 +22,45 @@
             </li>
           <li>
             <strong>Extensions</strong>:
-            I don’t have too many global recommendations here (it depends a lot on what you’re working with), but I’ll mention:<ul><li>
-            <strong><xa to="marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer">Bracket Pair Colorizer</xa></strong>:
-            makes it easier to distinguish where a code block ends by assigning the same color to the opening and closing brackets.
-          </li>
-          <li>
-            <strong><xa to="marketplace.visualstudio.com/items?itemName=pnp.polacode">Polacode</xa></strong>:
-            a nifty, pretty way to take code screenshots
-          </li>
-          <li>
-            <strong><xa to="marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare">Live Share</xa></strong>:
-            the best way to collaborate on code remotely that I’ve ever used.
-          </li>
-          <li>
-            <strong><xa to="marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html">es6-string-html</xa></strong>:
-            treats HTML inside template literal strings like actual HTML code, for the purposes of highlighting, code completion, Emmett, etc.
-          </li>
-          <li>
-            <strong><xa to="marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens</xa></strong>:
-            less indispensable now that VS Code has the <xa to="scotch.io/bar-talk/vs-code-v144-adds-a-git-timeline-view">Timeline view</xa>, but still amazingly handy for viewing git status and history in projects.
-          </li>
-          <li>
-            <strong><xa to="marketplace.visualstudio.com/items?itemName=Compulim.compulim-vscode-closetag">Close HTML/XML Tag</xa></strong>:
-            the only keyboard shortcut I miss from Sublime Text is easily replicated with this extension. Gives you a key command to auto-close whatever HTML tag your cursor is inside of.
+            I don’t have too many global recommendations here (it depends a lot on what you’re working with), but I’ll mention:
+
+            <ul>
+              <li>
+                <strong><xa to="marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html">es6-string-html</xa></strong>:
+                treats HTML inside template literal strings like actual HTML code, for the purposes of highlighting, code completion, Emmett, etc.
+              </li>
+              <li>
+                <strong><xa to="marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer">Bracket Pair Colorizer</xa></strong>:
+                makes it easier to distinguish where a code block ends by assigning the same color to the opening and closing brackets.
+              </li>
+              <li>
+                <strong><xa to="marketplace.visualstudio.com/items?itemName=pnp.polacode">Polacode</xa></strong>:
+                a nifty, pretty way to take code screenshots
+              </li>
+              <li>
+                <strong><xa to="marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare">Live Share</xa></strong>:
+                the best way to collaborate on code remotely that I’ve ever used.
+              </li>
+              <li>
+                <strong><xa to="marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens</xa></strong>:
+                less indispensable now that VS Code has the <xa to="scotch.io/bar-talk/vs-code-v144-adds-a-git-timeline-view">Timeline view</xa>, but still amazingly handy for viewing git status and history in projects.
+              </li>
+              <li>
+                <strong><xa to="marketplace.visualstudio.com/items?itemName=Compulim.compulim-vscode-closetag">Close HTML/XML Tag</xa></strong>:
+                the only keyboard shortcut I miss from Sublime Text is easily replicated with this extension. Gives you a key command to auto-close whatever HTML tag your cursor is inside of.
+              </li>
+              <li>
+                <strong><xa to="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</xa></strong>:
+              does what it says; when you adjust the opening tag of an HTML element, it makes the same change to the closing tag, and vice versa.
+              </li>
+              <li>
+                <strong><xa to="https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens">Error Lens</xa></strong>:
+              some understandably find this extension obnoxious, as it outputs errors directly beside your code (rather than keeping them hidden until hover), but I appreciate them always being visible—both to prevent needing to hover or click something, and as a reminder to fix them.
+              </li> 
+            </ul>
           </li>
         </ul>
       </li>
-    </ul>
-    </li>
       <li>
         <strong><xa to="localwp.com/">Local</xa></strong>:
         hands-down the best way to develop WordPress sites. Fast and easy (especially if you host with Flywheel or WP Engine; you can push and pull sites directly).
@@ -74,27 +85,27 @@
 
     <ul>
       <li>
-        JavaScript is my main language these days, and
+        ES6+ JavaScript is my main language these days, and
         <strong><xa to="vuejs.org/">Vue</xa></strong> is my main go-to for anything I’m building (I’m unsurprisingly, therefore, a huge fan of
         <strong><xa to="nuxtjs.org">Nuxt</xa></strong> and
         <strong><xa to="gridsome.org/">Gridsome</xa></strong> as well).
       </li>
       <li>
-        I’m also a big fan of
-        <strong><xa to="svelte.dev/">Svelte</xa></strong>, and I know
-        <strong><xa to="reactjs.org/">React</xa></strong> as well, which is also cool but it’s not my favorite.
+        I’m also a big fan of <strong><xa to="svelte.dev/">Svelte</xa></strong>, and have made several projects in <strong><xa to="reactjs.org/">React</xa></strong> as well. I've got working experience with jQuery and Knockout and am working on implementing TypeScript in my projects.
       </li>
       <li>
-        I love
-        <strong>CSS</strong> passionately, but I don’t use any libraries or frameworks; all my CSS is from-scratch and custom (usually written in
-        <strong><xa to="sass-lang.com/">SCSS</xa></strong>).
+        I love <strong>CSS</strong> passionately, but I don’t use any libraries or frameworks; all my CSS is from-scratch, responsive, and custom (usually written in
+        <strong><xa to="sass-lang.com/">SCSS</xa></strong>). I love authoring smooth, fluid transitions and animations.
+      </li>
+      <li>
+        I'm a strong proponent of well-architected, accessible, and semantic <b>HTML</b>. (I create and use SVG often.)
       </li>
       <li>
         I’m a <xa to="wordpress.org/">
-        <strong>WordPress</strong></xa> expert and generally prefer to build themes from scratch.
+        <strong>WordPress</strong></xa> expert and generally prefer to build themes from scratch. I'm capable with PHP and MySQL.
       </li>
       <li>
-        Professionally, I work in Ruby on Rails with SCSS and HAML templates using Vue components.
+        Professionally, I've worked with Ruby on Rails and Laravel backends.
       </li>
     </ul>
 
@@ -106,8 +117,7 @@
     <ul>
       <li>
         <strong><xa to="www.mozilla.org/en-US/firefox/new/">Firefox</xa></strong>:
-        currently in the middle of trying to convert again after failing last time. Liking what I see so far. (<xa to="www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwji7e3c_PzoAhXPZc0KHazlCD4QFjAAegQIERAC&amp;url=https%3A%2F%2Fbrave.com%2F&amp;usg=AOvVaw2CfcgN6wLi3270uJRtAJ62">
-        <strong>Brave</strong></xa> is my fallback choice.)
+        took some getting used to, but it’s a great browser with some awesome tools. It may not be as performant as Chromium browsers in some regards, but I personally view that as feature, not a bug; if I can make a transition or animation smooth in Firefox, I know it's buttery everywhere else, too.
       </li>
       <li>
         <strong><xa to="www.getcloudapp.com/">CloudApp</xa></strong>:
@@ -120,6 +130,14 @@
       <li>
         <strong><xa to="www.anker.com/products/variant/xanker-24g-wireless-vertical-ergonomic-optical-mouse/xa7852011">Anker 2.4G Wireless Vertical Ergonomic Optical Mouse</xa></strong>:
         I could feel my wrist straining using both a magic mouse and a touchpad. I switched to this mouse years ago. It took some adjustment, but I don’t ever want to use another mouse again, and I don’t even use the extra buttons.
+      </li>
+      <li>
+        <strong><xa to="https://kinesis-ergo.com/shop/freestyle2-mac/">Kinesis Freestyle2 for Mac</xa></strong> keyboard:
+        I paid for months of sitting-on-the-couch laptop time with a repetitive stress injury on my right wrist. This keyboard is a bit of an adjustment, but it has helped a lot with the wrist pain by keeping my wrists from going to outward angles.
+      </li>
+      <li>
+        <strong><xa to="https://www.hermanmiller.com/products/seating/office-chairs/sayl-chairs/">Herman Miller Sayl Chair</xa></strong>:
+        I made it about two months as a full-time work-from-home employee before I went and bought one of these chairs. It’s the most comfortable and easily adjustable office chair I’ve ever sat in (and it looks really nice, too).
       </li>
     </ul>
 
@@ -144,11 +162,11 @@
         lends you Slack-like ability to use emoji anywhere. Way better than the OSX default emoji picker.
       </li>
       <li>
-        <strong><xa to="www.wacom.com/en-us/products/pen-tablets/intuos-pro-small">Notion</xa></strong>:
+        <strong><xa to="notion.so">Notion</xa></strong>:
         my current favorite notes app. Can grow and get as complex as you need it to be, but for simple notes, the markdown and code highlight support is fantastic.
       </li>
       <li>
-        <strong><xa to="1password.com/">1Password</xa></strong>:
+        <strong><xa to="1password.com">1Password</xa></strong>:
         I’ve tried and liked other password software, but 1Password is just the most reliable cross-platform and -device in my experience.
       </li>
     </ul>
@@ -184,9 +202,6 @@
     <h3>Fonts</h3>
     <FontTester font="Pensum Display" label="Pensum Display Bold" link="https://www.myfonts.com/fonts/typemates/pensum-display/"/>
     <FontTester font="Averta Std" label="Averta Standard" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/" :italic="true" :bold="true" />
-    <!-- <FontTester font="Averta Std" fontStyle="italic" label="Averta Standard Italic" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
-    <FontTester font="Averta Std" fontWeight="bold" label="Averta Standard Bold" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/>
-    <FontTester font="Averta Std" fontWeight="bold" fontStyle="italic" label="Averta Standard Bold Italic" link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"/> -->
     <FontTester font="MonoLisa" label="MonoLisa Regular" link="https://www.monolisa.dev/"/>
 
     <br />

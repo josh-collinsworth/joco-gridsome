@@ -4,7 +4,7 @@
       <!-- <p class="fancy"><span aria-hidden="true" style="font-style: normal">👋🏻 </span>Hi, I’m Josh Collinsworth.</p> -->
       <h1>Hi, I’m Josh.</h1>
 
-      <p class="fancy">I’m a front-end developer, designer, and code instructor.</p>
+      <p class="fancy">I’m a front-end developer specializing in Vue, CSS, and WordPress.</p>
 
       <div class="previously">
         <p>
@@ -14,28 +14,9 @@
         <p>
           <b>Previously:</b> front-end engineer at <xa to="wpengine.com">WP Engine</xa>;
           senior support lead at <xa to="getflywheel.com">Flywheel</xa>;
-          WordPress instructor for <xa to="interfaceschool.com">AIM Code School</xa>.
+          course instructor for <xa to="interfaceschool.com">AIM Code School</xa>; graphic designer at <xa to="https://dday.com/">David Day | Associates</xa>.
         </p>
       </div>
-
-      <TagList>
-        <Tag to="/about">
-          <span aria-hidden="true">👀&ensp;</span>
-          Learn more <b>About</b> me
-        </Tag>
-        <Tag to="/contact">
-          <span aria-hidden="true">✉️&ensp;</span>
-          Get in <b>Contact</b>
-        </Tag>
-        <Tag to="/projects">
-          <span aria-hidden="true">💼&ensp;</span>
-          See some of my <b>Projects</b>
-        </Tag>
-        <Tag to="/blog">
-          <span aria-hidden="true">📝&ensp;</span>
-          Read my rarely-updated <b>Blog</b>
-        </Tag>
-      </TagList>
     </div>
   </Layout>
 </template>
@@ -43,12 +24,7 @@
 
 
 <script>
-import Tag from '~/components/Tag'
-import TagList from '~/components/TagList'
-
 export default {
-  components: { Tag, TagList },
-
   metaInfo: {
     title: "Josh Collinsworth, front-end developer/designer"
   },

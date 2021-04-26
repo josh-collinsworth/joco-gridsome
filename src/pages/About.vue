@@ -10,6 +10,8 @@
         <g-image id="avatar" src="/images/self-portrait-summer-2018.svg" alt="" />
         
         <p>I'm a senior JavaScript developer specializing in Vue, elegant CSS, and semantic, accessible HTML. I currently put those skills to use at <xa to="aware3.com">Aware3</xa> building software to help nonprofits engage with their communities.</p>
+
+        <p>There's a bit more about my tech toolbox on my <g-link to="/uses">uses</g-link> page.</p>
       </div>
 
       <h2>Previously: </h2>
