@@ -18,11 +18,15 @@ describe('<ExternalLink>', () => {
 
   it('renders with all attributes', () => {
     expect(component.attributes('href')).to.contain('https')
-    expect(component.attributes('rel')).to.contain('noreferrer noopener')
-    expect(component.attributes('target')).to.contain('_blank')
+    expect(component.attributes('rel')).to.eq('noreferrer noopener')
   })
 
   it('renders slot contents', () => {
-    expect(component.text()).to.contain('Hello!')
+    expect(component.text()).to.eq('Hello!')
+  })
+
+  it('opens in a new tab with the external prop', async () => {
+    await component.setProps({ openInNewTab: 'true' })
+    expect(component.attributes('target')).to.eq('_blank')
   })
 })
