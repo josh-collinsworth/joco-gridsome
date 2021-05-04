@@ -151,26 +151,6 @@ pre, code {
   font-weight: normal;
 }
 
-pre {
-  background: var(--darkerGray);
-  background: #2c292d; //the Monokai background color
-  padding: 1.5em;
-  margin: 2rem auto;
-  color: var(--white);
-  border-radius: 0.5em;
-	font-size: .8rem;
-  overflow: auto;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  code {
-    background: transparent;
-    font-size: inherit;
-    padding: 0;
-  }
-}
-
 code {
   font-size: .8em;
   font-weight: bold;
@@ -193,8 +173,6 @@ code {
 .aligncenter {
   text-align: center;
 }
-
-
 
 .highlight {
   font-size: 1.3em;

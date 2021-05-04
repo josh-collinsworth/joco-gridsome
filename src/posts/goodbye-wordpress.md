@@ -196,9 +196,9 @@ This miraculous little CLI tool takes your WordPress export XML file, and not on
 
 While I had a few small hiccups with it (mostly not really the tool's fault), the biggest was my custom blocks. The info on what a custom block should look like is *not* stored in the database; instead, there's just some text like this:
 
-```
-<!-- wp:block-lab/block_name_here -->
-```
+<Code>
+&lt;!-- wp:block-lab/block_name_here --&gt;
+</Code>
 
 WordPress apparently matches that line from the database to the PHP file that renders its contents at run time, rather than having the HTML for the block stored in the database as it would with typical blocks, like headings and text. (As you can infer, I'm using the Block Lab plugin for my custom blocks here. I'm not sure if this is a Block Lab-specific problem, or if this is the case for _any_ custom block.)
 
