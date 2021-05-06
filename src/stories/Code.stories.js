@@ -1,4 +1,4 @@
-import Code from './Code.vue'
+import Code from '../components/Code'
 
 export default {
   title: 'Components/Code',

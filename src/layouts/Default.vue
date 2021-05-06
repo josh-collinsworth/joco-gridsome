@@ -158,6 +158,7 @@ export default {
   main {
     width: 100%;
     max-width: var(--max-width);
+    overflow: auto;
   }
 }
 </style>

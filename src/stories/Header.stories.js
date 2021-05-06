@@ -1,21 +1,16 @@
-import MyHeader from './Header';
+import HeaderComponent from '../components/Header'
 
 export default {
-  title: 'Example/Header',
-  component: MyHeader,
-};
+  title: 'Components/Header',
+  component: HeaderComponent,
+}
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { MyHeader },
-  template:
-    '<my-header :user="user" @onLogin="onLogin" @onLogout="onLogout" @onCreateAccount="onCreateAccount" />',
-});
+  components: { HeaderComponent },
+  template: `<HeaderComponent>Typographically, poise is made of white space.</HeaderComponent>`
+})
 
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  user: {},
-};
+export const Header = Template.bind({})
 
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+Header.args = {}

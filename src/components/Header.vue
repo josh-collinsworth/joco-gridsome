@@ -18,8 +18,8 @@
 
 <script>
 import LogoSVG from './LogoSVG'
-import Grid from '~/components/Grid'
-import MainNav from '~/components/MainNav'
+import Grid from './Grid'
+import MainNav from './MainNav'
 
 export default {
 	components: {

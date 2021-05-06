@@ -7,7 +7,7 @@
     "dev": "gridsome develop",
     "explore": "gridsome explore",
     "test": "vue-cli-service test:unit src/tests/*.spec.js --watch --require src/tests/test-setup.js",
-    "storybook": "start-storybook -p 6007",
+    "storybook": "start-storybook -p 6007 -s ./static",
     "build-storybook": "build-storybook"
   },
   "dependencies": {

@@ -32,7 +32,7 @@
 
 <script>
 import { pages } from '../../gridsome.config' //Gets the list of pages from the Gridsome config file
-import HamburgerButton from '~/components/HamburgerButton'
+import HamburgerButton from './HamburgerButton'
 
 export default {
 	props: {

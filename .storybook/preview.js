@@ -1,4 +1,4 @@
-import StorybookDecorator from '../src/components/StorybookDecorator.vue';
+import StorybookDecorator from '../src/stories/StorybookDecorator';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -12,6 +12,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => ({
+    components: { StorybookDecorator },
     template: `<StorybookDecorator><story /></StorybookDecorator>`
   }),
 ]
