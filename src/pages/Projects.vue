@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<Layout :span="true">
 		<h1>Projects</h1>
 		<WorkLinks />
 

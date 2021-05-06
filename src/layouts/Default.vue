@@ -3,11 +3,11 @@
     'reduce-motion': reduceMotion,
     'prefers-dark': prefersDark,
     'prefers-light': prefersLight,
-    'mounted': ready }"
-  >
+    'mounted': ready,
+  }">
     <Header />
     <div class="layout">
-      <main id="main">
+      <main id="main" :class="{ span }">
         <slot />
       </main>
       <Sidebar v-if="sidebar" />
@@ -32,6 +32,11 @@ export default {
 
   props: {
     sidebar: {
+      type: Boolean,
+      default: false
+    },
+
+    span: {
       type: Boolean,
       default: false
     }
@@ -137,7 +142,7 @@ export default {
   align-items: center;
   justify-content: flex-start;
   width: calc(100% - (var(--margin) * 2));
-  padding-top: 4rem;
+  padding-top: 6rem;
 
   @media (min-width: $wider) {
     display: grid;
@@ -159,6 +164,11 @@ export default {
     width: 100%;
     max-width: var(--max-width);
     overflow: auto;
+
+    &.span {
+      grid-column: 1 / -1;
+      max-width: unset;
+    }
   }
 }
 </style>

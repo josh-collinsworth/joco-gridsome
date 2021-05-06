@@ -4,7 +4,10 @@
       <!-- <p class="fancy"><span aria-hidden="true" style="font-style: normal">👋🏻 </span>Hi, I’m Josh Collinsworth.</p> -->
       <h1>Hi, I’m Josh.</h1>
 
-      <p class="fancy">I’m a front-end developer specializing in Vue, CSS, and WordPress.</p>
+      <p class="fancy">
+        <span aria-hidden="true">👋🏼</span>
+        I’m a front-end developer specializing in Vue, CSS, and WordPress.
+      </p>
 
       <div class="previously">
         <p>
