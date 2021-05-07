@@ -163,7 +163,6 @@ export default {
   main {
     width: 100%;
     max-width: var(--max-width);
-    overflow: auto;
 
     &.span {
       grid-column: 1 / -1;
