@@ -56,10 +56,14 @@
               <li>
                 <strong><xa to="https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens">Error Lens</xa></strong>:
               some understandably find this extension obnoxious, as it outputs errors directly beside your code (rather than keeping them hidden until hover), but I appreciate them always being visible—both to prevent needing to hover or click something, and as a reminder to fix them.
-              </li> 
+              </li>
             </ul>
           </li>
         </ul>
+      </li>
+      <li>
+        <strong><xa to="www.mozilla.org/en-US/firefox/new/">Firefox</xa></strong>:
+        took some getting used to, but it’s a great browser with some awesome tools. It may not be as performant as Chromium browsers in some regards, but I personally view that as feature, not a bug; if I can make a transition or animation smooth in Firefox, I know it's buttery everywhere else, too.
       </li>
       <li>
         <strong><xa to="localwp.com/">Local</xa></strong>:
@@ -110,23 +114,9 @@
     </ul>
 
 
-    <h2>General</h2>
-
-
+    <h2>Hardware</h2>
 
     <ul>
-      <li>
-        <strong><xa to="www.mozilla.org/en-US/firefox/new/">Firefox</xa></strong>:
-        took some getting used to, but it’s a great browser with some awesome tools. It may not be as performant as Chromium browsers in some regards, but I personally view that as feature, not a bug; if I can make a transition or animation smooth in Firefox, I know it's buttery everywhere else, too.
-      </li>
-      <li>
-        <strong><xa to="www.getcloudapp.com/">CloudApp</xa></strong>:
-        taking screenshots and videos is a many-times-daily activity for me, and CloudApp makes it as seamless as possible.
-      </li>
-      <li>
-        <strong><xa to="rightfontapp.com/">RightFont</xa></strong>:
-        a simple, minimalist app for managing your computer’s fonts that looks and works better than Mac’s built-in FontBook.
-      </li>
       <li>
         <strong><xa to="www.anker.com/products/variant/xanker-24g-wireless-vertical-ergonomic-optical-mouse/xa7852011">Anker 2.4G Wireless Vertical Ergonomic Optical Mouse</xa></strong>:
         I could feel my wrist straining using both a magic mouse and a touchpad. I switched to this mouse years ago. It took some adjustment, but I don’t ever want to use another mouse again, and I don’t even use the extra buttons.
@@ -139,6 +129,10 @@
         <strong><xa to="https://www.hermanmiller.com/products/seating/office-chairs/sayl-chairs/">Herman Miller Sayl Chair</xa></strong>:
         I made it about two months as a full-time work-from-home employee before I went and bought one of these chairs. It’s the most comfortable and easily adjustable office chair I’ve ever sat in (and it looks really nice, too).
       </li>
+      <li>
+        <strong><xa to="https://www.upliftdesk.com/uplift-v2-standing-desk-frame/">Uplift V2 C-Frame</xa> standing desk</strong>:
+        Not a lot of purchases I’ve been happier with than this one. It works incredibly well and is surprisingly sturdy, even without springing for the commercial version. (I have the 27.5" feet for my larger Ikea desktop, and the Advanced Digital Memory Keypad.)
+      </li>
     </ul>
 
 
@@ -146,8 +140,20 @@
 
     <ul>
       <li>
+        <strong><xa to="1password.com">1Password</xa></strong>:
+        The first thing I instal on every new device. I’ve tried and liked other password software, but 1Password is just the most reliable cross-platform and -device in my experience.
+      </li>
+      <li>
         <xa to="http://xalfredapp.com"><strong>Alfred</strong></xa>:
-        the first thing I install on every new Mac. (I use the <xa to="www.alfredapp.com/powerpack/">powerpack</xa> for added features, which is worth every penny.) The main features I love are clipboard history, snippet expansion, global search (never touch Finder again!), and workflows to automate repetitive or tedious tasks. Wouldn’t ever want to work without it.
+        the <em>second</em> thing I install on every new Mac. (I use the <xa to="www.alfredapp.com/powerpack/">powerpack</xa> for added features, which is worth every penny.) The main features I love are clipboard history, snippet expansion, global search (never touch Finder again!), and workflows to automate repetitive or tedious tasks. Wouldn’t ever want to work without it.
+      </li>
+      <li>
+        <strong><xa to="www.getcloudapp.com/">CloudApp</xa></strong>:
+        taking screenshots and videos is a many-times-daily activity for me, and CloudApp makes it as seamless as possible.
+      </li>
+      <li>
+        <strong><xa to="rightfontapp.com/">RightFont</xa></strong>:
+        a simple, minimalist app for managing your computer’s fonts that looks and works better than Mac’s built-in FontBook.
       </li>
       <li>
         <strong><xa to="rectangleapp.com/">Rectangle</xa></strong>:
@@ -164,10 +170,6 @@
       <li>
         <strong><xa to="notion.so">Notion</xa></strong>:
         my current favorite notes app. Can grow and get as complex as you need it to be, but for simple notes, the markdown and code highlight support is fantastic.
-      </li>
-      <li>
-        <strong><xa to="1password.com">1Password</xa></strong>:
-        I’ve tried and liked other password software, but 1Password is just the most reliable cross-platform and -device in my experience.
       </li>
     </ul>
 
