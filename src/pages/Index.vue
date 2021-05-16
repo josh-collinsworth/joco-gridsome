@@ -62,7 +62,7 @@ export default {
     font-size: 1.2rem;
 
     @media (min-width: $narrow) {
-      font-size: calc(0.75rem + 1vw);
+      font-size: calc(1rem + 0.5vw);
     }
 
     @media (min-width: $widest) {
