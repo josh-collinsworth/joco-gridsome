@@ -6,12 +6,12 @@
 
       <p class="fancy">
         <span aria-hidden="true">👋🏼</span>
-        I’m a front-end developer specializing in Vue, CSS, and WordPress.
+        I’m a front-end developer, designer, and instructor specializing in Vue, CSS, and&nbsp;WordPress.
       </p>
 
       <div class="previously">
         <p>
-          <b>Currently:</b> senior JavaScript developer at <xa to="aware3.com">Aware3</xa>; maker and designer of <xa to="quina.app">Quina</xa>.
+          <b>Currently:</b> senior JavaScript developer at <xa to="aware3.com">Aware3</xa>; maker and designer&nbsp;of&nbsp;<xa to="quina.app">Quina</xa>.
         </p>
 
         <p>
@@ -23,7 +23,6 @@
     </div>
   </Layout>
 </template>
-
 
 
 <script>
@@ -51,23 +50,33 @@ export default {
   }
 
   h1 {
-    font-size: calc(2rem + 2vw);
+    font-size: calc(2.2rem + 2vw);
 
     @media (min-width: $widest) {
-      font-size: 3.8rem;
+      font-size: 4rem;
+    }
+  }
+
+  p.fancy {
+    margin-top: .75rem;
+    font-size: 1.2rem;
+
+    @media (min-width: $narrow) {
+      font-size: calc(0.75rem + 1vw);
     }
 
-    & + p.fancy {
-      margin-top: .75rem;
+    @media (min-width: $widest) {
+      font-size: 1.5rem;
     }
   }
 
   .previously {
-    margin: 1rem 0 0.5rem;
-    font-size: 0.9rem;
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1rem;
+    max-width: 49ch;
 
     p {
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
     }
   }
 }
