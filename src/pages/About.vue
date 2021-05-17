@@ -48,7 +48,6 @@
 </template>
 
 <script>
-
 export default {
   metaInfo: {
     title: "Josh Collinsworth | About me"
