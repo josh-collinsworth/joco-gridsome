@@ -11,7 +11,7 @@
 
       <div class="previously">
         <p>
-          <b>Currently:</b> senior JavaScript developer at <xa to="aware3.com">Aware3</xa>; maker and designer&nbsp;of&nbsp;<xa to="quina.app">Quina</xa>.
+          <b>Currently:</b> senior JavaScript developer at <xa to="aware3.com">Aware3</xa>; maker and designer&nbsp;of&nbsp;<xa to="quina.app">Quina</xa>; <xa to="https://css-tricks.com/author/joshcollinsworth/">CSS Tricks author</xa>.
         </p>
 
         <p>
