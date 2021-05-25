@@ -5,19 +5,23 @@
       <h1>Hi, I’m Josh.</h1>
 
       <p class="fancy">
-        <span aria-hidden="true">👋🏼</span>
+        <span aria-hidden="true" style="font-style: normal;">👋🏼</span>
         I’m a front-end developer, designer, and instructor specializing in Vue, CSS, and&nbsp;WordPress.
       </p>
 
       <div class="previously">
         <p>
-          <b>Currently:</b> senior JavaScript developer at <xa to="aware3.com">Aware3</xa>; maker and designer&nbsp;of&nbsp;<xa to="quina.app">Quina</xa>; <xa to="https://css-tricks.com/author/joshcollinsworth/">CSS Tricks author</xa>.
+          <b>Currently:</b> senior JavaScript developer at <xa to="aware3.com">Aware3</xa>;
+          maker and designer&nbsp;of&nbsp;<xa to="quina.app">Quina</xa>;
+          occasional author on <g-link to="/blog">my own blog</g-link>
+          and <xa to="https://css-tricks.com/author/joshcollinsworth/">CSS&nbsp;Tricks</xa>.
         </p>
 
         <p>
           <b>Previously:</b> front-end engineer at <xa to="wpengine.com">WP Engine</xa>;
           senior support lead at <xa to="getflywheel.com">Flywheel</xa>;
-          course instructor for <xa to="interfaceschool.com">AIM Code School</xa>; graphic designer at <xa to="https://dday.com/">David Day | Associates</xa>.
+          course instructor for <xa to="interfaceschool.com">AIM Code School</xa>;
+          graphic designer at <xa to="https://dday.com/">David Day | Associates</xa>.
         </p>
       </div>
     </div>
