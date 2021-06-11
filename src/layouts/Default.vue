@@ -7,7 +7,7 @@
   }">
     <Header />
     <div class="layout">
-      <main id="main" :class="{ span }">
+      <main id="main" :class="{ span }" tabindex="-1">
         <slot />
       </main>
       <Sidebar v-if="sidebar" />

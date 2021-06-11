@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<header class="header">
-			<a class="skip-to-content-link" href="#main">
+			<a @click="focusMain" class="skip-to-content-link" href="#main">
 				Skip to main content
 			</a>
 
@@ -29,11 +29,17 @@ export default {
 	data: () => ({
 		menuOpen: false
 	}),
-	
+
 	methods: {
 		toggleMenu() {
 			this.menuOpen = !this.menuOpen
-		}
+		},
+
+    // I don't love any part of this, but it's necessary to make the "skip to main content" link work properly, so we'll live with it.
+    focusMain() {
+      const main = document.querySelector('main');
+      main.focus();
+    }
 	}
 }
 </script>

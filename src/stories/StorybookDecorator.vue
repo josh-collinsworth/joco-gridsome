@@ -6,7 +6,7 @@
     'mounted': ready }"
   >
     <div class="layout">
-      <main id="main">
+      <main id="main" tabindex="-1"
         <slot/>
       </main>
     </div>
@@ -72,7 +72,7 @@ export default {
   },
 }
 </script>
-	
+
 
 
 <style lang="scss">

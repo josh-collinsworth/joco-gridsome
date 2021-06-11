@@ -10,10 +10,14 @@ categories:
 coverImage: "social-share-image.png"
 excerpt: "The story of building Quina, a word game Progressive Web App built with Nuxt, and launched on the Google Play Store."
 ---
+
 import Callout from '~/components/Callout.vue'
 import SideNote from '~/components/SideNote.vue'
 import Highlight from '~/components/Highlight.vue'
 
+<SideNote>
+About six months after I wrote this post, I published <a href="https://css-tricks.com/what-i-learned-building-a-word-game-app-with-nuxt-on-google-play/">a longer, more technically in-depth version of this article on CSS Tricks</a>.
+</SideNote>
 
 One of my favorite code hobbies is making games on [CodePen](https://codepen.io). I've got a handful I've created in the online sandbox code editor over the years—[Connect Four](https://codepen.io/collinsworth/pen/MWwXpLd), [Color Flood](https://codepen.io/collinsworth/pen/Pymdxo), [Hangman](https://codepen.io/collinsworth/pen/oNbavJN) and [sliding puzzles](https://codepen.io/collinsworth/pen/XwPXrM), to name a few—but I've wanted to build a legit, standalone app for a long time now.
 
@@ -33,7 +37,7 @@ Quina is a classic word game where users attempt to guess a secret five-letter w
 
 The idea is pretty straightforward: you have ten chances to guess a secret five-letter code word. After each guess, you get a clue that reveals some info about how close your guess is to that code word. I suppose you'd primarily consider it a word game, but there's a good amount of strategy and logic involved as well.
 
-If this sounds familiar, it's probably because you've either played the original, or played its most popular variant; [Mastermind](https://en.wikipedia.org/wiki/Mastermind_(board_game)) is another version of the same game.
+If this sounds familiar, it's probably because you've either played the original, or played its most popular variant; [Mastermind](<https://en.wikipedia.org/wiki/Mastermind_(board_game)>) is another version of the same game.
 
 <Callout>Quina is Latin for “five at a time,” since the game is played with five-letter words.</Callout>
 
@@ -63,11 +67,10 @@ Beyond the core word game, Quina has a number of features to hopefully keep it e
 <SideNote>The images below are from the Google Play Store app listing, so they’re a bit more marketing-y than I’d normally choose. Sorry.</SideNote>
 
 - Quina offers three different word sets to help players find the right challenge level: **Basic**, **Tricky**, and **Random**. All told, there are about 1,200 code words between the three.
-    - Basic sticks to common, everyday English words; Tricky has some curveballs and harder words; and Random just lets you enjoy the challenge of not knowing.
+  - Basic sticks to common, everyday English words; Tricky has some curveballs and harder words; and Random just lets you enjoy the challenge of not knowing.
 - Players also have the option to **start the game with a hint**, if they want (either a small one or a big one), to make the game a bit more accessible.
 - There's a quick-start tutorial, as well as a more in-depth explanation of the rules.
 - As you play, you can mark up your guesses to help you deduce the meaning behind the clues.
-
 
 ![](../assets/images/post_images/tutorial-3-1024x576.png)
 
@@ -186,7 +189,7 @@ This section is mainly just going to be me griping, but if you're gonna go down 
 
 - You have to pay Google $25 and apply for a developer account just to start (probably reasonable, but still feels kinda steep).
 - Starting January 2021, Google will not allow any payment providers other than Google Pay, which charges a 30% (_thirty percent!_) fee—ten times what similar payment providers like Stripe charge. (And yes, this applies to app purchases, too—which means Google gets almost $1 of every $2.99 download).
-    - **EDIT:** apparently this change may be legally contested by some US states.
+  - **EDIT:** apparently this change may be legally contested by some US states.
 - You cannot delete an app you've created in the Google Play developer console, ever. Even if you just typed a few things into a text box and never did anything with it, you still can't delete that.
 - This means if you mess something up and need to start over, you can never use that same app ID again. You just gotta pick another one, create a new app, and upload a new package.
 - If you make your app free, you can never make it paid again, even if it hasn't actually launched yet. So you'll have to just start over with a whole new app, which means filling out _allllll_ the fields all over again. (And again: it'll need a new unique app ID.)
