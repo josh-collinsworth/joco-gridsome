@@ -18,17 +18,12 @@ hr {
   border-bottom: 1px solid var(--lightGray);
 }
 
-nav .active--exact span {
-  border-bottom: .1em solid var(--yellow);
-  font-weight: bold;
-}
-
 .header,
 .footer {
   padding: 2rem var(--margin);
   width: 100%;
 
-  @media (min-width: 1680px){
+  @media (min-width: 1680px) {
     // --margin: 4rem;
   }
 }
@@ -37,7 +32,7 @@ nav .active--exact span {
   padding-top: 2.5rem;
 
   //Ensure there's always room for the settings button
-  @media(max-width: $medium) {
+  @media (max-width: $medium) {
     --margin: 4rem;
   }
 }
@@ -48,11 +43,11 @@ nav .active--exact span {
   padding: 1rem;
   width: calc(100% + 2rem);
   margin-left: -1rem;
-  background: rgba(123, 167, 188, .1)!important;
+  background: rgba(123, 167, 188, 0.1) !important;
 }
 
 .details {
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 1.5em;
   font-style: italic;
 }
@@ -66,5 +61,5 @@ h1 + .details {
 }
 
 h2 + .details {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
