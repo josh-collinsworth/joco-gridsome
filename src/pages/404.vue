@@ -9,9 +9,9 @@
 
       <ul>
         <li>
-          <g-link to="/about">
+          <g-link to="/">
             <span aria-hidden="true">👀&ensp;</span>
-            About
+            Home (about me)
           </g-link>
         </li>
         <li>

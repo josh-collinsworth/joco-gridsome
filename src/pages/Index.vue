@@ -1,27 +1,51 @@
 <template>
   <Layout>
     <div class="intro">
-      <!-- <p class="fancy"><span aria-hidden="true" style="font-style: normal">👋🏻 </span>Hi, I’m Josh Collinsworth.</p> -->
       <h1>Hi, I’m Josh.</h1>
 
       <p class="fancy">
         <span aria-hidden="true" style="font-style: normal;">👋🏼</span>
-        I’m a front-end developer, designer, and instructor specializing in Vue, CSS, and&nbsp;WordPress.
+        I’m a front-end developer and designer.
       </p>
 
       <div class="previously">
+        <h2 class="h3">Professionally:</h2>
         <p>
-          <b>Currently:</b> senior JavaScript developer at <xa to="aware3.com">Aware3</xa>;
-          maker and designer&nbsp;of&nbsp;<xa to="quina.app">Quina</xa>;
+          Senior developer at <xa to="shopify.com">Shopify</xa>;
+          maker and designer of <i>Quina</i> (<xa to="quina.app">web</xa>/<xa to="https://play.google.com/store/apps/details?id=app.quina.collinsworth">Android</xa>);
           occasional author on <g-link to="/blog">my own blog</g-link>
-          and <xa to="https://css-tricks.com/author/joshcollinsworth/">CSS&nbsp;Tricks</xa>.
+          and on <xa to="https://css-tricks.com/author/joshcollinsworth/">CSS&nbsp;Tricks</xa>.
         </p>
 
+        <h2 class="h3">Previously:</h2>
+
         <p>
-          <b>Previously:</b> front-end engineer at <xa to="wpengine.com">WP Engine</xa>;
+          Senior JavaScript developer at <xa to="aware3.com">Aware3</xa>;
+          front-end engineer at <xa to="wpengine.com">WP Engine</xa>;
           senior support lead at <xa to="getflywheel.com">Flywheel</xa>;
           course instructor for <xa to="interfaceschool.com">AIM Code School</xa>;
-          graphic designer at <xa to="https://dday.com/">David Day | Associates</xa>.
+          graphic designer and contractor;
+          seasoned bartender who makes a pretty good old fashioned. 
+        </p>
+        
+        <h2 class="h3">Personally:</h2>
+
+        <p>
+          Hobby coder;
+          infrequent blog author;
+          font hoarder;
+          husband;
+          dad (with both the jokes and bod to match);
+          accessibility advocate;
+          cold brew coffee lover;
+          DEI accomplice;
+          occasional conference speaker;
+          pun enthusiast;
+          curious learner;
+          dog owner and lover;
+          lifelong Nintendo fan;
+          musician/guitarist/hack pianist;
+          liberal abuser of semicolons.
         </p>
       </div>
     </div>
@@ -82,6 +106,16 @@ export default {
     p {
       margin-bottom: 1.5em;
     }
+  }
+
+  .h3 {
+    font-family: var(--body-font);
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    border: 0;
   }
 }
 </style>
